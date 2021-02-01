@@ -370,7 +370,7 @@ public class SdkApplicationContext {
                                                       .setApplication(mApplication)
                                                       .setCurrentActivity(currentActivity)
                                                       .addPackage(new SdkMainReactPackage(null))
-                                                      .addPackage(new SdkReactPackage())
+                                                      .addPackage(new SdkReactPackage(mTeamsApplication, this))
                                                       /*.addPackage(sdkPackageFactory.create(SdkMainReactPackage.class))
                                                       .addPackage(new SvgPackage())
                                                       .addPackage(sdkPackageFactory.create(SdkReactPackage.class))

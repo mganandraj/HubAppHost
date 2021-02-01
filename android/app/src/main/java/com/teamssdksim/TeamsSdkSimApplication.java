@@ -88,7 +88,7 @@ public class TeamsSdkSimApplication implements ITeamsApplication {
 
     TeamsSdkSimApplication (Activity activity, Application application) {
         mActivity = activity;
-        mApplication = mApplication;
+        mApplication = application;
     }
 
     @Nullable

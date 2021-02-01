@@ -10,6 +10,9 @@ import com.facebook.react.ReactPackage;
 import com.facebook.react.bridge.NativeModule;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.uimanager.ViewManager;
+import com.microsoft.skype.teams.sdk.SdkApplicationContext;
+import com.microsoft.skype.teams.sdk.react.modules.SdkLoggerModule;
+import com.microsoft.teams.core.app.ITeamsApplication;
 /*import com.microsoft.skype.teams.sdk.react.injection.SdkModuleFactory;
 import com.microsoft.skype.teams.sdk.react.injection.SdkPackageScope;
 import com.microsoft.skype.teams.sdk.react.injection.SdkViewManagerFactory;
@@ -55,13 +58,17 @@ import javax.inject.Inject;
  */
 // @SdkPackageScope
 public class SdkReactPackage implements ReactPackage {
+    ITeamsApplication mTteamsApplication;
+    SdkApplicationContext mSdkApplicationContext;
     // private final SdkModuleComponent.Factory mSdkModuleComponentFactory;
 
     /*@Inject
     public SdkReactPackage(@NonNull SdkModuleComponent.Factory sdkModuleComponentFactory) {
         mSdkModuleComponentFactory = sdkModuleComponentFactory;
     }*/
-    public SdkReactPackage() {
+    public SdkReactPackage(ITeamsApplication teamsApplication, SdkApplicationContext sdkApplicationContext) {
+        mTteamsApplication = teamsApplication;
+        mSdkApplicationContext = sdkApplicationContext;
         // mSdkModuleComponentFactory = sdkModuleComponentFactory;
     }
 
@@ -72,6 +79,7 @@ public class SdkReactPackage implements ReactPackage {
 
         // TODO: should we restrict the APIs based on the application scopes?
         List<NativeModule> modules = new ArrayList<>();
+        modules.add(new SdkLoggerModule(reactContext, "SdkLoggerModule",  mTteamsApplication, mTteamsApplication.getLogger(""), mSdkApplicationContext));
         /*modules.add(sdkModuleFactory.create(SdkNativeEventPublisherModule.class));
         modules.add(sdkModuleFactory.create(SdkAuthenticationServiceModule.class));
         modules.add(sdkModuleFactory.create(SdkLoggerModule.class));

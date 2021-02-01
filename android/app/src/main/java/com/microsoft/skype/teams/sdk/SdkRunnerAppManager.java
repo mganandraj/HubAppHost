@@ -150,7 +150,7 @@ public class SdkRunnerAppManager implements ISdkRunnerAppManager {
         Executors.newSingleThreadExecutor().execute(new Runnable() {
             @Override
             public void run() {
-                // Download the app manifest and resources from runner server.
+                // Download the app manifest and resources from runner server.*/
                 try {
                     mSdkAppManifest = downloadAppManifestFromRunnerServer();
                     mAppDefinition = downloadAppDefinitionFromRunnerServer();
