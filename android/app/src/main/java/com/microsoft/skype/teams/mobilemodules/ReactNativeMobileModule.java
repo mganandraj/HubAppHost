@@ -4,42 +4,34 @@
 
 package com.microsoft.skype.teams.mobilemodules;
 
-import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
-import android.net.Uri;
-import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import com.microsoft.skype.teams.logger.ILogger;
 import com.microsoft.skype.teams.logger.LogPriority;
 // import com.microsoft.skype.teams.mobilemodules.injection.ActivityFeedExtensionFactory;
 import com.microsoft.skype.teams.sdk.ISdkRunnerAppManager;
 import com.microsoft.skype.teams.sdk.SdkApplicationContext;
-import com.microsoft.skype.teams.sdk.SdkHelper;
 // import com.microsoft.skype.teams.sdk.models.SdkTabContext;
 import com.microsoft.skype.teams.sdk.rnbundle.ISdkBundleDownloadManager;
 import com.microsoft.skype.teams.sdk.utils.SdkRunnerUtils;
 import com.microsoft.skype.teams.services.configuration.AppConfiguration;
-//import com.microsoft.skype.teams.storage.IExperimentationManager;
-//import com.microsoft.skype.teams.storage.dao.rnapps.RNAppsDao;
-//import com.microsoft.skype.teams.storage.dao.rnbundles.RNBundlesDao;
+import com.microsoft.skype.teams.storage.IExperimentationManager;
+import com.microsoft.skype.teams.storage.dao.rnapps.RNAppsDao;
+import com.microsoft.skype.teams.storage.dao.rnbundles.RNBundlesDao;
 import com.microsoft.skype.teams.storage.models.MobileModuleDefinition;
 import com.microsoft.skype.teams.storage.tables.RNApp;
 import com.microsoft.skype.teams.storage.tables.RNBundle;
 // import com.microsoft.skype.teams.tasks.TasksActivityFeedExtension;
-import com.microsoft.skype.teams.utilities.BundleTypeAdapterFactory;
 //import com.microsoft.skype.teams.views.activities.CustomTabsShellActivity;
 //import com.microsoft.skype.teams.views.fragments.SdkAppHostFragment;
 //import com.microsoft.skype.teams.views.utilities.SettingsUtilities;
-import com.microsoft.teams.androidutils.NavigationParcel;
 import com.microsoft.teams.core.app.ITeamsApplication;
 //import com.microsoft.teams.core.data.extensions.IActivityFeedExtension;
 //import com.microsoft.teams.injection.PlatformAppScope;
 import com.microsoft.teams.core.preferences.IPreferences;
+import com.microsoft.teams.core.services.IScenarioManager;
 //import com.microsoft.teams.core.services.IScenarioManager;
 //import com.microsoft.teams.core.services.configuration.IUserConfiguration;
 //import com.microsoft.teams.core.services.navigation.ITeamsNavigationService;
@@ -49,14 +41,12 @@ import com.microsoft.teams.core.preferences.IPreferences;
 import java.util.ArrayList;
 import java.util.List;
 
-import java.util.Map;
-
 import javax.inject.Inject;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.WorkerThread;
-import androidx.collection.ArrayMap;
+
 import bolts.Task;
 import bolts.TaskCompletionSource;
 
@@ -64,7 +54,7 @@ import bolts.TaskCompletionSource;
 //import static com.microsoft.skype.teams.mobilemodules.MobileModuleConstants.ORG_CHART_ID;
 //import static com.microsoft.skype.teams.mobilemodules.MobileModuleConstants.PARAM_KEY_DEEPLINK;
 //import static com.microsoft.skype.teams.mobilemodules.MobileModuleConstants.PARAM_KEY_TAB_CONTEXT;
-import static com.microsoft.teams.androidutils.NavigationParcel.NAVIGATION_PARAMS;
+
 
 /**
  * Implements the React Native mobile module.
@@ -74,12 +64,12 @@ public class ReactNativeMobileModule extends com.microsoft.skype.teams.mobilemod
     private static final String LOG_TAG = "MobileModuleImplReactNative";
     private final ISdkBundleDownloadManager mSdkBundleDownloadManager;
     private final AppConfiguration mAppConfiguration;
-//    private final RNAppsDao mRnAppsDao;
-//    private final RNBundlesDao mRNBundlesDao;
+    private final RNAppsDao mRnAppsDao;
+    private final RNBundlesDao mRNBundlesDao;
 //    private final SdkApplicationContext.Factory mSdkApplicationContextFactory;
     private final ISdkRunnerAppManager mSdkRunnerAppManager;
-//    private final IExperimentationManager mExperimentationManager;
-//    private final IScenarioManager mScenarioManager;
+    private final IExperimentationManager mExperimentationManager;
+    private final IScenarioManager mScenarioManager;
 //    private final ITeamsNavigationService mTeamsNavigationService;
 //    private final ActivityFeedExtensionFactory mActivityFeedExtensionFactory;
     private SdkApplicationContext mSdkApplicationContext;
@@ -87,29 +77,29 @@ public class ReactNativeMobileModule extends com.microsoft.skype.teams.mobilemod
     @Inject
     ReactNativeMobileModule(@Nullable MobileModuleDefinition mobileModuleDefinition,
                             @NonNull Context context,
-//                            @NonNull RNAppsDao rnAppsDao,
-//                            @NonNull RNBundlesDao rnBundlesDao,
+                            @NonNull RNAppsDao rnAppsDao,
+                            @NonNull RNBundlesDao rnBundlesDao,
                             @NonNull ISdkRunnerAppManager sdkRunnerAppManager,
                             @NonNull ITeamsApplication teamsApplication,
                             @NonNull AppConfiguration appConfiguration,
 //                            @NonNull SdkApplicationContext.Factory sdkApplicationContextFactory,
                             @NonNull IPreferences preferences,
                             @NonNull ILogger logger,
-                            @NonNull ISdkBundleDownloadManager sdkBundleDownloadManager
-//                            @NonNull IExperimentationManager experimentationManager,
-//                            @NonNull IScenarioManager scenarioManager,
+                            @NonNull ISdkBundleDownloadManager sdkBundleDownloadManager,
+                            @NonNull IExperimentationManager experimentationManager,
+                            @NonNull IScenarioManager scenarioManager
 //                            @NonNull ITeamsNavigationService teamsNavigationService,
 //                            @NonNull ActivityFeedExtensionFactory activityFeedExtensionFactory
                             ) {
         super(mobileModuleDefinition, context, teamsApplication, preferences, logger);
         mAppConfiguration = appConfiguration;
-//        mRnAppsDao = rnAppsDao;
-//        mRNBundlesDao = rnBundlesDao;
+        mRnAppsDao = rnAppsDao;
+        mRNBundlesDao = rnBundlesDao;
         mSdkBundleDownloadManager = sdkBundleDownloadManager;
 //        mSdkApplicationContextFactory = sdkApplicationContextFactory;
         mSdkRunnerAppManager = sdkRunnerAppManager;
-//        mExperimentationManager = experimentationManager;
-//        mScenarioManager = scenarioManager;
+        mExperimentationManager = experimentationManager;
+        mScenarioManager = scenarioManager;
 //        mTeamsNavigationService = teamsNavigationService;
 //        mActivityFeedExtensionFactory = activityFeedExtensionFactory;
     }
@@ -191,7 +181,7 @@ public class ReactNativeMobileModule extends com.microsoft.skype.teams.mobilemod
         try {
             List<MobileModuleDefinition> mobileModuleDefinitions = new ArrayList<>();
             mobileModuleDefinitions.add(mModuleDefinition);
-            mSdkBundleDownloadManager.syncRNApps(mobileModuleDefinitions, scenarioTag,/* mRnAppsDao, mScenarioManager, */mLogger/*, mExperimentationManager*/);
+            mSdkBundleDownloadManager.syncRNApps(mobileModuleDefinitions, scenarioTag, mRnAppsDao, mScenarioManager, mLogger, mExperimentationManager);
             return Task.forResult(null);
         } catch (Exception ex) {
             mLogger.log(LogPriority.ERROR, LOG_TAG, ex, "Failed to sync package from %s.", mModuleDefinition.id);
@@ -243,22 +233,24 @@ public class ReactNativeMobileModule extends com.microsoft.skype.teams.mobilemod
         if (mSdkApplicationContext == null) {
             RNBundle rnBundle = null;
             String appId = getPackageId();
-            // if (SdkRunnerUtils.isRunnerApp(appId)) {
+            if (SdkRunnerUtils.isRunnerApp(appId)) {
                 rnBundle = mSdkRunnerAppManager.getRNBundle();
-//            } else {
-//                RNApp rnApp = mRnAppsDao.fromId(appId); // <- DB call on UI THREAD
-//                if (rnApp != null) {
-//                    rnBundle = mRNBundlesDao.from(appId, rnApp.bundleVersion); // <- DB call on UI THREAD
-//                }
-//            }
+            } else {
+                RNApp rnApp = mRnAppsDao.fromId(appId); // <- DB call on UI THREAD
+                if (rnApp != null) {
+                    rnBundle = mRNBundlesDao.from(appId, rnApp.bundleVersion); // <- DB call on UI THREAD
+                }
+            }
 
 //            if (rnBundle != null) {
 //                mSdkApplicationContext =  mSdkApplicationContextFactory.create(rnBundle);
 //            }
 
-            mSdkApplicationContext = new SdkApplicationContext(mTeamsApplication.getApplication(),
-                    rnBundle,
-                    mTeamsApplication);
+            if (rnBundle != null) {
+                mSdkApplicationContext = new SdkApplicationContext(mTeamsApplication.getApplication(),
+                        rnBundle,
+                        mTeamsApplication);
+            }
 
         }
         return mSdkApplicationContext;

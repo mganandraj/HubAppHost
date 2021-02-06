@@ -6,19 +6,21 @@ package com.microsoft.skype.teams.services.utilities;
 
 import android.content.Context;
 import android.content.res.Resources;
+import android.os.Build;
 import android.text.Html;
 import android.text.TextUtils;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.annotation.VisibleForTesting;
+import androidx.room.util.StringUtil;
 
+import com.microsoft.skype.teams.utilities.StringConstants;
 import com.microsoft.skype.teams.utilities.java.StringUtils;
 
-/*
 import com.google.common.collect.Ordering;
 import com.google.common.hash.Hashing;
-*/
 /*
 import com.microsoft.skype.teams.logger.ILogger;
 import com.microsoft.skype.teams.logger.LogPriority;
@@ -66,14 +68,12 @@ public final class StringUtilities {
      * @see java.util.Comparator#nullsFirst
      * when possible.
      */
-/*
-    public static final Comparator<? super String> NULL_TOLERANT_CASE_INSENSITIVE_ORDER
-            = Ordering.from(String.CASE_INSENSITIVE_ORDER).nullsFirst();
+//    public static final Comparator<? super String> NULL_TOLERANT_CASE_INSENSITIVE_ORDER
+//            = Ordering.from(String.CASE_INSENSITIVE_ORDER).nullsFirst();
 
     private static final String ALPHA_NUMERIC_STRING = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
     public static final Pattern WHITESPACE_PATTERN = Pattern.compile("\\s+");
-*/
 
     /**
      * Returns the input string with all whitespace condensed to a single space.
@@ -550,10 +550,9 @@ public final class StringUtilities {
     public static String getSystemNewLine() {
         return System.getProperty("line.separator", "\n");
     }
-/*
-    *//**
+    /**
      * Converts a map object into JSON without using a Serializer
-     *//*
+*/
     @SuppressWarnings("unchecked")
     public static String convertMapToJson(@Nullable Map<String, Object> map) {
         StringBuilder strBuilder = new StringBuilder();
@@ -591,14 +590,14 @@ public final class StringUtilities {
         return strBuilder.toString();
     }
 
-    *//**
+  /*  *
      * Convert the standard Base64 to Modified Base64 for Program identifiers
      * https://en.wikipedia.org/wiki/Base64#Program_identifiers
      * The '+' and '/' characters of standard Base64 are respectively replaced by '_' and '-'
      *
      * @param standardBase64
      * @return modifiedBase64
-     *//*
+*/
     @Nullable
     public static String convertToModifiedBase64(@Nullable final String standardBase64) {
         if (StringUtils.isNullOrEmptyOrWhitespace(standardBase64)) {
@@ -608,8 +607,9 @@ public final class StringUtilities {
         modifiedBase64 = modifiedBase64.replace("/", "-");
         return modifiedBase64;
     }
+/*
 
-    *//**
+    *
      * Check whether or not the given object type is actually a map instance of Map<String, ?> type.
      *
      * This method was originally created to be used in conjunction with the convertMapToJson method. This method is used
@@ -621,19 +621,22 @@ public final class StringUtilities {
      *
      * @param object object to be tested
      * @return true if the given object type is actually a map instance of Map<String, ?> type
-     *//*
+*/
+
     private static boolean isObjectMapWithKeyAsString(Object object) {
         return object instanceof Map                                        // basic check that the object is a map
                 && !((Map) object).isEmpty()                                 // check that the map is not empty
                 && ((Map) object).keySet().toArray()[0] instanceof String;   // verify that the the first entry in the map has a key of type String
     }
 
-    *//**
+/*
+    *
      * Encodes the URI component in UTF-8 encoding
      *
      * @param component URI component
      * @return encoded URI component or original component if encoding fails
-     *//*
+*/
+
     public static String getEncodedUriComponent(@Nullable String component) {
         if (StringUtils.isEmpty(component)) {
             return StringUtils.EMPTY_STRING;
@@ -646,10 +649,12 @@ public final class StringUtilities {
         }
     }
 
-    *//**
+/*
+    *
      * returns count of character from index where difference in character between two strings is found
      * returns
-     *//*
+*/
+
     public static int differenceCount(@Nullable String str1, @Nullable String str2) {
         if (str1 == null && str2 == null) {
             return 0;
@@ -667,10 +672,10 @@ public final class StringUtilities {
         return str2.length() - at;
     }
 
-    *//**
+/*    *
      * returns index at which difference in character between two strings is found
-     * returns -1 when both params are identical
-     *//*
+     * returns -1 when both params are identical*/
+
     private static int indexOfDifference(@Nullable CharSequence cs1, @Nullable CharSequence cs2) {
         if (cs1 == cs2) {
             return -1;
@@ -690,33 +695,42 @@ public final class StringUtilities {
         return -1;
     }
 
-    *//**
+    /**
      * @param length : length of the random string to be generated
      * @return numeric random String of provide length
-     *//*
+*/
     public static String randomNumeric(int length) {
         return generateRandomString("01234456789", length);
     }
 
-    *//**
+/*
+    *
      *
      * @param length : length of the random string to be generated
      * @return alphaNumeric random String of provide length
-     *//*
+*/
+
     public static String randomAlphaNumeric(int length) {
         return generateRandomString(ALPHA_NUMERIC_STRING, length);
     }
-
-    *//**
+/*
+    *
      * Reimplementation of jsoup's {@link StringUtil#normaliseWhitespace(String)}.
      * Modified to allow zero-width-join unicode characters (8205) as they are needed to
      * properly display compound emojis.
      * @param string String to format
-     * @return Formatted String
-     *//*
+     * @return Formatted String*/
+
+    public static boolean isActuallyWhitespace(int c){
+        return c == ' ' || c == '\t' || c == '\n' || c == '\f' || c == '\r' || c == 160;
+        // 160 is &nbsp; (non-breaking space). Not in the spec but expected.
+    }
+
+
     @NonNull
     public static String normalizeWhitespace(@NonNull String string) {
-        StringBuilder sb = StringUtil.stringBuilder();
+        // StringBuilder sb = StringUtil.stringBuilder();
+        StringBuilder sb = new StringBuilder();
         boolean lastWasWhite = false;
         int len = string.length();
         int c;
@@ -725,7 +739,8 @@ public final class StringUtilities {
             // invisible characters: zero width sp, zw non join, soft hyphen
             // zw join (8205) is okay
             boolean isInvisibleChar = Character.getType(c) == 16 && (c == 8203 || c == 8204 || c == 173);
-            if (StringUtil.isActuallyWhitespace(c)) {
+            // if (StringUtil.isActuallyWhitespace(c)) {
+            if (isActuallyWhitespace(c)) {
                 if (lastWasWhite) {
                     continue;
                 }
@@ -739,6 +754,7 @@ public final class StringUtilities {
         return sb.toString();
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     public static String calculateMd5Hash(@NonNull String source) throws NoSuchAlgorithmException {
         MessageDigest md = MessageDigest.getInstance("MD5");
         byte[] array = md.digest(source.getBytes(StandardCharsets.UTF_8));
@@ -749,9 +765,9 @@ public final class StringUtilities {
         return sb.toString();
     }
 
-    *//**
+   /* *
      * Generate a guid
-     *//*
+*/
     public static String generateGUID() {
         return UUID.randomUUID().toString();
     }
@@ -770,20 +786,20 @@ public final class StringUtilities {
         return builder.toString();
     }
 
-    *//**
+   /* *
      * Prevents a default instance of StringUtilities class from being created.
-     *//*
+*/
     private StringUtilities() {
     }
 
-    *//**
+ /*   *
      * Generate String by List
      * example:
      * ["a","b","c"] returns
      * a\nb\nc\n
      * @param list To generate string
-     * @return string
-     *//*
+     * @return string*/
+
     public static String getStringFromArray(List list) {
         if (list == null) {
             return StringUtils.EMPTY_STRING;
@@ -796,12 +812,12 @@ public final class StringUtilities {
         return failureDetailBuilder.toString();
     }
 
-    *//**
+    /**
      * Remove all Emoji chars from a string.
      *
      * @param source
      * @return a string without Emoji
-     *//*
+*/
     @Nullable
     public static String filterEmoji(@Nullable String source) {
         if (StringUtils.isNullOrEmptyOrWhitespace(source)) {
@@ -846,12 +862,13 @@ public final class StringUtilities {
         return stringBuilder.toString();
     }
 
-    *//**
+   /* *
      * The default {@link String#hashCode()} implements results in more than expected
      * collisions, particularly when strings have a common prefix. The might becomes
      * noticeable in case of URLs which do have common prefixes.
      * This is a fast implementation of hash function from guava.
-     *//*
+*/
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @NonNull
     public static String goodFastHash(@Nullable String string) {
         // noinspection UnstableApiUsage
@@ -886,5 +903,5 @@ public final class StringUtilities {
         }
         String[] names = fullName.split(WHITE_SPACE);
         return names[names.length - 1];
-    }*/
+    }
 }

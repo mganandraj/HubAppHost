@@ -15,8 +15,10 @@ import com.google.gson.JsonPrimitive;
 //import com.microsoft.skype.teams.storage.IExperimentationManager;
 //import com.microsoft.skype.teams.storage.dao.conversation.ConversationDaoHelper;
 //import com.microsoft.skype.teams.storage.tables.Conversation;
-//import com.microsoft.skype.teams.storage.models.MobileModuleDefinition;
+import com.microsoft.skype.teams.sdk.rnbundle.SdkBundleUtils;
+import com.microsoft.skype.teams.storage.models.MobileModuleDefinition;
 //import com.microsoft.skype.teams.storage.tables.Thread;
+import com.microsoft.skype.teams.storage.IExperimentationManager;
 import com.microsoft.skype.teams.utilities.java.JsonUtils;
 import com.microsoft.skype.teams.utilities.java.StringUtils;
 //import com.microsoft.teams.core.services.navigation.ITeamsNavigationService;
@@ -83,20 +85,20 @@ public final class SdkHelper {
     private SdkHelper() {
     }
 
-//    public static String getDeploymentKey(@NonNull String appId,
-//                                          @NonNull IExperimentationManager experimentationManager,
-//                                          @NonNull MobileModuleDefinition mobileModuleDefinition) {
-//        String deploymentKey = null;
-//        String deploymentKeyFromECS = experimentationManager.getReactNativeAppDeploymentKey(appId);
-//        if (deploymentKeyFromECS != null) {
-//            deploymentKey = deploymentKeyFromECS;
-//        } else {
-//            if (mobileModuleDefinition.rnPackageUrl != null) {
-//                deploymentKey = SdkBundleUtils.getDeploymentKey(mobileModuleDefinition.rnPackageUrl);
-//            }
-//        }
-//        return deploymentKey;
-//    }
+    public static String getDeploymentKey(@NonNull String appId,
+                                          @NonNull IExperimentationManager experimentationManager,
+                                          @NonNull MobileModuleDefinition mobileModuleDefinition) {
+        String deploymentKey = null;
+        String deploymentKeyFromECS = experimentationManager.getReactNativeAppDeploymentKey(appId);
+        if (deploymentKeyFromECS != null) {
+            deploymentKey = deploymentKeyFromECS;
+        } else {
+            if (mobileModuleDefinition.rnPackageUrl != null) {
+                deploymentKey = SdkBundleUtils.getDeploymentKey(mobileModuleDefinition.rnPackageUrl);
+            }
+        }
+        return deploymentKey;
+    }
 
     /**
      * Throws an error with the specified message and message parameters.

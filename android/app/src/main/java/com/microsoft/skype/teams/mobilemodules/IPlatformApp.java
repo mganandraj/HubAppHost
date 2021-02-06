@@ -10,6 +10,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.microsoft.skype.teams.sdk.ISdkRunnerAppManager;
+import com.microsoft.skype.teams.storage.dao.rnapps.RNAppsDao;
+import com.microsoft.skype.teams.storage.dao.rnbundles.RNBundlesDao;
 import com.microsoft.skype.teams.storage.tables.AppDefinition;
 import com.microsoft.teams.core.app.ITeamsApplication;
 
@@ -26,7 +28,7 @@ public interface IPlatformApp {
     @Nullable
     // IMobileModule getMobileModule();
     public IMobileModule getMobileModule(Context context, ISdkRunnerAppManager sdkRunnerAppManager,
-                                         ITeamsApplication teamsApplication);
+                                         ITeamsApplication teamsApplication, RNAppsDao rnAppsDao, RNBundlesDao rnBundlesDao);
 
     void setAppDefinition(@NonNull AppDefinition appDefinition);
 }

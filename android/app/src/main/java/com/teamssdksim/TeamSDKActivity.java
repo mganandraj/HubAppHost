@@ -27,6 +27,10 @@ public class TeamSDKActivity extends AppCompatActivity {
         ViewGroup host = (ViewGroup)findViewById(R.id.reactHost);
 
         TeamsSdkSimApplication fakeApplication = new TeamsSdkSimApplication(this, this.getApplication());
+        TeamsSdkSimAppDefinitionDao appDefinitionDao = new TeamsSdkSimAppDefinitionDao();
+
+        TeamsSdkRNAppsDao teamsSdkRNAppsDao = new TeamsSdkRNAppsDao();
+        TeamsSdkSimRNBundlesDao teamsSdkSimRNBundlesDao = new TeamsSdkSimRNBundlesDao();
 
         SdkRunnerAppManager sdkRunnerAppManager = new SdkRunnerAppManager(this, new GsonBuilder().create(), fakeApplication);
         sdkRunnerAppManager.syncRunnerApp();
@@ -39,8 +43,8 @@ public class TeamSDKActivity extends AppCompatActivity {
                 AppDefinition appDefinition= sdkRunnerAppManager.getAppDefinition();
                 MobileModuleDefinition mobileModuleDefinition = appDefinition.getMobileModuleDefinition();
 
-                PlatformApp platformApp = new PlatformApp("TeamsSdkSimAppId", mobileModuleDefinition, sdkRunnerAppManager);
-                IMobileModule mobileModule = platformApp.getMobileModule(TeamSDKActivity.this, sdkRunnerAppManager, fakeApplication);
+                PlatformApp platformApp = new PlatformApp("TeamsSdkSimAppId", mobileModuleDefinition, appDefinitionDao, sdkRunnerAppManager);
+                IMobileModule mobileModule = platformApp.getMobileModule(TeamSDKActivity.this, sdkRunnerAppManager, fakeApplication, teamsSdkRNAppsDao, teamsSdkSimRNBundlesDao);
                 SdkApplicationContext sdkApplicationContext = mobileModule.getSdkApplicationContext();
                 ReactInstanceManager instanceManager = sdkApplicationContext.getReactInstanceManager(TeamSDKActivity.this);
 
