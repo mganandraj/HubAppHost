@@ -74,23 +74,23 @@ public class ReactNativeMobileModule extends com.microsoft.skype.teams.mobilemod
 //    private final ActivityFeedExtensionFactory mActivityFeedExtensionFactory;
     private SdkApplicationContext mSdkApplicationContext;
 
-    @Inject
-    ReactNativeMobileModule(@Nullable MobileModuleDefinition mobileModuleDefinition,
-                            @NonNull Context context,
-                            @NonNull RNAppsDao rnAppsDao,
-                            @NonNull RNBundlesDao rnBundlesDao,
-                            @NonNull ISdkRunnerAppManager sdkRunnerAppManager,
-                            @NonNull ITeamsApplication teamsApplication,
-                            @NonNull AppConfiguration appConfiguration,
+//    @Inject
+    public ReactNativeMobileModule(@Nullable MobileModuleDefinition mobileModuleDefinition,
+                                   @NonNull Context context,
+                                   @NonNull RNAppsDao rnAppsDao,
+                                   @NonNull RNBundlesDao rnBundlesDao,
+                                   @NonNull ISdkRunnerAppManager sdkRunnerAppManager,
+                                   @NonNull ITeamsApplication teamsApplication,
+                                   @NonNull AppConfiguration appConfiguration,
 //                            @NonNull SdkApplicationContext.Factory sdkApplicationContextFactory,
-                            @NonNull IPreferences preferences,
-                            @NonNull ILogger logger,
-                            @NonNull ISdkBundleDownloadManager sdkBundleDownloadManager,
-                            @NonNull IExperimentationManager experimentationManager,
-                            @NonNull IScenarioManager scenarioManager
+                                   @NonNull IPreferences preferences,
+                                   @NonNull ILogger logger,
+                                   @NonNull ISdkBundleDownloadManager sdkBundleDownloadManager,
+                                   @NonNull IExperimentationManager experimentationManager,
+                                   @NonNull IScenarioManager scenarioManager
 //                            @NonNull ITeamsNavigationService teamsNavigationService,
 //                            @NonNull ActivityFeedExtensionFactory activityFeedExtensionFactory
-                            ) {
+    ) {
         super(mobileModuleDefinition, context, teamsApplication, preferences, logger);
         mAppConfiguration = appConfiguration;
         mRnAppsDao = rnAppsDao;
