@@ -8,17 +8,18 @@ import android.content.Context;
 
 //import com.microsoft.skype.teams.mobilemodules.injection.MobileModuleFactory;
 import com.microsoft.skype.teams.sdk.ISdkRunnerAppManager;
+import com.microsoft.skype.teams.sdk.rnbundle.ISdkBundleDownloadManager;
 import com.microsoft.skype.teams.sdk.utils.SdkRunnerUtils;
 //import com.microsoft.skype.teams.storage.dao.appdefinition.AppDefinitionDao;
-import com.microsoft.skype.teams.services.diagnostics.telemetryschema.ScenarioContext;
-import com.microsoft.skype.teams.storage.IExperimentationManager;
+//import com.microsoft.skype.teams.services.diagnostics.telemetryschema.ScenarioContext;
+//import com.microsoft.skype.teams.storage.IExperimentationManager;
 import com.microsoft.skype.teams.storage.dao.appdefinition.AppDefinitionDao;
 import com.microsoft.skype.teams.storage.dao.rnapps.RNAppsDao;
 import com.microsoft.skype.teams.storage.dao.rnbundles.RNBundlesDao;
 import com.microsoft.skype.teams.storage.models.MobileModuleDefinition;
 import com.microsoft.skype.teams.storage.tables.AppDefinition;
 import com.microsoft.teams.core.app.ITeamsApplication;
-import com.microsoft.teams.core.services.IScenarioManager;
+//import com.microsoft.teams.core.services.IScenarioManager;
 import com.teamssdksim.TeamsSdkSimMobileModuleFactory;
 //import com.microsoft.teams.injection.PlatformAppId;
 //import com.microsoft.teams.injection.PlatformAppScope;
@@ -32,10 +33,6 @@ import java.util.Map;
 
 import static com.microsoft.skype.teams.mobilemodules.MobileModuleConstants.MODULE_TYPE_NATIVE;
 import static com.microsoft.skype.teams.mobilemodules.MobileModuleConstants.MODULE_TYPE_REACT_NATIVE;
-
-
-//import static com.microsoft.skype.teams.mobilemodules.MobileModuleConstants.MODULE_TYPE_NATIVE;
-//import static com.microsoft.skype.teams.mobilemodules.MobileModuleConstants.MODULE_TYPE_REACT_NATIVE;
 
 /**
  * Class for platform app
@@ -78,8 +75,7 @@ public class PlatformApp implements IPlatformApp {
     }
 
     @Nullable
-    public IMobileModule getMobileModule(Context context, ISdkRunnerAppManager sdkRunnerAppManager,
-                                         ITeamsApplication teamsApplication, RNAppsDao rnAppsDao, RNBundlesDao rnBundlesDao) {
+    public IMobileModule getMobileModule() {
         if (mMobileModuleDefinition == null) {
             return null;
         }
@@ -87,13 +83,11 @@ public class PlatformApp implements IPlatformApp {
         if (mMobileModule == null) {
             if (MODULE_TYPE_REACT_NATIVE.equalsIgnoreCase(mMobileModuleDefinition.type)) {
 //                mMobileModule = mMobileModuleFactory.create(ReactNativeMobileModule.class);
-                mMobileModule = mMobileModuleFactory.create(mMobileModuleDefinition, context, sdkRunnerAppManager,
-                        teamsApplication, rnAppsDao, rnBundlesDao);
+                mMobileModule = mMobileModuleFactory.create(mMobileModuleDefinition);
 
             } else if (MODULE_TYPE_NATIVE.equalsIgnoreCase(mMobileModuleDefinition.type)) {
 //                mMobileModule = mMobileModuleFactory.create(NativeMobileModule.class);
-                mMobileModule = mMobileModuleFactory.create(mMobileModuleDefinition, context, sdkRunnerAppManager,
-                        teamsApplication, rnAppsDao, rnBundlesDao);
+                mMobileModule = mMobileModuleFactory.create(mMobileModuleDefinition);
             } else {
                 return null;
             }

@@ -1,18 +1,34 @@
 package com.teamssdksim;
 
+import android.os.Build;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 
 import com.microsoft.skype.teams.storage.dao.rnapps.RNAppsDao;
 import com.microsoft.skype.teams.storage.tables.RNApp;
+import com.microsoft.skype.teams.storage.tables.RNBundle;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.List;
 
 public class TeamsSdkRNAppsDao implements RNAppsDao {
+
+    HashMap<String, RNApp> mRNAppMap = new HashMap<>();
+
     @Override
     public RNApp fromId(String moduleId) {
-        return null;
+//        RNApp rnApp = new RNApp();
+//        rnApp.moduleId = moduleId;
+//        rnApp.tenantId = "";
+//        rnApp.bundleVersion = "0.1";
+//        rnApp.lastUpdateCheckedTimeInMillis = 0;
+//
+//        return rnApp;
+        return mRNAppMap.get(moduleId);
     }
 
     @Override
@@ -22,7 +38,7 @@ public class TeamsSdkRNAppsDao implements RNAppsDao {
 
     @Override
     public List<RNApp> getAll(String userId) {
-        return null;
+        return new ArrayList<>(mRNAppMap.values());
     }
 
     @Override
@@ -42,7 +58,7 @@ public class TeamsSdkRNAppsDao implements RNAppsDao {
 
     @Override
     public void save(@NonNull RNApp item) {
-
+        mRNAppMap.put(item.moduleId, item);
     }
 
     @Override
@@ -55,8 +71,9 @@ public class TeamsSdkRNAppsDao implements RNAppsDao {
 
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     public void update(@NonNull RNApp item) {
-
+        mRNAppMap.replace(item.moduleId, item);
     }
 }

@@ -259,7 +259,7 @@ public class AppDefinition implements IModel {
                 }
             }
         }
-        return null;
+        return mMobileModuleDefinition;
     }
 
     private static MobileModuleDefinition parseMobileModuleDefinition(String appId, JsonObject mobileModuleObject) {

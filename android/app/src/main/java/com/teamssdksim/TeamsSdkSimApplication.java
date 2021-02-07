@@ -10,12 +10,48 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.microsoft.skype.teams.logger.ILogger;
+import com.microsoft.skype.teams.services.diagnostics.telemetryschema.ScenarioContext;
 import com.microsoft.teams.core.app.ITeamsApplication;
+import com.microsoft.teams.core.services.IScenarioManager;
 
 import java.util.Map;
 import java.util.logging.Logger;
 
 public class TeamsSdkSimApplication implements ITeamsApplication {
+
+    class ScenarioManager implements IScenarioManager {
+
+        @Override
+        public ScenarioContext startScenario(String scenarioName, @Nullable String instrumentationSource, @Nullable Map<String, Object> databag, String... tags) {
+            return null;
+        }
+
+        @NonNull
+        @Override
+        public ScenarioContext startScenario(String scenarioName, String... tags) {
+            return null;
+        }
+
+        @Override
+        public ScenarioContext startScenario(String scenarioName, @NonNull ScenarioContext parentScenarioContext, String... tags) {
+            return null;
+        }
+
+        @Override
+        public ScenarioContext getScenario(@Nullable String stepId) {
+            return null;
+        }
+
+        @Override
+        public void endScenarioOnError(@Nullable ScenarioContext scenarioContext, @NonNull String scenarioStatusCode, @NonNull String scenarioStatusReason, String... tags) {
+
+        }
+
+        @Override
+        public void endScenarioOnSuccess(@Nullable ScenarioContext scenarioContext, String... tags) {
+
+        }
+    }
 
     class TeamsSdkSimLogger implements ILogger {
 
@@ -149,6 +185,12 @@ public class TeamsSdkSimApplication implements ITeamsApplication {
     @Override
     public int getMsalEnterpriseConfigId() {
         return 0;
+    }
+
+    @NonNull
+    @Override
+    public IScenarioManager getScenarioManager(@Nullable String userObjectId) {
+        return new ScenarioManager();
     }
 
     @Nullable

@@ -197,7 +197,7 @@ public final class SdkBundleDownloadManager implements ISdkBundleDownloadManager
                     } else {
                         onBundleDownloadStatusUpdated(requestId, BUNDLE_ALREADY_EXISTS);
                     }
-                    // insertOrUpdateInRNAppTable(appId, sdkAppManifest, request.getRnAppsDao());
+                    insertOrUpdateInRNAppTable(appId, sdkAppManifest, request.getRnAppsDao());
                 } catch (Exception e) {
                     // Update SdkBundleDownloadRequest: ERROR_MANIFEST_PARSING_FAILED
                     onBundleDownloadStatusUpdated(requestId, ERROR_MANIFEST_PARSING_FAILED);

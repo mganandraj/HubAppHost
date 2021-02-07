@@ -840,7 +840,7 @@ public interface IExperimentationManager {
 //
 //    String getCaptivePortalCheckUrl();
 //
-//    String[] getListOfRNAppForPreInit();
+    String[] getListOfRNAppForPreInit();
 //
 //    boolean isMeetingStartNotificationsEnabled();
 //
@@ -1394,9 +1394,9 @@ public interface IExperimentationManager {
 //
 //    boolean isFallbackLoaderInReactNativeEnabled();
 //
-//    int getRetryCountForCodepushBundleDownload();
-//
-//    int getCodePushUpdateCheckBackoffTimeInMinutes();
+    int getRetryCountForCodepushBundleDownload();
+
+    int getCodePushUpdateCheckBackoffTimeInMinutes();
 //
 //    boolean isPreFetchResourceTokenInReactNativeEnabled();
 //

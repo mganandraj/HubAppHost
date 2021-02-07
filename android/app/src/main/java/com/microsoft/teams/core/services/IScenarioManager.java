@@ -34,8 +34,8 @@ public interface IScenarioManager {
 //
 //    ScenarioContext startMessageScenario(/*@ScenarioName*/ String scenarioName, @Nullable String correlationId, boolean isContact, String... tags);
 //
-//    @NonNull
-//    ScenarioContext startScenario(/*@ScenarioName*/ String scenarioName, String... tags);
+    @NonNull
+    ScenarioContext startScenario(/*@ScenarioName*/ String scenarioName, String... tags);
 //
 //    @NonNull
 //    ScenarioContext startScenario(/*@ScenarioName*/ String scenarioName, boolean polluteCustomerLogs, String... tags);
@@ -48,16 +48,16 @@ public interface IScenarioManager {
 //
 //    ScenarioContext startScenario(@Nullable Map<String, Object> databag,
 //                                  Supplier<ScenarioContext> scenarioContextSupplier);
-//
-//    /**
-//     * Start a scenario with reference to a parent scenario
-//     *
-//     * @param scenarioName the name of the scenario to start
-//     * @param parentScenarioContext the context of the parent scenario
-//     * @param tags additional context surrounding the scenario
-//     * @return the Id of the scenario that has started
-//     */
-//    ScenarioContext startScenario(/*@ScenarioName*/ String scenarioName, @NonNull ScenarioContext parentScenarioContext, String... tags);
+
+    /**
+     * Start a scenario with reference to a parent scenario
+     *
+     * @param scenarioName the name of the scenario to start
+     * @param parentScenarioContext the context of the parent scenario
+     * @param tags additional context surrounding the scenario
+     * @return the Id of the scenario that has started
+     */
+    ScenarioContext startScenario(/*@ScenarioName*/ String scenarioName, @NonNull ScenarioContext parentScenarioContext, String... tags);
 //
 //    ScenarioContext startScenario(/*@ScenarioName*/ String scenarioName, @NonNull ScenarioContext parentScenarioContext, boolean polluteCustomerLogs, String... tags);
 //
@@ -111,7 +111,7 @@ public interface IScenarioManager {
 //                                             @NonNull String scenarioStatusReason,
 //                                             String... tags);
 //
-//    ScenarioContext getScenario(@Nullable String stepId);
+    ScenarioContext getScenario(@Nullable String stepId);
 //
 //    /**
 //     * Ends a scenario, and all parent scenarios, with an error.

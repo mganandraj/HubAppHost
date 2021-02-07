@@ -8,20 +8,46 @@ import androidx.annotation.Nullable;
 import com.microsoft.skype.teams.mobilemodules.BaseMobileModule;
 import com.microsoft.skype.teams.mobilemodules.ReactNativeMobileModule;
 import com.microsoft.skype.teams.sdk.ISdkRunnerAppManager;
+import com.microsoft.skype.teams.sdk.rnbundle.ISdkBundleDownloadManager;
+import com.microsoft.skype.teams.services.configuration.AppConfiguration;
 import com.microsoft.skype.teams.services.diagnostics.telemetryschema.ScenarioContext;
 import com.microsoft.skype.teams.storage.IExperimentationManager;
 import com.microsoft.skype.teams.storage.dao.rnapps.RNAppsDao;
 import com.microsoft.skype.teams.storage.dao.rnbundles.RNBundlesDao;
 import com.microsoft.skype.teams.storage.models.MobileModuleDefinition;
 import com.microsoft.teams.core.app.ITeamsApplication;
+import com.microsoft.teams.core.preferences.IPreferences;
 import com.microsoft.teams.core.services.IScenarioManager;
 
 import java.util.Map;
 
 public class TeamsSdkSimMobileModuleFactory {
-    public BaseMobileModule create(MobileModuleDefinition mobileModuleDefinition, Context context, ISdkRunnerAppManager sdkRunnerAppManager,
-                                   ITeamsApplication teamsApplication, RNAppsDao rnAppsDao, RNBundlesDao rnBundlesDao) {
-        return new ReactNativeMobileModule(mobileModuleDefinition, context, rnAppsDao, rnBundlesDao, sdkRunnerAppManager, teamsApplication, null, null, teamsApplication.getLogger(""), null
+
+    Context mContext;
+    ISdkRunnerAppManager mSdkRunnerAppManager;
+    ITeamsApplication mTeamsApplication;
+    ISdkBundleDownloadManager mSdkBundleDownloadManager;
+    RNAppsDao mRNAppsDao;
+    RNBundlesDao mRNBundlesDao;
+    AppConfiguration mAppConfiguration;
+    IPreferences mPreferences;
+
+    TeamsSdkSimMobileModuleFactory(Context context, ISdkRunnerAppManager sdkRunnerAppManager,
+                                   ITeamsApplication teamsApplication, ISdkBundleDownloadManager sdkBundleDownloadManager, RNAppsDao rnAppsDao, RNBundlesDao rnBundlesDao, AppConfiguration appConfiguration,
+                                   IPreferences preferences) {
+        mContext = context;
+        mSdkRunnerAppManager = sdkRunnerAppManager ;
+        mTeamsApplication = teamsApplication;
+        mSdkBundleDownloadManager = sdkBundleDownloadManager;
+        mRNAppsDao = rnAppsDao;
+        mRNBundlesDao = rnBundlesDao;
+
+        mAppConfiguration = appConfiguration;
+        mPreferences = preferences;
+    }
+
+    public BaseMobileModule create(MobileModuleDefinition mobileModuleDefinition) {
+        return new ReactNativeMobileModule(mobileModuleDefinition, mContext, mRNAppsDao, mRNBundlesDao, mSdkRunnerAppManager, mTeamsApplication, mAppConfiguration, mPreferences, mTeamsApplication.getLogger(""), mSdkBundleDownloadManager
                 , new IExperimentationManager() {
             @Nullable
             @Override
@@ -38,6 +64,21 @@ public class TeamsSdkSimMobileModuleFactory {
             @Override
             public String getRingInfo() {
                 return null;
+            }
+
+            @Override
+            public String[] getListOfRNAppForPreInit() {
+                return new String[0];
+            }
+
+            @Override
+            public int getRetryCountForCodepushBundleDownload() {
+                return 0;
+            }
+
+            @Override
+            public int getCodePushUpdateCheckBackoffTimeInMinutes() {
+                return 0;
             }
 
             @Override
@@ -63,6 +104,22 @@ public class TeamsSdkSimMobileModuleFactory {
 
             @Override
             public ScenarioContext startScenario(String scenarioName, @Nullable String instrumentationSource, @Nullable Map<String, Object> databag, String... tags) {
+                return null;
+            }
+
+            @NonNull
+            @Override
+            public ScenarioContext startScenario(String scenarioName, String... tags) {
+                return null;
+            }
+
+            @Override
+            public ScenarioContext startScenario(String scenarioName, @NonNull ScenarioContext parentScenarioContext, String... tags) {
+                return null;
+            }
+
+            @Override
+            public ScenarioContext getScenario(@Nullable String stepId) {
                 return null;
             }
 

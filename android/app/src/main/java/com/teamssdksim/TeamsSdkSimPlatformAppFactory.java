@@ -29,7 +29,7 @@ public class TeamsSdkSimPlatformAppFactory {
                         @NonNull TeamsSdkSimMobileModuleFactory mobileModuleFactory,
                         @NonNull ISdkRunnerAppManager sdkRunnerAppManager) {
 
-        return new PlatformApp("TeamsSdkSimAppId", mobileModuleDefinition, appDefinitionDao, mobileModuleFactory, sdkRunnerAppManager);
+        return new PlatformApp(appId, mobileModuleDefinition, appDefinitionDao, mobileModuleFactory, sdkRunnerAppManager);
     }
 
     public TeamsSdkSimMobileModuleFactory getMobileModuleFactory() {

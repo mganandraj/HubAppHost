@@ -14,6 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.microsoft.skype.teams.logger.ILogger;
+import com.microsoft.teams.core.services.IScenarioManager;
 /*
 import com.microsoft.skype.teams.services.diagnostics.IUserBITelemetryManager;
 import com.microsoft.skype.teams.storage.IExperimentationManager;
@@ -172,10 +173,10 @@ public interface ITeamsApplication {
      * @param userObjectId specifies the specific user to obtain an {@link IScenarioManager} for.
      * @return an {@link IScenarioManager} instance.
      */
-/*
+
     @NonNull
     IScenarioManager getScenarioManager(@Nullable String userObjectId);
-*/
+
 
     /**
      * Gets the an instance of {@link IUserBITelemetryManager}. If the specified userObjectId is not null,
