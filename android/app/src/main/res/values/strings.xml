@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">TeamsSdkSim</string>
+    <string name="CODE_PUSH_APK_BUILD_TIME">0</string>
 </resources>

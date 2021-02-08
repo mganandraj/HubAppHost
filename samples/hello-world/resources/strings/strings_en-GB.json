@@ -1,0 +1,6 @@
+{
+  "app_name": "Hello World!",
+  "_app_name.comment": "App name",
+  "hello_world_view_title": "Home",
+  "_hello_world_view_title.comment": "Display title for home view."
+}

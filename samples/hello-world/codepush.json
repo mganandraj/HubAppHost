@@ -1,0 +1,9 @@
+{
+  "accessToken": "e8ee6a4506059ef58c0bedce28a182d0e19db8b4",
+  "appName": "anandrag-6x40/0b04a6cf-e696-4eb0-bac2-aaf883c9add5",
+  "deployment": "Staging",
+  "description": "",
+  "additionalArgs": [
+    "--debug"
+  ]
+}

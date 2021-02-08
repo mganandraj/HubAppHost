@@ -31,10 +31,12 @@ public class TeamsSdkSimMobileModuleFactory {
     RNBundlesDao mRNBundlesDao;
     AppConfiguration mAppConfiguration;
     IPreferences mPreferences;
+    IScenarioManager mScenarioManager;
+    IExperimentationManager mExperimentationManager;
 
     TeamsSdkSimMobileModuleFactory(Context context, ISdkRunnerAppManager sdkRunnerAppManager,
                                    ITeamsApplication teamsApplication, ISdkBundleDownloadManager sdkBundleDownloadManager, RNAppsDao rnAppsDao, RNBundlesDao rnBundlesDao, AppConfiguration appConfiguration,
-                                   IPreferences preferences) {
+                                   IPreferences preferences, IScenarioManager scenarioManager, IExperimentationManager experimentationManager) {
         mContext = context;
         mSdkRunnerAppManager = sdkRunnerAppManager ;
         mTeamsApplication = teamsApplication;
@@ -44,94 +46,13 @@ public class TeamsSdkSimMobileModuleFactory {
 
         mAppConfiguration = appConfiguration;
         mPreferences = preferences;
+
+        mScenarioManager = scenarioManager;
+        mExperimentationManager = experimentationManager;
     }
 
     public BaseMobileModule create(MobileModuleDefinition mobileModuleDefinition) {
         return new ReactNativeMobileModule(mobileModuleDefinition, mContext, mRNAppsDao, mRNBundlesDao, mSdkRunnerAppManager, mTeamsApplication, mAppConfiguration, mPreferences, mTeamsApplication.getLogger(""), mSdkBundleDownloadManager
-                , new IExperimentationManager() {
-            @Nullable
-            @Override
-            public String[] getEcsSettingAsStringArray(@NonNull String teamName, @NonNull String experimentName, @Nullable String[] defaultValue) {
-                return new String[0];
-            }
-
-            @Nullable
-            @Override
-            public String[] getEcsSettingAsStringArray(String configName, String[] defaultValue) {
-                return new String[0];
-            }
-
-            @Override
-            public String getRingInfo() {
-                return null;
-            }
-
-            @Override
-            public String[] getListOfRNAppForPreInit() {
-                return new String[0];
-            }
-
-            @Override
-            public int getRetryCountForCodepushBundleDownload() {
-                return 0;
-            }
-
-            @Override
-            public int getCodePushUpdateCheckBackoffTimeInMinutes() {
-                return 0;
-            }
-
-            @Override
-            public boolean isStepTelemetryEnabled() {
-                return false;
-            }
-
-            @Override
-            public String getReactNativeAppDeploymentKey(@NonNull String appId) {
-                return null;
-            }
-
-            @Override
-            public boolean shouldLogExperimentIds() {
-                return false;
-            }
-
-            @Override
-            public String getAppInfoExperimentationIds() {
-                return null;
-            }
-        }, new IScenarioManager(){
-
-            @Override
-            public ScenarioContext startScenario(String scenarioName, @Nullable String instrumentationSource, @Nullable Map<String, Object> databag, String... tags) {
-                return null;
-            }
-
-            @NonNull
-            @Override
-            public ScenarioContext startScenario(String scenarioName, String... tags) {
-                return null;
-            }
-
-            @Override
-            public ScenarioContext startScenario(String scenarioName, @NonNull ScenarioContext parentScenarioContext, String... tags) {
-                return null;
-            }
-
-            @Override
-            public ScenarioContext getScenario(@Nullable String stepId) {
-                return null;
-            }
-
-            @Override
-            public void endScenarioOnError(@Nullable ScenarioContext scenarioContext, @NonNull String scenarioStatusCode, @NonNull String scenarioStatusReason, String... tags) {
-
-            }
-
-            @Override
-            public void endScenarioOnSuccess(@Nullable ScenarioContext scenarioContext, String... tags) {
-
-            }
-        });
+                , mExperimentationManager, mScenarioManager);
     }
 }

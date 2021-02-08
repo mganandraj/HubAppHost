@@ -25,6 +25,7 @@ import com.facebook.react.shell.MainPackageConfig;
 import com.google.gson.Gson;
 // import com.horcrux.svg.SvgPackage;
 // import com.microsoft.appcenter.crashes.Crashes;
+import com.microsoft.appcenter.crashes.Crashes;
 import com.microsoft.skype.teams.app.AppStateProvider;
 import com.microsoft.skype.teams.data.ThemeColorData;
 // import com.microsoft.skype.teams.files.common.IFileTraits;
@@ -379,9 +380,9 @@ public class SdkApplicationContext {
                                                       .setJSMainModulePath("index.android")
                                                       .setInitialLifecycleState(LifecycleState.RESUMED);
 
-        //if (SdkRunnerUtils.isRunnerMode() && SdkRunnerUtils.isRunnerApp(mAppId)) {
+        if (SdkRunnerUtils.isRunnerMode() && SdkRunnerUtils.isRunnerApp(mAppId)) {
             builder.setUseDeveloperSupport(true);
-        /*} else {
+        } else {
             if (mTeamsApplication.getExperimentationManager(null).isFallbackLoaderInReactNativeEnabled()) {
                 ArrayList<JSBundleLoader> loaders = new ArrayList<>();
                 loaders.add(JSBundleLoader.createFileLoader(appJsBundleFile.getAbsolutePath()));
@@ -408,9 +409,9 @@ public class SdkApplicationContext {
                     Crashes.trackError(wrappedException);
 
                     Activity currentActivity = AppStateProvider.getCurrentActivity();
-                    if (currentActivity != null && !(currentActivity instanceof MainActivity)) {
+                    /*if (currentActivity != null && !(currentActivity instanceof MainActivity)) {
                         currentActivity.finish();
-                    } else {
+                    } else*/ {
                         // By default in production the app crashes
                         // TODO: we can show user a prompt about the RN module crash and then crash the teams app otherwise.
                         super.handleException(wrappedException);
@@ -418,7 +419,7 @@ public class SdkApplicationContext {
 
                 }
             });
-        }*/
+        }
 
         // Build react instance manager
         final ReactInstanceManager reactInstanceManager = builder.build();

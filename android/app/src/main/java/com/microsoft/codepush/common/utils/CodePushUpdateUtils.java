@@ -187,6 +187,7 @@ public class CodePushUpdateUtils {
      * @return hash value.
      */
     public String getHashForBinaryContents(Context context, boolean isDebugMode) throws CodePushMalformedDataException {
+        // return "c346b5b37624a1584a3705fbf2159f1c38dbdae646def1f92ec3cc8cd17dc3d3";
         try {
             return mCodePushUtils.getStringFromInputStream(context.getAssets().open(CodePushConstants.CODE_PUSH_HASH_FILE_NAME));
         } catch (IOException e) {

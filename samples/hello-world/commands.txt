@@ -1,0 +1,37 @@
+To Create sample app using teams-cli
+
+npm config set registry https://domoreexp.pkgs.visualstudio.com/_packaging/teams-mobile-platform/npm/registry/
+(Note: To reset the registry, run "npm config set registry https://registry.npmjs.org/)"
+(Note: You may need to run vsts-npm-auth or better-vsts-npm-auth dependending on the dev platform)
+
+npm i -g create-teams-rn-app
+create-teams-rn-app hello-world
+(In the prompt, choose "0.7.5" as teams-mobile-sdk version, to match with the latest native platform code in Teams)
+
+Install AppCenter CLI
+npm i -g appcenter-cli
+
+To create Codepush endpoint
+appcenter apps create -o Android -d 0b04a6cf-e696-4eb0-bac2-aaf883c9add5 -p React-Native
+(Note: CodePush app name should match the App ID in appDefinition.json)
+
+To push a new version of application
+
+appcenter login
+Copy access token into codepush.json
+
+yarn tsc
+yarn publish-app
+
+
+To run the app as SdkRunner
+
+Start teams dev server which serves appDefinition and manifest/resources
+yarn run-dev 
+
+Start RN dev server which serves JS bundle
+yarn start-rn
+
+yarn watch
+
+In hosting code, make appId as "runner-*"

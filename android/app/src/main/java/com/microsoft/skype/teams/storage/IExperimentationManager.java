@@ -1392,8 +1392,8 @@ public interface IExperimentationManager {
 //
 //    boolean isPSTNBlockEnabled();
 //
-//    boolean isFallbackLoaderInReactNativeEnabled();
-//
+    boolean isFallbackLoaderInReactNativeEnabled();
+
     int getRetryCountForCodepushBundleDownload();
 
     int getCodePushUpdateCheckBackoffTimeInMinutes();

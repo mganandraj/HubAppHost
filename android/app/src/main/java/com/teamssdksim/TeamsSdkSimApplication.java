@@ -10,121 +10,38 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.microsoft.skype.teams.logger.ILogger;
-import com.microsoft.skype.teams.services.diagnostics.telemetryschema.ScenarioContext;
+import com.microsoft.skype.teams.logger.ITelemetryLogger;
+import com.microsoft.skype.teams.storage.IExperimentationManager;
 import com.microsoft.teams.core.app.ITeamsApplication;
+import com.microsoft.teams.core.preferences.IPreferences;
 import com.microsoft.teams.core.services.IScenarioManager;
 
 import java.util.Map;
-import java.util.logging.Logger;
 
 public class TeamsSdkSimApplication implements ITeamsApplication {
-
-    class ScenarioManager implements IScenarioManager {
-
-        @Override
-        public ScenarioContext startScenario(String scenarioName, @Nullable String instrumentationSource, @Nullable Map<String, Object> databag, String... tags) {
-            return null;
-        }
-
-        @NonNull
-        @Override
-        public ScenarioContext startScenario(String scenarioName, String... tags) {
-            return null;
-        }
-
-        @Override
-        public ScenarioContext startScenario(String scenarioName, @NonNull ScenarioContext parentScenarioContext, String... tags) {
-            return null;
-        }
-
-        @Override
-        public ScenarioContext getScenario(@Nullable String stepId) {
-            return null;
-        }
-
-        @Override
-        public void endScenarioOnError(@Nullable ScenarioContext scenarioContext, @NonNull String scenarioStatusCode, @NonNull String scenarioStatusReason, String... tags) {
-
-        }
-
-        @Override
-        public void endScenarioOnSuccess(@Nullable ScenarioContext scenarioContext, String... tags) {
-
-        }
-    }
-
-    class TeamsSdkSimLogger implements ILogger {
-
-        @Override
-        public boolean isLogTransmissionEnabled() {
-            return true;
-        }
-
-        @Override
-        public int getMinimumLogPriority() {
-            return 0;
-        }
-
-        @Override
-        public void setMinimumLogPriority(int logPriority) {
-
-        }
-
-        @Override
-        public void enableFileLogging(boolean enabled) {
-
-        }
-
-        @Override
-        public void log(int priority, String tag, String format, Object... args) {
-            Log.e(tag, String.format(format, args));
-        }
-
-        @Override
-        public void log(int priority, String tag, Throwable t) {
-            Log.e(tag, t.toString());
-        }
-
-        @Override
-        public void log(int priority, String tag, Throwable t, String format, Object... args) {
-            Log.e(tag, String.format(format, args) + " || " + t.toString());
-        }
-
-        @Override
-        public void log(int priority, String tag, Throwable t, boolean skipCustomerDataScan, String format, Object... args) {
-            Log.e(tag, String.format(format, args) + " || " + t.toString());
-        }
-
-        @Override
-        public void logAdal(Map<String, String> adalAuthEvent) {
-
-        }
-
-        @Override
-        public void logCrash(Map<String, String> crashEvent) {
-            Log.e("CRASHH", crashEvent.toString());
-        }
-
-        @Override
-        public void pauseTransmission() {
-
-        }
-
-        @Override
-        public void resumeTransmission() {
-
-        }
-    }
 
     // Very hacky .. Trying to get the code running mode !!
     Activity mActivity;
     Application mApplication;
+    IExperimentationManager mExperimentationManager;
+    ITelemetryLogger mTelemetryLogger;
+    IPreferences mPreferences;
+    ILogger mLogger;
+    IScenarioManager mScenarioManager;
 
-    TeamsSdkSimLogger logger = new TeamsSdkSimLogger();
-
-    TeamsSdkSimApplication (Activity activity, Application application) {
+    TeamsSdkSimApplication (Activity activity, Application application,
+                            IExperimentationManager experimentationManager,
+                            IScenarioManager scenarioManager,
+                            ILogger logger,
+                            ITelemetryLogger telemetryLogger,
+                            IPreferences preferences) {
         mActivity = activity;
         mApplication = application;
+        mExperimentationManager = experimentationManager;
+        mTelemetryLogger = telemetryLogger;
+        mPreferences = preferences;
+        mScenarioManager = scenarioManager;
+        mLogger = logger;
     }
 
     @Nullable
@@ -171,8 +88,14 @@ public class TeamsSdkSimApplication implements ITeamsApplication {
 
     @NonNull
     @Override
+    public IExperimentationManager getExperimentationManager(@Nullable String userObjectId) {
+        return mExperimentationManager;
+    }
+
+    @NonNull
+    @Override
     public ILogger getLogger(@Nullable String userObjectId) {
-        return logger;
+        return mLogger;
     }
 
     @Nullable
@@ -190,7 +113,7 @@ public class TeamsSdkSimApplication implements ITeamsApplication {
     @NonNull
     @Override
     public IScenarioManager getScenarioManager(@Nullable String userObjectId) {
-        return new ScenarioManager();
+        return mScenarioManager;
     }
 
     @Nullable

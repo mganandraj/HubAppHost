@@ -14,15 +14,14 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.microsoft.skype.teams.logger.ILogger;
+import com.microsoft.skype.teams.storage.IExperimentationManager;
 import com.microsoft.teams.core.services.IScenarioManager;
 /*
 import com.microsoft.skype.teams.services.diagnostics.IUserBITelemetryManager;
-import com.microsoft.skype.teams.storage.IExperimentationManager;
 import com.microsoft.skype.teams.utilities.BaseDebugUtilities;
 import com.microsoft.teams.core.diagnostics.IAppStartScenario;
 import com.microsoft.teams.core.injection.AppDataFactory;
 import com.microsoft.teams.core.injection.UserDataFactory;
-import com.microsoft.teams.core.services.IScenarioManager;
 import com.microsoft.teams.core.services.configuration.IUserConfiguration;
 */
 
@@ -139,10 +138,10 @@ public interface ITeamsApplication {
      * @param userObjectId specifies the specific user to obtain an {@link IExperimentationManager} for.
      * @return an {@link IExperimentationManager} instance.
      */
-/*
+
     @NonNull
     IExperimentationManager getExperimentationManager(@Nullable String userObjectId);
-*/
+
 
     /**
      * Gets the an instance of {@link ILogger}. If the specified userObjectId is not null,

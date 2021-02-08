@@ -33,6 +33,7 @@ import com.microsoft.skype.teams.sdk.rnbundle.SdkBundleManager;
 import com.microsoft.skype.teams.sdk.rnbundle.SdkCodepushBundleDownloader;
 import com.microsoft.skype.teams.sdk.rnbundle.SdkLocalBundleDownloader;
 import com.microsoft.skype.teams.services.configuration.AppConfiguration;
+import com.microsoft.skype.teams.storage.IExperimentationManager;
 import com.microsoft.skype.teams.storage.dao.appdefinition.AppDefinitionDao;
 import com.microsoft.skype.teams.storage.dao.rnbundles.RNBundlesDao;
 import com.microsoft.skype.teams.storage.models.MobileModuleDefinition;
@@ -51,7 +52,17 @@ public class TeamSDKActivity extends AppCompatActivity {
 
         ViewGroup host = (ViewGroup)findViewById(R.id.reactHost);
 
-        TeamsSdkSimApplication fakeApplication = new TeamsSdkSimApplication(this, this.getApplication());
+        TeamsSdkSimExperimentationManager teamsSdkSimExperimentationManager = new TeamsSdkSimExperimentationManager();
+        TeamsSdkSimTelemetryLogger teamsSdkSimTelemetryLogger = new TeamsSdkSimTelemetryLogger();
+        TeamsSdkSimLogger teamsSdkSimLogger = new TeamsSdkSimLogger();
+        AppConfiguration appConfiguration = new TeamsSdkSimAppConfiguration();
+        Preferences preferences = new Preferences();
+        TeamsSdkSimScenarioManager teamsSdkSimScenarioManager = new TeamsSdkSimScenarioManager(teamsSdkSimExperimentationManager,
+                teamsSdkSimTelemetryLogger,
+                teamsSdkSimLogger,
+                preferences);
+
+        TeamsSdkSimApplication fakeApplication = new TeamsSdkSimApplication(this, this.getApplication(), teamsSdkSimExperimentationManager,  teamsSdkSimScenarioManager, teamsSdkSimLogger,teamsSdkSimTelemetryLogger,  preferences);
 
         SdkRunnerAppManager sdkRunnerAppManager = new SdkRunnerAppManager(this, new GsonBuilder().create(), fakeApplication);
         sdkRunnerAppManager.syncRunnerApp();
@@ -61,9 +72,6 @@ public class TeamSDKActivity extends AppCompatActivity {
         TeamsSdkRNAppsDao teamsSdkRNAppsDao = new TeamsSdkRNAppsDao();
         TeamsSdkSimRNBundlesDao teamsSdkSimRNBundlesDao = new TeamsSdkSimRNBundlesDao();
 
-        TeamsSdkSimExperimentationManager teamsSdkSimExperimentationManager = new TeamsSdkSimExperimentationManager();
-        AppConfiguration appConfiguration = new TeamsSdkSimAppConfiguration();
-        Preferences preferences = new Preferences();
 
         SdkBundleManager sdkBundleManager = new SdkBundleManager(fakeApplication, teamsSdkSimRNBundlesDao);
 
@@ -77,7 +85,7 @@ public class TeamSDKActivity extends AppCompatActivity {
                 fakeApplication
         );
 
-        TeamsSdkSimMobileModuleFactory teamsSdkSimMobileModuleFactory = new TeamsSdkSimMobileModuleFactory(TeamSDKActivity.this, sdkRunnerAppManager, fakeApplication, sdkBundleDownloadManager, teamsSdkRNAppsDao, teamsSdkSimRNBundlesDao, appConfiguration, preferences);
+        TeamsSdkSimMobileModuleFactory teamsSdkSimMobileModuleFactory = new TeamsSdkSimMobileModuleFactory(TeamSDKActivity.this, sdkRunnerAppManager, fakeApplication, sdkBundleDownloadManager, teamsSdkRNAppsDao, teamsSdkSimRNBundlesDao, appConfiguration, preferences, teamsSdkSimScenarioManager, teamsSdkSimExperimentationManager);
         TeamsSdkSimPlatformAppFactory teamsSdkSimPlatformAppFactory = new TeamsSdkSimPlatformAppFactory(appDefinitionDao,
                 teamsSdkSimMobileModuleFactory,
                 sdkRunnerAppManager);

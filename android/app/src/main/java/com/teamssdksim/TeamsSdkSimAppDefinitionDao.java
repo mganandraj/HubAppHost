@@ -45,7 +45,7 @@ public class TeamsSdkSimAppDefinitionDao implements AppDefinitionDao {
                 "    \"mobileModules\": [\n" +
                 "        {\n" +
                 "            \"type\": \"reactNative\",\n" +
-                "            \"rnPackageUrl\": \"codepush://teams-mobile-sdk-example/?deploymentKey=_uVIKMilIBiQTiFhfURMqHy4G7S3ryjiyjgWE\"\n" +
+                "            \"rnPackageUrl\": \"codepush://anandrag-6x40/TeamsHelloWorld/?deploymentKey=51sn_RABfAd_st3RxXoeXi9csqW-m9s0pQ4Hm\"\n" +
                 "        }\n" +
                 "    ],\n" +
                 "    \"id\": \"0b04a6cf-e696-4eb0-bac2-aaf883c9add5\",\n" +

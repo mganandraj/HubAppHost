@@ -1,0 +1,37 @@
+{
+  "name": "hello-world",
+  "version": "1.0.0",
+  "description": "Testing Office Interop",
+  "main": "index.js",
+  "author": "Microsoft Corporation",
+  "license": "ISC",
+  "scripts": {
+    "clean": "rimraf ./build",
+    "clean-sdk-cache": "rimraf ./.sdk_cache",
+    "package-app": "package-app",
+    "build": "yarn clean && build-resources && tsc && if [ -d 'node_modules/teams-mobile-sdk/node_modules/react' ]; then rm -R node_modules/teams-mobile-sdk/node_modules/react; fi",
+    "sdk-config": "sdk-config",
+    "install-teams": "install-teams",
+    "start-rn": "node ./node_modules/react-native/local-cli/cli.js start",
+    "start-android": "adb -s emulator-5556 reverse tcp:3333 tcp:3333 && adb -s emulator-5556 reverse tcp:8081 tcp:8081 && adb -s emulator-5556  shell am start -n \"com.microsoft.skype.teams.alpha/com.microsoft.skype.teams.Launcher\" -a android.intent.action.MAIN -c android.intent.category.LAUNCHER --esn \"sdkRunner\"",
+    "start-ios-sim": "xcrun simctl launch booted com.microsoft.dmx.teamspace SDK_RUNNER $(ifconfig en0 | awk '/inet.[0-9]/{print $2}') 3333",
+    "start-ios-device": "idevicedebug run com.microsoft.dmx.teamspace SDK_RUNNER \"$(ifconfig en0 | awk '/inet.[0-9]/{print $2}')\" 3333",
+    "android": "concurrently \"yarn watch\" \"yarn run-dev\" \"yarn start-rn\" \"yarn start-android\"",
+    "ios-sim": "concurrently \"yarn watch\" \"yarn run-dev\" \"yarn start-rn\" \"yarn start-ios-sim\"",
+    "ios-device": "concurrently \"yarn watch\" \"yarn run-dev\" \"yarn start-rn\" \"yarn start-ios-device\"",
+    "publish-app": "publish-app --config codepush.json",
+    "watch": "tsc --watch"
+  },
+  "dependencies": {
+    "react": "16.13.0",
+    "react-native": "0.62.2",
+    "teams-mobile-sdk": "0.7.5"
+  },
+  "devDependencies": {
+    "@types/react": "16.9.13",
+    "@types/react-native": "0.60.23",
+    "concurrently": "^3.6.0",
+    "rimraf": "^2.6.2",
+    "typescript": "3.1"
+  }
+}

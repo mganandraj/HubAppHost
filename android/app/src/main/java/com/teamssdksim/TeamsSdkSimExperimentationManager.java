@@ -29,6 +29,11 @@ public class TeamsSdkSimExperimentationManager implements IExperimentationManage
     }
 
     @Override
+    public boolean isFallbackLoaderInReactNativeEnabled() {
+        return false;
+    }
+
+    @Override
     public int getRetryCountForCodepushBundleDownload() {
         return 0;
     }

@@ -1,0 +1,24 @@
+com.microsoft.codepush.common.exceptions.CodePushNativeApiCallException: 
+com.microsoft.codepush.common.exceptions.CodePushQueryUpdateException: Error occurred during querying the update. Package hash is 
+
+c346b5b37624a1584a3705fbf2159f1c38dbdae646def1f92ec3cc8cd17dc3d3
+
+
+rnBundle = {RNBundle@5652} 
+ appId = "0b04a6cf-e696-4eb0-bac2-aaf883c9add5"
+ bundleLocation = "/data/user/0/com.teamssdksim/files/rnbundle/0b04a6cf-e696-4eb0-bac2-aaf883c9add5/1.0.0"
+ bundleSource = "codepush"
+ bundleVersion = "1.0.0"
+ manifest = "{"authDomains":[],"minReactNativeSdkVersion":"0.7.1","moduleType":"uiModule","targetNativeSdkVersion":0,"targetReactNativeSdkVersion":"0.7.1","version":"1.0.0","views":{"home":{"componentName":"HomeComponent","name":"home","title":{"id":"hello_world_view_title","type":"STRING"}}}}"
+ packageHashList = "71ded207fdd2fbb615426f9eb1e3309b4115ac1122ead24c02b9f71bf6b2615f"
+ shadow$_klass_ = {Class@5637} "class com.microsoft.skype.teams.storage.tables.RNBundle"
+ shadow$_monitor_ = -2130214937
+
+
+ item = {RNApp@5750} 
+ bundleVersion = "1.0.0"
+ lastUpdateCheckedTimeInMillis = 1612745549344
+ moduleId = "0b04a6cf-e696-4eb0-bac2-aaf883c9add5"
+ tenantId = null
+ shadow$_klass_ = {Class@5392} "class com.microsoft.skype.teams.storage.tables.RNApp"
+ shadow$_monitor_ = -1946393963

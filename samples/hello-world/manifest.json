@@ -1,0 +1,16 @@
+{
+  "name": "Hello Anand",
+  "title": "res://strings/app_name",
+  "icons": {
+    "default": "res://images/default/icn_default.svg",
+    "selected": "res://images/default/icn_selected.svg"
+  },
+  "views": [
+    {
+      "name": "home",
+      "title": "res://strings/hello_world_view_title",
+      "componentName": "HomeComponent"
+    }
+  ],
+  "minReactNativeSdkVersion": "0.7.1"
+}

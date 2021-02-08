@@ -25,7 +25,6 @@ import com.microsoft.skype.teams.storage.IExperimentationManager;
 //import com.microsoft.skype.teams.utilities.INotificationUtilitiesWrapper;
 //import com.microsoft.skype.teams.utilities.ITestUtilitiesWrapper;
 import com.microsoft.skype.teams.utilities.java.StringUtils;
-import com.microsoft.teams.core.models.GlobalPreferences;
 import com.microsoft.teams.core.preferences.IPreferences;
 //import com.microsoft.teams.core.services.configuration.IUserConfiguration;
 //import com.microsoft.teams.core.utilities.AppBuildConfigurationHelper;
@@ -122,7 +121,7 @@ public class ScenarioContext extends TelemetryEvent {
 
     public ScenarioContext(
             @ScenarioName String scenarioName,
-            @StepStatus String stepStatus,
+            String stepStatus,
             @Nullable ScenarioContext parentScenarioContext,
             @NonNull IExperimentationManager experimentationManager,
             @NonNull ITelemetryLogger telemetryLogger,
@@ -158,7 +157,7 @@ public class ScenarioContext extends TelemetryEvent {
 
     // pass the Scenario names in overrideSuppressLoggingEvents if you do not want to suppress any scenario's
     public ScenarioContext(@ScenarioName String scenarioName,
-                           @StepStatus String stepStatus,
+                           String stepStatus,
                            @Nullable ScenarioContext parentScenarioContext,
                            @NonNull IExperimentationManager experimentationManager,
                            @NonNull ITelemetryLogger telemetryLogger,
@@ -497,7 +496,7 @@ public class ScenarioContext extends TelemetryEvent {
         }
     }
 
-    private void endScenarioWithTimeTaken(@StepStatus String stepStatus,
+    private void endScenarioWithTimeTaken(String stepStatus,
                                           @StatusCode.StatusCodeValue String scenarioStatusCode,
                                           @Nullable String scenarioStatusReason,
                                           @NonNull String dependencyString,
@@ -538,7 +537,7 @@ public class ScenarioContext extends TelemetryEvent {
         }
     }
 
-    private void endScenario(@StepStatus String stepStatus,
+    private void endScenario(String stepStatus,
                              @StatusCode.StatusCodeValue String scenarioStatusCode,
                              @Nullable String scenarioStatusReason,
                              @NonNull String dependencyString,
