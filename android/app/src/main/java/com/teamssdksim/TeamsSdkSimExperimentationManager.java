@@ -5,7 +5,13 @@ import androidx.annotation.Nullable;
 
 import com.microsoft.skype.teams.storage.IExperimentationManager;
 
+import javax.inject.Inject;
+
 public class TeamsSdkSimExperimentationManager implements IExperimentationManager {
+
+    @Inject
+    public TeamsSdkSimExperimentationManager() {}
+
     @Nullable
     @Override
     public String[] getEcsSettingAsStringArray(@NonNull String teamName, @NonNull String experimentName, @Nullable String[] defaultValue) {

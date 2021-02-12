@@ -131,6 +131,7 @@ android {
         applicationId "com.teamssdksim"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
+        multiDexEnabled true
         versionCode 1
         versionName "1.0"
     }
@@ -173,7 +174,6 @@ android {
                 output.versionCodeOverride =
                         versionCodes.get(abi) * 1048576 + defaultConfig.versionCode
             }
-
         }
     }
 }
@@ -195,6 +195,11 @@ dependencies {
         exclude module: 'common'
     }
 
+    implementation "com.google.dagger:dagger:2.25.2"
+    implementation "com.google.dagger:dagger-android:2.25.2"
+    annotationProcessor "com.google.dagger:dagger-compiler:2.25.2"
+    annotationProcessor "com.google.dagger:dagger-android-processor:2.25.2"
+
     implementation "com.google.guava:guava:27.0.1-android"
 
     // implementation "com.pixplicity.easyprefs:library:${versions.easyprefs}@aar"
@@ -207,6 +212,8 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.6'
 
     api "com.parse.bolts:bolts-tasks:1.4.0"
+
+    implementation 'com.android.support:multidex:1.0.3'
 
     if (enableHermes) {
         def hermesPath = "../../node_modules/hermes-engine/android/";

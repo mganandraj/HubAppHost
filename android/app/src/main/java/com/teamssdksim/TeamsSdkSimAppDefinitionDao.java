@@ -25,7 +25,7 @@ public class TeamsSdkSimAppDefinitionDao implements AppDefinitionDao {
     ITeamsApplication mTeamsApplication;
     HashMap<String, AppDefinition> mAppDefinitionMap;
 
-    TeamsSdkSimAppDefinitionDao(ITeamsApplication teamsApplication) {
+    public TeamsSdkSimAppDefinitionDao(ITeamsApplication teamsApplication) {
         mTeamsApplication = teamsApplication;
         mAppDefinitionMap = new HashMap<>();
 

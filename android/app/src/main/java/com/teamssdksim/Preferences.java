@@ -10,7 +10,12 @@ import com.microsoft.teams.core.preferences.IPreferences;
 import java.util.List;
 import java.util.Set;
 
+import javax.inject.Inject;
+
 public class Preferences implements IPreferences {
+
+    @Inject public Preferences() {}
+
     @Override
     public boolean getBooleanGlobalPref(String key, boolean defaultValue) {
         return false;

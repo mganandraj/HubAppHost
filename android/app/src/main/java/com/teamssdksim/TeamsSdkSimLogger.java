@@ -6,7 +6,11 @@ import com.microsoft.skype.teams.logger.ILogger;
 
 import java.util.Map;
 
-class TeamsSdkSimLogger implements ILogger {
+import javax.inject.Inject;
+
+public class TeamsSdkSimLogger implements ILogger {
+
+    @Inject public TeamsSdkSimLogger(){}
 
     @Override
     public boolean isLogTransmissionEnabled() {

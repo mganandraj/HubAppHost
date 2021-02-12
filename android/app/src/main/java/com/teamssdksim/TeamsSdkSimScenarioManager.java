@@ -13,14 +13,16 @@ import com.microsoft.teams.core.services.IScenarioManager;
 
 import java.util.Map;
 
-class TeamsSdkSimScenarioManager implements IScenarioManager {
+import javax.inject.Inject;
+
+public class TeamsSdkSimScenarioManager implements IScenarioManager {
 
     @NonNull IExperimentationManager mExperimentationManager;
     @NonNull ITelemetryLogger mTelemetryLogger;
     @NonNull ILogger mLogger;
     @NonNull IPreferences mPreferences;
 
-    TeamsSdkSimScenarioManager(@NonNull IExperimentationManager experimentationManager,
+    @Inject public TeamsSdkSimScenarioManager(@NonNull IExperimentationManager experimentationManager,
                                @NonNull ITelemetryLogger telemetryLogger,
                                @NonNull ILogger logger,
                                @NonNull IPreferences preferences) {

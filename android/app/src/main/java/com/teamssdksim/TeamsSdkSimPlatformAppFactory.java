@@ -15,9 +15,9 @@ public class TeamsSdkSimPlatformAppFactory {
     TeamsSdkSimMobileModuleFactory m_mobileModuleFactory;
     ISdkRunnerAppManager m_sdkRunnerAppManager;
 
-    TeamsSdkSimPlatformAppFactory(AppDefinitionDao appDefinitionDao,
-                                  TeamsSdkSimMobileModuleFactory mobileModuleFactory,
-                                  ISdkRunnerAppManager sdkRunnerAppManager) {
+    public TeamsSdkSimPlatformAppFactory(AppDefinitionDao appDefinitionDao,
+                                         TeamsSdkSimMobileModuleFactory mobileModuleFactory,
+                                         ISdkRunnerAppManager sdkRunnerAppManager) {
         m_appDefinitionDao = appDefinitionDao;
         m_mobileModuleFactory = mobileModuleFactory;
         m_sdkRunnerAppManager = sdkRunnerAppManager;

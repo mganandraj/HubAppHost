@@ -9,6 +9,9 @@ import com.microsoft.skype.teams.storage.tables.AppDefinition;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.room.Dao;
+import androidx.room.Insert;
+import androidx.room.OnConflictStrategy;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -17,7 +20,6 @@ import java.util.Map;
 
 /** Represents an app definition (bot or tab) */
 public interface AppDefinitionDao extends IBaseDao<AppDefinition> {
-
     void save(AppDefinition appDefinition);
 
     void purge();

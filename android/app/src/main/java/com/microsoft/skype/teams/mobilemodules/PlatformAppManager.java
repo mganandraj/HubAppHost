@@ -8,6 +8,7 @@ package com.microsoft.skype.teams.mobilemodules;
 //import com.microsoft.skype.teams.events.EventHandler;
 //import com.microsoft.skype.teams.events.IEventBus;
 //import com.microsoft.skype.teams.mobilemodules.injection.component.PlatformAppComponent;
+import com.microsoft.skype.teams.sdk.ISdkRunnerAppManager;
 import com.microsoft.skype.teams.sdk.SdkRunnerAppManager;
 import com.microsoft.skype.teams.sdk.utils.SdkRunnerUtils;
 import com.microsoft.skype.teams.storage.dao.appdefinition.AppDefinitionDao;
@@ -35,7 +36,7 @@ import androidx.annotation.WorkerThread;
 public class PlatformAppManager implements IPlatformAppManager {
     // private final PlatformAppComponent.Factory mPlatformAppComponentFactory;
     private TeamsSdkSimPlatformAppFactory mPlatformAppFactory;
-    private final SdkRunnerAppManager mSdkRunnerAppManager;
+    private final ISdkRunnerAppManager mSdkRunnerAppManager;
     private final AppDefinitionDao mAppDefinitionDao;
     private final Map<String, IPlatformApp> mPlatformAppMap = new HashMap<>();
     // private final IEventBus mEventBus;
@@ -48,7 +49,7 @@ public class PlatformAppManager implements IPlatformAppManager {
 
     @Inject
     public PlatformAppManager(@NonNull /*PlatformAppComponent.Factory platformAppComponentFactory*/ TeamsSdkSimPlatformAppFactory platformAppFactory,
-                              @NonNull SdkRunnerAppManager sdkRunnerAppManager,
+                              @NonNull ISdkRunnerAppManager sdkRunnerAppManager,
                               @NonNull AppDefinitionDao appDefinitionDao/*,
                               @NonNull IEventBus eventBus*/) {
 //        mPlatformAppComponentFactory = platformAppComponentFactory;

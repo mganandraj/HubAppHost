@@ -34,9 +34,9 @@ public class TeamsSdkSimMobileModuleFactory {
     IScenarioManager mScenarioManager;
     IExperimentationManager mExperimentationManager;
 
-    TeamsSdkSimMobileModuleFactory(Context context, ISdkRunnerAppManager sdkRunnerAppManager,
-                                   ITeamsApplication teamsApplication, ISdkBundleDownloadManager sdkBundleDownloadManager, RNAppsDao rnAppsDao, RNBundlesDao rnBundlesDao, AppConfiguration appConfiguration,
-                                   IPreferences preferences, IScenarioManager scenarioManager, IExperimentationManager experimentationManager) {
+    public TeamsSdkSimMobileModuleFactory(Context context, ISdkRunnerAppManager sdkRunnerAppManager,
+                                          ITeamsApplication teamsApplication, ISdkBundleDownloadManager sdkBundleDownloadManager, RNAppsDao rnAppsDao, RNBundlesDao rnBundlesDao, AppConfiguration appConfiguration,
+                                          IPreferences preferences, IScenarioManager scenarioManager, IExperimentationManager experimentationManager) {
         mContext = context;
         mSdkRunnerAppManager = sdkRunnerAppManager ;
         mTeamsApplication = teamsApplication;

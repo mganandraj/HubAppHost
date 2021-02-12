@@ -7,7 +7,12 @@ import androidx.annotation.NonNull;
 
 import com.microsoft.skype.teams.services.configuration.AppConfiguration;
 
+import javax.inject.Inject;
+
 public class TeamsSdkSimAppConfiguration implements AppConfiguration {
+
+    @Inject public TeamsSdkSimAppConfiguration() {}
+
     @Override
     public boolean isShareMediaEnabled() {
         return false;

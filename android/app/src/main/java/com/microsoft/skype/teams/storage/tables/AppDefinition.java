@@ -8,6 +8,8 @@ import android.net.Uri;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
@@ -35,13 +37,14 @@ import java.util.Set;
 )
 */
 // public class AppDefinition extends BaseModel implements IModel {
+@Entity
 public class AppDefinition implements IModel {
     public static final String COLUMN_EXTERNAL_ID = "externalId";
 
-    // @PrimaryKey
+    @PrimaryKey
     public String appId;
 
-    // @PrimaryKey
+    @PrimaryKey
     public String tenantId;
 
     //@Column

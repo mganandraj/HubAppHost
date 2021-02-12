@@ -11,7 +11,12 @@ import com.microsoft.skype.teams.storage.IExperimentationManager;
 import com.microsoft.teams.telemetry.AppLifecycleState;
 import com.microsoft.teams.telemetry.EventProperties;
 
+import javax.inject.Inject;
+
 public class TeamsSdkSimTelemetryLogger implements ITelemetryLogger {
+
+    @Inject public TeamsSdkSimTelemetryLogger() {}
+
     @Nullable
     @Override
     public String getSessionId() {

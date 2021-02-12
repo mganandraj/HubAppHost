@@ -29,12 +29,12 @@ public class TeamsSdkSimApplication implements ITeamsApplication {
     ILogger mLogger;
     IScenarioManager mScenarioManager;
 
-    TeamsSdkSimApplication (Activity activity, Application application,
-                            IExperimentationManager experimentationManager,
-                            IScenarioManager scenarioManager,
-                            ILogger logger,
-                            ITelemetryLogger telemetryLogger,
-                            IPreferences preferences) {
+    public TeamsSdkSimApplication(Activity activity, Application application,
+                                  IExperimentationManager experimentationManager,
+                                  IScenarioManager scenarioManager,
+                                  ILogger logger,
+                                  ITelemetryLogger telemetryLogger,
+                                  IPreferences preferences) {
         mActivity = activity;
         mApplication = application;
         mExperimentationManager = experimentationManager;

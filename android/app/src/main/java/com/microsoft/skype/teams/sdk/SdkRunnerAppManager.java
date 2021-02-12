@@ -15,14 +15,14 @@ import com.microsoft.skype.teams.sdk.ISdkRunnerAppManager;
 import com.microsoft.skype.teams.sdk.models.SdkAppManifest;
 import com.microsoft.skype.teams.sdk.utils.SdkRunnerUtils;
 import com.microsoft.skype.teams.sdk.utils.SdkVersionUtils;
-// import com.microsoft.skype.teams.services.configuration.AppConfiguration;
+import com.microsoft.skype.teams.services.configuration.AppConfiguration;
 import com.microsoft.skype.teams.storage.tables.AppDefinition;
 import com.microsoft.skype.teams.storage.tables.RNBundle;
 //import com.microsoft.skype.teams.tabs.AppTab;
 //import com.microsoft.skype.teams.tabs.ITabProvider;
 import com.microsoft.skype.teams.utilities.IOUtilities;
 import com.microsoft.skype.teams.utilities.java.JsonUtils;
-//import com.microsoft.teams.androidutils.tasks.ITaskRunner;
+import com.microsoft.teams.androidutils.tasks.ITaskRunner;
 import com.microsoft.teams.core.app.ITeamsApplication;
 // import com.microsoft.teams.injection.ApplicationContext;
 
@@ -37,6 +37,8 @@ import bolts.Continuation;
 import bolts.Task;
 import bolts.TaskCompletionSource;
 */
+import bolts.Task;
+import bolts.TaskCompletionSource;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
@@ -51,10 +53,10 @@ import static com.microsoft.skype.teams.sdk.rnbundle.SdkBundleUtils.getCacheAppD
 @Singleton
 public class SdkRunnerAppManager implements ISdkRunnerAppManager {
     private static final String LOG_TAG = "SdkRunnerAppManager";
-    // private final ITaskRunner mTaskRunner;
+    private final ITaskRunner mTaskRunner;
     private final Context mContext;
     private final Gson mGson;
-    // private final AppConfiguration mAppConfiguration;
+    private final AppConfiguration mAppConfiguration;
     private final ITeamsApplication mTeamsApplication;
     private SdkAppManifest mSdkAppManifest;
     private AppDefinition mAppDefinition;
@@ -70,13 +72,13 @@ public class SdkRunnerAppManager implements ISdkRunnerAppManager {
     @Inject
     public SdkRunnerAppManager(@NonNull Context context,
                                @NonNull Gson gson,
-                               //@NonNull ITaskRunner taskRunner,
-                               //@NonNull AppConfiguration appConfiguration,
+                               @NonNull ITaskRunner taskRunner,
+                               @NonNull AppConfiguration appConfiguration,
                                @NonNull ITeamsApplication teamsApplication) {
         mContext = context;
         mGson = gson;
-//        mTaskRunner = taskRunner;
-//        mAppConfiguration = appConfiguration;
+        mTaskRunner = taskRunner;
+        mAppConfiguration = appConfiguration;
         mTeamsApplication = teamsApplication;
     }
 
@@ -94,14 +96,14 @@ public class SdkRunnerAppManager implements ISdkRunnerAppManager {
         rnBundle.bundleLocation = getCacheAppDirectory(mContext, mAppDefinition.appId).getAbsolutePath();
         return rnBundle;
     }
-/*
+
     @NonNull
     @Override
-    public Task<Void> syncRunnerApp(@NonNull ITabProvider tabProvider) {
+    public /*Task<Void>*/ void syncRunnerApp(/*@NonNull ITabProvider tabProvider*/) {
         final ILogger logger = mTeamsApplication.getLogger(null);
         if (!SdkRunnerUtils.isRunnerMode()) {
             logger.log(LogPriority.DEBUG, LOG_TAG, "Not in runner mode.");
-            return Task.forResult(null);
+            // return Task.forResult(null);
         }
 
         logger.log(LogPriority.DEBUG, LOG_TAG, "In runner mode.");
@@ -122,46 +124,46 @@ public class SdkRunnerAppManager implements ISdkRunnerAppManager {
                     return;
                 }
 
-                saveRunnerAppTab(mAppDefinition, tabProvider).continueWith(new Continuation<Void, Void>() {
-                    @Override
-                    public Void then(Task<Void> task) {
-                        if (task.isFaulted()) {
-                            taskCompletionSource.trySetError(task.getError());
-                        } else if (task.isCancelled()) {
-                            taskCompletionSource.trySetCancelled();
-                        } else {
-                            taskCompletionSource.trySetResult(null);
-                        }
-
-                        return null;
-                    }
-                });
+//                saveRunnerAppTab(mAppDefinition, tabProvider).continueWith(new Continuation<Void, Void>() {
+//                    @Override
+//                    public Void then(Task<Void> task) {
+//                        if (task.isFaulted()) {
+//                            taskCompletionSource.trySetError(task.getError());
+//                        } else if (task.isCancelled()) {
+//                            taskCompletionSource.trySetCancelled();
+//                        } else {
+//                            taskCompletionSource.trySetResult(null);
+//                        }
+//
+//                        return null;
+//                    }
+//                });
             }
         });
 
-        return taskCompletionSource.getTask();
-    }*/
-
-    @NonNull
-    @Override
-    public void syncRunnerApp() {
-        final ILogger logger = mTeamsApplication.getLogger(null);
-
-        Executors.newSingleThreadExecutor().execute(new Runnable() {
-            @Override
-            public void run() {
-                // Download the app manifest and resources from runner server.*/
-                try {
-                    mSdkAppManifest = downloadAppManifestFromRunnerServer();
-                    mAppDefinition = downloadAppDefinitionFromRunnerServer();
-                    downloadAppResourcesFromRunnerServer(mAppDefinition);
-                } catch (Exception e) {
-                    logger.log(LogPriority.ERROR, LOG_TAG, e, "Failed to download app from runner server.");
-                    return;
-                }
-            }
-        });
+        // return taskCompletionSource.getTask();
     }
+//
+//    @NonNull
+//    @Override
+//    public void syncRunnerApp() {
+//        final ILogger logger = mTeamsApplication.getLogger(null);
+//
+//        Executors.newSingleThreadExecutor().execute(new Runnable() {
+//            @Override
+//            public void run() {
+//                // Download the app manifest and resources from runner server.*/
+//                try {
+//                    mSdkAppManifest = downloadAppManifestFromRunnerServer();
+//                    mAppDefinition = downloadAppDefinitionFromRunnerServer();
+//                    downloadAppResourcesFromRunnerServer(mAppDefinition);
+//                } catch (Exception e) {
+//                    logger.log(LogPriority.ERROR, LOG_TAG, e, "Failed to download app from runner server.");
+//                    return;
+//                }
+//            }
+//        });
+//    }
 
     @Nullable
     private SdkAppManifest downloadAppManifestFromRunnerServer() throws Exception {
