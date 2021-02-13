@@ -1,5 +1,9 @@
 package com.microsoft.skype.teams.storage.tables;
 
+import androidx.annotation.NonNull;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
 import com.microsoft.skype.teams.storage.IModel;
 /*
 import com.microsoft.skype.teams.storage.SkypeTeamsDatabase;
@@ -16,11 +20,12 @@ import com.raizlabs.android.dbflow.structure.BaseModel;
         database = SkypeTeamsDatabase.class
 )*/
 // public class RNBundle extends BaseModel implements IModel {
+@Entity (primaryKeys = {"appId", "bundleVersion"})
 public class RNBundle implements IModel {
-    //@PrimaryKey
+    @NonNull
     public String appId;
 
-    //@PrimaryKey
+    @NonNull
     public String bundleVersion;
 
     //@Column

@@ -1,14 +1,10 @@
 package com.teamssdksim.modules;
 
-import androidx.annotation.NonNull;
-
-import com.microsoft.skype.teams.logger.ILogger;
 import com.microsoft.skype.teams.mobilemodules.IPlatformAppManager;
 import com.microsoft.skype.teams.mobilemodules.PlatformAppManager;
 import com.microsoft.skype.teams.sdk.ISdkRunnerAppManager;
 import com.microsoft.skype.teams.storage.dao.appdefinition.AppDefinitionDao;
-import com.teamssdksim.TeamsSdkSimLogger;
-import com.teamssdksim.TeamsSdkSimPlatformAppFactory;
+import com.teamssdksim.impls.TeamsSdkSimPlatformAppFactory;
 
 import javax.inject.Singleton;
 

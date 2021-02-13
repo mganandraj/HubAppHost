@@ -37,14 +37,17 @@ import java.util.Set;
 )
 */
 // public class AppDefinition extends BaseModel implements IModel {
-@Entity
+// @Entity(primaryKeys = {"appId","tenantId"})
+@Entity(primaryKeys = {"appId"})
 public class AppDefinition implements IModel {
     public static final String COLUMN_EXTERNAL_ID = "externalId";
 
-    @PrimaryKey
+    @NonNull
+//    @PrimaryKey
     public String appId;
 
-    @PrimaryKey
+//    @NonNull
+//    @PrimaryKey
     public String tenantId;
 
     //@Column

@@ -1,9 +1,6 @@
 package com.teamssdksim.modules;
 
-import com.microsoft.skype.teams.mobilemodules.MobileModuleSyncManager;
-import com.microsoft.skype.teams.sdk.rnbundle.SdkBundleManager;
 import com.teamssdksim.TeamSDKActivity;
-import com.teamssdksim.TeamsSdkSimMobileModuleFactory;
 
 import javax.inject.Singleton;
 import dagger.Component;

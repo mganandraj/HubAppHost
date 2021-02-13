@@ -1,7 +1,7 @@
 package com.teamssdksim.modules;
 
 import com.microsoft.skype.teams.logger.ILogger;
-import com.teamssdksim.TeamsSdkSimLogger;
+import com.teamssdksim.impls.TeamsSdkSimLogger;
 
 import javax.inject.Singleton;
 

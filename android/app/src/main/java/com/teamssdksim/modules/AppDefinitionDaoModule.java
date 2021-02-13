@@ -1,10 +1,9 @@
 package com.teamssdksim.modules;
 
-import com.microsoft.skype.teams.logger.ILogger;
 import com.microsoft.skype.teams.storage.dao.appdefinition.AppDefinitionDao;
+import com.microsoft.skype.teams.storage.database.SdkDatabase;
 import com.microsoft.teams.core.app.ITeamsApplication;
-import com.teamssdksim.TeamsSdkSimAppDefinitionDao;
-import com.teamssdksim.TeamsSdkSimLogger;
+import com.teamssdksim.impls.TeamsSdkSimAppDefinitionDao;
 
 import javax.inject.Singleton;
 
@@ -16,6 +15,7 @@ public class AppDefinitionDaoModule {
     @Singleton
     @Provides
     static AppDefinitionDao provideAppDefinitionDao(ITeamsApplication teamsApplication) {
-        return new TeamsSdkSimAppDefinitionDao(teamsApplication);
+        // return new TeamsSdkSimAppDefinitionDao(teamsApplication);
+        return SdkDatabase.get().appDefinitionDao();
     }
 }

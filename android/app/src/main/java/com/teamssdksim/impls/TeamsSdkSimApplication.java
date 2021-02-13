@@ -1,4 +1,4 @@
-package com.teamssdksim;
+package com.teamssdksim.impls;
 
 import android.app.Activity;
 import android.app.Application;

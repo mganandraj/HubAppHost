@@ -2,8 +2,8 @@ package com.teamssdksim.modules;
 
 import com.microsoft.skype.teams.sdk.ISdkRunnerAppManager;
 import com.microsoft.skype.teams.storage.dao.appdefinition.AppDefinitionDao;
-import com.teamssdksim.TeamsSdkSimMobileModuleFactory;
-import com.teamssdksim.TeamsSdkSimPlatformAppFactory;
+import com.teamssdksim.impls.TeamsSdkSimMobileModuleFactory;
+import com.teamssdksim.impls.TeamsSdkSimPlatformAppFactory;
 
 import javax.inject.Singleton;
 

@@ -1,4 +1,4 @@
-package com.teamssdksim;
+package com.teamssdksim.impls;
 
 import android.os.Build;
 
@@ -36,20 +36,20 @@ public class TeamsSdkRNAppsDao implements RNAppsDao {
 
     }
 
-    @Override
-    public List<RNApp> getAll(String userId) {
-        return new ArrayList<>(mRNAppMap.values());
-    }
+//    @Override
+//    public List<RNApp> getAll(String userId) {
+//        return new ArrayList<>(mRNAppMap.values());
+//    }
+//
+//    @Override
+//    public void deleteEntryForUser(String appId, String userId) {
+//
+//    }
 
-    @Override
-    public void deleteEntryForUser(String appId, String userId) {
-
-    }
-
-    @Override
-    public void deleteTable(RNApp table) {
-
-    }
+//    @Override
+//    public void deleteTable(RNApp table) {
+//
+//    }
 
     @Override
     public void delete(@NonNull RNApp item) {

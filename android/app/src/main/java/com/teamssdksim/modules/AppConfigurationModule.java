@@ -1,7 +1,7 @@
 package com.teamssdksim.modules;
 
 import com.microsoft.skype.teams.services.configuration.AppConfiguration;
-import com.teamssdksim.TeamsSdkSimAppConfiguration;
+import com.teamssdksim.impls.TeamsSdkSimAppConfiguration;
 
 import javax.inject.Singleton;
 

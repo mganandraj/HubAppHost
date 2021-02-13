@@ -1,7 +1,8 @@
 package com.teamssdksim.modules;
 
 import com.microsoft.skype.teams.storage.dao.rnbundles.RNBundlesDao;
-import com.teamssdksim.TeamsSdkSimRNBundlesDao;
+import com.microsoft.skype.teams.storage.database.SdkDatabase;
+import com.teamssdksim.impls.TeamsSdkSimRNBundlesDao;
 
 import javax.inject.Singleton;
 
@@ -14,6 +15,7 @@ public class RNBundlesDaoModule {
     @Singleton
     @Provides
     static RNBundlesDao provideRNBundlesDao() {
-        return new TeamsSdkSimRNBundlesDao();
+        return SdkDatabase.get().rnBundlesDao();
+        // return new TeamsSdkSimRNBundlesDao();
     }
 }

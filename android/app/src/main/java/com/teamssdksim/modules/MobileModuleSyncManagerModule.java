@@ -2,8 +2,6 @@ package com.teamssdksim.modules;
 
 import android.content.Context;
 
-import androidx.annotation.NonNull;
-
 import com.microsoft.skype.teams.logger.ILogger;
 import com.microsoft.skype.teams.mobilemodules.IMobileModuleManager;
 import com.microsoft.skype.teams.mobilemodules.IMobileModuleSyncManager;
@@ -14,7 +12,6 @@ import com.microsoft.teams.androidutils.tasks.ITaskRunner;
 import com.microsoft.teams.core.app.ITeamsApplication;
 import com.microsoft.teams.core.preferences.IPreferences;
 import com.microsoft.teams.core.services.IScenarioManager;
-import com.teamssdksim.TeamsSdkSimLogger;
 
 import javax.inject.Singleton;
 

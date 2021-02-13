@@ -1,7 +1,7 @@
 package com.teamssdksim.modules;
 
 import com.microsoft.skype.teams.storage.IExperimentationManager;
-import com.teamssdksim.TeamsSdkSimExperimentationManager;
+import com.teamssdksim.impls.TeamsSdkSimExperimentationManager;
 
 import javax.inject.Singleton;
 

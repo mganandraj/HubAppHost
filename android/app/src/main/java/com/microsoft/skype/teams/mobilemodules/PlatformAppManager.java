@@ -9,14 +9,13 @@ package com.microsoft.skype.teams.mobilemodules;
 //import com.microsoft.skype.teams.events.IEventBus;
 //import com.microsoft.skype.teams.mobilemodules.injection.component.PlatformAppComponent;
 import com.microsoft.skype.teams.sdk.ISdkRunnerAppManager;
-import com.microsoft.skype.teams.sdk.SdkRunnerAppManager;
 import com.microsoft.skype.teams.sdk.utils.SdkRunnerUtils;
 import com.microsoft.skype.teams.storage.dao.appdefinition.AppDefinitionDao;
 import com.microsoft.skype.teams.storage.models.MobileModuleDefinition;
 import com.microsoft.skype.teams.storage.tables.AppDefinition;
 //import com.microsoft.teams.injection.PlatformAppId;
 //import com.microsoft.teams.injection.UserScope;
-import com.teamssdksim.TeamsSdkSimPlatformAppFactory;
+import com.teamssdksim.impls.TeamsSdkSimPlatformAppFactory;
 
 import java.util.ArrayList;
 import java.util.HashMap;

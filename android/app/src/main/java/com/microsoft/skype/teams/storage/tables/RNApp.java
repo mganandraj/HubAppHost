@@ -1,5 +1,9 @@
 package com.microsoft.skype.teams.storage.tables;
 
+import androidx.annotation.NonNull;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
 import com.microsoft.skype.teams.storage.IModel;
 //import com.microsoft.skype.teams.storage.SkypeTeamsDatabase;
 //import com.raizlabs.android.dbflow.annotation.Column;
@@ -13,11 +17,13 @@ import com.microsoft.skype.teams.storage.IModel;
 //@Table(
 //        database = SkypeTeamsDatabase.class
 //)
+@Entity
 public class RNApp /*extends BaseModel */implements IModel {
-    //@PrimaryKey
+    @NonNull
+    @PrimaryKey
     public String moduleId;
 
-    //@PrimaryKey
+//    @PrimaryKey
     public String tenantId;
 
     //@Column

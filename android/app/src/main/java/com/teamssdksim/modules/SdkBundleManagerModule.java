@@ -1,11 +1,9 @@
 package com.teamssdksim.modules;
 
-import com.microsoft.skype.teams.logger.ILogger;
 import com.microsoft.skype.teams.sdk.rnbundle.ISdkBundleManager;
 import com.microsoft.skype.teams.sdk.rnbundle.SdkBundleManager;
 import com.microsoft.skype.teams.storage.dao.rnbundles.RNBundlesDao;
 import com.microsoft.teams.core.app.ITeamsApplication;
-import com.teamssdksim.TeamsSdkSimLogger;
 
 import javax.inject.Singleton;
 
