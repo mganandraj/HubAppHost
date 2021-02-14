@@ -1,0 +1,1742 @@
+/*
+ *  Copyright © Microsoft Corporation. All rights reserved.
+ */
+
+package com.microsoft.teams.services.diagnostics;
+
+import android.content.Context;
+
+import androidx.annotation.StringDef;
+
+import com.microsoft.aad.adal.ADALError;
+import com.microsoft.teams.sdk.SdkConstants;
+// import com.microsoft.teams.core.R;
+
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+
+import static com.microsoft.teams.sdk.SdkConstants.RN_BUNDLE_DOWNLOAD_ERROR;
+import static com.microsoft.teams.sdk.SdkConstants.RN_BUNDLE_PARSING_ERROR;
+
+/**
+ * Defines application wide error constants
+ */
+public final class StatusCode {
+
+    // Post message errors
+    public static final String CHAT_CREATE_FAILED = "CHAT_CREATE_FAILED";
+    public static final String CHAT_CREATE_FAILED_NON_RETRY_ABLE_ERROR = "CHAT_CREATE_FAILED_NON_RETRY_ABLE_ERROR";
+    public static final String SEND_MESSAGE_NULL = "SEND_MESSAGE_NULL";
+    public static final String CHAT_SEND_MESSAGE_NULL_RECEPIENT = "CHAT_SEND_MESSAGE_NULL_RECEPIENT";
+    public static final String MESSAGE_TRANSFORM_FAILED = "MESSAGE_TRANSFORM_FAILED";
+    public static final String ONGOING_OPERATION = "ONGOING_OPERATION";
+    public static final String POST_MESSAGE_EXECUTE_FAILED = "POST_MESSAGE_EXECUTE_FAILED";
+    public static final String POST_MESSAGE_STALE_FAILED = "POST_MESSAGE_STALE_FAILED"; // when we force fail a pending send message if it is too old
+    public static final String CHAT_LIST_SYNC_FAILED = "CHAT_LIST_SYNC_FAILED";
+
+    //Image upload related errors
+    public static final String AMS_IMAGE_UPLOAD_HAS_UNRESOLVED_REFERENCES = "AMS_IMAGE_UPLOAD_HAS_UNRESOLVED_REFERENCES";
+    public static final String AMS_OBJECT_FORWARDING_UNRESOLVED_REFERENCES = "AMS_OBJECT_FORWARDING_UNRESOLVED_REFERENCES";
+    public static final String AMS_ID_IS_NULL = "AMS_ID_IS_NULL";
+    public static final String AMS_GENERATED_URL_IS_NULL = "AMS_GENERATED_URL_IS_NULL";
+    public static final String AMS_IMAGE_BITMAP_NULL = "AMS_IMAGE_BITMAP_NULL";
+    public static final String AMS_IMAGE_SIZE_EXCEEDS_LIMIT = "AMS_IMAGE_SIZE_EXCEEDS_LIMIT";
+    public static final String AMS_CREATION_FAILED = "AMS_CREATION_FAILED";
+    public static final String AMS_UPLOAD_FAILED = "AMS_UPLOAD_FAILED";
+
+    public static final String IMAGE_URL_EMPTY = "IMAGE_URL_EMPTY";
+
+    //Voice message upload related errors
+    public static final String VOICE_MESSAGE_UPLOAD_HAS_UNRESOLVED_REFERENCES = "VOICE_MESSAGE_UPLOAD_HAS_UNRESOLVED_REFERENCES";
+
+    //Network related errors
+    public static final String NETWORK_UNAVAILABLE = "NETWORK_UNAVAILABLE";
+    public static final String IO_EXCEPTION = "IO_EXCEPTION";
+    public static final String SOCKET_TIMEOUT = "SOCKET_TIMEOUT";
+
+    public static final String ILLEGAL_ARGUMENT_EXCEPTION = "ILLEGAL_ARGUMENT_EXCEPTION";
+    public static final String TENANT_ID_IS_EMPTY = "TENANT_ID_IS_EMPTY";
+    public static final String USER_OBJECT_ID_IS_EMPTY = "USER_OBJECT_ID_IS_EMPTY";
+    public static final String RESOURCE_URL_IS_EMPTY = "RESOURCE_URL_IS_EMPTY";
+    public static final String TENANT_ID_IS_INVALID = "TENANT_ID_IS_INVALID";
+    public static final String ORGANIZER_ID_IS_INVALID = "ORGANIZER_ID_IS_INVALID";
+
+    // DB errors
+    public static final String DB_ENTITY_NOT_FOUND = "DB_ENTITY_NOT_FOUND";
+
+    // Auth errors
+    public static final String AAD_ACQUIRE_TOKEN_FAILED = "AAD_ACQUIRE_TOKEN_FAILED";
+    public static final String ADAL_ERROR = "ADAL_ERROR";
+    public static final String PASSWORD_RESET = "PASSWORD_RESET";
+    public static final String AUTH_UI_REQUIRED = "AUTH_UI_REQUIRED";
+    public static final String BLOCKED_BY_CONDITIONAL_ACCESS = "BLOCKED_BY_CONDITIONAL_ACCESS";
+    public static final String MSAL_ERROR = "MSAL_ERROR";
+    public static final String DUPLICATE_TOKEN_REQUEST = "DUPLICATE_TOKEN_REQUEST";
+    public static final String AUTH_STACK_ERROR = "AUTH_STACK_ERROR";
+    public static final String CONSENT_REQUIRED = "consent_required";
+    public static final String CONSUMER_GROUP_TOKEN_ERROR = "CONSUMER_GROUP_TOKEN_ERROR";
+    public static final String USER_SIGNING_OUT_OR_SIGNED_OUT = "USER_SIGNING_OUT_OR_SIGNED_OUT";
+    public static final String AAD_REFRESH_TOKEN_FAILED = "AAD_REFRESH_TOKEN_FAILED";
+    public static final String TEAMS_DISABLED_FOR_TENANT = "TEAMS_DISABLED_FOR_TENANT";
+    public static final String USER_LICENSE_NOT_PRESENT = "USER_LICENSE_NOT_PRESENT";
+    public static final String BROKER_NEEDS_TO_BE_INSTALLED = "BROKER_NEEDS_TO_BE_INSTALLED";
+    public static final String ADMIN_USER_LICENSE_NOT_PRESENT = "ADMIN_USER_LICENSE_NOT_PRESENT";
+    public static final String ADMIN_TEAMS_DISABLED_FOR_TENANT = "ADMIN_TEAMS_DISABLED_FOR_TENANT";
+    public static final String USER_LICENSE_NOT_PRESENT_TRIAL_ELIGIBLE = "USER_LICENSE_NOT_PRESENT_TRIAL_ELIGIBLE";
+    public static final String GUEST_USER_NOT_REDEEMED = "GUEST_USER_NOT_REDEEMED";
+    public static final String GET_SKYPE_CHAT_TOKENS_UNAUTHORIZED_ACCESS = "GET_SKYPE_CHAT_TOKENS_UNAUTHORIZED_ACCESS";
+    public static final String GET_SKYPE_CHAT_TOKENS_FAILURE = "GET_SKYPE_CHAT_TOKENS_FAILURE";
+    public static final String PROMPT_REQUIRED = "PROMPT_REQUIRED";
+    public static final String USER_CHANGED = "USER_CHANGED";
+    public static final String USER_CANCELLED_LOGIN = "USER_CANCELLED_LOGIN";
+    public static final String WALLED_GARDEN_DETECTED = "WALLED_GARDEN_DETECTED";
+    public static final String PERSONAL_ACCOUNT = "PERSONAL_ACCOUNT";
+    public static final String SSO_ACCOUNT_EXCEPTION = "SSO_ACCOUNT_EXCEPTION";
+    public static final String SSO_TIMEOUT_EXCEPTION = "SSO_TIMEOUT_EXCEPTION";
+    public static final String SSO_AUTHENTICATION_EXCEPTION = "SSO_AUTHENTICATION_EXCEPTION";
+    public static final String SSO_INTERRUPTED = "SSO_INTERRUPTED";
+    public static final String SSO_ACCOUNT_NOT_FOUND = "SSO_ACCOUNT_NOT_FOUND";
+    public static final String SSO_ADAL_RESULT_INVALID = "SSO_ADAL_RESULT_INVALID";
+    public static final String SSO_USER_DOESNT_MATCH = "SSO_USER_DOESNT_MATCH";
+    public static final String AUTH_ACTION_UNEXPECTED_ERROR = "AUTH_UNEXPECTED_ERROR";
+    public static final String ANONYMOUS_AUTH_FAILED = "ANONYMOUS_AUTH_FAILED";
+    public static final String ANONYMOUS_AUTH_NETWORK_FAILURE = "ANONYMOUS_AUTH_NETWORK_FAILURE";
+    public static final String GET_RESOURCE_TOKEN_FAILED = "GET_RESOURCE_TOKEN_FAILED";
+    public static final String TOKEN_EXISTS = "TOKEN_EXISTS";
+    public static final String NO_HOME_TENANT = "NO_HOME_TENANT";
+    public static final String NO_ACCOUNT_FOUND = "NO_ACCOUNT_FOUND";
+    public static final String COULDNT_APPLY_AUTH_HEADERS = "COULDNT_APPLY_AUTH_HEADERS";
+    public static final String EXPIRED_ADAL_ERROR = "EXPIRED_ADAL_ERROR";
+    public static final String EXPIRED_TOKEN_ERROR = "EXPIRED_TOKEN_ERROR";
+    public static final String AUTH_EMPTY_EMAIL_ERROR = "AUTH_EMPTY_EMAIL_ERROR";
+    public static final String APP_AUTHENTICATION_FAILED = "APP_AUTHENTICATION_FAILED";
+    public static final String APP_AUTHENTICATION_CANCELLED = "APP_AUTHENTICATION_CANCELLED";
+    public static final String APP_AUTHENTICATION_INCOMPLETE = "APP_AUTHENTICATION_INCOMPLETE";
+    public static final String BOT_FILE_ATTACHMENT_CANCELLED = "BOT_FILE_ATTACHMENT_CANCELLED";
+    public static final String BOT_FILE_ATTACHMENT_FAILED = "BOT_FILE_ATTACHMENT_FAILED";
+    public static final String STUCK_ON_FRE = "STUCK_ON_FRE";
+    public static final String SIGNED_IN_USERS_NOT_FOUND = "SIGNED_IN_USERS_NOT_FOUND";
+    public static final String DEVICE_CONNECTION_IS_NOT_AVAILABLE = "DEVICE_CONNECTION_IS_NOT_AVAILABLE";
+    public static final String NULL_PROVIDER = "NULL_PROVIDER";
+    public static final String RESULT_NOT_FOR_REQUEST = "RESULT_NOT_FOR_REQUEST";
+    public static final String WRONG_ACCOUNT_TYPE = "WRONG_ACCOUNT_TYPE";
+    public static final String NULL_ACCESS_TOKEN = "NULL_ACCESS_TOKEN";
+
+    // Misc errors
+    public static final String UNKNOWN = "UNKNOWN";
+    public static final String ANR = "ANR";
+    public static final String CANCELLED = "CANCELLED";
+    public static final String OPERATION_CANCELLED = "OPERATION_CANCELLED";
+    public static final String TIMED_OUT = "TIMED_OUT";
+    public static final String APP_NOT_VISIBLE = "APP_NOT_VISIBLE";
+    public static final String NO_ACTIVITY_TO_USE = "NO_ACTIVITY_TO_USE";
+    public static final String BITMAP_LOAD_ERROR = "BITMAP_LOAD_ERROR";
+    public static final String HAS_CLAIMS = "HAS_CLAIMS";
+    public static final String EXCEPTION = "EXCEPTION";
+    public static final String IMAGE_SOURCE_NULL = "IMAGE_SOURCE_NULL";
+    public static final String TEMP_IMAGE_NOT_FOUND = "TEMP_IMAGE_NOT_FOUND";
+    public static final String MAX_RETRY_EXCEEDED = "MAX_RETRY_EXCEEDED";
+    public static final String UNSUPPORTED = "UNSUPPORTED";
+    public static final String OBSOLETE = "OBSOLETE";
+    public static final String HTTP_RESILIENCY_GATE = "HTTP_RESILIENCY_GATE";
+    public static final String INTERRUPTED = "INTERRUPTED";
+    public static final String HTTP_CALL_CANCELLED = "HTTP_CALL_CANCELLED";
+
+    // Auto Prune errors
+    public static final String AUTO_PRUNE_NOT_ENABLED = "AUTO_PRUNE_NOT_ENABLED";
+    public static final String AUTO_PRUNE_DAY_IS_ZERO = "AUTO_PRUNE_DAY_IS_ZERO";
+    public static final String AUTO_PRUNE_FAILED_WITH_EXCEPTION = "AUTO_PRUNE_FAILED_WITH_EXCEPTION";
+
+    //Guest access
+    public static final String IS_CURRENT_TENANT = "IS_CURRENT_TENANT";
+    public static final String INVITATION_NOT_REDEMEED = "INVITATION_NOT_REDEMEED";
+    public static final String NULL_TASK = "NULL_TASK";
+    public static final String NULL_AUTH_RESULT = "NULL_AUTH_RESULT";
+    public static final String GUEST_ACCESS_BLOCKED = "GUEST_ACCESS_BLOCKED";
+    public static final String COMPANY_PORTAL_INSTALLED = "COMPANY_PORTAL_INSTALLED";
+    public static final String TENANT_ITEM_TAPPED = "TENANT_ITEM_TAPPED";
+
+    //Sync errors
+    public static final String DB_MIGRATION_INCOMPLETE = "DB_MIGRATION_INCOMPLETE";
+    public static final String SYNC_STILL_RUNNING = "SYNC_STILL_RUNNING";
+    public static final String TOO_FREQUENT = "TOO_FREQUENT";
+    public static final String STOP_REQUESTED = "STOP_REQUESTED";
+    public static final String SYNC_PENDING_PAUSE_REQUESTS = "SYNC_PENDING_PAUSE_REQUESTS";
+    public static final String SYNC_USER_DISABLED = "SYNC_USER_DISABLED";
+    public static final String SYNC_CALENDAR_EVENTS_FAILED = "SYNC_CALENDAR_EVENTS_FAILED";
+
+    //Database
+    public static final String DB_MIGRATION_ALREADY_RUNNING = "DB_MIGRATION_ALREADY_RUNNING";
+
+    // Calling errors
+    public static final String ACTIVE_CALL = "ACTIVE_CALL";
+    public static final String OK = "OK";
+    public static final String DO_NOT_DISTURB = "DO_NOT_DISTURB";
+    public static final String INCOMING_CALLS_OFF = "INCOMING_CALLS_OFF";
+    public static final String INCOMING_CALLS_NOTIFICATION_IMPORTANCE_LOW = "INCOMING_CALLS_NOTIFICATION_IMPORTANCE_LOW";
+    public static final String GCP_CALL_FORWARD_MUTED = "GCP_CALL_FORWARD_MUTED";
+    public static final String AD_HOC_MEETING_DETAILS_INVALID = "AD_HOC_MEETING_DETAILS_INVALID";
+    public static final String ANOTHER_CALL_IN_PROGRESS = "ANOTHER_CALL_IN_PROGRESS";
+    public static final String ANONYMOUS_CALL_IN_PROGRESS = "ANONYMOUS_CALL_IN_PROGRESS";
+    public static final String ANOTHER_CALL_USER_IN_LOBBY = "ANOTHER_CALL_USER_IN_LOBBY";
+    public static final String APP_IN_FRE = "APP_IN_FRE";
+    public static final String APPLICATION_IN_BACKGROUND = "APPLICATION_IN_BACKGROUND";
+    public static final String AUDIO_CALLING_ENABLED_FALSE = "AUDIO_CALLING_ENABLED_FALSE";
+    public static final String AUTHORISE_USER_FAILURE = "AUTHORISE_USER_FAILURE";
+    public static final String CALL_EARLY_RING_FAILED = "CALL_EARLY_RING_FAILED";
+    public static final String CALL_HANDLER_ERROR_CALL_ID_ZERO = "CALL_HANDLER_ERROR_CALL_ID_ZERO";
+    public static final String CALL_HANDLER_NULL = "CALL_HANDLER_NULL";
+    public static final String CALL_HANDLER_ERROR = "CALL_HANDLER_ERROR";
+    public static final String CALL_INIT_EXCEPTION = "CALL_INIT_EXCEPTION";
+    public static final String CALL_MANAGER_NULL = "CALL_MANAGER_NULL";
+    public static final String CALL_OBJECT_NULL = "CALL_OBJECT_NULL";
+    public static final String CALL_PUSH_FAILURE = "CALL_PUSH_FAILURE";
+    public static final String CALL_TIMEOUT_EXCEPTION = "CALL_TIMEOUT_EXCEPTION";
+    public static final String CALL_ALREADY_HANDLED = "CALL_ALREADY_HANDLED";
+    public static final String CALL_ALREADY_ENDED = "CALL_ALREADY_ENDED";
+    public static final String CALLER_MRI_NULL = "CALLER_MRI_NULL";
+    public static final String CHATS_CREATION_FAILED = "CHATS_CREATION_FAILED";
+    public static final String CONTACT_USER_NULL = "CONTACT_USER_NULL";
+    public static final String CONTACT_USER_ANONYMOUS = "CONTACT_USER_ANONYMOUS";
+    public static final String CONTACT_USER_PSTN_NOT_ENABLED = "CONTACT_USER_PSTN_NOT_ENABLED";
+    public static final String CONTACT_USER_SYNC_UP_TO_DATE = "CONTACT_USER_SYNC_UP_TO_DATE";
+    public static final String CONTACT_FAILED_ACCOUNT_CREATION = "CONTACT_FAILED_ACCOUNT_CREATION";
+    public static final String CONTACT_FAILED_RAW_CONTACT_CREATION = "CONTACT_FAILED_RAW_CONTACT_CREATION";
+    public static final String CONTACT_CREATION_AND_UPDATE_SUCCESSFUL = "CONTACT_CREATION_AND_UPDATE_SUCCESSFUL";
+    public static final String FAILED_TO_PARSE_MESSAGE = "FAILED_TO_PARSE_MESSAGE";
+    public static final String FAILED_TO_PARSE_SMART_REPLY = "FAILED_TO_PARSE_SMART_REPLY";
+    public static final String FAILED_TO_REDEEM_INVITE_LINK = "FAILED_TO_REDEEM_INVITE_LINK";
+    public static final String FAILED_TO_CLAIM_INVITE_LINK = "FAILED_TO_CLAIM_INVITE_LINK";
+    public static final String GROUP_CALL_NOT_ENABLED = "GROUP_CALL_NOT_ENABLED";
+    public static final String LIVE_STATE_NULL = "LIVE_STATE_NULL";
+    public static final String MAX_CONCURRENT_CALL_LIMIT = "MAX_CONCURRENT_CALL_LIMIT";
+    public static final String EMERGENCY_INFO_REFRESHED = "EMERGENCY_INFO_REFRESHED";
+    public static final String AUTHORIZATION_TOKEN_NULL = "AUTHORIZATION_TOKEN_NULL";
+    public static final String MAM_ENROLLMENT_MANAGER_NULL = "MAM_ENROLLMENT_MANAGER_NULL";
+    public static final String AUTHORIZATION_SERVICE_NULL = "AUTHORIZATION_SERVICE_NULL";
+    public static final String CURRENT_USER_INFO_NOT_RETRIEVED = "CURRENT_USER_INFO_NOT_RETRIEVED";
+    public static final String MEETING_OPTIONS_WEBPAGE_ERROR = "MEETING_OPTIONS_WEBPAGE_ERROR";
+    public static final String MEETING_DETAILS_INVALID = "MEETING_DETAILS_INVALID";
+    public static final String MEETING_OID_INVALID_GUID = "MEETING_OID_INVALID_GUID";
+    public static final String MEETING_CODE_INVALID = "MEETING_CODE_INVALID";
+    public static final String MEETING_INFO_NULL = "MEETING_INFO_NULL";
+    public static final String MEETUP_NOT_ENABLED = "MEETUP_NOT_ENABLED";
+    public static final String MEETUP_IP_AUDIO_DISABLED = "MEETUP_IP_AUDIO_DISABLED";
+    public static final String MESSAGE_ID_MISSING = "MESSAGE_ID_MISSING";
+    public static final String BROADCAST_ATTENDEE = "BROADCAST_ATTENDEE";
+    public static final String BROADCAST_ATTENDEE_NETWORK_FAILURE = "BROADCAST_ATTENDEE_NETWORK_FAILURE";
+    public static final String CHAT_ID_MISSING = "CHAT_ID_MISSING";
+    public static final String ANOTHER_CALL_WAITING_TO_BE_INPROGRESS = "ANOTHER_CALL_WAITING_TO_BE_INPROGRESS";
+    public static final String ANOTHER_WAITING_TO_BE_INPROGRESS_MESSAGE_IN_QUEUE = "ANOTHER_WAITING_TO_BE_INPROGRESS_MESSAGE_IN_QUEUE";
+    public static final String NATIVE_PSTN_CALL_GOING_ON = "NATIVE_PSTN_CALL_GOING_ON";
+    public static final String NETWORK_RECONNECT_BEGIN_UI_FAILED = "NETWORK_RECONNECT_BEGIN_UI_FAILED";
+    public static final String NETWORK_RECONNECT_SUCCESS_UI_FAILED = "NETWORK_RECONNECT_SUCCESS_UI_FAILED";
+    public static final String NETWORK_RECONNECT_FAIL_UI_FAILED = "NETWORK_RECONNECT_FAIL_UI_FAIL";
+    public static final String NOT_SUPPORTED_ARCH = "NOT_SUPPORTED_ARCH";
+    public static final String NUMBER_NOT_VALID = "NUMBER_NOT_VALID";
+    public static final String ONE_ON_ONE_CALL_THREAD_NOT_FOUND = "ONE_ON_ONE_CALL_THREAD_NOT_FOUND";
+    public static final String PERMISSION_DENIED_BY_USER = "PERMISSION_DENIED_BY_USER";
+    public static final String PRIVATE_MEETING_NOT_ENABLED = "PRIVATE_MEETING_NOT_ENABLED";
+    public static final String PSTN_CALL_NOT_VALID = "PSTN_CALL_NOT_VALID";
+    public static final String VOCIEMAIL_CALL_NOT_VALID = "VOCIEMAIL_CALL_NOT_VALID";
+    public static final String RETRY_FAILED = "RETRY_FAILED";
+    public static final String DELETE_MEETING_FAILED = "DELETE_MEETING_FAILED";
+    public static final String SKYLIB_EXCEPTION = "SKYLIB_EXCEPTION";
+    public static final String SKYLIB_GET_ACCOUNT_FAILED = "SKYLIB_GET_ACCOUNT_FAILED";
+    public static final String SKYLIB_INVALID_STATE = "SKYLIB_INVALID_STATE";
+    public static final String SKYLIB_LOG_IN_FAILED = "SKYLIB_LOG_IN_FAILED";
+    public static final String SKYLIB_NOT_INITIALIZED = "SKYLIB_NOT_INITIALIZED";
+    public static final String TEAMS_CALL_NOT_VALID = "TEAMS_CALL_NOT_VALID";
+    public static final String USER_IS_NULL = "USER_IS_NULL";
+    public static final String MSAL_PUBLIC_APPLICATION_IS_NULL = "MSAL_PUBLIC_APPLICATION_IS_NULL";
+    public static final String ACCOUNT_IS_NULL = "ACCOUNT_IS_NULL";
+    public static final String USER_IS_PSTN_ACTIVE = "USER_IS_PSTN_ACTIVE";
+    public static final String VEDIO_CALLING_ENABLED_FALSE = "VEDIO_CALLING_ENABLED_FALSE";
+    public static final String INVALID_CONVERSATION_ID_FOR_GROUP = "INVALID_CONVERSATION_ID_FOR_GROUP";
+    public static final String WEB_VIEW_ERROR = "WEB_VIEW_ERROR";
+    public static final String WEB_VIEW_HTTP_ERROR = "WEB_VIEW_HTTP_ERROR";
+    public static final String WEB_VIEW_SSL_ERROR = "WEB_VIEW_SSL_ERROR";
+    public static final String OPEN_FILE_PICKER_FAILED = "OPEN_FILE_PICKER_FAILED";
+    public static final String CALL_TRANSFER_INITIALIZE_FAILED = "CALL_TRANSFER_INITIALIZE_FAILED";
+    public static final String CALL_HOLD_FAILED = "CALL_HOLD_FAILED";
+    public static final String USER_ENDED_CALL = "USER_ENDED_CALL";
+    public static final String RECIPIENT_NOT_SAME_AS_LOCAL_USER = "RECIPIENT_NOT_SAME_AS_LOCAL_USER";
+    public static final String CALLING_CALL_ENDED_ABNORMALLY = "CALLING_CALL_ENDED_ABNORMALLY";
+    public static final String CALLING_CALL_ENDED = "CALLING_CALL_ENDED";
+    public static final String MEETING_JOIN_FAILED = "MEETING_JOIN_FAILED";
+    public static final String BROADCAST_MEETINGS_DISABLED = "BROADCAST_MEETINGS_DISABLED";
+    public static final String INVALID_PHONE_NUMBER = "INVALID_PHONE_NUMBER";
+    public static final String CALL_ME_BACK_INITIATED = "CALL_ME_BACK_INITIATED";
+    public static final String CALL_ME_BACK_NOT_INITIATED = "CALL_ME_BACK_NOT_INITIATED";
+    public static final String USER_DISMISSED_CALL_ME_BACK_DIALOG = "USER_DISMISSED_CALL_ME_BACK_DIALOG";
+    public static final String SHARING_ANNOTATION_STOPPED = "SHARING_ANNOTATION_STOPPED";
+    public static final String CONTENT_SHARING_STOPPED = "CONTENT_SHARING_STOPPED";
+    public static final String USER_STOPPED_CONTENT_SHARING = "CONTENT_SHARING_STOPPED";
+    public static final String BROADCAST_SCHEDULING_SERVICE_ERROR = "BROADCAST_SCHEDULING_SERVICE_ERROR";
+    public static final String BROADCAST_ATTENDEE_SERVICE_ERROR = "BROADCAST_ATTENDEE_SERVICE_ERROR";
+    public static final String BROADCAST_VIDEO_DOWNLOAD_ERROR = "BROADCAST_VIDEO_DOWNLOAD_ERROR";
+    public static final String PPT_SHARE_NOT_ENABLED = "PPT_SHARE_NOT_ENABLED";
+    public static final String PPT_SHARE_ERROR = "PPT_SHARE_ERROR";
+    public static final String PPT_WRS_INIT_FAILED = "PPT_WRS_INIT_FAILED";
+    public static final String CONTENT_SHARING_ERROR = "CONTENT_SHARING_ERROR";
+    public static final String SHARING_ANNOTATION_ERROR = "SHARING_ANNOTATION_ERROR";
+    public static final String MEETING_RECORDING_PLAYER_ERROR = "MEETING_RECORDING_PLAYER_ERROR";
+    public static final String SCREEN_SHARE_ERROR = "SCREEN_SHARE_ERROR";
+    public static final String USER_DENIED_OVERLAY_PERMISSION = "USER_DENIED_OVERLAY_PERMISSION";
+    public static final String LIVE_EVENT_ENDED_ABNORMALLY = "LIVE_EVENT_ENDED_ABNORMALLY";
+    public static final String LIVE_EVENT_ENDED = "LIVE_EVENT_ENDED";
+    public static final String KNOWN_AMP_PLAYER = "KNOWN_AMP_PLAYER";
+    public static final String UNKNOWN_AMP_PLAYER = "UNKNOWN_AMP_PLAYER";
+    public static final String DIFFERENT_CLOUD = "DIFFERENT_CLOUD";
+    public static final String MOBILITY_POLICY_AUDIO_DISABLED = "MOBILITY_POLICY_AUDIO_DISABLED";
+    public static final String AUDIO_DISABLED_DIAL_IN_ONLY = "AUDIO_DISABLED_DIAL_IN_ONLY";
+    public static final String CALL_DISABLED_ON_DEVICE = "CALL_DISABLED_ON_DEVICE";
+    public static final String ANOTHER_CALL_INPROGRESS_ON_NORDEN = "ANOTHER_CALL_INPROGRESS_ON_NORDEN";
+    public static final String ANOTHER_CALL_INPROGRESS_ON_NORDEN_CONSOLE = "ANOTHER_CALL_INPROGRESS_ON_NORDEN_CONSOLE";
+    public static final String NORDEN_CONSOLE_NOT_CONNECTED = "NORDEN_CONSOLE_NOT_CONNECTED";
+    public static final String BYOM_AUTO_ACCEPT_CALL_ON_NORDEN_CONSOLE = "BYOM_AUTO_ACCEPT_CALL_ON_NORDEN_CONSOLE";
+    public static final String TROUTER_REGISTRATION_FAILED = "TROUTER_REGISTRATION_FAILED";
+    public static final String TROUTER_REGISTRATION_ERROR = "TROUTER_REGISTRATION_ERROR";
+    public static final String CALL_QUEUE_FAILED = "CALL_QUEUE_FAILED";
+    public static final String CALL_PARK_FAILED = "CALL_PARK_FAILED";
+    public static final String UNABLE_TO_SUBSCRIBE_TO_PARKED_CALL = "UNABLE_TO_SUBSCRIBE_TO_PARKED_CALL";
+    public static final String HOLD_FAILED_FROM_SLIMCORE = "HOLD_FAILED_FROM_SLIMCORE";
+    public static final String PARK_FAILED_FOR_HOLD = "PARK_FAILED_FOR_HOLD";
+    public static final String DID_NOT_RUN = "DID_NOT_RUN";
+    public static final String CALL_CAN_NOT_BE_RESUMED = "CALL_CAN_NOT_BE_RESUMED";
+    public static final String CALL_ACTION_MESSAGE_SEND_FAILURE = "CALL_ACTION_MESSAGE_SEND_FAILURE";
+    public static final String CALL_EMPTY_MEMBER_LIST = "CALL_EMPTY_MEMBER_LIST";
+    public static final String STREAM_PLAYER_SIGNIN_FAILED = "STREAM_PLAYER_SIGNIN_FAILED";
+    public static final String STREAM_SERVER_ERROR = "STREAM_SERVER_ERROR";
+    public static final String STREAM_TOKEN_REQUEST_NOT_RECEIVED = "STREAM_TOKEN_REQUEST_NOT_RECEIVED";
+    public static final String NOTIFICATION_IS_DISABLED = "NOTIFICATION_IS_DISABLED";
+    public static final String CALL_GROUP_FORWARDING_MUTED_FOR_USER = "CALL_GROUP_FORWARDING_MUTED_FOR_USER";
+    public static final String OUTGOING_IN_PRECALL_STATE = "OUTGOING_IN_PRECALL_STATE";
+    public static final String FAILED_TO_RAISED_HAND = "FAILED_TO_RAISED_HAND";
+    public static final String FAILED_TO_LOWER_HAND = "FAILED_TO_LOWER_HAND";
+    public static final String FAILED_TO_LOWER_ALL_HANDS = "FAILED_TO_LOWER_ALL_HANDS";
+    public static final String FAILED_TO_ALLOW_TO_SHARE_VIDEO = "FAILED_TO_ALLOW_TO_SHARE_VIDEO";
+    public static final String FAILED_TO_ALLOW_TO_UNMUTE = "FAILED_TO_ALLOW_TO_UNMUTE";
+    public static final String FAILED_TO_DO_NOT_ALLOW_TO_UNMUTE = "FAILED_TO_DO_NOT_ALLOW_TO_UNMUTE";
+    public static final String FAILED_TO_DO_NOT_ALLOW_TO_SHARE_VIDEO = "FAILED_TO_DO_NOT_ALLOW_TO_SHARE_VIDEO";
+    public static final String BLOCKED_INCOMING_CALL_DURING_QUIET_TIME = "BLOCK_INCOMING_CALL_DURING_QUIET_TIME";
+
+    //Call failure reason
+    public static final String INVALID = "INVALID";
+    public static final String NOFAILURE = "ALECALL_FAILURE_REASON_NOFAILURE";
+    public static final String MISC_ERROR = "ALECALL_FAILURE_REASON_MISC_ERROR";
+    public static final String RECIPIENT_USER_NOT_FOUND = "ALECALL_FAILURE_REASON_RECIPIENT_USER_NOT_FOUND";
+    public static final String RECIPIENT_NOT_ONLINE = "ALECALL_FAILURE_REASON_RECIPIENT_NOT_ONLINE";
+    public static final String NO_PROXIES_FOUND = "ALECALL_FAILURE_REASON_NO_PROXIES_FOUND";
+    public static final String SESSION_TERMINATED = "ALECALL_FAILURE_REASON_SESSION_TERMINATED";
+    public static final String NO_COMMON_CODEC = "ALECALL_FAILURE_REASON_NO_COMMON_CODEC";
+    public static final String SOUND_RECORDING_ERROR = "ALECALL_FAILURE_REASON_SOUND_RECORDING_ERROR";
+    public static final String SOUND_PLAYBACK_ERROR = "ALECALL_FAILURE_REASON_SOUND_PLAYBACK_ERROR";
+    public static final String REMOTE_SOUND_IO_ERROR = "ALECALL_FAILURE_REASON_REMOTE_SOUND_IO_ERROR";
+    public static final String RECIPIENT_BLOCKED = "ALECALL_FAILURE_REASON_RECIPIENT_BLOCKED";
+    public static final String CALLER_NOT_FRIEND = "ALECALL_FAILURE_REASON_CALLER_NOT_FRIEND";
+    public static final String CALLER_NOT_AUTHORIZED = "ALECALL_FAILURE_REASON_CALLER_NOT_AUTHORIZED";
+    public static final String COMMERCIAL_CONTACT_PROHIBITED = "ALECALL_FAILURE_REASON_COMMERCIAL_CONTACT_PROHIBITED";
+    public static final String HOST_ENDED_CONF = "ALECALL_FAILURE_REASON_HOST_ENDED_CONF";
+    public static final String TOO_MANY_IDENTITIES = "ALECALL_FAILURE_REASON_TOO_MANY_IDENTITIES";
+    public static final String CONF_PARTICIPANT_COUNT_LIMIT_REACHED = "ALECALL_FAILURE_REASON_CONF_PARTICIPANT_COUNT_LIMIT_REACHED";
+    public static final String FORKED_CALL_TIMED_OUT = "ALECALL_FAILURE_REASON_FORKED_CALL_TIMED_OUT";
+    public static final String FORKED_CALL_CANCELLED = "ALECALL_FAILURE_REASON_FORKED_CALL_CANCELLED";
+    public static final String SESSION_ESTABLISHMENT_TIMEDOUT = "ALECALL_FAILURE_REASON_SESSION_ESTABLISHMENT_TIMEDOUT";
+    public static final String ANSWERED_ELSEWHERE = "ALECALL_FAILURE_REASON_ANSWERED_ELSEWHERE";
+    public static final String PSTN_NO_SKYPEOUT_SUBSCRIPTION = "ALECALL_FAILURE_REASON_PSTN_NO_SKYPEOUT_SUBSCRIPTION";
+    public static final String PSTN_INSUFFICIENT_FUNDS = "ALECALL_FAILURE_REASON_PSTN_INSUFFICIENT_FUNDS";
+    public static final String PSTN_INTERNET_CONNECTION_LOST = "ALECALL_FAILURE_REASON_PSTN_INTERNET_CONNECTION_LOST";
+    public static final String PSTN_SKYPEOUT_ACCOUNT_BLOCKED = "ALECALL_FAILURE_REASON_PSTN_SKYPEOUT_ACCOUNT_BLOCKED";
+    public static final String PSTN_COULD_NOT_CONNECT_TO_SKYPE_PROXY = "ALECALL_FAILURE_REASON_PSTN_COULD_NOT_CONNECT_TO_SKYPE_PROXY";
+    public static final String PSTN_BLOCKED_BY_US = "ALECALL_FAILURE_REASON_PSTN_BLOCKED_BY_US";
+    public static final String PSTN_BLOCKED_REGULATORY_INDIA = "ALECALL_FAILURE_REASON_PSTN_BLOCKED_REGULATORY_INDIA";
+    public static final String PSTN_INVALID_NUMBER = "ALECALL_FAILURE_REASON_PSTN_INVALID_NUMBER";
+    public static final String PSTN_NUMBER_FORBIDDEN = "ALECALL_FAILURE_REASON_PSTN_NUMBER_FORBIDDEN";
+    public static final String PSTN_CALL_TIMED_OUT = "ALECALL_FAILURE_REASON_PSTN_CALL_TIMED_OUT";
+    public static final String PSTN_BUSY = "ALECALL_FAILURE_REASON_PSTN_BUSY";
+    public static final String PSTN_CALL_TERMINATED = "ALECALL_FAILURE_REASON_PSTN_CALL_TERMINATED";
+    public static final String PSTN_NETWORK_ERROR = "ALECALL_FAILURE_REASON_PSTN_NETWORK_ERROR";
+    public static final String PSTN_NUMBER_UNAVAILABLE = "ALECALL_FAILURE_REASON_PSTN_NUMBER_UNAVAILABLE";
+    public static final String PSTN_CALL_REJECTED = "ALECALL_FAILURE_REASON_PSTN_CALL_REJECTED";
+    public static final String PSTN_EMERGENCY_CALL_DENIED = "ALECALL_FAILURE_REASON_PSTN_EMERGENCY_CALL_DENIED";
+    public static final String PSTN_MISC_ERROR = "ALECALL_FAILURE_REASON_PSTN_MISC_ERROR";
+    public static final String CALL_NOT_FOUND = "ALECALL_FAILURE_REASON_CALL_NOT_FOUND";
+    public static final String TROUTER_ERROR = "ALECALL_FAILURE_REASON_TROUTER_ERROR";
+    public static final String MEDIA_DROPPED_ERROR = "ALECALL_FAILURE_REASON_MEDIA_DROPPED_ERROR";
+    public static final String PSTN_NO_SUBSCRIPTION_COVER = "ALECALL_FAILURE_REASON_PSTN_NO_SUBSCRIPTION_COVER";
+    public static final String CALL_NOTIFICATION_DELIVERY_FAILURE = "ALECALL_FAILURE_REASON_CALL_NOTIFICATION_DELIVERY_FAILURE";
+    public static final String PSTN_CREDIT_EXPIRED = "ALECALL_FAILURE_REASON_PSTN_CREDIT_EXPIRED";
+    public static final String PSTN_CREDIT_EXPIRED_BUT_ENOUGH = "ALECALL_FAILURE_REASON_PSTN_CREDIT_EXPIRED_BUT_ENOUGH";
+    public static final String ENTERPRISE_PSTN_INTERNAL_ERROR = "ALECALL_FAILURE_REASON_ENTERPRISE_PSTN_INTERNAL_ERROR";
+    public static final String ENTERPRISE_PSTN_UNAVAILABLE = "ALECALL_FAILURE_REASON_ENTERPRISE_PSTN_UNAVAILABLE";
+    public static final String ENTERPRISE_PSTN_FORBIDDEN = "ALECALL_FAILURE_REASON_ENTERPRISE_PSTN_FORBIDDEN";
+    public static final String ENTERPRISE_PSTN_INVALID_NUMBER = "ALECALL_FAILURE_REASON_ENTERPRISE_PSTN_INVALID_NUMBER";
+    public static final String ENTERPRISE_PSTN_MISC_ERROR = "ALECALL_FAILURE_REASON_ENTERPRISE_PSTN_MISC_ERROR";
+    public static final String KICKED = "ALECALL_FAILURE_REASON_KICKED";
+    public static final String NETWORK_REQUEST_TIMEOUT_ERROR = "ALECALL_FAILURE_REASON_NETWORK_REQUEST_TIMEOUT_ERROR";
+    public static final String CALL_DOES_NOT_EXIST = "ALECALL_FAILURE_REASON_CALL_DOES_NOT_EXIST";
+    public static final String MEDIA_SETUP_FAILURE = "ALECALL_FAILURE_REASON_MEDIA_SETUP_FAILURE";
+    public static final String SERVICE_UNAVAILABLE = "ALECALL_FAILURE_REASON_SERVICE_UNAVAILABLE";
+    public static final String SIGNALING_ERROR = "ALECALL_FAILURE_REASON_SIGNALING_ERROR";
+    public static final String CONVERSATION_ESTABLISHMENT_FAILED = "ALECALL_FAILURE_REASON_CONVERSATION_ESTABLISHMENT_FAILED";
+    public static final String TEMPORARILY_UNAVAILABLE = "ALECALL_FAILURE_REASON_TEMPORARILY_UNAVAILABLE";
+    public static final String GENERAL_NETWORK_ERROR = "ALECALL_FAILURE_REASON_GENERAL_NETWORK_ERROR";
+    public static final String NETWORK_CANNOT_CONNECT_ERROR = "ALECALL_FAILURE_REASON_NETWORK_CANNOT_CONNECT_ERROR";
+    public static final String NO_SIGNALING_FROM_PEER = "ALECALL_FAILURE_REASON_NO_SIGNALING_FROM_PEER";
+    public static final String ANONYMOUS_JOIN_DISABLED_BY_POLICY = "ALECALL_FAILURE_REASON_ANONYMOUS_JOIN_DISABLED_BY_POLICY";
+    public static final String NO_LOBBY_FOR_BROADCAST_JOIN = "ALECALL_FAILURE_REASON_NO_LOBBY_FOR_BROADCAST_JOIN";
+    public static final String NOT_ALLOWED_DUE_TO_INFORMATION_BARRIER = "ALECALL_FAILURE_REASON_NOT_ALLOWED_DUE_TO_INFORMATION_BARRIER";
+    public static final String BROADCAST_LIMIT_REACHED = "ALECALL_FAILURE_REASON_BROADCAST_LIMIT_REACHED";
+    public static final String B2B_JOIN_DISABLED_BY_POLICY = "ALECALL_FAILURE_REASON_B2B_JOIN_DISABLED_BY_POLICY";
+    public static final String LOCATION_BASED_ROUTING_ERROR = "ALECALL_FAILURE_REASON_LOCATION_BASED_ROUTING_ERROR";
+    public static final String CONF_LOBBY_PARTICIPANT_COUNT_LIMIT_REACHED = "ALECALL_FAILURE_REASON_CONF_LOBBY_PARTICIPANT_COUNT_LIMIT_REACHED";
+    public static final String FAILURE_REASON_FORBIDDEN = "ALECALL_FAILURE_REASON_FORBIDDEN";
+    public static final String UNKNOWN_FAILURE_REASON = "UNKNOWN_FAILURE_REASON";
+    public static final String REFUSED = "REFUSED";
+    public static final String CALL_FORWARDING_INITIATED = "CALL_FORWARDING_INITIATED";
+    public static final String VM_REDIRECT_INITIATED = "VM_REDIRECT_INITIATED";
+    public static final String MISSED = "MISSED";
+    public static final String DENIED_IN_LOBBY = "DENIED_IN_LOBBY";
+    public static final String TIMEOUT_IN_LOBBY = "TIMEOUT_IN_LOBBY";
+    public static final String SCENARIO_STATUS_CODE_NOT_FOUND_FOR_CALL_STATUS = "SCENARIO_STATUS_CODE_NOT_FOUND_FOR_CALL_STATUS";
+    public static final String SCENARIO_MEDIA_CONNECTED_FAIL_UNKNOWN = "SCENARIO_MEDIA_CONNECTED_FAIL_UNKNOWN";
+    public static final String MERGE_SOURCE_CALL_INVALID_PARTICIPANT = "MERGE_SOURCE_CALL_INVALID_PARTICIPANT";
+    public static final String MERGE_SOURCE_CALL_TYPE_NOT_ALLOWED = "MERGE_SOURCE_CALL_TYPE_NOT_ALLOWED";
+    public static final String MERGE_TARGET_CALL_TYPE_NOT_ALLOWED = "MERGE_TARGET_CALL_TYPE_NOT_ALLOWED";
+    public static final String MERGE_SOURCE_SFC_INTEROP_CALL = "MERGE_SOURCE_SFC_INTEROP_CALL";
+    public static final String MERGE_TARGET_SFC_INTEROP_CALL = "MERGE_TARGET_SFC_INTEROP_CALL";
+    public static final String MERGE_TARGET_CALL_HAS_PARTICIPANT_ALREADY = "MERGE_TARGET_CALL_HAS_PARTICIPANT_ALREADY";
+    public static final String MERGE_TARGET_CALL_DOES_NOT_EXIST = "MERGE_TARGET_CALL_DOES_NOT_EXIST";
+    public static final String MERGE_TARGET_CALL_NOT_ON_HOLD = "MERGE_TARGET_CALL_NOT_ON_HOLD";
+    public static final String MERGE_PSTN_CALLS_MERGE_NOT_SUPPORTED = "MERGE_PSTN_CALLS_MERGE_NOT_SUPPORTED";
+    public static final String MERGE_FAILED_RESOLVE_MERGE_CALL_THREAD = "MERGE_FAILED_RESOLVE_MERGE_CALL_THREAD";
+    public static final String MERGE_FAILED_TO_RESOLVE_PARTICIPANT_LEG_ID = "MERGE_FAILED_TO_RESOLVE_PARTICIPANT_LEG_ID";
+    public static final String MERGE_OPERATION_STATUS_RESULT_INVALID = "MERGE_OPERATION_STATUS_RESULT_INVALID";
+    public static final String MERGE_OPERATION_FAILED = "MERGE_OPERATION_FAILED";
+    public static final String CONSULTATIVE_CALL_NULL = "CONSULTATIVE_CALL_NULL";
+    public static final String GET_THREAD_PROPERTIES_FAILED = "GET_THREAD_PROPERTIES_FAILED";
+
+    // VBSS Errors
+    public static final String VBSS_START_SCREEN_SHARE_FAILED = "VBSS_START_SCREEN_SHARE_FAILED";
+
+    //EXPO Errors
+    public static final String CAST_INIT_FAILED = "CAST_INIT_FAILED";
+
+    // Notification received errors
+    public static final String NOTIFICATION_FILTERED_OUT = "notification_filtered_out";
+    public static final String NOTIFICATION_SHOULD_BE_SUPPRESSED = "notification_should_be_suppressed";
+    public static final String NOTIFICATION_MTMA_SUPPRESSED = "notification_mtma_suppressed";
+    public static final String NOTIFICATION_HANDLED_BY_NATIVE_PACKAGE = "NOTIFICATION_HANDLED_BY_NATIVE_PACKAGE";
+    public static final String SKYPE_INSTALLING_OR_SIGNED_OUT = "SKYPE_INSTALLING_OR_SIGNED_OUT";
+    public static final String AUTH_ERROR = "AUTH_ERROR";
+    public static final String NOTIFICATION_PROMPT_REQUIRED = "NOTIFICATION_PROMPT_REQUIRED";
+    public static final String NOT_INTENDED_FOR_USER = "NOT_INTENDED_FOR_USER";
+    public static final String CALL_NOTIFICATION = "CALL_NOTIFICATION";
+    public static final String CALL_LONGPOLL = "CALL_LONGPOLL";
+    public static final String MISSING_RAW_PAYLOAD = "MISSING_RAW_PAYLOAD";
+    public static final String SHOW_ONLY_ACTIVE = "SHOW_ONLY_ACTIVE";
+    public static final String DUPLICATE_ALERT = "DUPLICATE_ALERT";
+    public static final String ACTIVITY_FEED_EMPTY = "ACTIVITY_FEED_EMPTY";
+    public static final String UNKNOWN_SENDER = "UNKNOWN_SENDER";
+    public static final String MESSAGE_PARSING_FAILED = "MESSAGE_PARSING_FAILED";
+    public static final String RAW_PAYLOAD_PARSING_FAILED = "RAW_PAYLOAD_PARSING_FAILED";
+    public static final String SETTINGS_TURNED_OFF = "SETTINGS_TURNED_OFF";
+    public static final String ACTIVITY_TYPE_UNKNOWN = "ACTIVITY_TYPE_UNKNOWN";
+    public static final String SYNC_FAILURE = "SYNC_FAILURE";
+    public static final String CONSUMPTION_HORIZON_NOTIFICATION = "CONSUMPTION_HORIZON_NOTIFICATION";
+    public static final String CHANNEL_MESSAGE = "CHANNEL_MESSAGE";
+    public static final String APP_FOREGROUND = "APP_FOREGROUND";
+    public static final String USER_DND = "USER_DND";
+    public static final String DIFFERENT_USER = "DIFFERENT_USER. SenderId: ";
+    public static final String FILE_CALL_CONTROL_MESSAGE = "FILE_CALL_CONTROL_MESSAGE";
+    public static final String READ_ACTIVITY = "READ_ACTIVITY. ActivityId: ";
+    public static final String USER_MISSING = "USER_MISSING. UserId: ";
+    public static final String TEAM_MISSING = "TEAM_MISSING";
+    public static final String CONTROL_MESSAGE = "CONTROL_MESSAGE";
+    public static final String MESSAGE_TYPE_LIVE_MEETING_NOTIFICATION = "LIVE_MEETING_NOTIFICATION";
+    public static final String MESSAGE_TYPE_RECORDING = "MESSAGE_TYPE_RECORDING";
+    public static final String MESSAGE_TYPE_TRANSCRIPT = "MESSAGE_TYPE_TRANSCRIPT";
+    public static final String MESSAGE_TYPE_MEETING_OBJECTS = "MESSAGE_TYPE_MEETING_OBJECTS";
+    public static final String MESSAGE_NOT_FOUND = "MESSAGE_NOT_FOUND";
+    public static final String NOTIFICATION_FROM_CURRENT_USER = "MESSAGE_FROM_CURRENT_USER";
+    public static final String BOT_IS_NOTIFICATION_ONLY = "MESSAGE_FROM_NOTIFICATION_ONLY_BOT";
+    public static final String IGNORE_SFB_INTER_OP_FED_THREAD = "IGNORE_SFB_INTER_OP_FED_THREAD";
+    public static final String IGNORE_FEDERATED_CHAT_THREAD = "IGNORE_FEDERATED_CHAT_THREAD";
+    public static final String IGNORE_SMS_CHAT_THREAD = "IGNORE_SMS_CHAT_THREAD";
+    public static final String TENANT_BEING_SWITCHED = "TENANT_BEING_SWITCHED";
+    public static final String HAS_OUTSTANDING_LOGIN_PROMPT = "HAS_OUTSTANDING_LOGIN_PROMPT";
+    public static final String END_CALL_PUSH_NOTIFICATION = "END_CALL_PUSH_NOTIFICATION";
+    public static final String APP_FOREGROUND_PUSH_NOTIFICATION = "APP_FOREGROUND_PUSH_NOTIFICATION";
+    public static final String INCOMPLETE_CH_PUSH_NOTIFICATION = "INCOMPLETE_CH_PUSH_NOTIFICATION";
+    public static final String INCOMPLETE_BADGE_COUNT_PUSH_NOTIFICATION = "INCOMPLETE_BADGE_COUNT_PUSH_NOTIFICATION";
+    public static final String NOTIFICATION_MANAGER_ERROR = "NOTIFICATION_MANAGER_ERROR";
+    public static final String NO_ACTIVE_PUSH_NOTIFICATION = "NO_ACTIVE_PUSH_NOTIFICATION";
+    public static final String NO_MATCHED_NOTIFICATION = "NO_MATCHED_NOTIFICATION";
+    public static final String DEVICE_API_VERSION_TOO_LOW = "DEVICE_API_VERSION_TOO_LOW";
+    public static final String EMPTY_MRIS_LIST = "EMPTY_MRIS_LIST";
+    public static final String UNKNOWN_FEDERATED_USER = "UNKNOWN_FEDERATED_USER";
+    public static final String CACHED_INVALID_FEDERATED_USERS = "CACHED_INVALID_FEDERATED_USERS";
+    public static final String FEDERATED_USER_BY_EMAIL_FORBIDDEN = "FEDERATED_USER_BY_EMAIL_FORBIDDEN";
+    public static final String FEDERATED_USER_BY_EMAIL_NOT_FOUND = "FEDERATED_USER_BY_EMAIL_NOT_FOUND";
+    public static final String NO_MATCHED_FEDERATED_USER_BY_MRI = "NO_MATCHED_FEDERATED_USER_BY_MRI";
+    public static final String FEDERATED_USER_BY_MRI_FORBIDDEN = "NO_MATCHED_FEDERATED_USER_BY_MRI_FORBIDDEN";
+    public static final String VIEW_DESTROYED = "VIEW_DESTROYED";
+
+    public static final String INTUNE_REMEDIATE_COMPLIANCE_POLICY_FAILURE = "INTUNE_REMEDIATE_COMPLIANCE_POLICY_FAILURE";
+
+    public static final String END_ACTIVE_CALL_PUSH_NOTIFICATION = "END_ACTIVE_CALL_PUSH_NOTIFICATION";
+    public static final String NOTIFICATION_QUIET_HOURS = "NOTIFICATION_QUIET_HOURS";
+    public static final String NOTIFICATION_TENANT_ID_IS_EMPTY = "NOTIFICATION_TENANT_ID_IS_EMPTY";
+    public static final String NOTIFICATION_WORK_MANGER_ERROR = "NOTIFICATION_WORK_MANGER_ERROR";
+    public static final String NOTIFICATION_PAYLOAD_EMPTY = "NOTIFICATION_PAYLOAD_EMPTY";
+    public static final String NOTIFICATION_PAYLOAD_PARSE_EXCEPTION = "NOTIFICATION_PAYLOAD_PARSE_EXCEPTION";
+    public static final String NOTIFICATION_NOT_TRUSTED = "NOTIFICATION_NOT_TRUSTED";
+
+    public static final String BACKGROUND_NOTIFICATION_SYNC_NOT_ENABLED = "BACKGROUND_NOTIFICATION_SYNC_NOT_ENABLED";
+    public static final String BACKGROUND_NOTIFICATION_SYNC_APP_FOREGROUND = "BACKGROUND_NOTIFICATION_SYNC_APP_FOREGROUND";
+    public static final String BACKGROUND_NOTIFICATION_SYNC_SETTING_NOT_ALWAYS = "BACKGROUND_NOTIFICATION_SYNC_SETTING_NOT_ALWAYS";
+    public static final String BACKGROUND_NOTIFICATION_SYNC_LONGPOLL_FAILED = "BACKGROUND_NOTIFICATION_SYNC_LONGPOLL_FAILED";
+
+    public static final String IGNORE_MTMA_NOTIFICATION = "IGNORE_MTMA_NOTIFICATION";
+
+    //Image Error
+    public static final String IMAGE_PREVIEW_ERROR = "IMAGE_PREVIEW_ERROR";
+    public static final String IMAGE_DOWNLOAD_FAILED = "IMAGE_DOWNLOAD_FAILED";
+
+    public static final String MAM_POLICY_BLOCKED = "MAM_POLICY_BLOCKED";
+
+    //Delegate Errors
+    public static final String ERROR_DELEGATE_ALREADY_EXIST = "Conflict";
+    public static final String ERROR_DELEGATE_NOT_FOUND = "NotFound";
+    public static final String ERROR_DELEGATE_INVALID = "InvalidUserId";
+
+    // Bookmark error
+    public static final String BOOKMARK_FAILED = "BOOKMARK_FAILED";
+
+    //Error in response received from API
+    public static final String ERROR_IN_RESPONSE = "ERROR_IN_RESPONSE";
+
+    //Error while opening file preview
+    public static final String FILE_PREVIEW_ERROR = "FILE_PREVIEW_ERROR";
+    public static final String FILE_INFO_NULL = "FILE_INFO_NULL";
+    public static final String FILE_BAD_URL = "FILE_BAD_URL";
+    public static final String FILE_DEEPLINK_NO_PREVIEW_AVAILABLE = "FILE_DEEPLINK_NO_PREVIEW_AVAILABLE";
+    public static final String ONE_UP_PREVIEW_NOT_NEEDED = "ONE_UP_VIEWER_NOT_NEEDED";
+    public static final String FILE_NOT_FOUND_EXCEPTION = "FILE_NOT_FOUND_EXCEPTION";
+    public static final String ACCESS_DENIED = "ACCESS_DENIED";
+
+    //Error while downloading File
+    public static final String FILE_ID_ERROR = "FILE_ID_ERROR";
+    public static final String FILE_DOWNLOAD_URL_EMPTY = "FILE_DOWNLOAD_URL_EMPTY";
+    public static final String FILE_DOWNLOAD_CANCEL = "FILE_DOWNLOAD_CANCEL";
+    public static final String FILE_DOWNLOAD_FAILED = "FILE_DOWNLOAD_FAILED";
+    public static final String FILE_DOWNLOAD_URL_NON_HTTPS = "FILE_DOWNLOAD_URL_NON_HTTPS";
+    public static final String GIF_FILE_DOWNLOAD_FAILED = "GIF_FILE_DOWNLOAD_FAILED";
+    public static final String FILE_DOWNLOAD_NOT_SUPPORTED = "FILE_DOWNLOAD_NOT_SUPPORTED";
+
+    //File upload related error
+    public static final String FILE_ATTACHMENT_NULL = "FILE_ATTACHMENT_NULL";
+    public static final String FILE_NOT_CHANNEL_ATTACHMENT = "FILE_NOT_CHANNEL_ATTACHMENT";
+    public static final String FILE_NOT_CHAT_ATTACHMENT = "FILE_NOT_CHAT_ATTACHMENT";
+    public static final String ONEDRIVE_OUT_OF_SPACE = "ONEDRIVE_OUT_OF_SPACE";
+    public static final String FILE_UPLOAD_FAILED = "FILE_UPLOAD_FAILED";
+    public static final String FILE_UPLOAD_TO_RETRY = "FILE_UPLOAD_TO_RETRY";
+    public static final String FILE_UPLOAD_PAUSED = "FILE_UPLOAD_PAUSED";
+    public static final String UPLOAD_SESSION_EXPIRED = "UPLOAD_SESSION_EXPIRED";
+    public static final String UPLOAD_NOT_STARTED_YET = "UPLOAD_NOT_STARTED_YET";
+    public static final String UNABLE_TO_READ_FILE = "UNABLE_TO_READ_FILE";
+    public static final String FILE_UPLOAD_REQUEST_OBSOLETE = "FILE_UPLOAD_REQUEST_OBSOLETE";
+
+    //File upload cleanup
+    public static final String ECS_DISABLED = "ECS_DISABLED";
+
+    //IP Compliance
+    public static final String FILE_IP_COMPLIANCE = "FILE_IP_COMPLIANCE";
+    public static final String FILE_PREVIEW_IP_COMPLIANCE_ERROR = "FILE_PREVIEW_IP_COMPLIANCE_ERROR";
+
+    //Calendar
+    public static final String EVENT_OVERLAP_ERROR = "CalendarEventCreationFailedOccurrenceTimeSpanTooBig";
+    public static final String EVENT_NOT_FOUND = "CalendarEventNotFound";
+    public static final String RANGE_NOT_FOUND = "CalendarEventRangeNotFound";
+    public static final String EVENT_FORBIDDEN_ERROR = "Forbidden";
+    public static final String MAIL_BOX_NOT_FOUND_ERROR = "ErrorNonExistentMailbox";
+    public static final String OCCURRENCE_OVERLAP_ERROR = "ErrorOccurrenceCrossingBoundary";
+    public static final String NO_EVENTS = "noEvents";
+    public static final String NO_FUTURE_EVENTS = "noFutureEvents";
+
+    //Office Lens
+    public static final String LENS_FAILED = "LENS_HANDLER_FAILED";
+
+    // Bots
+    public static final String VIDEO_RESTRICTED_INCOMPLETE = "VIDEO_RESTRICTED_INCOMPLETE";
+    public static final String ADD_TOGETHER_MODE_BOT_FAILED = "ADD_TOGETHER_MODE_BOT_FAILED";
+    public static final String STARTING_TOGETHER_MODE_FAILED = "STARTING_TOGETHER_MODE_FAILED";
+    public static final String ADD_LARGE_GALLERY_MODE_BOT_FAILED = "ADD_LARGE_GALLERY_MODE_BOT_FAILED";
+    public static final String STARTING_LARGE_GALLERY_MODE_FAILED = "STARTING_LARGE_GALLERY_MODE_FAILED";
+    public static final String STARTING_TOGETHER_MODE_INCOMPLETE = "STARTING_TOGETHER_MODE_INCOMPLETE";
+    public static final String STARTING_LARGE_GALLERY_MODE_INCOMPLETE = "STARTING_LARGE_GALLERY_MODE_INCOMPLETE";
+    public static final String STARTING_RECORDING_FAILED = "STARTING_RECORDING_FAILED";
+    public static final String ADDING_RECORDING_BOT_FAILED = "ADDING_RECORDING_BOT_FAILED";
+    public static final String RETRIEVE_RECORDING_POLICY_FAILED = "RETRIEVE_RECORDING_POLICY_FAILED";
+    public static final String FETCH_RECORDING_PERMISSIONS_AND_SETTINGS_FAILED = "FETCH_RECORDING_PERMISSIONS_AND_SETTINGS_FAILED";
+    public static final String STARTING_LIVE_CAPTION_FAILED = "STARTING_LIVE_CAPTION_FAILED";
+    public static final String ADDING_LIVE_CAPTION_BOT_FAILED = "ADDING_LIVE_CAPTION_BOT_FAILED";
+
+    //Cortana
+    public static final String CORTANA_BACKGROUND_TOKEN_REFRESH_SUCCESS = "CORTANA_BACKGROUND_TOKEN_REFRESH_SUCCESS";
+    public static final String CORTANA_BACKGROUND_TOKEN_REFRESH_RETRY = "CORTANA_BACKGROUND_TOKEN_REFRESH_RETRY";
+    public static final String CORTANA_BACKGROUND_TOKEN_REFRESH_FAILED = "CORTANA_BACKGROUND_TOKEN_REFRESH_FAILED";
+    public static final String CORTANA_ADMIN_SETTINGS_REFRESH_SUCCESS = "CORTANA_ADMIN_SETTINGS_REFRESH_SUCCESS";
+    public static final String CORTANA_ADMIN_SETTINGS_REFRESH_FAILED = "CORTANA_ADMIN_SETTINGS_REFRESH_FAILED";
+    public static final String CORTANA_SKILL_ACTION_EXECUTION_FAILED = "CORTANA_SKILL_ACTION_EXECUTION_FAILED";
+    public static final String CORTANA_KWS_SERVICE_REJECTED = "CORTANA_KWS_SERVICE_REJECTED";
+    public static final String CORTANA_KWS_TRIGGER_INCOMPLETE = "CORTANA_KWS_TRIGGER_INCOMPLETE";
+    public static final String CORTANA_AUTO_CLOSE_FAILED = "CORTANA_AUTO_CLOSE_FAILED";
+    public static final String CORTANA_MORE_MENU_FAILED = "CORTANA_MORE_MENU_FAILED";
+    public static final String CORTANA_SKILL_ACTION_DELAY_FAILED = "CORTANA_SKILL_ACTION_DELAY_FAILED";
+    public static final String CORTANA_SDK_EVENTS_SCENARIO_FAILED = "CORTANA_SDK_EVENTS_SCENARIO_FAILED";
+    public static final String CORTANA_SDK_EVENTS_SCENARIO_INCOMPLETE = "CORTANA_SDK_EVENTS_SCENARIO_INCOMPLETE";
+    public static final String CORTANA_INITIALIZATION_SCENARIO_INCOMPLETE = "CORTANA_INITIALIZATION_SCENARIO_INCOMPLETE";
+    public static final String CORTANA_INITIALIZATION_SCENARIO_FAILED = "CORTANA_INITIALIZATION_SCENARIO_FAILED";
+    public static final String CORTANA_INITIALIZATION_CANCELLED = "CORTANA_INITIALIZATION_CANCELLED";
+    public static final String CORTANA_WATCHDOG_SCENARIO_FAILED = "CORTANA_WATCHDOG_SCENARIO_FAILED";
+    public static final String CORTANA_RESPONSE_ERROR_SCENARIO_FAILED = "CORTANA_RESPONSE_ERROR_SCENARIO_FAILED";
+
+    //Meetings
+    public static final String TIME_ZONE_CALL_FAILED = "TIME_ZONE_CALL_FAILED";
+    public static final String FETCH_MEETING_METADATA_FAILURE = "FETCH_MEETING_METADATA_FAILURE";
+    public static final String NO_MEETING_INFO = "NO_MEETING_INFO";
+
+    //PSTN block/unblock
+    public static final String NUMBER_INVALID = "NUMBER_INVALID";
+    public static final String NUMBER_EMPTY = "NUMBER_EMPTY";
+
+    // Dock
+    public static final String DOCK_MESSAGE_ACK_FAILED = "DOCK_MESSAGE_ACK_FAILED";
+
+    //Mobile Module Error code
+    public static final String CODEPUSH_BUNDLE_DOWNLOAD_AND_INSTALL_FAILED = "CODEPUSH_BUNDLE_DOWNLOAD_AND_INSTALL_FAILED";
+    public static final String CODEPUSH_SYNC_APP_OVERALL_FAILED = "CODEPUSH_OVERALL_SYNC_APP_FAILED";
+    public static final String GET_RN_APP_ICON_URI_FAILED = "GET_RN_APP_ICON_URI_FAILED";
+    public static final String GET_SELECTED_RN_APP_ICON_URI_FAILED = "GET_SELECTED_RN_APP_ICON_URI_FAILED";
+    public static final String MISSING_PREREQUISITE = "MISSING_PREREQUISITE";
+    public static final String RN_APP_RENDER_FAILED = "RN_APP_RENDER_FAILED";
+    public static final String RN_APP_RENDER_DOWNLOADING = "RN_APP_RENDER_DOWNLOADING";
+
+    public static final String STATUS_DROP_INDICES_FAILED = "STATUS_DROP_INDICES_FAILED";
+    public static final String STATUS_RECREATE_INDICES_FAILED = "STATUS_RECREATE_INDICES_FAILED";
+
+    //WorkManager
+    public static final String WORK_MANAGER_EXECUTION_EXCEPTION = "WORK_MANAGER_EXECUTION_EXCEPTION";
+
+    //Translation
+    public static final String GET_TRANSLATION_SUPPORTED_LANGUAGES_API_CALL_FAILURE = "GET_TRANSLATION_SUPPORTED_LANGUAGES_API_CALL_FAILURE";
+    public static final String GET_TRANSLATION_SUPPORTED_LANGUAGES_API_CALL_UNSUCCESSFUL = "GET_TRANSLATION_SUPPORTED_LANGUAGES_API_CALL_UNSUCCESSFUL";
+
+    //Invite-free
+    public static final String QUARANTINE_LIMIT_REACHED = "QUARANTINE_LIMIT_REACHED";
+
+    //Background Sync Service
+    public static final String BACKGROUND_SYNC_SERVICE_NOT_ENABLED = "BACKGROUND_SYNC_SERVICE_NOT_ENABLED";
+    public static final String BACKGROUND_SYNC_SERVICE_APP_FOREGROUND = "BACKGROUND_SYNC_SERVICE_APP_FOREGROUND";
+
+    // SharedDevice related Codes
+    public static final String SHARED_DEVICE_ERROR = "SHARED_DEVICE_ERROR";
+
+    // Meetnow
+    public static final String MEETNOW_SERVICE_ERROR = "MEETNOW_SERVICE_ERROR";
+
+    // Background blur
+    public static final String BACKGROUND_BLUR_FAILED = "BACKGROUND_BLUR_FAILED";
+    public static final String BACKGROUND_PERSISTED_LOAD_FAILED = "BACKGROUND_PERSISTED_LOAD_FAILED";
+    public static final String BG_EFFECTS_IMAGE_DOWNLOAD_FAILED = "BG_EFFECTS_IMAGE_DOWNLOAD_FAILED";
+    public static final String BG_EFFECTS_FAILED_SLIM_CORE = "BG_EFFECTS_FAILED_SLIM_CORE";
+    public static final String BG_EFFECTS_CUSTOM_IMAGE_UPLOAD_FAILED = "BG_EFFECTS_CUSTOM_IMAGE_UPLOAD_FAILED";
+
+    // Extensibility Platform specific status codes
+    public static final String PLATFORM_OPEN_CONVERSATION_FAILED = "OPEN_CONVERSATION_FAILED";
+    public static final String PLATFORM_CREATE_NEW_CONVERSATION_FAILED = "CREATE_NEW_CONVERSATION_FAILED";
+
+    // Generic status codes for network calls
+    public static final String NULL_RESPONSE = "null_response";
+    public static final String UNSUCCESSFUL_RESPONSE = "unsuccessful_response";
+    public static final String TOKEN_FETCH_FAILURE = "token_fetch_failure";
+
+    //Teams SDK
+    public static final String ERROR_SDK_UNRECOGNIZED = "sdk_unrecognized";
+    public static final String ERROR_SDK_INVALID_URL = "sdk_invalid_url";
+
+    // Beacon
+    public static final String BEACON_ADVERTISEMENT_STOPPED = "AdvertisementStopped";
+
+    // Live state service errors
+    public static final String STATE_SERVICE_ERROR_NONE = "None";
+    public static final String STATE_SERVICE_ERROR_ENDPOINT_REQUEST = "EndpointRequestError";
+    public static final String STATE_SERVICE_ERROR_AUTH_REQUEST = "AuthRequestError";
+    public static final String STATE_SERVICE_ERROR_WEB_SOCKET_CONNECT = "WebSocketConnectError";
+
+    // Expected Errors based on ECS Config
+    public static final String EXPECTED_TERMINATED_REASON = "ExpectedTerminatedReason";
+    public static final String EXPECTED_CALL_CODE = "ExpectedCallCode";
+    public static final String EXPECTED_CALL_SUBCODE = "ExpectedCalLSubCode";
+    public static final String EXPECTED_CALL_SUBCODE_MAP = "ExpectedCallSubCodeMap";
+    public static final String EXPECTED_CALL_SUBCODE_RANGE_MAP = "ExpectedCallSubCodeRangeMap";
+
+    // Call video failure
+    public static final String CALL_START_VIDEO_SKYLIB_FAILED = "CALL_START_VIDEO_SKYLIB_FAILED";
+    public static final String CALL_START_VIDEO_PAUSED_EARLY = "CALL_START_VIDEO_PAUSED_EARLY";
+    public static final String CALL_START_VIDEO_STOPPED_EARLY = "CALL_START_VIDEO_STOPPED_EARLY";
+
+    // Emoji
+    public static final String EMOJI_DOWNLOAD_FAILED = "EMOJI_DOWNLOAD_FAILED";
+
+    //Meeting Extension
+    public static final String MEETING_EXTENSION_UNKNOWN = "unknown";
+    public static final String MEETING_EXTENSION_UNSUPPORTED_MEETING = "unsupportedMeeting";
+    public static final String MEETING_EXTENSION_ON_THREAD_AVAILABLE = "noThreadAvailable";
+    public static final String MEETING_EXTENSION_NO_APP_DEFINITION_AVAILABLE = "noAppDefinitionAvailable";
+    public static final String MEETING_EXTENSION_INTERNAL_ERROR = "internalError";
+
+
+    private StatusCode() {
+    }
+
+    public static String getErrorDisplayText(Context context, @StatusCodeValue String errorCode) {
+        if (errorCode == null || errorCode.equalsIgnoreCase(ADALError.AUTH_FAILED_CANCELLED.name())) {
+            return null;
+        }
+
+        if (ADALError.DEVICE_CONNECTION_IS_NOT_AVAILABLE.name().equalsIgnoreCase(errorCode)
+                || ADALError.DEVICE_INTERNET_IS_NOT_AVAILABLE.name().equalsIgnoreCase(errorCode)
+                || ADALError.NO_NETWORK_CONNECTION_POWER_OPTIMIZATION.name().equalsIgnoreCase(errorCode)
+                || StatusCode.NETWORK_UNAVAILABLE.equalsIgnoreCase(errorCode)) {
+            // return context.getString(R.string.cannot_auth_when_offline_error);
+            return "context.getString(R.string.cannot_auth_when_offline_error)";
+        }
+
+//        switch (errorCode) {
+//            case TEAMS_DISABLED_FOR_TENANT:
+//                return context.getString(R.string.skype_teams_disabled_for_tenant_error_message);
+//            case USER_LICENSE_NOT_PRESENT:
+//                return context.getString(R.string.skype_teams_user_license_not_present_error_message);
+//            case ADMIN_USER_LICENSE_NOT_PRESENT:
+//            case USER_LICENSE_NOT_PRESENT_TRIAL_ELIGIBLE:
+//                return context.getString(R.string.skype_teams_admin_user_license_not_present_error_message);
+//            case ADMIN_TEAMS_DISABLED_FOR_TENANT:
+//                return context.getString(R.string.skype_teams_admin_teams_disabled_for_tenant_error_message);
+//            case GUEST_USER_NOT_REDEEMED:
+//                return context.getString(R.string.skype_teams_admin_teams_disabled_for_tenant_error_message);
+//            case GET_SKYPE_CHAT_TOKENS_UNAUTHORIZED_ACCESS:
+//                return context.getString(R.string.skype_teams_not_enabled_error_message);
+//            case WALLED_GARDEN_DETECTED:
+//                return context.getString(R.string.walled_garden_detected);
+//            case PERSONAL_ACCOUNT:
+//                return context.getString(R.string.personal_email);
+//            default:
+//            return context.getString(R.string.unknown_auth_error);
+
+//        }
+        return "context.getString(R.string.unknown_auth_error)";
+    }
+
+    @Retention(RetentionPolicy.SOURCE)
+    @StringDef({AAD_ACQUIRE_TOKEN_FAILED,
+            AAD_REFRESH_TOKEN_FAILED,
+            RESULT_NOT_FOR_REQUEST,
+            NULL_ACCESS_TOKEN,
+            WRONG_ACCOUNT_TYPE,
+            ACTIVE_CALL,
+            DO_NOT_DISTURB,
+            INCOMING_CALLS_OFF,
+            GCP_CALL_FORWARD_MUTED,
+            AD_HOC_MEETING_DETAILS_INVALID,
+            ADAL_ERROR,
+            NO_ACCOUNT_FOUND,
+            USER_SIGNING_OUT_OR_SIGNED_OUT,
+            ADMIN_TEAMS_DISABLED_FOR_TENANT,
+            ADMIN_USER_LICENSE_NOT_PRESENT,
+            NUMBER_INVALID,
+            NUMBER_EMPTY,
+            USER_LICENSE_NOT_PRESENT_TRIAL_ELIGIBLE,
+            GUEST_USER_NOT_REDEEMED,
+            ANOTHER_CALL_IN_PROGRESS,
+            ANONYMOUS_CALL_IN_PROGRESS,
+            APP_IN_FRE,
+            APP_NOT_VISIBLE,
+            APPLICATION_IN_BACKGROUND,
+            HAS_OUTSTANDING_LOGIN_PROMPT,
+            AUDIO_CALLING_ENABLED_FALSE,
+            AUTHORISE_USER_FAILURE,
+            CALL_EARLY_RING_FAILED,
+            CALL_HANDLER_ERROR_CALL_ID_ZERO,
+            CALL_HANDLER_NULL,
+            CALL_HANDLER_ERROR,
+            CALL_INIT_EXCEPTION,
+            CALL_MANAGER_NULL,
+            CALL_OBJECT_NULL,
+            CALL_PUSH_FAILURE,
+            CALL_ALREADY_HANDLED,
+            CALL_ALREADY_ENDED,
+            CALL_TIMEOUT_EXCEPTION,
+            CALLER_MRI_NULL,
+            CANCELLED,
+            HTTP_CALL_CANCELLED,
+            CHAT_SEND_MESSAGE_NULL_RECEPIENT,
+            CHATS_CREATION_FAILED,
+            CONTACT_USER_NULL,
+            CONTACT_USER_ANONYMOUS,
+            CONTACT_USER_PSTN_NOT_ENABLED,
+            CONTACT_USER_SYNC_UP_TO_DATE,
+            CONTACT_FAILED_ACCOUNT_CREATION,
+            CONTACT_FAILED_RAW_CONTACT_CREATION,
+            CONTACT_CREATION_AND_UPDATE_SUCCESSFUL,
+            DB_ENTITY_NOT_FOUND,
+            FAILED_TO_PARSE_MESSAGE,
+            FAILED_TO_PARSE_SMART_REPLY,
+            FAILED_TO_REDEEM_INVITE_LINK,
+            GET_SKYPE_CHAT_TOKENS_FAILURE,
+            GET_SKYPE_CHAT_TOKENS_UNAUTHORIZED_ACCESS,
+            GROUP_CALL_NOT_ENABLED,
+            GUEST_ACCESS_BLOCKED,
+            EXPIRED_TOKEN_ERROR,
+            AMS_IMAGE_BITMAP_NULL,
+            AMS_IMAGE_SIZE_EXCEEDS_LIMIT,
+            AMS_CREATION_FAILED,
+            AMS_UPLOAD_FAILED,
+            AMS_IMAGE_UPLOAD_HAS_UNRESOLVED_REFERENCES,
+            AMS_OBJECT_FORWARDING_UNRESOLVED_REFERENCES,
+            AMS_ID_IS_NULL,
+            IMAGE_DOWNLOAD_FAILED,
+            AMS_GENERATED_URL_IS_NULL,
+            INVALID_CONVERSATION_ID_FOR_GROUP,
+            INVITATION_NOT_REDEMEED,
+            IO_EXCEPTION,
+            SOCKET_TIMEOUT,
+            IS_CURRENT_TENANT,
+            LIVE_STATE_NULL,
+            USER_CANCELLED_LOGIN,
+            LIVE_STATE_NULL,
+            ILLEGAL_ARGUMENT_EXCEPTION,
+            MAX_CONCURRENT_CALL_LIMIT,
+            EMERGENCY_INFO_REFRESHED,
+            AUTHORIZATION_TOKEN_NULL,
+            MAM_ENROLLMENT_MANAGER_NULL,
+            AUTHORIZATION_SERVICE_NULL,
+            CURRENT_USER_INFO_NOT_RETRIEVED,
+            MEETING_OPTIONS_WEBPAGE_ERROR,
+            MEETING_DETAILS_INVALID,
+            MEETING_OID_INVALID_GUID,
+            MEETING_INFO_NULL,
+            MEETUP_NOT_ENABLED,
+            MEETUP_IP_AUDIO_DISABLED,
+            MESSAGE_ID_MISSING,
+            CHAT_ID_MISSING,
+            HAS_CLAIMS,
+            ANOTHER_CALL_WAITING_TO_BE_INPROGRESS,
+            ANOTHER_WAITING_TO_BE_INPROGRESS_MESSAGE_IN_QUEUE,
+            ANOTHER_CALL_USER_IN_LOBBY,
+            MESSAGE_TRANSFORM_FAILED,
+            NATIVE_PSTN_CALL_GOING_ON,
+            NETWORK_RECONNECT_BEGIN_UI_FAILED,
+            NETWORK_RECONNECT_SUCCESS_UI_FAILED,
+            NETWORK_RECONNECT_FAIL_UI_FAILED,
+            NETWORK_UNAVAILABLE,
+            IO_EXCEPTION,
+            NO_ACTIVITY_TO_USE,
+            NOT_SUPPORTED_ARCH,
+            AUTO_PRUNE_NOT_ENABLED,
+            AUTO_PRUNE_DAY_IS_ZERO,
+            AUTO_PRUNE_FAILED_WITH_EXCEPTION,
+            NULL_TASK,
+            NUMBER_NOT_VALID,
+            Team.NAME_EMPTY,
+            Team.NAME_BLOCKED_WORD,
+            Team.NAME_VALIDATE_ERROR_INVALID_PAYLOAD,
+            Team.NAME_VALIDATE_ERROR,
+            Team.INVALID_PAYLOAD,
+            Team.CREATE_ERROR,
+            Team.EDIT_ERROR,
+            Team.DELETE_ERROR,
+            Team.UPDATE_PROFILE_PICTURE_ERROR,
+            Team.GET_DEFAULT_TEAM_INITIALS_ERROR,
+            ONE_ON_ONE_CALL_THREAD_NOT_FOUND,
+            ONGOING_OPERATION,
+            OPERATION_CANCELLED,
+            PERMISSION_DENIED_BY_USER,
+            PERSONAL_ACCOUNT,
+            POST_MESSAGE_EXECUTE_FAILED,
+            POST_MESSAGE_STALE_FAILED,
+            PRIVATE_MEETING_NOT_ENABLED,
+            PROMPT_REQUIRED,
+            PSTN_CALL_NOT_VALID,
+            RETRY_FAILED,
+            MAX_RETRY_EXCEEDED,
+            BITMAP_LOAD_ERROR,
+            DELETE_MEETING_FAILED,
+            SEND_MESSAGE_NULL,
+            SKYLIB_EXCEPTION,
+            SKYLIB_GET_ACCOUNT_FAILED,
+            SKYLIB_INVALID_STATE,
+            SKYLIB_LOG_IN_FAILED,
+            SKYLIB_NOT_INITIALIZED,
+            SSO_ACCOUNT_EXCEPTION,
+            SSO_ACCOUNT_NOT_FOUND,
+            SSO_AUTHENTICATION_EXCEPTION,
+            SSO_INTERRUPTED,
+            SSO_TIMEOUT_EXCEPTION,
+            TEAMS_CALL_NOT_VALID,
+            TEAMS_DISABLED_FOR_TENANT,
+            TIMED_OUT,
+            UNKNOWN,
+            ANR,
+            MSAL_ERROR,
+            USER_CHANGED,
+            USER_IS_NULL,
+            MSAL_PUBLIC_APPLICATION_IS_NULL,
+            ACCOUNT_IS_NULL,
+            USER_IS_PSTN_ACTIVE,
+            USER_LICENSE_NOT_PRESENT,
+            VEDIO_CALLING_ENABLED_FALSE,
+            VOICE_MESSAGE_UPLOAD_HAS_UNRESOLVED_REFERENCES,
+            WALLED_GARDEN_DETECTED,
+            CHAT_CREATE_FAILED,
+            CHAT_CREATE_FAILED_NON_RETRY_ABLE_ERROR,
+            WEB_VIEW_ERROR,
+            WEB_VIEW_HTTP_ERROR,
+            WEB_VIEW_SSL_ERROR,
+            OPEN_FILE_PICKER_FAILED,
+            GET_RESOURCE_TOKEN_FAILED,
+            TOKEN_EXISTS,
+            SSO_ADAL_RESULT_INVALID,
+            SSO_USER_DOESNT_MATCH,
+            COMPANY_PORTAL_INSTALLED,
+            NO_HOME_TENANT,
+            NULL_AUTH_RESULT,
+            AUTH_ACTION_UNEXPECTED_ERROR,
+            SKYPE_INSTALLING_OR_SIGNED_OUT,
+            AUTH_ERROR,
+            NOTIFICATION_PROMPT_REQUIRED,
+            NOT_INTENDED_FOR_USER,
+            CALL_NOTIFICATION,
+            CALL_LONGPOLL,
+            MISSING_RAW_PAYLOAD,
+            SHOW_ONLY_ACTIVE,
+            DUPLICATE_ALERT,
+            ACTIVITY_FEED_EMPTY,
+            UNKNOWN_SENDER,
+            MESSAGE_PARSING_FAILED,
+            RAW_PAYLOAD_PARSING_FAILED,
+            SETTINGS_TURNED_OFF,
+            SYNC_FAILURE,
+            CONSUMPTION_HORIZON_NOTIFICATION,
+            CHANNEL_MESSAGE,
+            APP_FOREGROUND,
+            USER_DND,
+            DIFFERENT_USER,
+            FILE_CALL_CONTROL_MESSAGE,
+            READ_ACTIVITY,
+            USER_MISSING,
+            TEAM_MISSING,
+            CONTROL_MESSAGE,
+            MESSAGE_TYPE_LIVE_MEETING_NOTIFICATION,
+            MESSAGE_NOT_FOUND,
+            NOTIFICATION_FROM_CURRENT_USER,
+            BOT_IS_NOTIFICATION_ONLY,
+            IGNORE_SFB_INTER_OP_FED_THREAD,
+            IGNORE_FEDERATED_CHAT_THREAD,
+            INCOMPLETE_BADGE_COUNT_PUSH_NOTIFICATION,
+            IGNORE_SMS_CHAT_THREAD,
+            TENANT_BEING_SWITCHED,
+            END_CALL_PUSH_NOTIFICATION,
+            APP_FOREGROUND_PUSH_NOTIFICATION,
+            INCOMPLETE_CH_PUSH_NOTIFICATION,
+            NOTIFICATION_MANAGER_ERROR,
+            NO_ACTIVE_PUSH_NOTIFICATION,
+            NO_MATCHED_NOTIFICATION,
+            DB_MIGRATION_INCOMPLETE,
+            SYNC_STILL_RUNNING,
+            DEVICE_API_VERSION_TOO_LOW,
+            EMPTY_MRIS_LIST,
+            DUPLICATE_TOKEN_REQUEST,
+            UNKNOWN_FEDERATED_USER,
+            CACHED_INVALID_FEDERATED_USERS,
+            FEDERATED_USER_BY_EMAIL_FORBIDDEN,
+            FEDERATED_USER_BY_EMAIL_NOT_FOUND,
+            NO_MATCHED_FEDERATED_USER_BY_MRI,
+            FEDERATED_USER_BY_MRI_FORBIDDEN,
+            ANONYMOUS_AUTH_FAILED,
+            ANONYMOUS_AUTH_NETWORK_FAILURE,
+            TOO_FREQUENT,
+            STOP_REQUESTED,
+            DB_MIGRATION_ALREADY_RUNNING,
+            VOCIEMAIL_CALL_NOT_VALID,
+            OK,
+            CALL_CAN_NOT_BE_RESUMED,
+            CALL_ACTION_MESSAGE_SEND_FAILURE,
+            CALL_EMPTY_MEMBER_LIST,
+            STREAM_PLAYER_SIGNIN_FAILED,
+            STREAM_SERVER_ERROR,
+            STREAM_TOKEN_REQUEST_NOT_RECEIVED,
+            INVALID,
+            NOFAILURE,
+            MISC_ERROR,
+            RECIPIENT_USER_NOT_FOUND,
+            RECIPIENT_NOT_ONLINE,
+            NO_PROXIES_FOUND,
+            SESSION_TERMINATED,
+            NO_COMMON_CODEC,
+            SOUND_RECORDING_ERROR,
+            SOUND_PLAYBACK_ERROR,
+            REMOTE_SOUND_IO_ERROR,
+            RECIPIENT_BLOCKED,
+            CALLER_NOT_FRIEND,
+            CALLER_NOT_AUTHORIZED,
+            COMMERCIAL_CONTACT_PROHIBITED,
+            HOST_ENDED_CONF,
+            TOO_MANY_IDENTITIES,
+            CONF_PARTICIPANT_COUNT_LIMIT_REACHED,
+            FORKED_CALL_TIMED_OUT,
+            FORKED_CALL_CANCELLED,
+            SESSION_ESTABLISHMENT_TIMEDOUT,
+            ANSWERED_ELSEWHERE,
+            PSTN_NO_SKYPEOUT_SUBSCRIPTION,
+            PSTN_INSUFFICIENT_FUNDS,
+            PSTN_INTERNET_CONNECTION_LOST,
+            PSTN_SKYPEOUT_ACCOUNT_BLOCKED,
+            PSTN_COULD_NOT_CONNECT_TO_SKYPE_PROXY,
+            PSTN_BLOCKED_BY_US,
+            PSTN_BLOCKED_REGULATORY_INDIA,
+            PSTN_INVALID_NUMBER,
+            PSTN_NUMBER_FORBIDDEN,
+            PSTN_CALL_TIMED_OUT,
+            PSTN_BUSY,
+            PSTN_CALL_TERMINATED,
+            PSTN_NETWORK_ERROR,
+            PSTN_NUMBER_UNAVAILABLE,
+            PSTN_CALL_REJECTED,
+            PSTN_EMERGENCY_CALL_DENIED,
+            PSTN_MISC_ERROR,
+            CALL_NOT_FOUND,
+            TROUTER_ERROR,
+            MEDIA_DROPPED_ERROR,
+            PSTN_NO_SUBSCRIPTION_COVER,
+            CALL_NOTIFICATION_DELIVERY_FAILURE,
+            PSTN_CREDIT_EXPIRED,
+            PSTN_CREDIT_EXPIRED_BUT_ENOUGH,
+            ENTERPRISE_PSTN_INTERNAL_ERROR,
+            ENTERPRISE_PSTN_UNAVAILABLE,
+            ENTERPRISE_PSTN_FORBIDDEN,
+            ENTERPRISE_PSTN_INVALID_NUMBER,
+            ENTERPRISE_PSTN_MISC_ERROR,
+            KICKED,
+            NETWORK_REQUEST_TIMEOUT_ERROR,
+            CALL_DOES_NOT_EXIST,
+            MEDIA_SETUP_FAILURE,
+            SERVICE_UNAVAILABLE,
+            SIGNALING_ERROR,
+            CONVERSATION_ESTABLISHMENT_FAILED,
+            TEMPORARILY_UNAVAILABLE,
+            GENERAL_NETWORK_ERROR,
+            NETWORK_CANNOT_CONNECT_ERROR,
+            NO_SIGNALING_FROM_PEER,
+            ANONYMOUS_JOIN_DISABLED_BY_POLICY,
+            NO_LOBBY_FOR_BROADCAST_JOIN,
+            NOT_ALLOWED_DUE_TO_INFORMATION_BARRIER,
+            BROADCAST_LIMIT_REACHED,
+            B2B_JOIN_DISABLED_BY_POLICY,
+            LOCATION_BASED_ROUTING_ERROR,
+            UNKNOWN_FAILURE_REASON,
+            CALL_TRANSFER_INITIALIZE_FAILED,
+            CALL_HOLD_FAILED,
+            USER_ENDED_CALL,
+            RECIPIENT_NOT_SAME_AS_LOCAL_USER,
+            CALLING_CALL_ENDED_ABNORMALLY,
+            CALLING_CALL_ENDED,
+            INVALID_PHONE_NUMBER,
+            CALL_ME_BACK_INITIATED,
+            CALL_ME_BACK_NOT_INITIATED,
+            USER_DISMISSED_CALL_ME_BACK_DIALOG,
+            USER_STOPPED_CONTENT_SHARING,
+            BROADCAST_ATTENDEE_SERVICE_ERROR,
+            BROADCAST_ATTENDEE_NETWORK_FAILURE,
+            BROADCAST_SCHEDULING_SERVICE_ERROR,
+            PPT_SHARE_NOT_ENABLED,
+            PPT_SHARE_ERROR,
+            PPT_WRS_INIT_FAILED,
+            SCREEN_SHARE_ERROR,
+            USER_DENIED_OVERLAY_PERMISSION,
+            LIVE_EVENT_ENDED_ABNORMALLY,
+            LIVE_EVENT_ENDED,
+            KNOWN_AMP_PLAYER,
+            UNKNOWN_AMP_PLAYER,
+            CONTENT_SHARING_ERROR,
+            SHARING_ANNOTATION_ERROR,
+            MEETING_JOIN_FAILED,
+            BROADCAST_MEETINGS_DISABLED,
+            MERGE_SOURCE_CALL_INVALID_PARTICIPANT,
+            MERGE_SOURCE_CALL_TYPE_NOT_ALLOWED,
+            MERGE_TARGET_CALL_TYPE_NOT_ALLOWED,
+            MERGE_SOURCE_SFC_INTEROP_CALL,
+            MERGE_TARGET_SFC_INTEROP_CALL,
+            MERGE_TARGET_CALL_HAS_PARTICIPANT_ALREADY,
+            MERGE_TARGET_CALL_DOES_NOT_EXIST,
+            MERGE_TARGET_CALL_NOT_ON_HOLD,
+            MERGE_PSTN_CALLS_MERGE_NOT_SUPPORTED,
+            MERGE_FAILED_RESOLVE_MERGE_CALL_THREAD,
+            MERGE_FAILED_TO_RESOLVE_PARTICIPANT_LEG_ID,
+            MERGE_OPERATION_STATUS_RESULT_INVALID,
+            MERGE_OPERATION_FAILED,
+            CONSULTATIVE_CALL_NULL,
+            GET_THREAD_PROPERTIES_FAILED,
+            ACTIVITY_TYPE_UNKNOWN,
+            VIEW_DESTROYED,
+            BOOKMARK_FAILED,
+            TENANT_ITEM_TAPPED,
+            ERROR_IN_RESPONSE,
+            TIME_ZONE_CALL_FAILED,
+            FILE_PREVIEW_ERROR,
+            EXCEPTION,
+            FILE_ATTACHMENT_NULL,
+            FILE_NOT_CHANNEL_ATTACHMENT,
+            FILE_NOT_CHAT_ATTACHMENT,
+            ONEDRIVE_OUT_OF_SPACE,
+            SYNC_PENDING_PAUSE_REQUESTS,
+            SYNC_USER_DISABLED,
+            SYNC_CALENDAR_EVENTS_FAILED,
+            NOTIFICATION_HANDLED_BY_NATIVE_PACKAGE,
+            DB_MIGRATION_ALREADY_RUNNING,
+            EVENT_OVERLAP_ERROR,
+            NO_EVENTS,
+            NO_FUTURE_EVENTS,
+            TENANT_ID_IS_EMPTY,
+            ORGANIZER_ID_IS_INVALID,
+            TENANT_ID_IS_INVALID,
+            USER_OBJECT_ID_IS_EMPTY,
+            END_ACTIVE_CALL_PUSH_NOTIFICATION,
+            NOTIFICATION_QUIET_HOURS,
+            NOTIFICATION_TENANT_ID_IS_EMPTY,
+            NOTIFICATION_FILTERED_OUT,
+            NOTIFICATION_SHOULD_BE_SUPPRESSED,
+            NOTIFICATION_MTMA_SUPPRESSED,
+            NOTIFICATION_WORK_MANGER_ERROR,
+            NOTIFICATION_PAYLOAD_EMPTY,
+            NOTIFICATION_PAYLOAD_PARSE_EXCEPTION,
+            NOTIFICATION_NOT_TRUSTED,
+            BACKGROUND_NOTIFICATION_SYNC_NOT_ENABLED,
+            BACKGROUND_NOTIFICATION_SYNC_APP_FOREGROUND,
+            BACKGROUND_NOTIFICATION_SYNC_SETTING_NOT_ALWAYS,
+            BACKGROUND_NOTIFICATION_SYNC_LONGPOLL_FAILED,
+            IGNORE_MTMA_NOTIFICATION,
+            MESSAGE_TYPE_RECORDING,
+            MESSAGE_TYPE_TRANSCRIPT,
+            MESSAGE_TYPE_MEETING_OBJECTS,
+            MEETING_RECORDING_PLAYER_ERROR,
+            SCENARIO_MEDIA_CONNECTED_FAIL_UNKNOWN,
+            LENS_FAILED,
+            FILE_INFO_NULL,
+            FILE_BAD_URL,
+            FILE_ID_ERROR,
+            FILE_DOWNLOAD_URL_EMPTY,
+            FILE_DOWNLOAD_CANCEL,
+            FILE_DOWNLOAD_FAILED,
+            FILE_DOWNLOAD_URL_NON_HTTPS,
+            GIF_FILE_DOWNLOAD_FAILED,
+            FILE_DOWNLOAD_NOT_SUPPORTED,
+            FILE_UPLOAD_FAILED,
+            FILE_IP_COMPLIANCE,
+            FILE_PREVIEW_IP_COMPLIANCE_ERROR,
+            OBSOLETE,
+            MAM_POLICY_BLOCKED,
+            INTUNE_REMEDIATE_COMPLIANCE_POLICY_FAILURE,
+            IMAGE_SOURCE_NULL,
+            TEMP_IMAGE_NOT_FOUND,
+            COULDNT_APPLY_AUTH_HEADERS,
+            EXPIRED_ADAL_ERROR,
+            FILE_DEEPLINK_NO_PREVIEW_AVAILABLE,
+            DIFFERENT_CLOUD,
+            TEMP_IMAGE_NOT_FOUND,
+            FILE_UPLOAD_TO_RETRY,
+            FILE_UPLOAD_PAUSED,
+            UPLOAD_SESSION_EXPIRED,
+            UPLOAD_NOT_STARTED_YET,
+            UNABLE_TO_READ_FILE,
+            FILE_UPLOAD_REQUEST_OBSOLETE,
+            FILE_NOT_FOUND_EXCEPTION,
+            ECS_DISABLED,
+            Search.SEARCH_ABANDONED,
+            Search.USER_SEARCH_ITEM_CLICKED,
+            Search.CHAT_CONVERSATION_SEARCH_ITEM_CLICKED,
+            Search.MESSAGE_SEARCH_ITEM_CLICKED,
+            Search.FILE_SEARCH_ITEM_CLICKED,
+            Search.BOOKMARK_ANSWER_ITEM_CLICKED,
+            Search.BOOKMARK_ANSWER_V2_ITEM_CLICKED,
+            Search.CALENDAR_ANSWER_ITEM_CLICKED,
+            Search.ACRONYM_ANSWER_ITEM_CLICKED,
+            Search.TOP_N_CACHE_SYNC_FAILED,
+            Search.CONTEXTUAL_SEARCH,
+            Search.WARM_UP_ERROR,
+            Search.MSAI_INIT_ERROR,
+            Search.MSAI_FETCH_TOKEN_ERROR,
+            Search.MSAI_SEARCH_ERROR,
+            Search.MSAI_NULL_UNIQUE_ID,
+            Search.SEARCH_TIMEOUT,
+            Search.DEVICE_CONTACTS_IN_SEARCH_NOT_ENABLED,
+            CORTANA_BACKGROUND_TOKEN_REFRESH_SUCCESS,
+            CORTANA_BACKGROUND_TOKEN_REFRESH_RETRY,
+            CORTANA_BACKGROUND_TOKEN_REFRESH_FAILED,
+            CORTANA_ADMIN_SETTINGS_REFRESH_SUCCESS,
+            CORTANA_ADMIN_SETTINGS_REFRESH_FAILED,
+            CORTANA_SKILL_ACTION_EXECUTION_FAILED,
+            CORTANA_KWS_SERVICE_REJECTED,
+            CORTANA_KWS_TRIGGER_INCOMPLETE,
+            CORTANA_AUTO_CLOSE_FAILED,
+            CORTANA_MORE_MENU_FAILED,
+            CORTANA_SKILL_ACTION_DELAY_FAILED,
+            CORTANA_SDK_EVENTS_SCENARIO_FAILED,
+            CORTANA_SDK_EVENTS_SCENARIO_INCOMPLETE,
+            CORTANA_INITIALIZATION_SCENARIO_INCOMPLETE,
+            CORTANA_INITIALIZATION_SCENARIO_FAILED,
+            CORTANA_INITIALIZATION_CANCELLED,
+            CORTANA_WATCHDOG_SCENARIO_FAILED,
+            CORTANA_RESPONSE_ERROR_SCENARIO_FAILED,
+            UNSUPPORTED,
+            ACCESS_DENIED,
+            DOCK_MESSAGE_ACK_FAILED,
+            CODEPUSH_BUNDLE_DOWNLOAD_AND_INSTALL_FAILED,
+            CODEPUSH_SYNC_APP_OVERALL_FAILED,
+            ACCESS_DENIED,
+            RNL.OUTLOOK_CONTACT_FETCH_FAILED,
+            RNL.BUDDY_CONTACT_FETCH_FAILED,
+            RNL.RNL_CONTACT_SYNC_FAILED,
+            RNL.RNL_NO_CONTACTS_FOUND,
+            People.SYNC_FAILED,
+            People.CONTACT_SYNC_FAILED,
+            People.CONTACT_LIST_SYNC_FAILED,
+            People.DELETE_CONTACT_FAILED,
+            People.ADD_CONTACT_FAILED,
+            AUTH_EMPTY_EMAIL_ERROR,
+            UNSUPPORTED,
+            HTTP_RESILIENCY_GATE,
+            GET_RN_APP_ICON_URI_FAILED,
+            GET_SELECTED_RN_APP_ICON_URI_FAILED,
+            MOBILITY_POLICY_AUDIO_DISABLED,
+            RN_APP_RENDER_FAILED,
+            RN_APP_RENDER_DOWNLOADING,
+            AUDIO_DISABLED_DIAL_IN_ONLY,
+            CALL_DISABLED_ON_DEVICE,
+            ANOTHER_CALL_INPROGRESS_ON_NORDEN,
+            ANOTHER_CALL_INPROGRESS_ON_NORDEN_CONSOLE,
+            NORDEN_CONSOLE_NOT_CONNECTED,
+            BYOM_AUTO_ACCEPT_CALL_ON_NORDEN_CONSOLE,
+            StatusNote.STATUS_NOTE_SET_SUCCESSFUL,
+            StatusNote.STATUS_NOTE_SET_FAILED,
+            StatusNote.STATUS_NOTE_NETWORK_FAILED,
+            StatusNote.STATUS_NOTE_SERVICE_CALL_FAILED,
+            StatusNote.STATUS_NOTE_OPEN_SET_STATUS_NOTE_FAILED,
+            MOBILITY_POLICY_AUDIO_DISABLED,
+            Targeting.SERVICE_ERROR,
+            Targeting.PARSE_ERROR,
+            Targeting.NO_MEMBERS,
+            Targeting.TAG_EXISTS,
+            Targeting.TOO_MANY_MEMBERS,
+            Targeting.TOO_MANY_TAGS_IN_TEAM,
+            Targeting.TOO_MANY_TAGS_FOR_USER,
+            Targeting.HTTP_REQUEST_FAILED,
+            Targeting.CACHE_MISS_WITH_NO_NETWORK,
+            Targeting.TAGS_DISABLED_BY_TENANT,
+            Targeting.ADDING_TOO_MANY_MEMBERS_AT_ONCE,
+            Targeting.AUTHENTICATION_ERROR,
+            TROUTER_REGISTRATION_FAILED,
+            TROUTER_REGISTRATION_ERROR,
+            CALL_QUEUE_FAILED,
+            CALL_PARK_FAILED,
+            UNABLE_TO_SUBSCRIBE_TO_PARKED_CALL,
+            HOLD_FAILED_FROM_SLIMCORE,
+            PARK_FAILED_FOR_HOLD,
+            DID_NOT_RUN,
+            STATUS_DROP_INDICES_FAILED,
+            STATUS_RECREATE_INDICES_FAILED,
+            Now.APP_NOT_WHITELISTED,
+            Now.GENERIC_NOW_ERROR,
+            Now.DB_PERSIST_ERROR,
+            RN_BUNDLE_DOWNLOAD_ERROR,
+            MISSING_PREREQUISITE,
+            RN_BUNDLE_PARSING_ERROR,
+            SdkConstants.SdkCodepushCheckUpdateStatus.NO_UPDATE,
+            SdkConstants.SdkCodepushCheckUpdateStatus.UPDATE_AVAILABLE,
+            SdkConstants.SdkCodepushCheckUpdateStatus.ERROR_OCCURRED,
+            SdkConstants.SdkCodepushBundleDownloadStatus.DOWNLOADED,
+            SdkConstants.SdkCodepushBundleDownloadStatus.FAILED,
+            WORK_MANAGER_EXECUTION_EXCEPTION,
+            GET_TRANSLATION_SUPPORTED_LANGUAGES_API_CALL_FAILURE,
+            GET_TRANSLATION_SUPPORTED_LANGUAGES_API_CALL_UNSUCCESSFUL,
+            IMAGE_URL_EMPTY,
+            PeoplePicker.SERVER_RESULT_SOURCE,
+            STUCK_ON_FRE,
+            APP_AUTHENTICATION_FAILED,
+            APP_AUTHENTICATION_CANCELLED,
+            APP_AUTHENTICATION_INCOMPLETE,
+            BOT_FILE_ATTACHMENT_CANCELLED,
+            BOT_FILE_ATTACHMENT_FAILED,
+            INTERRUPTED,
+            QUARANTINE_LIMIT_REACHED,
+            CALL_GROUP_FORWARDING_MUTED_FOR_USER,
+            OUTGOING_IN_PRECALL_STATE,
+            FAILED_TO_RAISED_HAND,
+            FAILED_TO_LOWER_HAND,
+            FAILED_TO_LOWER_ALL_HANDS,
+            FAILED_TO_ALLOW_TO_UNMUTE,
+            FAILED_TO_DO_NOT_ALLOW_TO_UNMUTE,
+            FAILED_TO_ALLOW_TO_SHARE_VIDEO,
+            FAILED_TO_DO_NOT_ALLOW_TO_SHARE_VIDEO,
+            BetterTogether.TRANSPORT_NOT_READY,
+            BetterTogether.NOT_PAIRED,
+            BetterTogether.UNRESOLVED_ENDPOINT,
+            BetterTogether.UNSUPPORTED_COMMAND,
+            BetterTogether.INVALID_COMMAND_NAME,
+            BetterTogether.BAD_REQUEST,
+            BetterTogether.TARGET_ENDPOINT_MISMATCH,
+            BetterTogether.SALT_MISMATCH,
+            BetterTogether.COMMAND_CANCELLED,
+            BetterTogether.COMMAND_FAULTED,
+            BetterTogether.CALL_START_CONVERSATION_SYNC_FAILED,
+            BetterTogether.KEEP_ALIVE_COMMAND_FAILED,
+            BetterTogether.NO_EQUIVALENT_OUTGOING_COMMAND,
+            BetterTogether.P2P_START_CALL_GUID_MISMATCH,
+            BetterTogether.P2P_START_CALL_GUID_NULL,
+            BetterTogether.P2P_START_VM_NULL,
+            BetterTogether.COMMAND_ERROR,
+            BetterTogether.CALL_COMMAND_ERROR,
+            BetterTogether.P2P_START_ERROR,
+            BetterTogether.UNHANDLED_COMMAND_ERROR,
+            BetterTogether.UNKNOWN_COMMAND_ERROR,
+            BetterTogether.COMMAND_ERROR,
+            BetterTogether.COMMAND_DISABLED,
+            BetterTogether.RESPONSE_ERROR,
+            BetterTogether.DISCOVERY,
+            BetterTogether.FAILED_TO_START_BEACON,
+            BetterTogether.PAIRING,
+            BetterTogether.UNPAIRING,
+            BetterTogether.TRANSPORT_USER_DISCOVER_ERROR,
+            BetterTogether.RE_REGISTRATION_FAILED,
+            BetterTogether.CAPTIONS_COMMAND_ERROR,
+            BetterTogether.ROOM_UPDATE_ERROR,
+            BetterTogether.COMMAND_DROPPED,
+            BetterTogether.BEACON_START_CANCELLED,
+            BetterTogether.PAIR_TASK_CANCELLED,
+            BetterTogether.SESSION_SETUP_CANCELLED,
+            BetterTogether.SESSION_SETUP_ERROR,
+            RoomRemote.SESSION_USER_CANCEL,
+            RoomRemote.SESSION_USER_REJECTED,
+            RoomRemote.SESSION_SETUP_TIMEOUT,
+            RoomRemote.SESSION_TARGET_NOT_REGISTERED,
+            RoomRemote.SESSION_UNKNOWN_ERROR,
+            RoomRemote.PERMISSION_NOT_GRANTED,
+            RoomRemote.PROXIMITY_CHECKING_CANCELED,
+            RoomRemote.PROXIMITY_CHECKING_TIMEOUT,
+            RoomRemote.PAIR_FAILURE,
+            RoomRemote.ORPHAN_SESSION_ON_CLIENT,
+            RoomRemote.ORPHAN_SESSION_ON_ROOM,
+            SMSChatErrors.SMS_CHAT_FORBIDDEN,
+            KingstonNotificationsModule.MODULE_NOT_READY,
+            KingstonNotificationsModule.CLUBBING_FAILED,
+            KingstonNotificationsModule.CREATE_NEW_NOTIFICATION_FAILED,
+            CHAT_LIST_SYNC_FAILED,
+            Files.GET_METADATA_FAILED,
+            Files.FILE_PREVIEW_NOT_SUPPORTED,
+            Files.FILE_PREVIEW_FALLBACK_NOT_AVAILABLE,
+            Files.PDF_RENDER_ERROR,
+            Files.NO_CONTEXT,
+            Files.CONSUMER_ONEDRIVE_PROVISIONING_FAILED,
+            Files.CONSUMER_ONEDRIVE_ALREADY_PROVISIONED,
+            IMAGE_PREVIEW_ERROR,
+            CHAT_LIST_SYNC_FAILED,
+            IpPhoneCompanyPortalStatusCode.ENROLLMENT_FAILED,
+            IpPhoneCompanyPortalStatusCode.ENROLLMENT_CANCELLED,
+            IpPhoneCompanyPortalStatusCode.ENROLLMENT_TIME_OUT,
+            IpPhoneCompanyPortalStatusCode.UNENROLLMENT_FAILED,
+            IpPhoneCompanyPortalStatusCode.UNENROLLMENT_CANCELLED,
+            SIGNED_IN_USERS_NOT_FOUND,
+            AUTH_STACK_ERROR,
+            PASSWORD_RESET,
+            AUTH_UI_REQUIRED,
+            BLOCKED_BY_CONDITIONAL_ACCESS,
+            CONSENT_REQUIRED,
+            RESOURCE_URL_IS_EMPTY,
+            VaultStatusCode.PARTIAL_FAILED,
+            VaultStatusCode.SERVICE_CALL_FAILED,
+            VaultStatusCode.ENCRYPTION_FAILED,
+            VaultStatusCode.FETCH_FAILED,
+            VaultStatusCode.PARSING_FAILED,
+            LiveLocationStatusCode.ABANDONED,
+            LiveLocationStatusCode.BEACON_INIT_FAILED,
+            LiveLocationStatusCode.CONFLICT,
+            LiveLocationStatusCode.EXISTING_TRIGGERS,
+            LiveLocationStatusCode.FETCH_FAILED,
+            LiveLocationStatusCode.INVALID_USER,
+            LiveLocationStatusCode.MESSAGE_SEND_FAILED,
+            LiveLocationStatusCode.NO_CONSENT,
+            LiveLocationStatusCode.NO_FOREGROUND_LOCATION,
+            LiveLocationStatusCode.NO_LOCATION_BACKGROUND_OFF,
+            LiveLocationStatusCode.NO_LOCATION_BACKGROUND_ON,
+            LiveLocationStatusCode.NO_LOCATION_EXCEPTION,
+            LiveLocationStatusCode.NO_SESSIONS,
+            LiveLocationStatusCode.NOT_ALL_REQUESTS_COMPLETED,
+            LiveLocationStatusCode.NOT_FOUND,
+            LiveLocationStatusCode.OTHER_ACCOUNT_ACTIVE,
+            LiveLocationStatusCode.QUOTA_EXCEEDED,
+            LiveLocationStatusCode.SERVICE_CALL_FAILED,
+            GroupsStatusCode.SERVICE_CALL_FAILED,
+            GroupsStatusCode.ACTION_CANCELED,
+            GroupsStatusCode.NOT_ALL_OFF_NETWORK_INVITES_SUCCEEDED,
+            CoreIAStatusCode.NO_GALLERY_PREVIEW,
+            CoreIAStatusCode.SERVICE_CALL_FAILED,
+            BACKGROUND_SYNC_SERVICE_NOT_ENABLED,
+            BACKGROUND_SYNC_SERVICE_APP_FOREGROUND,
+            BrbOcvFeedbackStatusCode.MISSING_FIELD,
+            BrbOcvFeedbackStatusCode.NETWORK_CALL_FAILED,
+            BrbOcvFeedbackStatusCode.NO_NETWORK,
+            BrbOcvFeedbackStatusCode.POWER_LIFT_CALL_FAILED,
+            SHARED_DEVICE_ERROR,
+            NULL_PROVIDER,
+            MEETNOW_SERVICE_ERROR,
+            BACKGROUND_BLUR_FAILED,
+            BACKGROUND_PERSISTED_LOAD_FAILED,
+            BG_EFFECTS_IMAGE_DOWNLOAD_FAILED,
+            BG_EFFECTS_FAILED_SLIM_CORE,
+            BG_EFFECTS_CUSTOM_IMAGE_UPLOAD_FAILED,
+            PLATFORM_OPEN_CONVERSATION_FAILED,
+            PLATFORM_CREATE_NEW_CONVERSATION_FAILED,
+            NULL_RESPONSE,
+            UNSUCCESSFUL_RESPONSE,
+            TOKEN_FETCH_FAILURE,
+            MEETING_CODE_INVALID,
+            ERROR_SDK_UNRECOGNIZED,
+            ERROR_SDK_INVALID_URL,
+            STATE_SERVICE_ERROR_NONE,
+            STATE_SERVICE_ERROR_ENDPOINT_REQUEST,
+            STATE_SERVICE_ERROR_AUTH_REQUEST,
+            STATE_SERVICE_ERROR_WEB_SOCKET_CONNECT,
+            FETCH_MEETING_METADATA_FAILURE,
+            NO_MEETING_INFO,
+            BEACON_ADVERTISEMENT_STOPPED,
+            CALL_START_VIDEO_SKYLIB_FAILED,
+            CALL_START_VIDEO_PAUSED_EARLY,
+            CALL_START_VIDEO_STOPPED_EARLY,
+            EMOJI_DOWNLOAD_FAILED,
+            VIDEO_RESTRICTED_INCOMPLETE,
+            ADD_TOGETHER_MODE_BOT_FAILED,
+            STARTING_TOGETHER_MODE_FAILED,
+            ADD_LARGE_GALLERY_MODE_BOT_FAILED,
+            STARTING_LARGE_GALLERY_MODE_FAILED,
+            STARTING_RECORDING_FAILED,
+            ADDING_RECORDING_BOT_FAILED,
+            RETRIEVE_RECORDING_POLICY_FAILED,
+            FETCH_RECORDING_PERMISSIONS_AND_SETTINGS_FAILED,
+            STARTING_LIVE_CAPTION_FAILED,
+            ADDING_LIVE_CAPTION_BOT_FAILED,
+            STARTING_TOGETHER_MODE_INCOMPLETE,
+            STARTING_LARGE_GALLERY_MODE_INCOMPLETE,
+            ExtensibilityStatusCodes.APP_DEFINITION_NOT_FOUND,
+            ExtensibilityStatusCodes.INTERNAL_ERROR,
+            VBSS_START_SCREEN_SHARE_FAILED,
+            MEETING_EXTENSION_UNKNOWN,
+            MEETING_EXTENSION_UNSUPPORTED_MEETING,
+            MEETING_EXTENSION_ON_THREAD_AVAILABLE,
+            MEETING_EXTENSION_NO_APP_DEFINITION_AVAILABLE,
+            MEETING_EXTENSION_INTERNAL_ERROR
+    })
+    public @interface StatusCodeValue {
+    }
+
+    /**
+     * Status codes for Team Scenarios (Create, Validate,delete)
+     */
+    public static final class Team {
+        // App level Error codes
+        public static final String NAME_EMPTY = "TEAM_NAME_EMPTY";
+        public static final String NAME_VALIDATE_ERROR_INVALID_PAYLOAD = "TEAM_NAME_VALIDATE_ERROR_INVALID_PAYLOAD";
+        public static final String NAME_VALIDATE_ERROR = "TEAM_NAME_VALIDATION_ERROR";
+        public static final String CREATE_ERROR = "TEAM_CREATE_ERROR";
+        public static final String EDIT_ERROR = "TEAM_EDIT_ERROR";
+        public static final String DELETE_ERROR = "TEAM_DELETE_ERROR";
+        public static final String UPDATE_PROFILE_PICTURE_ERROR = "TEAM_UPDATE_PROFILE_PICTURE_ERROR";
+        public static final String GET_DEFAULT_TEAM_INITIALS_ERROR = "TEAM_GET_DEFAULT_INITIALS_ERROR";
+        public static final String INVALID_PAYLOAD = "TEAM_ERROR_INVALID_PAYLOAD";
+
+        // Server generated error codes
+        public static final String NAME_BLOCKED_WORD = "ContainsBlockedWord";
+    }
+
+    /**
+     * Status codes for Files specific scenario
+     */
+    public static final class Files {
+        //File preview
+        public static final String GET_METADATA_FAILED = "GET_METADATA_FAILED";
+        public static final String FILE_PREVIEW_NOT_SUPPORTED = "FILE_PREVIEW_NOT_SUPPORTED";
+        public static final String FILE_PREVIEW_FALLBACK_NOT_AVAILABLE = "FILE_PREVIEW_FALLBACK_NOT_AVAILABLE";
+        public static final String PDF_RENDER_ERROR = "PDF_RENDER_ERROR";
+
+        public static final String NO_CONTEXT = "NO_CONTEXT";
+        public static final String CONSUMER_ONEDRIVE_PROVISIONING_FAILED = "CONSUMER_ONEDRIVE_PROVISIONING_FAILED";
+        public static final String CONSUMER_ONEDRIVE_ALREADY_PROVISIONED = "CONSUMER_ONEDRIVE_ALREADY_PROVISIONED";
+    }
+
+    /**
+     * Now Section Errors
+     */
+    public static final class Now {
+        public static final String GENERIC_NOW_ERROR = "NOW_ERROR";
+        public static final String DB_PERSIST_ERROR = "DB_PERSIST_ERROR";
+        public static final String APP_NOT_WHITELISTED = "APP_NOT_WHITELISTED";
+    }
+
+    /**
+     * Status code for search scenario
+     */
+    public static final class Search {
+        public static final String SEARCH_ABANDONED = "SearchAbandoned";
+        public static final String USER_SEARCH_ITEM_CLICKED = "UserSearchItemClicked";
+        public static final String CHAT_CONVERSATION_SEARCH_ITEM_CLICKED = "GroupChatSearchItemClicked";
+        public static final String MESSAGE_SEARCH_ITEM_CLICKED = "MessageSearchItemClicked";
+        public static final String FILE_SEARCH_ITEM_CLICKED = "FileSearchItemClicked";
+        public static final String CALENDAR_ANSWER_ITEM_CLICKED = "CalendarAnswerItemClicked";
+        public static final String BOOKMARK_ANSWER_ITEM_CLICKED = "BookmarkAnswerItemClicked";
+        public static final String BOOKMARK_ANSWER_V2_ITEM_CLICKED = "BookmarkAnswerV2ItemClicked";
+        public static final String ACRONYM_ANSWER_ITEM_CLICKED = "AcronymAnswerItemClicked";
+        public static final String TEXT_SUGGESTION_ITEM_CLICKED = "TextSuggestionItemClicked";
+        public static final String TEAM_SEARCH_ITEM_CLICKED = "TeamSearchItemClicked";
+        public static final String CHANNEL_SEARCH_ITEM_CLICKED = "ChannelSearchItemClicked";
+        public static final String TOP_N_CACHE_SYNC_FAILED = "TopNCacheSyncFailed";
+        public static final String CONTEXTUAL_SEARCH = "ContextualSearch";
+        public static final String WARM_UP_ERROR = "WarmUpError";
+        public static final String MSAI_INIT_ERROR = "MsaiInitError";
+        public static final String MSAI_FETCH_TOKEN_ERROR = "MsaiFetchTokenError";
+        public static final String MSAI_SEARCH_ERROR = "MsaiSearchError";
+        public static final String MSAI_NULL_UNIQUE_ID = "MsaiNullUniqueId";
+        public static final String SEARCH_TIMEOUT = "SearchTimeout";
+        public static final String DEVICE_CONTACTS_IN_SEARCH_NOT_ENABLED = "DeviceContactsInSearchNotEnabled";
+    }
+
+    /**
+     * Status code for reverse number lookup scenario
+     */
+    public static final class RNL {
+        public static final String OUTLOOK_CONTACT_FETCH_FAILED = "OutlookContactFetchFailed";
+        public static final String BUDDY_CONTACT_FETCH_FAILED = "BuddyContactFetchFailed";
+        public static final String RNL_CONTACT_SYNC_FAILED = "RNLContactSyncFailed";
+        public static final String RNL_NO_CONTACTS_FOUND = "RNLNoContactsFound";
+    }
+
+    /**
+     * Status code for reverse number lookup scenario
+     */
+    public static final class People {
+        public static final String SYNC_FAILED = "PeopleSyncFailed";
+        public static final String CONTACT_SYNC_FAILED = "PeopleContactSyncFailed";
+        public static final String CONTACT_LIST_SYNC_FAILED = "PeopleContactListSyncFailed";
+        public static final String DELETE_CONTACT_FAILED = "DeleteContactFailed";
+        public static final String ADD_CONTACT_FAILED = "AddContactFailed";
+    }
+
+    /**
+     * Status code for people picker
+     */
+    public static final class PeoplePicker {
+        public static final String SERVER_RESULT_SOURCE = "ServerResultSource";
+    }
+
+    /**
+     * Status codes for targeting scenarios
+     */
+    public static final class Targeting {
+        public static final String SERVICE_ERROR = "TargetingServiceError";
+        public static final String CLIENT_ERROR = "TargetingClientError";
+        public static final String PARSE_ERROR = "TargetingParsingError";
+        public static final String NO_MEMBERS = "TargetingNoMembersError";
+        public static final String TAG_EXISTS = "TargetingTagAlreadyExists";
+        public static final String TOO_MANY_MEMBERS = "TargetingTagTooManyMembers";
+        public static final String TOO_MANY_TAGS_IN_TEAM = "TargetingTagTooManyTagsForTeam";
+        public static final String TOO_MANY_TAGS_FOR_USER = "TargetingTagTooManyTagsForUser";
+        public static final String HTTP_REQUEST_FAILED = "TargetingHttpRequestFailed";
+        public static final String CACHE_MISS_WITH_NO_NETWORK = "TargetingCacheMissWithNoNetwork";
+        public static final String TAGS_DISABLED_BY_TENANT = "TargetingTagsDisabledByTenant";
+        public static final String AUTHENTICATION_ERROR = "TargetingAuthenticationError";
+        public static final String ADDING_TOO_MANY_MEMBERS_AT_ONCE = "TargetingAddingTooManyMembersAtOnce";
+    }
+
+    /**
+     * Status Codes for Status Notes
+     */
+    public static final class StatusNote {
+        public static final String STATUS_NOTE_SET_SUCCESSFUL = "STATUS_NOTE_SET_SUCCESSFUL";
+        public static final String STATUS_NOTE_SET_FAILED = "STATUS_NOTE_SET_FAILED";
+        public static final String STATUS_NOTE_NETWORK_FAILED = "STATUS_NOTE_NETWORK_FAILED";
+        public static final String STATUS_NOTE_SERVICE_CALL_FAILED = "STATUS_NOTE_SERVICE_CALL_FAILED";
+        public static final String STATUS_NOTE_OPEN_SET_STATUS_NOTE_FAILED = "STATUS_NOTE_OPEN_SET_STATUS_NOTE_FAILED";
+    }
+
+    /**
+     * Status codes for Better Together scenarios.
+     */
+    public static final class BetterTogether {
+        public static final String DISCOVERY = "Discovery";
+        public static final String FAILED_TO_START_BEACON = "FailedToStartBeacon";
+        public static final String PAIRING = "Pairing";
+        public static final String UNPAIRING = "UnPairing";
+        public static final String TRANSPORT_USER_DISCOVER_ERROR = "TransportUserDiscoverError";
+        public static final String TRANSPORT_NOT_READY = "TransportNotReady";
+        public static final String NOT_PAIRED = "NotPaired";
+        public static final String UNRESOLVED_ENDPOINT = "UnresolvedEndpoint";
+        public static final String UNSUPPORTED_COMMAND = "UnsupportedCommand";
+        public static final String BAD_REQUEST = "CommandMalformed";
+        public static final String INVALID_COMMAND_NAME = "InvalidCommandName";
+        public static final String TARGET_ENDPOINT_MISMATCH = "TargetEndpointMismatch";
+        public static final String SALT_MISMATCH = "SaltMismatch";
+        public static final String COMMAND_CANCELLED = "CommandCancelled";
+        public static final String COMMAND_FAULTED = "CommandFaulted";
+        public static final String CALL_START_CONVERSATION_SYNC_FAILED = "CallStartConvSyncFailure";
+        public static final String KEEP_ALIVE_COMMAND_FAILED = "KeepAliveCommandFailed";
+
+        public static final String NO_EQUIVALENT_OUTGOING_COMMAND = "NoEquivalentOutgoingCommand";
+        public static final String P2P_START_VM_NULL = "P2PStartViewModelNull";
+        public static final String P2P_START_CALL_GUID_NULL = "P2PStartCallGuidNull";
+        public static final String P2P_START_CALL_GUID_MISMATCH = "P2PStartCallGuidMismatch";
+        public static final String COMMAND_ERROR = "CommandError";
+        public static final String P2P_START_ERROR = "P2PStartError";
+        public static final String CALL_COMMAND_ERROR = "CallCommandError";
+        public static final String UNKNOWN_COMMAND_ERROR = "UnknownCommandError";
+        public static final String COMMAND_DROPPED = "CommandDropped";
+        public static final String COMMAND_DISABLED = "CommandDisabled";
+        public static final String UNHANDLED_COMMAND_ERROR = "UnhandledCommandError";
+        public static final String RESPONSE_ERROR = "ResponseError";
+        public static final String RE_REGISTRATION_FAILED = "ReRegisterationFailed";
+        public static final String CAPTIONS_COMMAND_ERROR = "CaptionsCommandError";
+        public static final String ROOM_UPDATE_ERROR = "RoomUpdateError";
+        public static final String BEACON_START_CANCELLED = "BeaconStartCancelled";
+        public static final String PAIR_TASK_CANCELLED = "PairTaskCancelled";
+        public static final String PAIR_NO_RESPONSE = "PairTaskCancelled";
+        public static final String SESSION_SETUP_CANCELLED = "SessionSetupCancelled";
+        public static final String SESSION_SETUP_ERROR = "SessionSetupError";
+    }
+
+    /**
+     * Status codes for SMS chats related scenarios
+     */
+    public static final class SMSChatErrors {
+        // this is sent back to the UI layer if we receive a 403 http response and error code of 1400 in response body.
+        // This happens if a user is trying to send an SMS chat to a phone number which belongs to a Teams user.
+        public static final String SMS_CHAT_FORBIDDEN = "SmsChatForbidden";
+    }
+
+    /**
+     * Status codes for Kingston notifications module scenarios
+     */
+    public static final class KingstonNotificationsModule {
+        public static final String MODULE_NOT_READY = "ModuleNotReady";
+        public static final String CLUBBING_FAILED = "ClubbingFailed";
+        public static final String CREATE_NEW_NOTIFICATION_FAILED = "CreateNewNotificationFailed";
+    }
+
+    /**
+     * Status codes for IP phone & company portal IPC scenarios
+     */
+    public static final class IpPhoneCompanyPortalStatusCode {
+        public static final String ENROLLMENT_FAILED = "EnrollmentFailed";
+        public static final String ENROLLMENT_CANCELLED = "EnrollmentCancelled";
+        public static final String ENROLLMENT_TIME_OUT = "EnrollmentTimeOut";
+        public static final String UNENROLLMENT_FAILED = "UnenrollmentFailed";
+        public static final String UNENROLLMENT_CANCELLED = "UnenrollmentCancelled";
+    }
+
+    /**
+     * Status codes for Vault scenarios
+     */
+    public static final class VaultStatusCode {
+        public static final String SERVICE_CALL_FAILED = "VaultServiceCallFailed";
+        public static final String FETCH_FAILED = "VaultLocalFetchFailed";
+        public static final String PARSING_FAILED = "VaultParsingFailed";
+        public static final String ENCRYPTION_FAILED = "VaultEncryptionFailed";
+        public static final String PARTIAL_FAILED = "VaultPartialFailure";
+        public static final String NULL_RESPONSE = "VaultServiceResponseNull";
+    }
+
+    /**
+     * Status codes for Live Location scenarios
+     */
+    public static final class LiveLocationStatusCode {
+        public static final String ABANDONED = "Abandoned";
+        public static final String BEACON_INIT_FAILED = "BeaconInitFailed";
+        public static final String CONFLICT = "Conflict";
+        public static final String EXISTING_TRIGGERS = "ExistingTriggers";
+        public static final String FETCH_FAILED = "FetchFailed";
+        public static final String INVALID_USER = "InvalidUser";
+        public static final String MESSAGE_SEND_FAILED = "MessageSendFailed";
+        public static final String NO_CONSENT = "NoPrivacyConsent";
+        public static final String NO_FOREGROUND_LOCATION = "NoForegroundLocation";
+        public static final String NO_LOCATION_BACKGROUND_OFF = "NoLocationBackgroundOff";
+        public static final String NO_LOCATION_BACKGROUND_ON = "NoLocationBackgroundOn";
+        public static final String NO_LOCATION_EXCEPTION = "NoLocationException";
+        public static final String NO_SESSIONS = "NoActiveSessions";
+        public static final String NOT_ALL_REQUESTS_COMPLETED = "NotAllRequestsCompleted";
+        public static final String NOT_FOUND = "NotFound";
+        public static final String OTHER_ACCOUNT_ACTIVE = "OtherAccountActive";
+        public static final String QUOTA_EXCEEDED = "QuotaExceeded";
+        public static final String SERVICE_CALL_FAILED = "ServiceCallFailed";
+
+    }
+
+    /**
+     * Status codes for Groups scenarios
+     */
+    public static final class GroupsStatusCode {
+        public static final String SERVICE_CALL_FAILED = "GroupsServiceCallFailed";
+        public static final String ACTION_CANCELED = "GroupsActionCanceled";
+        public static final String NOT_ALL_OFF_NETWORK_INVITES_SUCCEEDED = "GroupsNotAllOffNetworkInvitesSucceeded";
+    }
+
+    /**
+     * Status codes for Core IA scenarios
+     */
+    public static final class CoreIAStatusCode {
+        public static final String NO_GALLERY_PREVIEW = "NoGalleryPreview";
+        public static final String SERVICE_CALL_FAILED = "CoreIAServiceCallFailed";
+    }
+
+    /**
+     * Status codes for Feedback (OCV and BRB) scenarios
+     */
+    public static final class BrbOcvFeedbackStatusCode {
+        public static final String MISSING_FIELD = "MissingField";
+        public static final String NO_NETWORK = "NoNetwork";
+        public static final String NETWORK_CALL_FAILED = "NetworkRequestFailed";
+        public static final String POWER_LIFT_CALL_FAILED = "PowerLiftRequestFailed";
+    }
+
+    /**
+     * Status codes for Room Remote scenarios
+     */
+    public static final class RoomRemote {
+        public static final String SESSION_USER_CANCEL = "SessionUserCancel";
+        public static final String SESSION_USER_REJECTED = "SessionUserRejected";
+        public static final String SESSION_SETUP_TIMEOUT = "SessionUserTimeout";
+        public static final String SESSION_TARGET_NOT_REGISTERED = "SessionTargetNotRegistered";
+        public static final String SESSION_UNKNOWN_ERROR = "SessionUnknownError";
+        public static final String PERMISSION_NOT_GRANTED = "PermissionNotGranted";
+        public static final String PROXIMITY_CHECKING_CANCELED = "ProximityCheckingCanceled";
+        public static final String PROXIMITY_CHECKING_TIMEOUT = "ProximityCheckingTimeout";
+        public static final String PAIR_FAILURE = "PairFailure";
+        public static final String ORPHAN_SESSION_ON_CLIENT = "OrphanSessionOnClient";
+        public static final String ORPHAN_SESSION_ON_ROOM = "OrphanSessionOnRoom";
+    }
+
+    /**
+     * Status codes for Extensibility scenarios
+     */
+    public static final class ExtensibilityStatusCodes {
+        public static final String APP_DEFINITION_NOT_FOUND = "AppDefinitionNotFound";
+        public static final String INTERNAL_ERROR = "InternalError";
+    }
+}
