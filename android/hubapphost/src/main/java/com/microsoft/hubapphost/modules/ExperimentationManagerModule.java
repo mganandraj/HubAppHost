@@ -1,6 +1,6 @@
 package com.microsoft.hubapphost.modules;
 
-import com.microsoft.hubapphost.impls.TeamsSdkSimExperimentationManager;
+import com.microsoft.hubapphost.impls.ExperimentationManagerImpl;
 import com.microsoft.teams.storage.IExperimentationManager;
 
 import javax.inject.Singleton;
@@ -14,6 +14,6 @@ public class ExperimentationManagerModule {
     @Singleton
     @Provides
     static IExperimentationManager provideTeamsNavigationService() {
-        return new TeamsSdkSimExperimentationManager();
+        return new ExperimentationManagerImpl();
     }
 }

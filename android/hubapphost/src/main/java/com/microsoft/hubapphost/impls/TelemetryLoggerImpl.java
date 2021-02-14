@@ -13,9 +13,9 @@ import com.microsoft.teams.telemetry.EventProperties;
 
 import javax.inject.Inject;
 
-public class TeamsSdkSimTelemetryLogger implements ITelemetryLogger {
+public class TelemetryLoggerImpl implements ITelemetryLogger {
 
-    @Inject public TeamsSdkSimTelemetryLogger() {}
+    @Inject public TelemetryLoggerImpl() {}
 
     @Nullable
     @Override

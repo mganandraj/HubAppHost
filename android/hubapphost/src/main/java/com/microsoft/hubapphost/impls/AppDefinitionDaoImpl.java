@@ -18,11 +18,11 @@ import java.util.List;
 
 import static com.microsoft.teams.sdk.SdkHelper.throwError;
 
-public class TeamsSdkSimAppDefinitionDao implements AppDefinitionDao {
+public class AppDefinitionDaoImpl implements AppDefinitionDao {
     ITeamsApplication mTeamsApplication;
     HashMap<String, AppDefinition> mAppDefinitionMap;
 
-    public TeamsSdkSimAppDefinitionDao(ITeamsApplication teamsApplication) {
+    public AppDefinitionDaoImpl(ITeamsApplication teamsApplication) {
         mTeamsApplication = teamsApplication;
         mAppDefinitionMap = new HashMap<>();
 

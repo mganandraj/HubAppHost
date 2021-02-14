@@ -6,7 +6,7 @@ import android.os.Handler;
 import android.os.Looper;
 
 import com.google.gson.JsonObject;
-import com.microsoft.hubapphost.impls.Preferences;
+import com.microsoft.hubapphost.impls.PreferencesImpl;
 import com.microsoft.hubapphost.modules.AppComponent;
 import com.microsoft.hubapphost.modules.ContextModule;
 import com.microsoft.hubapphost.modules.DaggerAppComponent;
@@ -56,7 +56,7 @@ public class PlatformAppProvider {
     AppConfiguration mAppConfiguration;
 
     @Inject
-    Preferences mPreferences;
+    PreferencesImpl mPreferencesImpl;
 
     @Inject
     IScenarioManager mScenarioManager;
@@ -101,6 +101,7 @@ public class PlatformAppProvider {
     }
 
     ArrayList<IPlatformAppsObserver> mPlatformAppsObservers = new ArrayList<>();
+
     public void attachPlatformAppsObserver(IPlatformAppsObserver platformAppsObserver) {
         mPlatformAppsObservers.add(platformAppsObserver);
     }
@@ -151,7 +152,8 @@ public class PlatformAppProvider {
                     }
                 }
                 return null;
-            }}).onSuccess(new Continuation<Void, Void>() {
+            }
+        }).onSuccess(new Continuation<Void, Void>() {
             @Override
             public Void then(Task<Void> task) throws Exception {
                 // Trigger a synchonization
@@ -165,25 +167,30 @@ public class PlatformAppProvider {
     public void syncMobileModules() {
         mSdkRunnerAppManager.syncRunnerApp();
 
-        mMobileModuleSyncManager.syncMobileModules()
-                .onSuccess(new Continuation<Void, Object>() {
+        TaskUtilities.runOnBackgroundThread(new Runnable() {
+            @Override
+            public void run() {
+                mMobileModuleSyncManager.syncMobileModules()
+                        .onSuccess(new Continuation<Void, Object>() {
 
-                    @Override
-                    public Object then(Task<Void> task) throws Exception {
+                            @Override
+                            public Object then(Task<Void> task) throws Exception {
 
-                        ArrayList<IPlatformApp> platformApps = new ArrayList<>();
-                        for (AppDefinition appDefinition : mAppDefinitionDao.getAppDefinitionsWithMobileModules() ) {
-                            IPlatformApp platformApp = mPlatformAppManager.get(appDefinition.appId);
-                            platformApps.add(platformApp);
-                        }
+                                ArrayList<IPlatformApp> platformApps = new ArrayList<>();
+                                for (AppDefinition appDefinition : mAppDefinitionDao.getAppDefinitionsWithMobileModules()) {
+                                    IPlatformApp platformApp = mPlatformAppManager.get(appDefinition.appId);
+                                    platformApps.add(platformApp);
+                                }
 
-                        for (IPlatformAppsObserver platformAppsObserver: mPlatformAppsObservers) {
-                            platformAppsObserver.onPlatformAppsChanged(platformApps);
-                        }
-                        return null;
-                    }
+                                for (IPlatformAppsObserver platformAppsObserver : mPlatformAppsObservers) {
+                                    platformAppsObserver.onPlatformAppsChanged(platformApps);
+                                }
+                                return null;
+                            }
 
-                });
+                        });
+            }
+        });
     }
 
     // TODO .. THis shouldn't be bound to an activity.
@@ -215,7 +222,7 @@ public class PlatformAppProvider {
     }
 
     public static PlatformAppProvider get() {
-        if(sPlatformAppProvider == null) {
+        if (sPlatformAppProvider == null) {
             throw new RuntimeException("PlatformAppProvider::initialize must be called prior to calling get.");
         }
 

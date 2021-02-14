@@ -15,7 +15,7 @@ import com.microsoft.teams.core.app.ITeamsApplication;
 import com.microsoft.teams.core.preferences.IPreferences;
 import com.microsoft.teams.core.services.IScenarioManager;
 
-public class TeamsSdkSimMobileModuleFactory {
+public class MobileModuleFactoryImpl {
 
     Context mContext;
     ISdkRunnerAppManager mSdkRunnerAppManager;
@@ -28,9 +28,9 @@ public class TeamsSdkSimMobileModuleFactory {
     IScenarioManager mScenarioManager;
     IExperimentationManager mExperimentationManager;
 
-    public TeamsSdkSimMobileModuleFactory(Context context, ISdkRunnerAppManager sdkRunnerAppManager,
-                                          ITeamsApplication teamsApplication, ISdkBundleDownloadManager sdkBundleDownloadManager, RNAppsDao rnAppsDao, RNBundlesDao rnBundlesDao, AppConfiguration appConfiguration,
-                                          IPreferences preferences, IScenarioManager scenarioManager, IExperimentationManager experimentationManager) {
+    public MobileModuleFactoryImpl(Context context, ISdkRunnerAppManager sdkRunnerAppManager,
+                                   ITeamsApplication teamsApplication, ISdkBundleDownloadManager sdkBundleDownloadManager, RNAppsDao rnAppsDao, RNBundlesDao rnBundlesDao, AppConfiguration appConfiguration,
+                                   IPreferences preferences, IScenarioManager scenarioManager, IExperimentationManager experimentationManager) {
         mContext = context;
         mSdkRunnerAppManager = sdkRunnerAppManager ;
         mTeamsApplication = teamsApplication;

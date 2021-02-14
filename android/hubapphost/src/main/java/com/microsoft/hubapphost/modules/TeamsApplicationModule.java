@@ -3,7 +3,7 @@ package com.microsoft.hubapphost.modules;
 import android.app.Activity;
 import android.app.Application;
 
-import com.microsoft.hubapphost.impls.TeamsSdkSimApplication;
+import com.microsoft.hubapphost.impls.TeamsApplicationImpl;
 import com.microsoft.teams.logger.ILogger;
 import com.microsoft.teams.logger.ITelemetryLogger;
 import com.microsoft.teams.storage.IExperimentationManager;
@@ -32,6 +32,6 @@ public class TeamsApplicationModule {
                                                      ILogger logger,
                                                      ITelemetryLogger telemetryLogger,
                                                      IPreferences preferences) {
-        return new TeamsSdkSimApplication(mActivity, mApplication, experimentationManager, scenarioManager, logger, telemetryLogger, preferences);
+        return new TeamsApplicationImpl(mActivity, mApplication, experimentationManager, scenarioManager, logger, telemetryLogger, preferences);
     }
 }

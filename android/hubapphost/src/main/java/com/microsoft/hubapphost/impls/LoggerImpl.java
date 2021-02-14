@@ -8,9 +8,9 @@ import java.util.Map;
 
 import javax.inject.Inject;
 
-public class TeamsSdkSimLogger implements ILogger {
+public class LoggerImpl implements ILogger {
 
-    @Inject public TeamsSdkSimLogger(){}
+    @Inject public LoggerImpl(){}
 
     @Override
     public boolean isLogTransmissionEnabled() {

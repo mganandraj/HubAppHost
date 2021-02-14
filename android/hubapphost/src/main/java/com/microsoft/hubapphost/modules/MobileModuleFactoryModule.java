@@ -2,7 +2,7 @@ package com.microsoft.hubapphost.modules;
 
 import android.content.Context;
 
-import com.microsoft.hubapphost.impls.TeamsSdkSimMobileModuleFactory;
+import com.microsoft.hubapphost.impls.MobileModuleFactoryImpl;
 import com.microsoft.teams.sdk.ISdkRunnerAppManager;
 import com.microsoft.teams.sdk.rnbundle.ISdkBundleDownloadManager;
 import com.microsoft.teams.services.configuration.AppConfiguration;
@@ -23,10 +23,10 @@ public class MobileModuleFactoryModule {
 
     @Singleton
     @Provides
-    static TeamsSdkSimMobileModuleFactory provideMobileModuleFactory(Context context, ISdkRunnerAppManager sdkRunnerAppManager,
-                                                                     ITeamsApplication teamsApplication, ISdkBundleDownloadManager sdkBundleDownloadManager, RNAppsDao rnAppsDao, RNBundlesDao rnBundlesDao, AppConfiguration appConfiguration,
-                                                                     IPreferences preferences, IScenarioManager scenarioManager, IExperimentationManager experimentationManager) {
-        return new TeamsSdkSimMobileModuleFactory(context,
+    static MobileModuleFactoryImpl provideMobileModuleFactory(Context context, ISdkRunnerAppManager sdkRunnerAppManager,
+                                                              ITeamsApplication teamsApplication, ISdkBundleDownloadManager sdkBundleDownloadManager, RNAppsDao rnAppsDao, RNBundlesDao rnBundlesDao, AppConfiguration appConfiguration,
+                                                              IPreferences preferences, IScenarioManager scenarioManager, IExperimentationManager experimentationManager) {
+        return new MobileModuleFactoryImpl(context,
                 sdkRunnerAppManager,
                 teamsApplication,
                 sdkBundleDownloadManager,

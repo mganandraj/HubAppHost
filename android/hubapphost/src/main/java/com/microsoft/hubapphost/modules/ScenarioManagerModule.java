@@ -1,6 +1,6 @@
 package com.microsoft.hubapphost.modules;
 
-import com.microsoft.hubapphost.impls.TeamsSdkSimScenarioManager;
+import com.microsoft.hubapphost.impls.ScenarioManagerImpl;
 import com.microsoft.teams.logger.ILogger;
 import com.microsoft.teams.logger.ITelemetryLogger;
 import com.microsoft.teams.storage.IExperimentationManager;
@@ -21,7 +21,7 @@ public class ScenarioManagerModule {
                                                    ITelemetryLogger telemetryLoggerModule,
                                                    ILogger loggerModule,
                                                    IPreferences preferencesModule) {
-        return new TeamsSdkSimScenarioManager(experimentationManager,
+        return new ScenarioManagerImpl(experimentationManager,
                 telemetryLoggerModule,
                 loggerModule,
                 preferencesModule);

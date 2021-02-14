@@ -15,17 +15,17 @@ import java.util.Map;
 
 import javax.inject.Inject;
 
-public class TeamsSdkSimScenarioManager implements IScenarioManager {
+public class ScenarioManagerImpl implements IScenarioManager {
 
     @NonNull IExperimentationManager mExperimentationManager;
     @NonNull ITelemetryLogger mTelemetryLogger;
     @NonNull ILogger mLogger;
     @NonNull IPreferences mPreferences;
 
-    @Inject public TeamsSdkSimScenarioManager(@NonNull IExperimentationManager experimentationManager,
-                               @NonNull ITelemetryLogger telemetryLogger,
-                               @NonNull ILogger logger,
-                               @NonNull IPreferences preferences) {
+    @Inject public ScenarioManagerImpl(@NonNull IExperimentationManager experimentationManager,
+                                       @NonNull ITelemetryLogger telemetryLogger,
+                                       @NonNull ILogger logger,
+                                       @NonNull IPreferences preferences) {
         mExperimentationManager = experimentationManager;
         mTelemetryLogger = telemetryLogger;
         mLogger = logger;

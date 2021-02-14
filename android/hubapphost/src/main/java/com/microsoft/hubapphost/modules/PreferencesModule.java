@@ -1,6 +1,6 @@
 package com.microsoft.hubapphost.modules;
 
-import com.microsoft.hubapphost.impls.Preferences;
+import com.microsoft.hubapphost.impls.PreferencesImpl;
 import com.microsoft.teams.core.preferences.IPreferences;
 
 import javax.inject.Singleton;
@@ -14,6 +14,6 @@ public class PreferencesModule {
     @Singleton
     @Provides
     static IPreferences providePreferences() {
-        return new Preferences();
+        return new PreferencesImpl();
     }
 }

@@ -1,6 +1,6 @@
 package com.microsoft.hubapphost.modules;
 
-import com.microsoft.hubapphost.impls.TeamsSdkSimLogger;
+import com.microsoft.hubapphost.impls.LoggerImpl;
 import com.microsoft.teams.logger.ILogger;
 
 import javax.inject.Singleton;
@@ -14,6 +14,6 @@ public class LoggerModule {
     @Singleton
     @Provides
     static ILogger provideLogger() {
-        return new TeamsSdkSimLogger();
+        return new LoggerImpl();
     }
 }

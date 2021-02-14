@@ -15,7 +15,7 @@ import com.microsoft.teams.core.app.ITeamsApplication;
 import com.microsoft.teams.core.preferences.IPreferences;
 import com.microsoft.teams.core.services.IScenarioManager;
 
-public class TeamsSdkSimApplication implements ITeamsApplication {
+public class TeamsApplicationImpl implements ITeamsApplication {
 
     // Very hacky .. Trying to get the code running mode !!
     Activity mActivity;
@@ -26,12 +26,12 @@ public class TeamsSdkSimApplication implements ITeamsApplication {
     ILogger mLogger;
     IScenarioManager mScenarioManager;
 
-    public TeamsSdkSimApplication(Activity activity, Application application,
-                                  IExperimentationManager experimentationManager,
-                                  IScenarioManager scenarioManager,
-                                  ILogger logger,
-                                  ITelemetryLogger telemetryLogger,
-                                  IPreferences preferences) {
+    public TeamsApplicationImpl(Activity activity, Application application,
+                                IExperimentationManager experimentationManager,
+                                IScenarioManager scenarioManager,
+                                ILogger logger,
+                                ITelemetryLogger telemetryLogger,
+                                IPreferences preferences) {
         mActivity = activity;
         mApplication = application;
         mExperimentationManager = experimentationManager;

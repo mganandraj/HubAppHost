@@ -1,4 +1,4 @@
 include ':hubapphost'
-rootProject.name = 'TeamsSdkSim'
+rootProject.name = 'HubAppHost'
 apply from: file("../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesSettingsGradle(settings)
 include ':app'

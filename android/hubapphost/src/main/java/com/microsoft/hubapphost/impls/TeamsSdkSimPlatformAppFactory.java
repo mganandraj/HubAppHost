@@ -12,11 +12,11 @@ import com.microsoft.teams.storage.models.MobileModuleDefinition;
 public class TeamsSdkSimPlatformAppFactory {
 
     AppDefinitionDao m_appDefinitionDao;
-    TeamsSdkSimMobileModuleFactory m_mobileModuleFactory;
+    MobileModuleFactoryImpl m_mobileModuleFactory;
     ISdkRunnerAppManager m_sdkRunnerAppManager;
 
     public TeamsSdkSimPlatformAppFactory(AppDefinitionDao appDefinitionDao,
-                                         TeamsSdkSimMobileModuleFactory mobileModuleFactory,
+                                         MobileModuleFactoryImpl mobileModuleFactory,
                                          ISdkRunnerAppManager sdkRunnerAppManager) {
         m_appDefinitionDao = appDefinitionDao;
         m_mobileModuleFactory = mobileModuleFactory;
@@ -26,13 +26,13 @@ public class TeamsSdkSimPlatformAppFactory {
     public IPlatformApp create(String appId,
                         @Nullable MobileModuleDefinition mobileModuleDefinition,
                         @NonNull AppDefinitionDao appDefinitionDao,
-                        @NonNull TeamsSdkSimMobileModuleFactory mobileModuleFactory,
+                        @NonNull MobileModuleFactoryImpl mobileModuleFactory,
                         @NonNull ISdkRunnerAppManager sdkRunnerAppManager) {
 
         return new PlatformApp(appId, mobileModuleDefinition, appDefinitionDao, mobileModuleFactory, sdkRunnerAppManager);
     }
 
-    public TeamsSdkSimMobileModuleFactory getMobileModuleFactory() {
+    public MobileModuleFactoryImpl getMobileModuleFactory() {
         return m_mobileModuleFactory;
     }
 }

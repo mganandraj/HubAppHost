@@ -44,7 +44,7 @@ dependencies {
 
     implementation 'com.nimbusds:nimbus-jose-jwt:5.3'
 
-    api('com.microsoft.aad:adal:1.16.3') {
+    implementation ('com.microsoft.aad:adal:1.16.3') {
         exclude module: 'common'
     }
 

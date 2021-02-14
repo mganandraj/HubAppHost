@@ -9,9 +9,9 @@ import com.microsoft.teams.services.configuration.AppConfiguration;
 
 import javax.inject.Inject;
 
-public class TeamsSdkSimAppConfiguration implements AppConfiguration {
+public class AppConfigurationImpl implements AppConfiguration {
 
-    @Inject public TeamsSdkSimAppConfiguration() {}
+    @Inject public AppConfigurationImpl() {}
 
     @Override
     public boolean isShareMediaEnabled() {

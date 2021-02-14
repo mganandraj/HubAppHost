@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class TeamsSdkSimRNBundlesDao implements RNBundlesDao {
+public class RNBundlesDaoImpl implements RNBundlesDao {
 
     HashMap<String, RNBundle> mRNBundleMap = new HashMap<>();
 

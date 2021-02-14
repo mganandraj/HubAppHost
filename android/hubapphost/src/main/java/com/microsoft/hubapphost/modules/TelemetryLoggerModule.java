@@ -1,6 +1,6 @@
 package com.microsoft.hubapphost.modules;
 
-import com.microsoft.hubapphost.impls.TeamsSdkSimTelemetryLogger;
+import com.microsoft.hubapphost.impls.TelemetryLoggerImpl;
 import com.microsoft.teams.logger.ITelemetryLogger;
 
 import javax.inject.Singleton;
@@ -14,6 +14,6 @@ public class TelemetryLoggerModule {
     @Singleton
     @Provides
     static ITelemetryLogger provideTelemetryLogger() {
-        return new TeamsSdkSimTelemetryLogger();
+        return new TelemetryLoggerImpl();
     }
 }

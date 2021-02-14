@@ -12,9 +12,9 @@ import java.util.Set;
 
 import javax.inject.Inject;
 
-public class Preferences implements IPreferences {
+public class PreferencesImpl implements IPreferences {
 
-    @Inject public Preferences() {}
+    @Inject public PreferencesImpl() {}
 
     @Override
     public boolean getBooleanGlobalPref(String key, boolean defaultValue) {

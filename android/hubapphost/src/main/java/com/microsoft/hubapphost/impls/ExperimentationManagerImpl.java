@@ -7,10 +7,10 @@ import com.microsoft.teams.storage.IExperimentationManager;
 
 import javax.inject.Inject;
 
-public class TeamsSdkSimExperimentationManager implements IExperimentationManager {
+public class ExperimentationManagerImpl implements IExperimentationManager {
 
     @Inject
-    public TeamsSdkSimExperimentationManager() {}
+    public ExperimentationManagerImpl() {}
 
     @Nullable
     @Override

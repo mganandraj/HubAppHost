@@ -1,4 +1,4 @@
-package com.teamssdksim.impls;
+package com.microsoft.hubapphost.impls;
 
 import android.os.Build;
 
@@ -12,7 +12,7 @@ import com.microsoft.teams.storage.tables.RNApp;
 import java.util.Collection;
 import java.util.HashMap;
 
-public class TeamsSdkRNAppsDao implements RNAppsDao {
+public class RNAppsDaoImpl implements RNAppsDao {
 
     HashMap<String, RNApp> mRNAppMap = new HashMap<>();
 

@@ -1,6 +1,6 @@
 package com.microsoft.hubapphost.modules;
 
-import com.microsoft.hubapphost.impls.TeamsSdkSimAppConfiguration;
+import com.microsoft.hubapphost.impls.AppConfigurationImpl;
 import com.microsoft.teams.services.configuration.AppConfiguration;
 
 import javax.inject.Singleton;
@@ -13,6 +13,6 @@ public class AppConfigurationModule {
     @Singleton
     @Provides
     static AppConfiguration provideAppConfiguration() {
-        return new TeamsSdkSimAppConfiguration();
+        return new AppConfigurationImpl();
     }
 }

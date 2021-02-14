@@ -5,7 +5,7 @@
 package com.microsoft.teams.mobilemodules;
 
 //import com.microsoft.teams.mobilemodules.injection.MobileModuleFactory;
-import com.microsoft.hubapphost.impls.TeamsSdkSimMobileModuleFactory;
+import com.microsoft.hubapphost.impls.MobileModuleFactoryImpl;
 import com.microsoft.teams.sdk.ISdkRunnerAppManager;
         import com.microsoft.teams.sdk.utils.SdkRunnerUtils;
 //import com.microsoft.teams.storage.dao.appdefinition.AppDefinitionDao;
@@ -36,14 +36,14 @@ public class PlatformApp implements IPlatformApp {
     private MobileModuleDefinition mMobileModuleDefinition;
     private IMobileModule mMobileModule;
     // private MobileModuleFactory mMobileModuleFactory;
-    TeamsSdkSimMobileModuleFactory mMobileModuleFactory;
+    MobileModuleFactoryImpl mMobileModuleFactory;
 
     @Inject
     public PlatformApp(@NonNull /*@PlatformAppId*/ String appId,
                        @Nullable MobileModuleDefinition mobileModuleDefinition,
                        @NonNull AppDefinitionDao appDefinitionDao,
                        /*@NonNull MobileModuleFactory mobileModuleFactory,*/
-                       TeamsSdkSimMobileModuleFactory mobileModuleFactory,
+                       MobileModuleFactoryImpl mobileModuleFactory,
                        @NonNull ISdkRunnerAppManager sdkRunnerAppManager) {
 
         mAppId = appId;
