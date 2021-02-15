@@ -316,6 +316,8 @@ public final class SdkBundleDownloadManager implements ISdkBundleDownloadManager
                 rnapp = new RNApp();
                 rnapp.moduleId = appId;
                 rnapp.bundleVersion = sdkAppManifest.version;
+                rnapp.lastUpdateCheckedTimeInMillis = System.currentTimeMillis();
+                rnAppsDao.add(rnapp);
             } else {
                 // If newer bundle version number is less or equal than existing version number, ignore it
                 if (rnapp.bundleVersion == null || SdkVersionUtils.compareSDKVersions(sdkAppManifest.version, rnapp.bundleVersion) != 1) {
@@ -339,9 +341,11 @@ public final class SdkBundleDownloadManager implements ISdkBundleDownloadManager
                     }
                 }
                 rnapp.bundleVersion = sdkAppManifest.version;
+                rnapp.lastUpdateCheckedTimeInMillis = System.currentTimeMillis();
+                rnAppsDao.update(rnapp);
             }
-            rnapp.lastUpdateCheckedTimeInMillis = System.currentTimeMillis();
-            rnAppsDao.save(rnapp);
+
+            // rnAppsDao.save(rnapp);
         }
     }
 }

@@ -146,7 +146,7 @@ public class PlatformAppProvider {
                 CoreParserHelper.parseAppDefinition(jsonObject, appDefinition, null, mTeamsApplication.getLogger(""));
                 if (appDefinition != null) {
                     try {
-                        mAppDefinitionDao.save(appDefinition);
+                        mAppDefinitionDao.add(appDefinition);
                     } catch (Exception ex) {
                         ex.printStackTrace();
                     }

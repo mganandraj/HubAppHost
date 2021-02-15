@@ -8,7 +8,7 @@ import android.content.Context;
 
 import androidx.annotation.StringDef;
 
-import com.microsoft.aad.adal.ADALError;
+// import com.microsoft.aad.adal.ADALError;
 import com.microsoft.teams.sdk.SdkConstants;
 // import com.microsoft.teams.core.R;
 
@@ -703,17 +703,17 @@ public final class StatusCode {
     }
 
     public static String getErrorDisplayText(Context context, @StatusCodeValue String errorCode) {
-        if (errorCode == null || errorCode.equalsIgnoreCase(ADALError.AUTH_FAILED_CANCELLED.name())) {
+        if (errorCode == null/* || errorCode.equalsIgnoreCase(ADALError.AUTH_FAILED_CANCELLED.name())*/) {
             return null;
         }
-
-        if (ADALError.DEVICE_CONNECTION_IS_NOT_AVAILABLE.name().equalsIgnoreCase(errorCode)
-                || ADALError.DEVICE_INTERNET_IS_NOT_AVAILABLE.name().equalsIgnoreCase(errorCode)
-                || ADALError.NO_NETWORK_CONNECTION_POWER_OPTIMIZATION.name().equalsIgnoreCase(errorCode)
-                || StatusCode.NETWORK_UNAVAILABLE.equalsIgnoreCase(errorCode)) {
-            // return context.getString(R.string.cannot_auth_when_offline_error);
-            return "context.getString(R.string.cannot_auth_when_offline_error)";
-        }
+//
+//        if (ADALError.DEVICE_CONNECTION_IS_NOT_AVAILABLE.name().equalsIgnoreCase(errorCode)
+//                || ADALError.DEVICE_INTERNET_IS_NOT_AVAILABLE.name().equalsIgnoreCase(errorCode)
+//                || ADALError.NO_NETWORK_CONNECTION_POWER_OPTIMIZATION.name().equalsIgnoreCase(errorCode)
+//                || StatusCode.NETWORK_UNAVAILABLE.equalsIgnoreCase(errorCode)) {
+//            // return context.getString(R.string.cannot_auth_when_offline_error);
+//            return "context.getString(R.string.cannot_auth_when_offline_error)";
+//        }
 
 //        switch (errorCode) {
 //            case TEAMS_DISABLED_FOR_TENANT:

@@ -33,6 +33,11 @@ public class RNAppsDaoImpl implements RNAppsDao {
 
     }
 
+    @Override
+    public void add(RNApp rnApp) {
+        mRNAppMap.put(rnApp.moduleId, rnApp);
+    }
+
 //    @Override
 //    public List<RNApp> getAll(String userId) {
 //        return new ArrayList<>(mRNAppMap.values());

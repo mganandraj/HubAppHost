@@ -23,8 +23,8 @@
     "watch": "tsc --watch"
   },
   "dependencies": {
-    "react": "16.13.0",
-    "react-native": "0.62.2",
+    "react": "16.13.1",
+    "react-native": "0.62.16-microsoft.0",
     "teams-mobile-sdk": "0.7.5"
   },
   "devDependencies": {
