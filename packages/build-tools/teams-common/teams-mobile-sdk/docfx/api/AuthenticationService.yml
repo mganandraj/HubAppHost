@@ -1,0 +1,126 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.AuthenticationService
+    name: AuthenticationService
+    fullName: AuthenticationService
+    children:
+      - teams-mobile-sdk.AuthenticationService.getResourceToken
+      - teams-mobile-sdk.AuthenticationService.getResourceTokenWithClaim
+      - teams-mobile-sdk.AuthenticationService.getSkypeToken
+    langs:
+      - typeScript
+    type: class
+    summary: >
+      The authentication services enables developers to authenticate the user to
+      their application resources.
+
+      Before fetching a resource token for a domain, the domain must first be
+      declared within the app's manifest.
+
+      **For example**
+
+      ```json
+
+      {
+        "views": [
+          // ...
+        ],
+        "authDomains": [
+          "https://graph.microsoft.com"
+        ]
+      }
+
+      ```
+
+
+      Token requests for domains which are not declared within the manifest will
+      fail.
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.AuthenticationService.getResourceToken
+    name: getResourceToken(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      This method gets the resource token for the specified resource. If the
+      resource is supported,
+
+      the method will return a valid access token for the resource. If the
+      resource is not supported,
+
+      the method will fail with an error.
+    syntax:
+      content: 'static function getResourceToken(resource: string)'
+      parameters:
+        - id: resource
+          type:
+            - string
+          description: resource for which the token is being requested
+      return:
+        type:
+          - Promise<string>
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.AuthenticationService.getResourceTokenWithClaim
+    name: >-
+      getResourceTokenWithClaim(string, undefined | false | true, undefined |
+      string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      This method gets the access token for the specified resource. If the
+      resource is supported,
+
+      the method will return a valid access token for the resource. If the
+      resource is not supported,
+
+      the method will fail with an error.
+    syntax:
+      content: >-
+        static function getResourceTokenWithClaim(resource: string, silent?:
+        undefined | false | true, claim?: undefined | string)
+      parameters:
+        - id: resource
+          type:
+            - string
+          description: resource for which the token is being requested
+        - id: silent
+          type:
+            - undefined | false | true
+          description: >-
+            optional flag indicating whether to attempt the token acquisition
+            silently or
+
+            allow a prompt to be shown. Default value of the flag is false
+          optional: true
+        - id: claim
+          type:
+            - undefined | string
+          description: >-
+            optional claim string to pass to AAD when requesting for the access
+            token
+          optional: true
+      return:
+        type:
+          - Promise<string>
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.AuthenticationService.getSkypeToken
+    name: getSkypeToken(boolean)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: This method gets users skype token
+    syntax:
+      content: 'static function getSkypeToken(isConsumer: boolean)'
+      parameters:
+        - id: isConsumer
+          type:
+            - boolean
+          description: flag indicating whether a consumer or not
+      return:
+        type:
+          - Promise<string>
+    package: teams-mobile-sdk

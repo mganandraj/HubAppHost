@@ -1,0 +1,238 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.ImageAndFilePickerInterface
+    name: ImageAndFilePickerInterface
+    fullName: ImageAndFilePickerInterface
+    children:
+      - teams-mobile-sdk.ImageAndFilePickerInterface.compressImage
+      - >-
+        teams-mobile-sdk.ImageAndFilePickerInterface.optimizeImageForNetworkUpload
+      - teams-mobile-sdk.ImageAndFilePickerInterface.pickDocumentFromBrowser
+      - teams-mobile-sdk.ImageAndFilePickerInterface.pickPhotoFromGallery
+      - >-
+        teams-mobile-sdk.ImageAndFilePickerInterface.takePhotoWithCustomizedOfficeLensCamera
+      - teams-mobile-sdk.ImageAndFilePickerInterface.takePhotoWithDefaultCamera
+      - >-
+        teams-mobile-sdk.ImageAndFilePickerInterface.takePhotoWithOfficeLensCamera
+    langs:
+      - typeScript
+    type: interface
+    summary: Image and file picker.
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ImageAndFilePickerInterface.compressImage
+    name: 'compressImage(FileMetaData, ImageQuality)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >
+      API to compress the given image to the target image quality
+
+      The resulting image falls into one of these buckets based on target image
+      quality passed in params
+
+      1. Excellent      (Threshold size  20 MB)
+
+      2. Good           (Threshold size   4 MB)
+
+      3. Moderate       (Threshold size   2 MB)
+
+      4. Low            (Threshold size 100 KB)
+
+      5. Uncompressed  (if any error occurs during the compression)
+    syntax:
+      content: >-
+        function compressImage(imageMetadata: FileMetaData, targetImageQuality:
+        ImageQuality)
+      parameters:
+        - id: imageMetadata
+          type:
+            - teams-mobile-sdk.FileMetaData
+          description: 'meta data of image file, which need to be optimized'
+        - id: targetImageQuality
+          type:
+            - teams-mobile-sdk.ImageQuality
+          description: desired quality of compressed image
+      return:
+        type:
+          - Promise<teams-mobile-sdk.ImageAndFilePickerResponse>
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ImageAndFilePickerInterface.optimizeImageForNetworkUpload
+    name: optimizeImageForNetworkUpload(FileMetaData)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |
+      API to optimise the given image for network upolad
+      This will optimise the image based on multiple factors
+      - User preference for image quality
+      - Network type
+      - Network bandwidth
+      The resulting image falls into one of these buckets
+      1. Excellent      (Threshold size  20 MB)
+      2. Good           (Threshold size   4 MB)
+      3. Moderate       (Threshold size   2 MB)
+      4. Low            (Threshold size 100 KB)
+      5. Uncompressed
+    syntax:
+      content: 'function optimizeImageForNetworkUpload(imageMetadata: FileMetaData)'
+      parameters:
+        - id: imageMetadata
+          type:
+            - teams-mobile-sdk.FileMetaData
+          description: 'meta data of image file, which need to be optimized'
+      return:
+        type:
+          - Promise<teams-mobile-sdk.ImageAndFilePickerResponse>
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ImageAndFilePickerInterface.pickDocumentFromBrowser
+    name: pickDocumentFromBrowser(Boolean)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      API to pick document from browser (iCloud, drive, etc.)
+      `allowMultipleSelection` is not supported in iOS.
+    syntax:
+      content: 'function pickDocumentFromBrowser(allowMultipleSelection: Boolean)'
+      parameters:
+        - id: allowMultipleSelection
+          type:
+            - Boolean
+          description: ''
+      return:
+        type:
+          - Promise<teams-mobile-sdk.ImageAndFilePickerResponse>
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ImageAndFilePickerInterface.pickPhotoFromGallery
+    name: pickPhotoFromGallery(Boolean)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      API to pick photo from device's photo app
+      allowMultipleSelection not supported in ios
+    syntax:
+      content: 'function pickPhotoFromGallery(allowMultipleSelection: Boolean)'
+      parameters:
+        - id: allowMultipleSelection
+          type:
+            - Boolean
+          description: ''
+      return:
+        type:
+          - Promise<teams-mobile-sdk.ImageAndFilePickerResponse>
+    package: teams-mobile-sdk
+  - uid: >-
+      teams-mobile-sdk.ImageAndFilePickerInterface.takePhotoWithCustomizedOfficeLensCamera
+    name: 'takePhotoWithCustomizedOfficeLensCamera(Boolean, Boolean, String)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      API to take photo with office lens camera
+      Multiple photo capture is available. Maximum limit is based
+      on Teams app configuration
+    syntax:
+      content: >-
+        function takePhotoWithCustomizedOfficeLensCamera(storeInPrivate:
+        Boolean, allowMultipleCapture: Boolean, launchMode?: String)
+      parameters:
+        - id: storeInPrivate
+          type:
+            - Boolean
+          description: save the clicked image(s) in a private folder.
+        - id: allowMultipleCapture
+          type:
+            - Boolean
+          description: allow clicking multiple photos.
+        - id: launchMode
+          type:
+            - String
+          description: >+
+            Mode in which office lens will open. Valid values: WhiteBoard,
+            BusinessCard, Document, Photo. Default value is 'Photo'.
+
+          optional: true
+      return:
+        type:
+          - Promise<teams-mobile-sdk.ImageAndFilePickerResponse>
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ImageAndFilePickerInterface.takePhotoWithDefaultCamera
+    name: takePhotoWithDefaultCamera(Boolean)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |
+      API to take photo with default device camera
+      If camera capability is not available in device, promise
+      will be returned with non supported status code.
+      set storeInPrivate to save the clicked image in a private folder
+    syntax:
+      content: 'function takePhotoWithDefaultCamera(storeInPrivate: Boolean)'
+      parameters:
+        - id: storeInPrivate
+          type:
+            - Boolean
+          description: ''
+      return:
+        type:
+          - Promise<teams-mobile-sdk.ImageAndFilePickerResponse>
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ImageAndFilePickerInterface.takePhotoWithOfficeLensCamera
+    name: 'takePhotoWithOfficeLensCamera(Boolean, Boolean)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |
+      API to take photo with office lens camera
+      Multiple photo capture is available. Maximum limit is based
+      on Teams app configuration
+      set the storeInPrivate to save the clicked image(s) in a private folder.
+      set  allowMultipleCapture to be able to take multiple photos.
+    syntax:
+      content: >-
+        function takePhotoWithOfficeLensCamera(storeInPrivate: Boolean,
+        allowMultipleCapture: Boolean)
+      parameters:
+        - id: storeInPrivate
+          type:
+            - Boolean
+          description: ''
+        - id: allowMultipleCapture
+          type:
+            - Boolean
+          description: ''
+      return:
+        type:
+          - Promise<teams-mobile-sdk.ImageAndFilePickerResponse>
+    package: teams-mobile-sdk
+references:
+  - uid: teams-mobile-sdk.FileMetaData
+    name: FileMetaData
+    spec.typeScript:
+      - name: FileMetaData
+        fullName: FileMetaData
+        uid: teams-mobile-sdk.FileMetaData
+  - uid: teams-mobile-sdk.ImageQuality
+    name: ImageQuality
+    spec.typeScript:
+      - name: ImageQuality
+        fullName: ImageQuality
+        uid: teams-mobile-sdk.ImageQuality
+  - uid: Promise<teams-mobile-sdk.ImageAndFilePickerResponse>
+    name: ImageAndFilePickerResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: ImageAndFilePickerResponse
+        fullName: ImageAndFilePickerResponse
+        uid: teams-mobile-sdk.ImageAndFilePickerResponse
+      - name: '>'
+        fullName: '>'

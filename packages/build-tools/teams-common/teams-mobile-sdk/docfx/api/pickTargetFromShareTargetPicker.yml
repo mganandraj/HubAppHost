@@ -1,0 +1,30 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.pickTargetFromShareTargetPicker
+    name: pickTargetFromShareTargetPicker()
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: |
+      Launches the Teams recipient picker on top of the current view.
+      > [!NOTE]
+      > Calling this method takes the user out of your app.
+    syntax:
+      content: function pickTargetFromShareTargetPicker()
+      parameters: []
+      return:
+        type:
+          - Promise<teams-mobile-sdk.ShareTarget>
+    package: teams-mobile-sdk
+references:
+  - uid: Promise<teams-mobile-sdk.ShareTarget>
+    name: ShareTarget>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: ShareTarget
+        fullName: ShareTarget
+        uid: teams-mobile-sdk.ShareTarget
+      - name: '>'
+        fullName: '>'

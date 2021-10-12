@@ -1,0 +1,86 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.DeviceContact
+    name: DeviceContact
+    fullName: DeviceContact
+    children:
+      - teams-mobile-sdk.DeviceContact.contactId
+      - teams-mobile-sdk.DeviceContact.contactPhoneNumberId
+      - teams-mobile-sdk.DeviceContact.displayName
+      - teams-mobile-sdk.DeviceContact.profileImageUrl
+      - teams-mobile-sdk.DeviceContact.telephoneNumber
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.DeviceContact.contactId
+    name: contactId
+    fullName: contactId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'contactId: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.DeviceContact.contactPhoneNumberId
+    name: contactPhoneNumberId
+    fullName: contactPhoneNumberId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'contactPhoneNumberId: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.DeviceContact.displayName
+    name: displayName
+    fullName: displayName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'displayName: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.DeviceContact.profileImageUrl
+    name: profileImageUrl
+    fullName: profileImageUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'profileImageUrl: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.DeviceContact.telephoneNumber
+    name: telephoneNumber
+    fullName: telephoneNumber
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'telephoneNumber: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk

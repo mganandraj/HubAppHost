@@ -1,0 +1,37 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.DeviceContactsProviderInterface
+    name: DeviceContactsProviderInterface
+    fullName: DeviceContactsProviderInterface
+    children:
+      - teams-mobile-sdk.DeviceContactsProviderInterface.getDeviceContacts
+    langs:
+      - typeScript
+    type: interface
+    summary: Navigation interface
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.DeviceContactsProviderInterface.getDeviceContacts
+    name: getDeviceContacts()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: function getDeviceContacts()
+      parameters: []
+      return:
+        type:
+          - 'Promise<teams-mobile-sdk.DeviceContact[]>'
+    package: teams-mobile-sdk
+references:
+  - uid: 'Promise<teams-mobile-sdk.DeviceContact[]>'
+    name: 'DeviceContact[]>'
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: DeviceContact
+        fullName: DeviceContact
+        uid: teams-mobile-sdk.DeviceContact
+      - name: '[]>'
+        fullName: '[]>'

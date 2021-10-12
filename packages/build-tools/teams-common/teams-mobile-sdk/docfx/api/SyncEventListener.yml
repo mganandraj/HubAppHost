@@ -1,0 +1,44 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.SyncEventListener
+    name: SyncEventListener
+    fullName: SyncEventListener
+    children:
+      - teams-mobile-sdk.SyncEventListener.registerHandlerForTabsInChatsSync
+      - >-
+        teams-mobile-sdk.SyncEventListener.registerHandlerForTeamsAndChannelsSync
+    langs:
+      - typeScript
+    type: class
+    summary: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.SyncEventListener.registerHandlerForTabsInChatsSync
+    name: registerHandlerForTabsInChatsSync(any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'static function registerHandlerForTabsInChatsSync(handler: any)'
+      parameters:
+        - id: handler
+          type:
+            - any
+          description: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.SyncEventListener.registerHandlerForTeamsAndChannelsSync
+    name: registerHandlerForTeamsAndChannelsSync(any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'static function registerHandlerForTeamsAndChannelsSync(handler: any)'
+      parameters:
+        - id: handler
+          type:
+            - any
+          description: ''
+    package: teams-mobile-sdk

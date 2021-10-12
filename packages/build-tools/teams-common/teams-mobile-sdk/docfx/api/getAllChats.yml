@@ -1,0 +1,29 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.getAllChats
+    name: getAllChats()
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: |-
+      Gets all chats for the current user.
+      This API will not return archived chats.
+    syntax:
+      content: function getAllChats()
+      parameters: []
+      return:
+        type:
+          - 'Promise<teams-mobile-sdk.Chat[]>'
+    package: teams-mobile-sdk
+references:
+  - uid: 'Promise<teams-mobile-sdk.Chat[]>'
+    name: 'Chat[]>'
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: Chat
+        fullName: Chat
+        uid: teams-mobile-sdk.Chat
+      - name: '[]>'
+        fullName: '[]>'

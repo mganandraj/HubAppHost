@@ -1,0 +1,31 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.SyncState
+    name: SyncState
+    fullName: SyncState
+    children:
+      - teams-mobile-sdk.SyncState.COMPLETED
+      - teams-mobile-sdk.SyncState.INPROGRESS
+    langs:
+      - typeScript
+    type: enum
+    summary: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.SyncState.COMPLETED
+    name: COMPLETED
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: null
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.SyncState.INPROGRESS
+    name: INPROGRESS
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: null
+    package: teams-mobile-sdk

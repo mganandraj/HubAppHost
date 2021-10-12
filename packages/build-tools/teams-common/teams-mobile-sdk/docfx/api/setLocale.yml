@@ -1,0 +1,17 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.setLocale
+    name: setLocale(string)
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function setLocale(inputLocale: string)'
+      parameters:
+        - id: inputLocale
+          type:
+            - string
+          description: ''
+    package: teams-mobile-sdk

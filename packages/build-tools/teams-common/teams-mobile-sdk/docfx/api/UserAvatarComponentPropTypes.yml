@@ -1,0 +1,36 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.UserAvatarComponentPropTypes
+    name: UserAvatarComponentPropTypes
+    fullName: UserAvatarComponentPropTypes
+    children:
+      - teams-mobile-sdk.UserAvatarComponentPropTypes.avatarProps
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    extends:
+      name: ViewProps
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.UserAvatarComponentPropTypes.avatarProps
+    name: avatarProps
+    fullName: avatarProps
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'avatarProps?: UserAvatarProps'
+      return:
+        type:
+          - teams-mobile-sdk.UserAvatarProps
+    package: teams-mobile-sdk
+references:
+  - uid: teams-mobile-sdk.UserAvatarProps
+    name: UserAvatarProps
+    spec.typeScript:
+      - name: UserAvatarProps
+        fullName: UserAvatarProps
+        uid: teams-mobile-sdk.UserAvatarProps

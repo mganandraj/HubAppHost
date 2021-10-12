@@ -1,0 +1,153 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.TeamsModules
+    name: TeamsModules
+    fullName: TeamsModules
+    children:
+      - teams-mobile-sdk.TeamsModules.openChat
+      - teams-mobile-sdk.TeamsModules.openChatWithUserMris
+      - teams-mobile-sdk.TeamsModules.openContactCard
+      - teams-mobile-sdk.TeamsModules.openMeetingDetails
+      - teams-mobile-sdk.TeamsModules.postMessage
+      - teams-mobile-sdk.TeamsModules.startAudioCall
+    langs:
+      - typeScript
+    type: class
+    summary: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsModules.openChat
+    name: openChat(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'static function openChat(conversationId: string)'
+      parameters:
+        - id: conversationId
+          type:
+            - string
+          description: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsModules.openChatWithUserMris
+    name: 'openChatWithUserMris(string[])'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'static function openChatWithUserMris(userMris: string[])'
+      parameters:
+        - id: userMris
+          type:
+            - 'string[]'
+          description: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsModules.openContactCard
+    name: openContactCard(Contact)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >
+      API to open contact card <br>
+
+      Pass mri as id if exists with type org, otherwise pass contactId with type
+      contact
+    syntax:
+      content: 'static function openContactCard(contact: Contact)'
+      parameters:
+        - id: contact
+          type:
+            - teams-mobile-sdk.Contact
+          description: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsModules.openMeetingDetails
+    name: 'openMeetingDetails(string, boolean)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: API to open message details page
+    syntax:
+      content: >-
+        static function openMeetingDetails(eventId: string, isSeriesMaster:
+        boolean)
+      parameters:
+        - id: eventId
+          type:
+            - string
+          description: ID of exchange calendar event.
+        - id: isSeriesMaster
+          type:
+            - boolean
+          description: |
+            true if event is of type SeriesMaster, else false
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsModules.postMessage
+    name: postMessage(TeamsMessagingRequest)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >
+      API to post message to Teams chat / channel <br>
+
+      If message sending is not successful, promise
+
+      will be returned with failure status code.
+
+
+      See [Teams Messaging](../articles/11_Modules/05_Teams_Messaging.md) for
+      more.
+    syntax:
+      content: 'static function postMessage(params: TeamsMessagingRequest)'
+      parameters:
+        - id: params
+          type:
+            - teams-mobile-sdk.TeamsMessagingRequest
+          description: input params required to post message
+      return:
+        type:
+          - Promise<teams-mobile-sdk.TeamsMessagingResponse>
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsModules.startAudioCall
+    name: startAudioCall(Contact)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'static function startAudioCall(contact: Contact)'
+      parameters:
+        - id: contact
+          type:
+            - teams-mobile-sdk.Contact
+          description: ''
+    package: teams-mobile-sdk
+references:
+  - uid: teams-mobile-sdk.Contact
+    name: Contact
+    spec.typeScript:
+      - name: Contact
+        fullName: Contact
+        uid: teams-mobile-sdk.Contact
+  - uid: teams-mobile-sdk.TeamsMessagingRequest
+    name: TeamsMessagingRequest
+    spec.typeScript:
+      - name: TeamsMessagingRequest
+        fullName: TeamsMessagingRequest
+        uid: teams-mobile-sdk.TeamsMessagingRequest
+  - uid: Promise<teams-mobile-sdk.TeamsMessagingResponse>
+    name: TeamsMessagingResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: TeamsMessagingResponse
+        fullName: TeamsMessagingResponse
+        uid: teams-mobile-sdk.TeamsMessagingResponse
+      - name: '>'
+        fullName: '>'

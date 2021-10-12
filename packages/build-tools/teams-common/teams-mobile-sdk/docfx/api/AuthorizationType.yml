@@ -1,0 +1,21 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.AuthorizationType
+    name: AuthorizationType
+    fullName: AuthorizationType
+    children:
+      - teams-mobile-sdk.AuthorizationType.Sharepoint
+    langs:
+      - typeScript
+    type: enum
+    summary: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.AuthorizationType.Sharepoint
+    name: Sharepoint
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: null
+    package: teams-mobile-sdk

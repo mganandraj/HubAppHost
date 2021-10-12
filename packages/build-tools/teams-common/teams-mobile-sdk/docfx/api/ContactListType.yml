@@ -1,0 +1,61 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.ContactListType
+    name: ContactListType
+    fullName: ContactListType
+    children:
+      - teams-mobile-sdk.ContactListType.CUSTOM
+      - teams-mobile-sdk.ContactListType.FAVOURITES
+      - teams-mobile-sdk.ContactListType.OTHERCONTACTS
+      - teams-mobile-sdk.ContactListType.SFBFAVOURITES
+      - teams-mobile-sdk.ContactListType.TAGGED
+    langs:
+      - typeScript
+    type: enum
+    summary: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ContactListType.CUSTOM
+    name: CUSTOM
+    children: []
+    langs:
+      - typeScript
+    summary: CUSTOM - new clients will treat this as user created custom list
+    type: field
+    numericValue: null
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ContactListType.FAVOURITES
+    name: FAVOURITES
+    children: []
+    langs:
+      - typeScript
+    summary: FAVOURITES - only shown by old clients as speed dials
+    type: field
+    numericValue: null
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ContactListType.OTHERCONTACTS
+    name: OTHERCONTACTS
+    children: []
+    langs:
+      - typeScript
+    summary: OTHERCONTACTS - new clients will treat this as user created custom list
+    type: field
+    numericValue: null
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ContactListType.SFBFAVOURITES
+    name: SFBFAVOURITES
+    children: []
+    langs:
+      - typeScript
+    summary: SFBFAVOURITES - shown as Favorites in both old and new clients
+    type: field
+    numericValue: null
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ContactListType.TAGGED
+    name: TAGGED
+    children: []
+    langs:
+      - typeScript
+    summary: TAGGED - new clients will treat this as user created custom list
+    type: field
+    numericValue: null
+    package: teams-mobile-sdk

@@ -1,0 +1,80 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.Resource
+    name: Resource
+    fullName: Resource
+    children:
+      - teams-mobile-sdk.Resource.getLocalizedString
+      - teams-mobile-sdk.Resource.image
+      - teams-mobile-sdk.Resource.string
+    langs:
+      - typeScript
+    type: class
+    summary: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.Resource.getLocalizedString
+    name: 'getLocalizedString(string, [key: string]: function)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Gets the localized version of a string.
+    syntax:
+      content: >-
+        static function getLocalizedString(path: string, paramData: [key:
+        string]: function)
+      parameters:
+        - id: path
+          type:
+            - string
+          description: path to the string (usually the string resource name)
+        - id: paramData
+          type:
+            - '[key: string]: function'
+          description: |
+            data for placeholder replacement in the string
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.Resource.image
+    name: image(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Returns the URI for an image resource. Useful when sending an
+      image to native.
+    syntax:
+      content: 'static function image(imageResourcePath: string)'
+      parameters:
+        - id: imageResourcePath
+          type:
+            - string
+          description: ''
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.Resource.string
+    name: string(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Returns the URI for a string resource. Useful when sending a
+      string to native.
+    syntax:
+      content: 'static function string(stringResourceName: string)'
+      parameters:
+        - id: stringResourceName
+          type:
+            - string
+          description: |
+            name of the string resource
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk

@@ -1,0 +1,379 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.TelemetryClient
+    name: TelemetryClient
+    fullName: TelemetryClient
+    children:
+      - teams-mobile-sdk.TelemetryClient.endScenarioChainOnCancel
+      - teams-mobile-sdk.TelemetryClient.endScenarioChainOnError
+      - teams-mobile-sdk.TelemetryClient.endScenarioChainOnIncomplete
+      - teams-mobile-sdk.TelemetryClient.endScenarioChainOnSuccess
+      - teams-mobile-sdk.TelemetryClient.endScenarioOnCancel
+      - teams-mobile-sdk.TelemetryClient.endScenarioOnError
+      - teams-mobile-sdk.TelemetryClient.endScenarioOnIncomplete
+      - teams-mobile-sdk.TelemetryClient.endScenarioOnSuccess
+      - teams-mobile-sdk.TelemetryClient.logUserBIEvent
+      - teams-mobile-sdk.TelemetryClient.registerHandlerForPDCLevelChange
+      - teams-mobile-sdk.TelemetryClient.removeHandlerForPDCLevelChange
+      - teams-mobile-sdk.TelemetryClient.startScenario
+      - teams-mobile-sdk.TelemetryClient.startScenarioUnderParent
+    langs:
+      - typeScript
+    type: class
+    summary: Provides helper methods to log Telemetry Events
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TelemetryClient.endScenarioChainOnCancel
+    name: >-
+      endScenarioChainOnCancel(string, string, string, undefined | [key:
+      string]: function)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Ends a scenario, and all parent scenarios with a cancel.'
+    syntax:
+      content: >-
+        static function endScenarioChainOnCancel(scenarioId: string,
+        scenarioErrorCode: string, scenarioErrorReason: string, databag?:
+        undefined | [key: string]: function)
+      parameters:
+        - id: scenarioId
+          type:
+            - string
+          description: the scenario to end
+        - id: scenarioErrorCode
+          type:
+            - string
+          description: The reason the scenario has been cancelled
+        - id: scenarioErrorReason
+          type:
+            - string
+          description: A longer description of the reason
+        - id: databag
+          type:
+            - 'undefined | [key: string]: function'
+          description: additional context surrounding the scenario
+          optional: true
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TelemetryClient.endScenarioChainOnError
+    name: >-
+      endScenarioChainOnError(string, string, string, undefined | [key: string]:
+      function)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Ends a scenario, and all parent scenarios, with an error.'
+    syntax:
+      content: >-
+        static function endScenarioChainOnError(scenarioId: string,
+        scenarioErrorCode: string, scenarioErrorReason: string, databag?:
+        undefined | [key: string]: function)
+      parameters:
+        - id: scenarioId
+          type:
+            - string
+          description: the scenario to end
+        - id: scenarioErrorCode
+          type:
+            - string
+          description: The reason the scenario has been cancelled
+        - id: scenarioErrorReason
+          type:
+            - string
+          description: A longer description of the reason
+        - id: databag
+          type:
+            - 'undefined | [key: string]: function'
+          description: additional context surrounding the scenario
+          optional: true
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TelemetryClient.endScenarioChainOnIncomplete
+    name: >-
+      endScenarioChainOnIncomplete(string, string, string, [key: string]:
+      function | null)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Ends a scenario, and all parent scenarios, with an incomplete'
+    syntax:
+      content: >-
+        static function endScenarioChainOnIncomplete(scenarioId: string,
+        scenarioErrorCode: string, scenarioErrorReason: string, databag?: [key:
+        string]: function | null)
+      parameters:
+        - id: scenarioId
+          type:
+            - string
+          description: the scenario to end
+        - id: scenarioErrorCode
+          type:
+            - string
+          description: The reason the scenario has been cancelled
+        - id: scenarioErrorReason
+          type:
+            - string
+          description: A longer description of the reason
+        - id: databag
+          type:
+            - '[key: string]: function | null'
+          description: additional context surrounding the scenario
+          optional: true
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TelemetryClient.endScenarioChainOnSuccess
+    name: 'endScenarioChainOnSuccess(string, undefined | [key: string]: function)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Ends a scenario, and all parent scenarios, with a success.'
+    syntax:
+      content: >-
+        static function endScenarioChainOnSuccess(scenarioId: string, databag?:
+        undefined | [key: string]: function)
+      parameters:
+        - id: scenarioId
+          type:
+            - string
+          description: the scenario to end
+        - id: databag
+          type:
+            - 'undefined | [key: string]: function'
+          description: additional context surrounding the scenario
+          optional: true
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TelemetryClient.endScenarioOnCancel
+    name: >-
+      endScenarioOnCancel(string, string, string, undefined | [key: string]:
+      function)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Ends a scenario with a cancel
+    syntax:
+      content: >-
+        static function endScenarioOnCancel(scenarioId: string,
+        scenarioErrorCode: string, scenarioErrorReason: string, databag?:
+        undefined | [key: string]: function)
+      parameters:
+        - id: scenarioId
+          type:
+            - string
+          description: the scenario to end
+        - id: scenarioErrorCode
+          type:
+            - string
+          description: The reason the scenario has been cancelled
+        - id: scenarioErrorReason
+          type:
+            - string
+          description: A longer description of the reason
+        - id: databag
+          type:
+            - 'undefined | [key: string]: function'
+          description: additional context surrounding the scenario
+          optional: true
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TelemetryClient.endScenarioOnError
+    name: >-
+      endScenarioOnError(string, string, string, undefined | [key: string]:
+      function)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Ends a scenario with an error
+    syntax:
+      content: >-
+        static function endScenarioOnError(scenarioId: string,
+        scenarioErrorCode: string, scenarioErrorReason: string, databag?:
+        undefined | [key: string]: function)
+      parameters:
+        - id: scenarioId
+          type:
+            - string
+          description: the scenario to end
+        - id: scenarioErrorCode
+          type:
+            - string
+          description: The reason the scenario has been cancelled
+        - id: scenarioErrorReason
+          type:
+            - string
+          description: A longer description of the reason
+        - id: databag
+          type:
+            - 'undefined | [key: string]: function'
+          description: additional context surrounding the scenario
+          optional: true
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TelemetryClient.endScenarioOnIncomplete
+    name: >-
+      endScenarioOnIncomplete(string, string, string, undefined | [key: string]:
+      function)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Ends a scenario with an incomplete
+    syntax:
+      content: >-
+        static function endScenarioOnIncomplete(scenarioId: string,
+        scenarioErrorCode: string, scenarioErrorReason: string, databag?:
+        undefined | [key: string]: function)
+      parameters:
+        - id: scenarioId
+          type:
+            - string
+          description: the scenario to end
+        - id: scenarioErrorCode
+          type:
+            - string
+          description: The reason the scenario has been cancelled
+        - id: scenarioErrorReason
+          type:
+            - string
+          description: A longer description of the reason
+        - id: databag
+          type:
+            - 'undefined | [key: string]: function'
+          description: additional context surrounding the scenario
+          optional: true
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TelemetryClient.endScenarioOnSuccess
+    name: 'endScenarioOnSuccess(string, undefined | [key: string]: function)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Ends a scenario with a success.
+    syntax:
+      content: >-
+        static function endScenarioOnSuccess(scenarioId: string, databag?:
+        undefined | [key: string]: function)
+      parameters:
+        - id: scenarioId
+          type:
+            - string
+          description: the scenario to end
+        - id: databag
+          type:
+            - 'undefined | [key: string]: function'
+          description: additional context surrounding the scenario
+          optional: true
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TelemetryClient.logUserBIEvent
+    name: logUserBIEvent(UserBIEvent)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Logs a user BI telemetry event to ARIA
+    syntax:
+      content: 'static function logUserBIEvent(event: UserBIEvent)'
+      parameters:
+        - id: event
+          type:
+            - teams-mobile-sdk.UserBIEvent
+          description: user bi event data
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TelemetryClient.registerHandlerForPDCLevelChange
+    name: 'registerHandlerForPDCLevelChange((pdcLevel: UserPDCLevel) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Registers a callback/listener for user's PDC level changes.
+
+      Note: Only a single listener can be registered at a time. Please ensure to
+      remove existing
+
+      listener by calling removeHandlerForPDCLevelChange before registering
+      another listener.
+    syntax:
+      content: >-
+        static function registerHandlerForPDCLevelChange(handler: (pdcLevel:
+        UserPDCLevel) => void)
+      parameters:
+        - id: handler
+          type:
+            - '(pdcLevel: UserPDCLevel) => void'
+          description: method to be called when user's PDC level change event is received
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TelemetryClient.removeHandlerForPDCLevelChange
+    name: removeHandlerForPDCLevelChange()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Removes callback/listener registered for user's PDC level changes
+    syntax:
+      content: static function removeHandlerForPDCLevelChange()
+      parameters: []
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TelemetryClient.startScenario
+    name: 'startScenario(string, undefined | [key: string]: function)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Start a scenario
+    syntax:
+      content: >-
+        static function startScenario(scenarioName: string, databag?: undefined
+        | [key: string]: function)
+      parameters:
+        - id: scenarioName
+          type:
+            - string
+          description: the name of the scenario to start
+        - id: databag
+          type:
+            - 'undefined | [key: string]: function'
+          description: additional context surrounding the scenario
+          optional: true
+      return:
+        type:
+          - Promise<string>
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TelemetryClient.startScenarioUnderParent
+    name: >-
+      startScenarioUnderParent(string, string, undefined | [key: string]:
+      function)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Start a scenario with reference to a parent scenario
+    syntax:
+      content: >-
+        static function startScenarioUnderParent(scenarioName: string,
+        parentScenarioId: string, databag?: undefined | [key: string]: function)
+      parameters:
+        - id: scenarioName
+          type:
+            - string
+          description: the name of the scenario to start
+        - id: parentScenarioId
+          type:
+            - string
+          description: the Id of the parent scenario
+        - id: databag
+          type:
+            - 'undefined | [key: string]: function'
+          description: additional context surrounding the scenario
+          optional: true
+      return:
+        type:
+          - Promise<string>
+    package: teams-mobile-sdk
+references:
+  - uid: teams-mobile-sdk.UserBIEvent
+    name: UserBIEvent
+    spec.typeScript:
+      - name: UserBIEvent
+        fullName: UserBIEvent
+        uid: teams-mobile-sdk.UserBIEvent

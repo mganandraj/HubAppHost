@@ -1,0 +1,31 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.SortOrder
+    name: SortOrder
+    fullName: SortOrder
+    children:
+      - teams-mobile-sdk.SortOrder.DisplayName
+      - teams-mobile-sdk.SortOrder.CreationDate
+    langs:
+      - typeScript
+    type: enum
+    summary: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.SortOrder.DisplayName
+    name: DisplayName
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: 0
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.SortOrder.CreationDate
+    name: CreationDate
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: 1
+    package: teams-mobile-sdk

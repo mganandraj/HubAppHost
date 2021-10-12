@@ -1,0 +1,36 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.PersonProfilePicture
+    name: PersonProfilePicture
+    fullName: PersonProfilePicture
+    children:
+      - teams-mobile-sdk.PersonProfilePicture.profilePictureUrl
+    langs:
+      - typeScript
+    type: interface
+    summary: An object containing a Person profile picture.
+    extends:
+      name: teams-mobile-sdk.PersonIds
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.PersonProfilePicture.profilePictureUrl
+    name: profilePictureUrl
+    fullName: profilePictureUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The URL of the profile picture.
+    optional: true
+    syntax:
+      content: 'profilePictureUrl?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: teams-mobile-sdk
+references:
+  - uid: teams-mobile-sdk.PersonIds
+    name: PersonIds
+    spec.typeScript:
+      - name: PersonIds
+        fullName: PersonIds
+        uid: teams-mobile-sdk.PersonIds

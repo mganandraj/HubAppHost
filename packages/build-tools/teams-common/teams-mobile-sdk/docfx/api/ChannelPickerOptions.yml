@@ -1,0 +1,79 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.ChannelPickerOptions
+    name: ChannelPickerOptions
+    fullName: ChannelPickerOptions
+    children:
+      - teams-mobile-sdk.ChannelPickerOptions.pickableChannels
+      - teams-mobile-sdk.ChannelPickerOptions.preSelectedChannelId
+      - teams-mobile-sdk.ChannelPickerOptions.title
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      Represents configuration options for channel
+      picker.
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ChannelPickerOptions.pickableChannels
+    name: pickableChannels
+    fullName: pickableChannels
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      The list of channel IDs that the user must pick from. The given
+      channels will be grouped under their respective teams. The order
+      of display of the teams will be the user selected ordering that
+      is stored by Teams. Under each team, the General channel will be
+      shown first and the remaining channels follow in lexicographically
+      increasing order.
+      If this is not specified, all channels the user is a member of will
+      be shown in the picker.
+    optional: true
+    syntax:
+      content: 'pickableChannels?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ChannelPickerOptions.preSelectedChannelId
+    name: preSelectedChannelId
+    fullName: preSelectedChannelId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      Use this property to specify if any channel is selected by
+      default in the channel picker.
+      NOTE: The resultant promise of the channel picker will resolve
+      to null when the user cancels the picker even if this property
+      is specified.
+    optional: true
+    syntax:
+      content: 'preSelectedChannelId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ChannelPickerOptions.title
+    name: title
+    fullName: title
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      The string to show as title of the channel picker. It is
+      the developer's responsibility to provide a localized string
+      if localization is desired.
+      If a title isnot provided, a default title will be shown. The
+      default title is a localized version of "Select a channel".
+    optional: true
+    syntax:
+      content: 'title?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: teams-mobile-sdk

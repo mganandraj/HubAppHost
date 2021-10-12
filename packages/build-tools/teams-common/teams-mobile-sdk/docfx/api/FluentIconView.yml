@@ -1,0 +1,51 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.FluentIconView
+    name: FluentIconView
+    fullName: FluentIconView<SS>
+    children: []
+    langs:
+      - typeScript
+    type: class
+    summary: >
+      An image view that renders icons from the Fluent icon set provided by
+
+      Stardust.
+
+      Syntax:
+
+      ```jsx
+
+      <FluentIconView
+       iconSymbol='notepad'
+       iconStyle={IconStyle.FILLED}
+       style={{width: 64, height: 64}}/>
+      ```
+
+      The above code produces a 64x64 filled notepad icon.
+
+
+      Also see:
+      [FluentIconViewProps](xref:teams-mobile-sdk.FluentIconViewProps),
+
+      [IconStyle](xref:teams-mobile-sdk.IconStyle)
+
+
+      Introduced in v0.7.4. Set minReactNativeSdkVersion to 0.7.4 in
+      manifest.json
+
+      if you use this component in your app.
+    extends:
+      name: 'Component<teams-mobile-sdk.FluentIconViewProps, any>'
+    package: teams-mobile-sdk
+references:
+  - uid: 'Component<teams-mobile-sdk.FluentIconViewProps, any>'
+    name: 'FluentIconViewProps, any>'
+    spec.typeScript:
+      - name: Component<
+        fullName: Component<
+      - name: FluentIconViewProps
+        fullName: FluentIconViewProps
+        uid: teams-mobile-sdk.FluentIconViewProps
+      - name: ', any>'
+        fullName: ', any>'

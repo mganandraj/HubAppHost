@@ -1,0 +1,41 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.LocalizedStringsProvider
+    name: LocalizedStringsProvider
+    fullName: LocalizedStringsProvider
+    children:
+      - teams-mobile-sdk.LocalizedStringsProvider.getDefaultLocaleStrings
+      - teams-mobile-sdk.LocalizedStringsProvider.getSupportedLocaleStrings
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.LocalizedStringsProvider.getDefaultLocaleStrings
+    name: getDefaultLocaleStrings()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: function getDefaultLocaleStrings()
+      parameters: []
+      return:
+        type:
+          - Object
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.LocalizedStringsProvider.getSupportedLocaleStrings
+    name: getSupportedLocaleStrings()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: function getSupportedLocaleStrings()
+      parameters: []
+      return:
+        type:
+          - '[key: string]: function'
+    package: teams-mobile-sdk

@@ -1,0 +1,203 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.TelemetryInfo
+    name: TelemetryInfo
+    fullName: TelemetryInfo
+    children:
+      - teams-mobile-sdk.TelemetryInfo.deviceId
+      - teams-mobile-sdk.TelemetryInfo.deviceManufacturer
+      - teams-mobile-sdk.TelemetryInfo.deviceModel
+      - teams-mobile-sdk.TelemetryInfo.deviceName
+      - teams-mobile-sdk.TelemetryInfo.deviceType
+      - teams-mobile-sdk.TelemetryInfo.deviceVersion
+      - teams-mobile-sdk.TelemetryInfo.isAppPinned
+      - teams-mobile-sdk.TelemetryInfo.sdkVersion
+      - teams-mobile-sdk.TelemetryInfo.teamsVersion
+      - teams-mobile-sdk.TelemetryInfo.userPDCLevel
+      - teams-mobile-sdk.TelemetryInfo.userRing
+      - teams-mobile-sdk.TelemetryInfo.viewStartTime
+    langs:
+      - typeScript
+    type: interface
+    summary: Contains various properties useful for telemetry purposes.
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TelemetryInfo.deviceId
+    name: deviceId
+    fullName: deviceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'deviceId: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TelemetryInfo.deviceManufacturer
+    name: deviceManufacturer
+    fullName: deviceManufacturer
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'deviceManufacturer: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TelemetryInfo.deviceModel
+    name: deviceModel
+    fullName: deviceModel
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'deviceModel: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TelemetryInfo.deviceName
+    name: deviceName
+    fullName: deviceName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'deviceName: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TelemetryInfo.deviceType
+    name: deviceType
+    fullName: deviceType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'deviceType: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TelemetryInfo.deviceVersion
+    name: deviceVersion
+    fullName: deviceVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'deviceVersion: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TelemetryInfo.isAppPinned
+    name: isAppPinned
+    fullName: isAppPinned
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      `true` if the RN is currently pinned on the bottom bar.
+      Currently present only in iOS. Will be `undefined` for Android.
+    optional: true
+    syntax:
+      content: 'isAppPinned?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TelemetryInfo.sdkVersion
+    name: sdkVersion
+    fullName: sdkVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'sdkVersion: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TelemetryInfo.teamsVersion
+    name: teamsVersion
+    fullName: teamsVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'teamsVersion: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TelemetryInfo.userPDCLevel
+    name: userPDCLevel
+    fullName: userPDCLevel
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'userPDCLevel: UserPDCLevel'
+      return:
+        type:
+          - teams-mobile-sdk.UserPDCLevel
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TelemetryInfo.userRing
+    name: userRing
+    fullName: userRing
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'userRing: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TelemetryInfo.viewStartTime
+    name: viewStartTime
+    fullName: viewStartTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      The time at which the current view was started on the native side.
+      Expressed as milliseconds since 1 January 1970.
+    syntax:
+      content: 'viewStartTime: number'
+      return:
+        type:
+          - number
+    package: teams-mobile-sdk
+references:
+  - uid: teams-mobile-sdk.UserPDCLevel
+    name: UserPDCLevel
+    spec.typeScript:
+      - name: UserPDCLevel
+        fullName: UserPDCLevel
+        uid: teams-mobile-sdk.UserPDCLevel

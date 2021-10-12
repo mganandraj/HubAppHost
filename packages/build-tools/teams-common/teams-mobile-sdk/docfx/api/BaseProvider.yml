@@ -1,0 +1,64 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.BaseProvider
+    name: BaseProvider
+    fullName: BaseProvider<P>
+    children:
+      - teams-mobile-sdk.BaseProvider.getApplicationContext
+      - teams-mobile-sdk.BaseProvider.run
+    langs:
+      - typeScript
+    type: class
+    summary: >
+      ```ts
+
+      class BaseProvider <P extends BaseProviderParams, R extends
+      BaseProviderResult>
+
+      ```
+
+      Base class for all providers (runnables).
+
+
+      Also see:
+
+      1. [BaseProviderParams](xref:teams-mobile-sdk.BaseProviderParams)
+
+      2. [BaseProviderResult](xref:teams-mobile-sdk.BaseProviderResult)
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.BaseProvider.getApplicationContext
+    name: getApplicationContext()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: function getApplicationContext()
+      parameters: []
+      return:
+        type:
+          - teams-mobile-sdk.ApplicationContext
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.BaseProvider.run
+    name: run(P)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function run(params: P)'
+      parameters:
+        - id: params
+          type:
+            - P
+          description: ''
+    package: teams-mobile-sdk
+references:
+  - uid: teams-mobile-sdk.ApplicationContext
+    name: ApplicationContext
+    spec.typeScript:
+      - name: ApplicationContext
+        fullName: ApplicationContext
+        uid: teams-mobile-sdk.ApplicationContext

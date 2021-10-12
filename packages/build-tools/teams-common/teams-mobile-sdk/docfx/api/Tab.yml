@@ -1,0 +1,116 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.Tab
+    name: Tab
+    fullName: Tab
+    children:
+      - teams-mobile-sdk.Tab.displayName
+      - teams-mobile-sdk.Tab.id
+      - teams-mobile-sdk.Tab.metadata
+      - teams-mobile-sdk.Tab.parentThreadId
+      - teams-mobile-sdk.Tab.tabDefinitionJson
+      - teams-mobile-sdk.Tab.tabURL
+      - teams-mobile-sdk.Tab.type
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.Tab.displayName
+    name: displayName
+    fullName: displayName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Name of the Tab
+    syntax:
+      content: 'displayName: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.Tab.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: A unique identifier for the tab.
+    syntax:
+      content: 'id: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.Tab.metadata
+    name: metadata
+    fullName: metadata
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Tab settings
+    syntax:
+      content: 'metadata: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.Tab.parentThreadId
+    name: parentThreadId
+    fullName: parentThreadId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Channel id
+    syntax:
+      content: 'parentThreadId: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.Tab.tabDefinitionJson
+    name: tabDefinitionJson
+    fullName: tabDefinitionJson
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Tab Properties
+    syntax:
+      content: 'tabDefinitionJson: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.Tab.tabURL
+    name: tabURL
+    fullName: tabURL
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: tab Url
+    syntax:
+      content: 'tabURL: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.Tab.type
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: type of Tab
+    syntax:
+      content: 'type: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk

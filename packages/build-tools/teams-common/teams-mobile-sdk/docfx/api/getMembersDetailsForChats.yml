@@ -1,0 +1,31 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.getMembersDetailsForChats
+    name: 'getMembersDetailsForChats(string[])'
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Gets all member details for the given list of chat ids.
+    syntax:
+      content: 'function getMembersDetailsForChats(chatIDs: string[])'
+      parameters:
+        - id: chatIDs
+          type:
+            - 'string[]'
+          description: ''
+      return:
+        type:
+          - 'Promise<Map<string, teams-mobile-sdk.User[]>>'
+    package: teams-mobile-sdk
+references:
+  - uid: 'Promise<Map<string, teams-mobile-sdk.User[]>>'
+    name: 'User[]>>'
+    spec.typeScript:
+      - name: 'Promise<Map<string, '
+        fullName: 'Promise<Map<string, '
+      - name: User
+        fullName: User
+        uid: teams-mobile-sdk.User
+      - name: '[]>>'
+        fullName: '[]>>'

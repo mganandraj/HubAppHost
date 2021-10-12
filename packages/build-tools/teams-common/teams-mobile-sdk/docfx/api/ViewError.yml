@@ -1,0 +1,56 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.ViewError
+    name: ViewError
+    fullName: ViewError
+    children:
+      - teams-mobile-sdk.ViewError.description
+      - teams-mobile-sdk.ViewError.errorImageResource
+      - teams-mobile-sdk.ViewError.title
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ViewError.description
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'description: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ViewError.errorImageResource
+    name: errorImageResource
+    fullName: errorImageResource
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'errorImageResource: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ViewError.title
+    name: title
+    fullName: title
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'title: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk

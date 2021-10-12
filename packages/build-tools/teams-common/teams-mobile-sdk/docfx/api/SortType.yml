@@ -1,0 +1,31 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.SortType
+    name: SortType
+    fullName: SortType
+    children:
+      - teams-mobile-sdk.SortType.Ascending
+      - teams-mobile-sdk.SortType.Descending
+    langs:
+      - typeScript
+    type: enum
+    summary: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.SortType.Ascending
+    name: Ascending
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: 0
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.SortType.Descending
+    name: Descending
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: 1
+    package: teams-mobile-sdk

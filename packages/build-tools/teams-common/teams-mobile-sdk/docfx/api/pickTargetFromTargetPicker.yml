@@ -1,0 +1,43 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.pickTargetFromTargetPicker
+    name: pickTargetFromTargetPicker(params)
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: |-
+      Launches the chat/channel recipient picker on top of the current view.
+      > [!WARNING]
+      > iOS doesn't support `params` currently and will always show a combined picker.
+      > [!NOTE]
+      > Calling this method takes the user out of your app.
+    syntax:
+      content: >- 
+        function pickTargetFromTargetPicker(params: TargetPickerParams)
+      parameters:
+        - id: params
+          type:
+            - teams-mobile-sdk.TargetPickerParams
+          description: Configuration of the picker to be displayed.
+      return:
+        type:
+          - Promise<teams-mobile-sdk.ShareTarget>
+    package: teams-mobile-sdk
+references:
+  - uid: teams-mobile-sdk.TargetPickerParams
+    name: TargetPickerParams
+    spec.typeScript:
+      - name: TargetPickerParams
+        fullName: TargetPickerParams
+        uid: teams-mobile-sdk.TargetPickerParams
+  - uid: Promise<teams-mobile-sdk.ShareTarget>
+    name: ShareTarget>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: ShareTarget
+        fullName: ShareTarget
+        uid: teams-mobile-sdk.ShareTarget
+      - name: '>'
+        fullName: '>'

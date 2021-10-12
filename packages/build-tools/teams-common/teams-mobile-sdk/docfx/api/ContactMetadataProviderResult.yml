@@ -1,0 +1,43 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.ContactMetadataProviderResult
+    name: ContactMetadataProviderResult
+    fullName: ContactMetadataProviderResult
+    children:
+      - teams-mobile-sdk.ContactMetadataProviderResult.results
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    extends:
+      name: teams-mobile-sdk.BaseProviderResult
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ContactMetadataProviderResult.results
+    name: results
+    fullName: results
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'results: ContactMetadata[]'
+      return:
+        type:
+          - 'teams-mobile-sdk.ContactMetadata[]'
+    package: teams-mobile-sdk
+references:
+  - uid: teams-mobile-sdk.BaseProviderResult
+    name: BaseProviderResult
+    spec.typeScript:
+      - name: BaseProviderResult
+        fullName: BaseProviderResult
+        uid: teams-mobile-sdk.BaseProviderResult
+  - uid: 'teams-mobile-sdk.ContactMetadata[]'
+    name: 'ContactMetadata[]'
+    spec.typeScript:
+      - name: ContactMetadata
+        fullName: ContactMetadata
+        uid: teams-mobile-sdk.ContactMetadata
+      - name: '[]'
+        fullName: '[]'

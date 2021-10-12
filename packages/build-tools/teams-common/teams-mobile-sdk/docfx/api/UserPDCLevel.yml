@@ -1,0 +1,54 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.UserPDCLevel
+    name: UserPDCLevel
+    fullName: UserPDCLevel
+    children:
+      - teams-mobile-sdk.UserPDCLevel.Basic
+      - teams-mobile-sdk.UserPDCLevel.Full
+      - teams-mobile-sdk.UserPDCLevel.Required
+      - teams-mobile-sdk.UserPDCLevel.Unset
+    langs:
+      - typeScript
+    type: enum
+    summary: >-
+      Represents user's current Privacy Data Control(PDC) level. RN apps should
+      log events corresponding to user's PDC level.
+
+      Refer
+      https://domoreexp.visualstudio.com/DefaultCollection/Teamspace/_wiki/wikis/Teamspace.wiki/2791/Privacy-Data-Controls-in-Telemetry
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.UserPDCLevel.Basic
+    name: Basic
+    children: []
+    langs:
+      - typeScript
+    summary: 'Permissible Event PDC Level: Basic, Required Service Data'
+    type: field
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.UserPDCLevel.Full
+    name: Full
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Also known as Optional. Permissible Event PDC Level: Basic, Full, Required
+      Service Data
+    type: field
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.UserPDCLevel.Required
+    name: Required
+    children: []
+    langs:
+      - typeScript
+    summary: 'Permissible Event PDC Level: Required Service Data'
+    type: field
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.UserPDCLevel.Unset
+    name: Unset
+    children: []
+    langs:
+      - typeScript
+    summary: 'Permissible Event PDC Level: Basic, Full, Required Service Data'
+    type: field
+    package: teams-mobile-sdk

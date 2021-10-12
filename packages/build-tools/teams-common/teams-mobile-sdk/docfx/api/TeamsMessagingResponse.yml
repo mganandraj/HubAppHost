@@ -1,0 +1,58 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.TeamsMessagingResponse
+    name: TeamsMessagingResponse
+    fullName: TeamsMessagingResponse
+    children:
+      - teams-mobile-sdk.TeamsMessagingResponse.messageID
+      - teams-mobile-sdk.TeamsMessagingResponse.statusCode
+    langs:
+      - typeScript
+    type: interface
+    summary: Copyright © Microsoft Corporation. All rights reserved.
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsMessagingResponse.messageID
+    name: messageID
+    fullName: messageID
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Unique identifier for message
+    syntax:
+      content: 'messageID: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsMessagingResponse.statusCode
+    name: statusCode
+    fullName: statusCode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      status code for TeamsMessaging request<br>
+
+      <br>
+
+      TeamsMessagingStatusSuccess = 200,                         //Success<br>
+
+      TeamsMessagingStatusThreadIDNotValid = 401,                //Thread ID not
+      valid<br>
+
+      TeamsMessagingStatusThreadIDNotFound = 404,                //Thread ID not
+      found<br>
+
+      TeamsMessagingStatusMessageUploadFailed = 500,             //Message
+      upload failed<br>
+
+      TeamsMessagingStatusCreateMessageFailed = 501,             //Create
+      Message failed<br>
+    syntax:
+      content: 'statusCode: number'
+      return:
+        type:
+          - number
+    package: teams-mobile-sdk

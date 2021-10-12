@@ -1,0 +1,142 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.TeamsFetchBlobReadStream
+    name: TeamsFetchBlobReadStream
+    fullName: TeamsFetchBlobReadStream
+    children:
+      - teams-mobile-sdk.TeamsFetchBlobReadStream.onData
+      - teams-mobile-sdk.TeamsFetchBlobReadStream.onDataCallback
+      - teams-mobile-sdk.TeamsFetchBlobReadStream.onEnd
+      - teams-mobile-sdk.TeamsFetchBlobReadStream.onEndCallback
+      - teams-mobile-sdk.TeamsFetchBlobReadStream.onError
+      - teams-mobile-sdk.TeamsFetchBlobReadStream.onErrorCallback
+      - teams-mobile-sdk.TeamsFetchBlobReadStream.open
+      - teams-mobile-sdk.TeamsFetchBlobReadStream.constructor
+    langs:
+      - typeScript
+    type: class
+    summary: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsFetchBlobReadStream.onData
+    name: 'onData((detail: any) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function onData(fn: (detail: any) => void)'
+      parameters:
+        - id: fn
+          type:
+            - '(detail: any) => void'
+          description: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsFetchBlobReadStream.onDataCallback
+    name: onDataCallback
+    fullName: onDataCallback
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'public onDataCallback: (detail: any) => void'
+      return:
+        type:
+          - '(detail: any) => void'
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsFetchBlobReadStream.onEnd
+    name: onEnd(any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function onEnd(fn: any)'
+      parameters:
+        - id: fn
+          type:
+            - any
+          description: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsFetchBlobReadStream.onEndCallback
+    name: onEndCallback
+    fullName: onEndCallback
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'public onEndCallback: (detail: any) => void'
+      return:
+        type:
+          - '(detail: any) => void'
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsFetchBlobReadStream.onError
+    name: onError(any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function onError(fn: any)'
+      parameters:
+        - id: fn
+          type:
+            - any
+          description: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsFetchBlobReadStream.onErrorCallback
+    name: onErrorCallback
+    fullName: onErrorCallback
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'public onErrorCallback: (detail: any) => void'
+      return:
+        type:
+          - '(detail: any) => void'
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsFetchBlobReadStream.open
+    name: open()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: function open()
+      parameters: []
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsFetchBlobReadStream.constructor
+    name: 'TeamsFetchBlobReadStream(string, string, number)'
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        new TeamsFetchBlobReadStream(path: string, encoding: string, bufferSize:
+        number)
+      parameters:
+        - id: path
+          type:
+            - string
+          description: ''
+        - id: encoding
+          type:
+            - string
+          description: ''
+        - id: bufferSize
+          type:
+            - number
+          description: ''
+    package: teams-mobile-sdk

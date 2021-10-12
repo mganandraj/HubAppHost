@@ -1,0 +1,67 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.TeamsWebView
+    name: TeamsWebView
+    fullName: TeamsWebView<S>
+    children:
+      - teams-mobile-sdk.TeamsWebView.injectJavaScript
+      - teams-mobile-sdk.TeamsWebView.reload
+      - teams-mobile-sdk.TeamsWebView.render
+    langs:
+      - typeScript
+    type: class
+    summary: ''
+    extends:
+      name: Component<teams-mobile-sdk.TeamsWebViewProps>
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsWebView.injectJavaScript
+    name: injectJavaScript(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function injectJavaScript(script: string)'
+      parameters:
+        - id: script
+          type:
+            - string
+          description: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsWebView.reload
+    name: reload()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: function reload()
+      parameters: []
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsWebView.render
+    name: render()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: function render()
+      parameters: []
+      return:
+        type:
+          - Element
+    package: teams-mobile-sdk
+references:
+  - uid: Component<teams-mobile-sdk.TeamsWebViewProps>
+    name: TeamsWebViewProps>
+    spec.typeScript:
+      - name: Component<
+        fullName: Component<
+      - name: TeamsWebViewProps
+        fullName: TeamsWebViewProps
+        uid: teams-mobile-sdk.TeamsWebViewProps
+      - name: '>'
+        fullName: '>'

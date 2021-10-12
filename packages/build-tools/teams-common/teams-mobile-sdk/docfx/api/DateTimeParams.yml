@@ -1,0 +1,175 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.DateTimeParams
+    name: DateTimeParams
+    fullName: DateTimeParams
+    children:
+      - teams-mobile-sdk.DateTimeParams.dateViewSubmitButtonText
+      - teams-mobile-sdk.DateTimeParams.dateViewTitle
+      - teams-mobile-sdk.DateTimeParams.dayOfMonth
+      - teams-mobile-sdk.DateTimeParams.hour
+      - teams-mobile-sdk.DateTimeParams.isTimeSelectionRequired
+      - teams-mobile-sdk.DateTimeParams.minute
+      - teams-mobile-sdk.DateTimeParams.month
+      - teams-mobile-sdk.DateTimeParams.timeViewSubmitButtonText
+      - teams-mobile-sdk.DateTimeParams.timeViewTitle
+      - teams-mobile-sdk.DateTimeParams.year
+    langs:
+      - typeScript
+    type: interface
+    summary: Copyright © Microsoft Corporation. All rights reserved.
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.DateTimeParams.dateViewSubmitButtonText
+    name: dateViewSubmitButtonText
+    fullName: dateViewSubmitButtonText
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Submit button text for Date picker.
+    optional: true
+    syntax:
+      content: 'dateViewSubmitButtonText?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.DateTimeParams.dateViewTitle
+    name: dateViewTitle
+    fullName: dateViewTitle
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Title for Date picker tab.
+    optional: true
+    syntax:
+      content: 'dateViewTitle?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.DateTimeParams.dayOfMonth
+    name: dayOfMonth
+    fullName: dayOfMonth
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Day of month
+    optional: true
+    syntax:
+      content: 'dayOfMonth?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.DateTimeParams.hour
+    name: hour
+    fullName: hour
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Hour in the range (0-23)
+    optional: true
+    syntax:
+      content: 'hour?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.DateTimeParams.isTimeSelectionRequired
+    name: isTimeSelectionRequired
+    fullName: isTimeSelectionRequired
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      If set to true, click on Date picker submit button will take user to Time
+      picker.
+
+      If set to false, click on Date picker submit button will close dialog.
+    optional: true
+    syntax:
+      content: 'isTimeSelectionRequired?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.DateTimeParams.minute
+    name: minute
+    fullName: minute
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Minute in the range (0-59)
+    optional: true
+    syntax:
+      content: 'minute?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.DateTimeParams.month
+    name: month
+    fullName: month
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Month of the year (0-11)
+    optional: true
+    syntax:
+      content: 'month?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.DateTimeParams.timeViewSubmitButtonText
+    name: timeViewSubmitButtonText
+    fullName: timeViewSubmitButtonText
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Submit button text for Time picker.
+    optional: true
+    syntax:
+      content: 'timeViewSubmitButtonText?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.DateTimeParams.timeViewTitle
+    name: timeViewTitle
+    fullName: timeViewTitle
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Title for Time picker tab.
+    optional: true
+    syntax:
+      content: 'timeViewTitle?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.DateTimeParams.year
+    name: year
+    fullName: year
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Year
+    optional: true
+    syntax:
+      content: 'year?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: teams-mobile-sdk

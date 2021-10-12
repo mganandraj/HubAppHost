@@ -1,0 +1,35 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.ContactSearchResultsProviderParams
+    name: ContactSearchResultsProviderParams
+    fullName: ContactSearchResultsProviderParams
+    children:
+      - teams-mobile-sdk.ContactSearchResultsProviderParams.query
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    extends:
+      name: teams-mobile-sdk.BaseProviderParams
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ContactSearchResultsProviderParams.query
+    name: query
+    fullName: query
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'query: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+references:
+  - uid: teams-mobile-sdk.BaseProviderParams
+    name: BaseProviderParams
+    spec.typeScript:
+      - name: BaseProviderParams
+        fullName: BaseProviderParams
+        uid: teams-mobile-sdk.BaseProviderParams

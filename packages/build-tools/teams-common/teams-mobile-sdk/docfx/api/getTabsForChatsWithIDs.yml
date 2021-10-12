@@ -1,0 +1,31 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.getTabsForChatsWithIDs
+    name: 'getTabsForChatsWithIDs(string[])'
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Gets all tabs for the given list of chat ids
+    syntax:
+      content: 'function getTabsForChatsWithIDs(chatIDs: string[])'
+      parameters:
+        - id: chatIDs
+          type:
+            - 'string[]'
+          description: chat ids for which tabs will be returned
+      return:
+        type:
+          - 'Promise<Map<string, teams-mobile-sdk.Tab[]>>'
+    package: teams-mobile-sdk
+references:
+  - uid: 'Promise<Map<string, teams-mobile-sdk.Tab[]>>'
+    name: 'Tab[]>>'
+    spec.typeScript:
+      - name: 'Promise<Map<string, '
+        fullName: 'Promise<Map<string, '
+      - name: Tab
+        fullName: Tab
+        uid: teams-mobile-sdk.Tab
+      - name: '[]>>'
+        fullName: '[]>>'

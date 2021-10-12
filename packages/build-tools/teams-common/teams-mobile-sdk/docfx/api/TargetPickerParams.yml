@@ -1,0 +1,37 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.TargetPickerParams
+    name: TargetPickerParams
+    fullName: TargetPickerParams
+    children:
+      - teams-mobile-sdk.TargetPickerParams.pickerType
+    langs:
+      - typeScript
+    type: class
+    summary: Represents configuration options for share target picker.
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TargetPickerParams.pickerType
+    name: pickerType
+    fullName: pickerType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The type of picker to open. For e.g. if `pickerType` is `CHAT`, only chats
+      are
+
+      are shown in the picker.
+    syntax:
+      content: 'public pickerType: PickerType'
+      return:
+        type:
+          - teams-mobile-sdk.PickerType
+    package: teams-mobile-sdk
+references:
+  - uid: teams-mobile-sdk.PickerType
+    name: PickerType
+    spec.typeScript:
+      - name: PickerType
+        fullName: PickerType
+        uid: teams-mobile-sdk.PickerType

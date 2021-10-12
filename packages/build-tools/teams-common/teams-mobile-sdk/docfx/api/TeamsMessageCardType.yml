@@ -1,0 +1,111 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.TeamsMessageCardType
+    name: TeamsMessageCardType
+    fullName: TeamsMessageCardType
+    children:
+      - teams-mobile-sdk.TeamsMessageCardType.ADAPTIVE_CARD
+      - teams-mobile-sdk.TeamsMessageCardType.AUDIO_CARD
+      - teams-mobile-sdk.TeamsMessageCardType.CODE_SNIPPET_CARD
+      - teams-mobile-sdk.TeamsMessageCardType.HERO_CARD
+      - teams-mobile-sdk.TeamsMessageCardType.LIST_CARD
+      - teams-mobile-sdk.TeamsMessageCardType.PROFILE_CARD
+      - teams-mobile-sdk.TeamsMessageCardType.SIGN_IN_CARD
+      - teams-mobile-sdk.TeamsMessageCardType.SWIFT_CARD
+      - teams-mobile-sdk.TeamsMessageCardType.SWIFT_CONNECTOR_CARD
+      - teams-mobile-sdk.TeamsMessageCardType.THUMBNAIL_CARD
+    langs:
+      - typeScript
+    type: enum
+    summary: Copyright © Microsoft Corporation. All rights reserved.
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsMessageCardType.ADAPTIVE_CARD
+    name: ADAPTIVE_CARD
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: null
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsMessageCardType.AUDIO_CARD
+    name: AUDIO_CARD
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: null
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsMessageCardType.CODE_SNIPPET_CARD
+    name: CODE_SNIPPET_CARD
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: null
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsMessageCardType.HERO_CARD
+    name: HERO_CARD
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: null
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsMessageCardType.LIST_CARD
+    name: LIST_CARD
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: null
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsMessageCardType.PROFILE_CARD
+    name: PROFILE_CARD
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: null
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsMessageCardType.SIGN_IN_CARD
+    name: SIGN_IN_CARD
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: null
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsMessageCardType.SWIFT_CARD
+    name: SWIFT_CARD
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: null
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsMessageCardType.SWIFT_CONNECTOR_CARD
+    name: SWIFT_CONNECTOR_CARD
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: null
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsMessageCardType.THUMBNAIL_CARD
+    name: THUMBNAIL_CARD
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: null
+    package: teams-mobile-sdk

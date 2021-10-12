@@ -1,0 +1,26 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.BaseProviderResult
+    name: BaseProviderResult
+    fullName: BaseProviderResult
+    children:
+      - teams-mobile-sdk.BaseProviderResult.requestId
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.BaseProviderResult.requestId
+    name: requestId
+    fullName: requestId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'requestId: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk

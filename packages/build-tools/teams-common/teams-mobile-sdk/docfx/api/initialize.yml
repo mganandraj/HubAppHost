@@ -1,0 +1,26 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.initialize
+    name: initialize(LocalizedStringsProvider)
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function initialize(localizedStringsProviderValue:
+        LocalizedStringsProvider)
+      parameters:
+        - id: localizedStringsProviderValue
+          type:
+            - teams-mobile-sdk.LocalizedStringsProvider
+          description: ''
+    package: teams-mobile-sdk
+references:
+  - uid: teams-mobile-sdk.LocalizedStringsProvider
+    name: LocalizedStringsProvider
+    spec.typeScript:
+      - name: LocalizedStringsProvider
+        fullName: LocalizedStringsProvider
+        uid: teams-mobile-sdk.LocalizedStringsProvider

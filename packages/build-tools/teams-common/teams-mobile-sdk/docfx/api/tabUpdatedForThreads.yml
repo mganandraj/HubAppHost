@@ -1,0 +1,22 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.tabUpdatedForThreads
+    name: 'tabUpdatedForThreads(string[])'
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Indicate native client that tab list of chats have changed and it's time
+      for update.
+    syntax:
+      content: 'function tabUpdatedForThreads(chatIDs: string[])'
+      parameters:
+        - id: chatIDs
+          type:
+            - 'string[]'
+          description: chat ids for which tabs will be returned
+      return:
+        type:
+          - Promise<boolean>
+    package: teams-mobile-sdk

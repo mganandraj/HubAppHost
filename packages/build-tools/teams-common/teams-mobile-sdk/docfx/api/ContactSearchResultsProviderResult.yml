@@ -1,0 +1,43 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.ContactSearchResultsProviderResult
+    name: ContactSearchResultsProviderResult
+    fullName: ContactSearchResultsProviderResult
+    children:
+      - teams-mobile-sdk.ContactSearchResultsProviderResult.results
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    extends:
+      name: teams-mobile-sdk.BaseProviderResult
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ContactSearchResultsProviderResult.results
+    name: results
+    fullName: results
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'results: ContactSearchResultsGroup[]'
+      return:
+        type:
+          - 'teams-mobile-sdk.ContactSearchResultsGroup[]'
+    package: teams-mobile-sdk
+references:
+  - uid: teams-mobile-sdk.BaseProviderResult
+    name: BaseProviderResult
+    spec.typeScript:
+      - name: BaseProviderResult
+        fullName: BaseProviderResult
+        uid: teams-mobile-sdk.BaseProviderResult
+  - uid: 'teams-mobile-sdk.ContactSearchResultsGroup[]'
+    name: 'ContactSearchResultsGroup[]'
+    spec.typeScript:
+      - name: ContactSearchResultsGroup
+        fullName: ContactSearchResultsGroup
+        uid: teams-mobile-sdk.ContactSearchResultsGroup
+      - name: '[]'
+        fullName: '[]'

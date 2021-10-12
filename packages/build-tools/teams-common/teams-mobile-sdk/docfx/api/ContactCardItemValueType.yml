@@ -1,0 +1,38 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.ContactCardItemValueType
+    name: ContactCardItemValueType
+    fullName: ContactCardItemValueType
+    children:
+      - teams-mobile-sdk.ContactCardItemValueType.Link
+      - teams-mobile-sdk.ContactCardItemValueType.PhoneNumber
+      - teams-mobile-sdk.ContactCardItemValueType.Text
+    langs:
+      - typeScript
+    type: enum
+    summary: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ContactCardItemValueType.Link
+    name: Link
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ContactCardItemValueType.PhoneNumber
+    name: PhoneNumber
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ContactCardItemValueType.Text
+    name: Text
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    package: teams-mobile-sdk

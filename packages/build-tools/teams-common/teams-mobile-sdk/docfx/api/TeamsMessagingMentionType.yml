@@ -1,0 +1,31 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.TeamsMessagingMentionType
+    name: TeamsMessagingMentionType
+    fullName: TeamsMessagingMentionType
+    children:
+      - teams-mobile-sdk.TeamsMessagingMentionType.CHANNEL
+      - teams-mobile-sdk.TeamsMessagingMentionType.PERSON
+    langs:
+      - typeScript
+    type: enum
+    summary: Copyright © Microsoft Corporation. All rights reserved.
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsMessagingMentionType.CHANNEL
+    name: CHANNEL
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: null
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsMessagingMentionType.PERSON
+    name: PERSON
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: null
+    package: teams-mobile-sdk

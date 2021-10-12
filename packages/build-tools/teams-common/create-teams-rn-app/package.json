@@ -1,0 +1,38 @@
+{
+  "name": "create-teams-rn-app",
+  "version": "1.0.0",
+  "description": "Bootstrap a Teams React Native module quickly",
+  "main": "build/src",
+  "repository": "https://domoreexp.visualstudio.com/Teamspace/_git/TeamsMobile-Common",
+  "author": "Microsoft Corporation",
+  "license": "ISC",
+  "bin": {
+    "create-teams-rn-app": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "template"
+  ],
+  "scripts": {
+    "clean": "rm -rf ./dist",
+    "build": "ncc build src/index.ts",
+    "lint": "tslint --project tsconfig.json"
+  },
+  "devDependencies": {
+    "@types/commander": "^2.12.2",
+    "@types/fs-extra": "^9.0.1",
+    "@types/node": "^14.0.4",
+    "@types/prompts": "^2.0.8",
+    "@types/uuid": "^8.0.0",
+    "@zeit/ncc": "^0.22.3",
+    "chalk": "^4.0.0",
+    "commander": "^5.1.0",
+    "fs-extra": "^9.0.0",
+    "path": "^0.12.7",
+    "prompts": "^2.3.2",
+    "tslint": "5.8.0",
+    "tslint-config-prettier": "^1.17.0",
+    "typescript": "^3.9.3",
+    "uuid": "^8.1.0"
+  }
+}

@@ -1,0 +1,151 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.ApplicationContext
+    name: ApplicationContext
+    fullName: ApplicationContext
+    children:
+      - teams-mobile-sdk.ApplicationContext.constructor
+      - teams-mobile-sdk.ApplicationContext.getAccentColor
+      - teams-mobile-sdk.ApplicationContext.getCurrentAppTheme
+      - teams-mobile-sdk.ApplicationContext.getCurrentLocale
+      - teams-mobile-sdk.ApplicationContext.getCurrentSessionId
+      - teams-mobile-sdk.ApplicationContext.getCurrentUser
+      - teams-mobile-sdk.ApplicationContext.getTelemetryInfo
+    langs:
+      - typeScript
+    type: class
+    summary: >
+      Represents the application context. The current app context can be
+      accessed in a
+
+      <code><a href='xref:teams-mobile-sdk.TeamsView'>TeamsView</a></code> by
+      calling
+
+      <code><a
+      href='xref:teams-mobile-sdk.TeamsView.getApplicationContext'>getApplicationContext</a></code>.
+
+      The context will not change until the Teams app restarts so it is safe to
+      store it after
+
+      fetching it the first time.
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ApplicationContext.constructor
+    name: ApplicationContext(ApplicationParams)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'new ApplicationContext(appParams: ApplicationParams)'
+      parameters:
+        - id: appParams
+          type:
+            - ApplicationParams
+          description: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ApplicationContext.getAccentColor
+    name: getAccentColor()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Returns the accent color from appDefinition in #RRGGBBB format.'
+    syntax:
+      content: function getAccentColor()
+      parameters: []
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ApplicationContext.getCurrentAppTheme
+    name: getCurrentAppTheme()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'The current theme. There are two themes available: default and dark.'
+    syntax:
+      content: function getCurrentAppTheme()
+      parameters: []
+      return:
+        type:
+          - teams-mobile-sdk.AppTheme
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ApplicationContext.getCurrentLocale
+    name: getCurrentLocale()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Returns the current localse.
+    syntax:
+      content: function getCurrentLocale()
+      parameters: []
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ApplicationContext.getCurrentSessionId
+    name: getCurrentSessionId()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Returns the current sessionId.
+    syntax:
+      content: function getCurrentSessionId()
+      parameters: []
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ApplicationContext.getCurrentUser
+    name: getCurrentUser()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Returns a `User` object representing the current logged in user
+      in the Teams app.
+    syntax:
+      content: function getCurrentUser()
+      parameters: []
+      return:
+        type:
+          - teams-mobile-sdk.User
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ApplicationContext.getTelemetryInfo
+    name: getTelemetryInfo()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Returns a `TelemetryInfo` object containing device and teams information.
+    syntax:
+      content: function getTelemetryInfo()
+      parameters: []
+      return:
+        type:
+          - teams-mobile-sdk.TelemetryInfo
+    package: teams-mobile-sdk
+references:
+  - uid: teams-mobile-sdk.AppTheme
+    name: AppTheme
+    spec.typeScript:
+      - name: AppTheme
+        fullName: AppTheme
+        uid: teams-mobile-sdk.AppTheme
+  - uid: teams-mobile-sdk.User
+    name: User
+    spec.typeScript:
+      - name: User
+        fullName: User
+        uid: teams-mobile-sdk.User
+  - uid: teams-mobile-sdk.TelemetryInfo
+    name: TelemetryInfo
+    spec.typeScript:
+      - name: TelemetryInfo
+        fullName: TelemetryInfo
+        uid: teams-mobile-sdk.TelemetryInfo

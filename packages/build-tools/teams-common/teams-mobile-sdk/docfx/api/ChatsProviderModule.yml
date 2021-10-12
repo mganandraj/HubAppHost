@@ -1,0 +1,143 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.ChatsProviderModule
+    name: ChatsProviderModule
+    fullName: ChatsProviderModule
+    children:
+      - teams-mobile-sdk.ChatsProviderModule.getAllChats
+      - teams-mobile-sdk.ChatsProviderModule.getMembersDetailsForChats
+      - teams-mobile-sdk.ChatsProviderModule.getTabsForChatsWithIDs
+      - teams-mobile-sdk.ChatsProviderModule.getTabsInChatsInitialSyncState
+      - teams-mobile-sdk.ChatsProviderModule.tabUpdatedForThreads
+    langs:
+      - typeScript
+    type: class
+    summary: Module to provide chats and related APIs
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ChatsProviderModule.getAllChats
+    name: getAllChats()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Gets all chats for the current user.
+      This API will not return archived chats.
+    syntax:
+      content: function getAllChats()
+      parameters: []
+      return:
+        type:
+          - 'Promise<teams-mobile-sdk.Chat[]>'
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ChatsProviderModule.getMembersDetailsForChats
+    name: 'getMembersDetailsForChats(string[])'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Gets all member details for the given list of chat ids.
+    syntax:
+      content: 'function getMembersDetailsForChats(chatIDs: string[])'
+      parameters:
+        - id: chatIDs
+          type:
+            - 'string[]'
+          description: ''
+      return:
+        type:
+          - 'Promise<Map<string, teams-mobile-sdk.User[]>>'
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ChatsProviderModule.getTabsForChatsWithIDs
+    name: 'getTabsForChatsWithIDs(string[])'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Gets all tabs for the given list of chat ids
+    syntax:
+      content: 'function getTabsForChatsWithIDs(chatIDs: string[])'
+      parameters:
+        - id: chatIDs
+          type:
+            - 'string[]'
+          description: chat ids for which tabs will be returned
+      return:
+        type:
+          - 'Promise<Map<string, teams-mobile-sdk.Tab[]>>'
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ChatsProviderModule.getTabsInChatsInitialSyncState
+    name: getTabsInChatsInitialSyncState()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Get the initial sync status of chats
+    syntax:
+      content: function getTabsInChatsInitialSyncState()
+      parameters: []
+      return:
+        type:
+          - Promise<teams-mobile-sdk.SyncState>
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ChatsProviderModule.tabUpdatedForThreads
+    name: 'tabUpdatedForThreads(string[])'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Indicate native client that tab list of chats have changed and it's time
+      for update.
+    syntax:
+      content: 'function tabUpdatedForThreads(chatIDs: string[])'
+      parameters:
+        - id: chatIDs
+          type:
+            - 'string[]'
+          description: chat ids for which tabs will be returned
+      return:
+        type:
+          - Promise<boolean>
+    package: teams-mobile-sdk
+references:
+  - uid: 'Promise<teams-mobile-sdk.Chat[]>'
+    name: 'Chat[]>'
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: Chat
+        fullName: Chat
+        uid: teams-mobile-sdk.Chat
+      - name: '[]>'
+        fullName: '[]>'
+  - uid: 'Promise<Map<string, teams-mobile-sdk.User[]>>'
+    name: 'User[]>>'
+    spec.typeScript:
+      - name: 'Promise<Map<string, '
+        fullName: 'Promise<Map<string, '
+      - name: User
+        fullName: User
+        uid: teams-mobile-sdk.User
+      - name: '[]>>'
+        fullName: '[]>>'
+  - uid: 'Promise<Map<string, teams-mobile-sdk.Tab[]>>'
+    name: 'Tab[]>>'
+    spec.typeScript:
+      - name: 'Promise<Map<string, '
+        fullName: 'Promise<Map<string, '
+      - name: Tab
+        fullName: Tab
+        uid: teams-mobile-sdk.Tab
+      - name: '[]>>'
+        fullName: '[]>>'
+  - uid: Promise<teams-mobile-sdk.SyncState>
+    name: SyncState>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: SyncState
+        fullName: SyncState
+        uid: teams-mobile-sdk.SyncState
+      - name: '>'
+        fullName: '>'

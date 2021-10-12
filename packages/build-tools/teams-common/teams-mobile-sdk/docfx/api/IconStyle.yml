@@ -1,0 +1,31 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.IconStyle
+    name: IconStyle
+    fullName: IconStyle
+    children:
+      - teams-mobile-sdk.IconStyle.FILLED
+      - teams-mobile-sdk.IconStyle.REGULAR
+    langs:
+      - typeScript
+    type: enum
+    summary: An enumeration of possible icon styles
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.IconStyle.FILLED
+    name: FILLED
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: null
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.IconStyle.REGULAR
+    name: REGULAR
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: null
+    package: teams-mobile-sdk

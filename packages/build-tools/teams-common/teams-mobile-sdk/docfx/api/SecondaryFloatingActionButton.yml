@@ -1,0 +1,73 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.SecondaryFloatingActionButton
+    name: SecondaryFloatingActionButton
+    fullName: SecondaryFloatingActionButton
+    children:
+      - teams-mobile-sdk.SecondaryFloatingActionButton.buttonId
+      - teams-mobile-sdk.SecondaryFloatingActionButton.description
+      - teams-mobile-sdk.SecondaryFloatingActionButton.iconUri
+      - teams-mobile-sdk.SecondaryFloatingActionButton.title
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.SecondaryFloatingActionButton.buttonId
+    name: buttonId
+    fullName: buttonId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'buttonId: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.SecondaryFloatingActionButton.description
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'description?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.SecondaryFloatingActionButton.iconUri
+    name: iconUri
+    fullName: iconUri
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'iconUri: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.SecondaryFloatingActionButton.title
+    name: title
+    fullName: title
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'title?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: teams-mobile-sdk

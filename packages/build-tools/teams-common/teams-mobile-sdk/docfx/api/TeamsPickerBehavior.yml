@@ -1,0 +1,35 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.TeamsPickerBehavior
+    name: TeamsPickerBehavior
+    fullName: TeamsPickerBehavior
+    children:
+      - teams-mobile-sdk.TeamsPickerBehavior.MULTIPLE
+      - teams-mobile-sdk.TeamsPickerBehavior.SINGLE_CLEAR
+    langs:
+      - typeScript
+    type: enum
+    summary: Defines behavior when interacting with picker.
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsPickerBehavior.MULTIPLE
+    name: MULTIPLE
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Allows the selection of multiple items up to `pickerProps.limit`. Each
+      selected
+
+      item appears as a "chip" in the search box which can be deleted later.
+    type: field
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsPickerBehavior.SINGLE_CLEAR
+    name: SINGLE_CLEAR
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Allows selection of one item at a time. Upon selection, the search box is
+      cleared.
+    type: field
+    package: teams-mobile-sdk

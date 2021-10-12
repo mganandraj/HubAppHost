@@ -1,0 +1,63 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.AuthorizationHeaders
+    name: AuthorizationHeaders
+    fullName: AuthorizationHeaders
+    children:
+      - teams-mobile-sdk.AuthorizationHeaders.authType
+      - teams-mobile-sdk.AuthorizationHeaders.headers
+      - teams-mobile-sdk.AuthorizationHeaders.url
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.AuthorizationHeaders.authType
+    name: authType
+    fullName: authType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'authType: AuthorizationType'
+      return:
+        type:
+          - teams-mobile-sdk.AuthorizationType
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.AuthorizationHeaders.headers
+    name: headers
+    fullName: headers
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'headers: any'
+      return:
+        type:
+          - any
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.AuthorizationHeaders.url
+    name: url
+    fullName: url
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'url: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+references:
+  - uid: teams-mobile-sdk.AuthorizationType
+    name: AuthorizationType
+    spec.typeScript:
+      - name: AuthorizationType
+        fullName: AuthorizationType
+        uid: teams-mobile-sdk.AuthorizationType

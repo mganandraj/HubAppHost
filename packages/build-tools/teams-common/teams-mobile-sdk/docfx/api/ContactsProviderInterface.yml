@@ -1,0 +1,327 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.ContactsProviderInterface
+    name: ContactsProviderInterface
+    fullName: ContactsProviderInterface
+    children:
+      - teams-mobile-sdk.ContactsProviderInterface.deleteContactList
+      - teams-mobile-sdk.ContactsProviderInterface.getContactDetails
+      - teams-mobile-sdk.ContactsProviderInterface.getContactLists
+      - teams-mobile-sdk.ContactsProviderInterface.getContactsInList
+      - teams-mobile-sdk.ContactsProviderInterface.getContactSyncState
+      - teams-mobile-sdk.ContactsProviderInterface.getFavoriteContacts
+      - teams-mobile-sdk.ContactsProviderInterface.getPagesOfContactsInList
+      - teams-mobile-sdk.ContactsProviderInterface.saveContact
+      - teams-mobile-sdk.ContactsProviderInterface.saveContactList
+      - teams-mobile-sdk.ContactsProviderInterface.syncContacts
+    langs:
+      - typeScript
+    type: interface
+    summary: Contacts Provider.
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ContactsProviderInterface.deleteContactList
+    name: deleteContactList(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: API to delete the contact list in the db
+    syntax:
+      content: 'function deleteContactList(contactListId: string)'
+      parameters:
+        - id: contactListId
+          type:
+            - string
+          description: id of the contact list which needs to be deleted
+      return:
+        type:
+          - Promise<teams-mobile-sdk.ContactsProviderResponse<any>>
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ContactsProviderInterface.getContactDetails
+    name: getContactDetails(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: API to get contacts details
+    syntax:
+      content: 'function getContactDetails(contactId: string)'
+      parameters:
+        - id: contactId
+          type:
+            - string
+          description: id of the contact
+      return:
+        type:
+          - >-
+            Promise<teams-mobile-sdk.ContactsProviderResponse<teams-mobile-sdk.PeopleContact>>
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ContactsProviderInterface.getContactLists
+    name: 'getContactLists(SortType, SortOrder)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: API to get contactLists
+    syntax:
+      content: 'function getContactLists(sortType: SortType, sortOrder: SortOrder)'
+      parameters:
+        - id: sortType
+          type:
+            - teams-mobile-sdk.SortType
+          description: type of the sort
+        - id: sortOrder
+          type:
+            - teams-mobile-sdk.SortOrder
+          description: order of the sort
+      return:
+        type:
+          - >-
+            Promise<teams-mobile-sdk.ContactsProviderResponse<teams-mobile-sdk.ContactList[]>>
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ContactsProviderInterface.getContactsInList
+    name: 'getContactsInList(string, SortType, SortOrder)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: API to get contacts of a contact list
+    syntax:
+      content: >-
+        function getContactsInList(listId: string, sortType: SortType,
+        sortOrder: SortOrder)
+      parameters:
+        - id: listId
+          type:
+            - string
+          description: id of the contact list
+        - id: sortType
+          type:
+            - teams-mobile-sdk.SortType
+          description: type of the sort
+        - id: sortOrder
+          type:
+            - teams-mobile-sdk.SortOrder
+          description: order of the sort
+      return:
+        type:
+          - >-
+            Promise<teams-mobile-sdk.ContactsProviderResponse<teams-mobile-sdk.PeopleContact[]>>
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ContactsProviderInterface.getContactSyncState
+    name: getContactSyncState()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: API to get the sync state of contacts
+    syntax:
+      content: function getContactSyncState()
+      parameters: []
+      return:
+        type:
+          - Promise<teams-mobile-sdk.ContactSyncState>
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ContactsProviderInterface.getFavoriteContacts
+    name: 'getFavoriteContacts(SortType, SortOrder)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: API to get favourite contacts
+    syntax:
+      content: 'function getFavoriteContacts(sortType: SortType, sortOrder: SortOrder)'
+      parameters:
+        - id: sortType
+          type:
+            - teams-mobile-sdk.SortType
+          description: type of the sort
+        - id: sortOrder
+          type:
+            - teams-mobile-sdk.SortOrder
+          description: order of the sort
+      return:
+        type:
+          - >-
+            Promise<teams-mobile-sdk.ContactsProviderResponse<teams-mobile-sdk.PeopleContact[]>>
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ContactsProviderInterface.getPagesOfContactsInList
+    name: 'getPagesOfContactsInList(string, Number, Number, SortType, SortOrder)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: API to get contacts with pagination
+    syntax:
+      content: >-
+        function getPagesOfContactsInList(listId: string, pageNumber: Number,
+        withPageSize: Number, sortType: SortType, sortOrder: SortOrder)
+      parameters:
+        - id: listId
+          type:
+            - string
+          description: the id of the contact list
+        - id: pageNumber
+          type:
+            - Number
+          description: number of the page
+        - id: withPageSize
+          type:
+            - Number
+          description: size of the page
+        - id: sortType
+          type:
+            - teams-mobile-sdk.SortType
+          description: type of the sort
+        - id: sortOrder
+          type:
+            - teams-mobile-sdk.SortOrder
+          description: order of the sort
+      return:
+        type:
+          - >-
+            Promise<teams-mobile-sdk.ContactsProviderResponse<teams-mobile-sdk.PeopleContact[]>>
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ContactsProviderInterface.saveContact
+    name: saveContact(PeopleContact)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: API to save a contact which is created/edited in the db
+    syntax:
+      content: 'function saveContact(Contact: PeopleContact)'
+      parameters:
+        - id: Contact
+          type:
+            - teams-mobile-sdk.PeopleContact
+          description: ''
+      return:
+        type:
+          - Promise<teams-mobile-sdk.ContactsProviderResponse<any>>
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ContactsProviderInterface.saveContactList
+    name: saveContactList(ContactList)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: API to save the contact list in the db
+    syntax:
+      content: 'function saveContactList(contactList: ContactList)'
+      parameters:
+        - id: contactList
+          type:
+            - teams-mobile-sdk.ContactList
+          description: contact list which needs to be saved
+      return:
+        type:
+          - Promise<teams-mobile-sdk.ContactsProviderResponse<any>>
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ContactsProviderInterface.syncContacts
+    name: syncContacts()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'API to sync contacts, contacts lists in db'
+    syntax:
+      content: function syncContacts()
+      parameters: []
+      return:
+        type:
+          - any
+    package: teams-mobile-sdk
+references:
+  - uid: Promise<teams-mobile-sdk.ContactsProviderResponse<any>>
+    name: ContactsProviderResponse<any>>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: ContactsProviderResponse
+        fullName: ContactsProviderResponse
+        uid: teams-mobile-sdk.ContactsProviderResponse
+      - name: <any>>
+        fullName: <any>>
+  - uid: >-
+      Promise<teams-mobile-sdk.ContactsProviderResponse<teams-mobile-sdk.PeopleContact>>
+    name: PeopleContact>>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: ContactsProviderResponse
+        fullName: ContactsProviderResponse
+        uid: teams-mobile-sdk.ContactsProviderResponse
+      - name: <
+        fullName: <
+      - name: PeopleContact
+        fullName: PeopleContact
+        uid: teams-mobile-sdk.PeopleContact
+      - name: '>>'
+        fullName: '>>'
+  - uid: teams-mobile-sdk.SortType
+    name: SortType
+    spec.typeScript:
+      - name: SortType
+        fullName: SortType
+        uid: teams-mobile-sdk.SortType
+  - uid: teams-mobile-sdk.SortOrder
+    name: SortOrder
+    spec.typeScript:
+      - name: SortOrder
+        fullName: SortOrder
+        uid: teams-mobile-sdk.SortOrder
+  - uid: >-
+      Promise<teams-mobile-sdk.ContactsProviderResponse<teams-mobile-sdk.ContactList[]>>
+    name: 'ContactList[]>>'
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: ContactsProviderResponse
+        fullName: ContactsProviderResponse
+        uid: teams-mobile-sdk.ContactsProviderResponse
+      - name: <
+        fullName: <
+      - name: ContactList
+        fullName: ContactList
+        uid: teams-mobile-sdk.ContactList
+      - name: '[]>>'
+        fullName: '[]>>'
+  - uid: Promise<teams-mobile-sdk.ContactSyncState>
+    name: ContactSyncState>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: ContactSyncState
+        fullName: ContactSyncState
+        uid: teams-mobile-sdk.ContactSyncState
+      - name: '>'
+        fullName: '>'
+  - uid: >-
+      Promise<teams-mobile-sdk.ContactsProviderResponse<teams-mobile-sdk.PeopleContact[]>>
+    name: 'PeopleContact[]>>'
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: ContactsProviderResponse
+        fullName: ContactsProviderResponse
+        uid: teams-mobile-sdk.ContactsProviderResponse
+      - name: <
+        fullName: <
+      - name: PeopleContact
+        fullName: PeopleContact
+        uid: teams-mobile-sdk.PeopleContact
+      - name: '[]>>'
+        fullName: '[]>>'
+  - uid: teams-mobile-sdk.PeopleContact
+    name: PeopleContact
+    spec.typeScript:
+      - name: PeopleContact
+        fullName: PeopleContact
+        uid: teams-mobile-sdk.PeopleContact
+  - uid: teams-mobile-sdk.ContactList
+    name: ContactList
+    spec.typeScript:
+      - name: ContactList
+        fullName: ContactList
+        uid: teams-mobile-sdk.ContactList

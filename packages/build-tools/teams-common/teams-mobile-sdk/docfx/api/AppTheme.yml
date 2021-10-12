@@ -1,0 +1,31 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.AppTheme
+    name: AppTheme
+    fullName: AppTheme
+    children:
+      - teams-mobile-sdk.AppTheme.DARK
+      - teams-mobile-sdk.AppTheme.DEFAULT
+    langs:
+      - typeScript
+    type: enum
+    summary: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.AppTheme.DARK
+    name: DARK
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: null
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.AppTheme.DEFAULT
+    name: DEFAULT
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: null
+    package: teams-mobile-sdk

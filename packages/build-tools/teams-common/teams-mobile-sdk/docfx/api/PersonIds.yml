@@ -1,0 +1,60 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.PersonIds
+    name: PersonIds
+    fullName: PersonIds
+    children:
+      - teams-mobile-sdk.PersonIds.aadId
+      - teams-mobile-sdk.PersonIds.mri
+      - teams-mobile-sdk.PersonIds.upn
+    langs:
+      - typeScript
+    type: interface
+    summary: >-
+      An object containing the Identifiers of a Person.
+
+      The base class for Person, PersonProfilePicture, PersonPresenceStatus,
+      etc.
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.PersonIds.aadId
+    name: aadId
+    fullName: aadId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Azure Active Directory ID.
+    syntax:
+      content: 'aadId: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.PersonIds.mri
+    name: mri
+    fullName: mri
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Teams MRI.
+    syntax:
+      content: 'mri: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.PersonIds.upn
+    name: upn
+    fullName: upn
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: User Principle Name.
+    syntax:
+      content: 'upn: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk

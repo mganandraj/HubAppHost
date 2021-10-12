@@ -1,0 +1,43 @@
+{
+  "extends": ["tslint:recommended","tslint-react","tslint-config-prettier"],
+  "env": {
+    "node": true
+  },
+  "rules": {
+    "semicolon": [true, "always"],
+    "ordered-imports": true,
+    "no-console": false,
+    "interface-name": false,
+    "max-classes-per-file": false,
+    "object-literal-sort-keys": false,
+    "variable-name": [true, "ban-keywords", "allow-leading-underscore"],
+    "member-ordering": false,
+    "no-shadowed-variable": false,
+    "only-arrow-functions": false,
+    "forin": false,
+    "ban-types": false,
+    "object-literal-shorthand": false,
+    "jsx-self-close": false,
+    "no-string-literal": false,
+    "no-unused-expression": false,
+    "no-var-requires": false,
+    "trailing-comma": [true, {"multiline": "never", "singleline": "never"}]  
+  },
+  "jsRules": {
+    "no-console": false,
+    "interface-name": false,
+    "max-classes-per-file": false,
+    "object-literal-sort-keys": false,
+    "variable-name": [true, "ban-keywords", "allow-leading-underscore"],
+    "member-ordering": false,
+    "no-shadowed-variable": false,
+    "only-arrow-functions": false,
+    "forin": false,
+    "ban-types": false,
+    "object-literal-shorthand": false,
+    "jsx-self-close": false,
+    "no-string-literal": false,
+    "no-var-requires": false,
+    "trailing-comma": [true, {"multiline": "never", "singleline": "never"}]  
+  }
+}

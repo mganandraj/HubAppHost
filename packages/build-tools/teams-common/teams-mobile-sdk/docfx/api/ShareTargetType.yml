@@ -1,0 +1,47 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.ShareTargetType
+    name: ShareTargetType
+    fullName: ShareTargetType
+    children:
+      - teams-mobile-sdk.ShareTargetType.CHANNEL
+      - teams-mobile-sdk.ShareTargetType.GROUP
+      - teams-mobile-sdk.ShareTargetType.PERSON
+      - teams-mobile-sdk.ShareTargetType.PRIVATE_MEETING
+    langs:
+      - typeScript
+    type: enum
+    summary: Represents the type of a share target.
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ShareTargetType.CHANNEL
+    name: CHANNEL
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ShareTargetType.GROUP
+    name: GROUP
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ShareTargetType.PERSON
+    name: PERSON
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ShareTargetType.PRIVATE_MEETING
+    name: PRIVATE_MEETING
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    package: teams-mobile-sdk

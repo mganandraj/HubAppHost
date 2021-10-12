@@ -1,0 +1,109 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.Channel
+    name: Channel
+    fullName: Channel
+    children:
+      - teams-mobile-sdk.Channel.id
+      - teams-mobile-sdk.Channel.isFavorite
+      - teams-mobile-sdk.Channel.isGeneralChannel
+      - teams-mobile-sdk.Channel.isPrivateChannel
+      - teams-mobile-sdk.Channel.name
+      - teams-mobile-sdk.Channel.teamId
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.Channel.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      A unique identifier for the channel. The ID of the General
+      channel in a team is equal to the ID of the team. But, it
+      is recommended to use the isGeneralChannel property of this
+      class to identify the General channel instead of doing the
+      comparison yourself.
+      For e.g.: 19:0477a47b9e7d471e81df13dfaffdfca4@thread.skype
+    syntax:
+      content: 'id: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.Channel.isFavorite
+    name: isFavorite
+    fullName: isFavorite
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Indicates whether the channels is a favorite of the user
+    syntax:
+      content: 'isFavorite: boolean'
+      return:
+        type:
+          - boolean
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.Channel.isGeneralChannel
+    name: isGeneralChannel
+    fullName: isGeneralChannel
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Indicates whether this channel is the General channel for the team.
+    syntax:
+      content: 'isGeneralChannel: boolean'
+      return:
+        type:
+          - boolean
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.Channel.isPrivateChannel
+    name: isPrivateChannel
+    fullName: isPrivateChannel
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Indicates whether the channel is a private channel
+    syntax:
+      content: 'isPrivateChannel: boolean'
+      return:
+        type:
+          - boolean
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.Channel.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Name of the channel
+    syntax:
+      content: 'name: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.Channel.teamId
+    name: teamId
+    fullName: teamId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      Unique identifier for the channel's Team.
+      For General channels, `id` will equal `teamId`.
+    syntax:
+      content: 'teamId: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk

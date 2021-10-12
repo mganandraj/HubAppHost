@@ -1,0 +1,131 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.Contact
+    name: Contact
+    fullName: Contact
+    children:
+      - teams-mobile-sdk.Contact.avatarUrl
+      - teams-mobile-sdk.Contact.contactId
+      - teams-mobile-sdk.Contact.description
+      - teams-mobile-sdk.Contact.email
+      - teams-mobile-sdk.Contact.id
+      - teams-mobile-sdk.Contact.name
+      - teams-mobile-sdk.Contact.phoneNumber
+      - teams-mobile-sdk.Contact.type
+    langs:
+      - typeScript
+    type: interface
+    summary: Copyright © Microsoft Corporation. All rights reserved.
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.Contact.avatarUrl
+    name: avatarUrl
+    fullName: avatarUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'avatarUrl: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.Contact.contactId
+    name: contactId
+    fullName: contactId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'contactId: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.Contact.description
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'description: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.Contact.email
+    name: email
+    fullName: email
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'email: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.Contact.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'id: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.Contact.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'name: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.Contact.phoneNumber
+    name: phoneNumber
+    fullName: phoneNumber
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'phoneNumber: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.Contact.type
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'type: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk

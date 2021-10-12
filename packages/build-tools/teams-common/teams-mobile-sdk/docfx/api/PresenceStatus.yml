@@ -1,0 +1,19 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.PresenceStatus
+    name: PresenceStatus
+    fullName: PresenceStatus
+    children: []
+    langs:
+      - typeScript
+    type: type alias
+    summary: The real time presence status of a person.
+    syntax:
+      content: >-
+        type PresenceStatus = "Available" | "Busy" | "DoNotDisturb" |
+        "BeRightBack" | "Away" | "Offline" | "Reset" | "OffWork" | "Unknown" |
+        "OnThePhone" | "InAConferenceCall" | "InAMeeting" | "Presenting" |
+        "Idle" | "OOF" | "OOFAvailable" | "OOFBusy" | "OOFDoNotDisturb" |
+        "OOFInACall" | "OOFInAConferenceCall" | "OOFPresenting" | "OnShift" |
+        "OffShift" | "Blocked"
+    package: teams-mobile-sdk

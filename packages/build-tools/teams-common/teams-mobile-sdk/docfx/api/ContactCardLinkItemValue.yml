@@ -1,0 +1,83 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.ContactCardLinkItemValue
+    name: ContactCardLinkItemValue
+    fullName: ContactCardLinkItemValue
+    children:
+      - teams-mobile-sdk.ContactCardLinkItemValue.constructor
+      - teams-mobile-sdk.ContactCardLinkItemValue.displayText
+      - teams-mobile-sdk.ContactCardLinkItemValue.linkUrl
+      - teams-mobile-sdk.ContactCardLinkItemValue.valueType
+    langs:
+      - typeScript
+    type: class
+    summary: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ContactCardLinkItemValue.constructor
+    name: 'ContactCardLinkItemValue(string, string)'
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'new ContactCardLinkItemValue(displayText: string, linkUrl: string)'
+      parameters:
+        - id: displayText
+          type:
+            - string
+          description: ''
+        - id: linkUrl
+          type:
+            - string
+          description: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ContactCardLinkItemValue.displayText
+    name: displayText
+    fullName: displayText
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'public displayText: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ContactCardLinkItemValue.linkUrl
+    name: linkUrl
+    fullName: linkUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'public linkUrl: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ContactCardLinkItemValue.valueType
+    name: valueType
+    fullName: valueType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'public valueType: ContactCardItemValueType'
+      return:
+        type:
+          - teams-mobile-sdk.ContactCardItemValueType
+    package: teams-mobile-sdk
+references:
+  - uid: teams-mobile-sdk.ContactCardItemValueType
+    name: ContactCardItemValueType
+    spec.typeScript:
+      - name: ContactCardItemValueType
+        fullName: ContactCardItemValueType
+        uid: teams-mobile-sdk.ContactCardItemValueType

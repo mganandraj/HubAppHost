@@ -1,0 +1,62 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.IShareUtilsModuleNative
+    name: IShareUtilsModuleNative
+    fullName: IShareUtilsModuleNative
+    children:
+      - >-
+        teams-mobile-sdk.IShareUtilsModuleNative.pickTargetFromShareTargetPickerForShareObject
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    extends:
+      name: teams-mobile-sdk.IShareUtilsModule
+    package: teams-mobile-sdk
+  - uid: >-
+      teams-mobile-sdk.IShareUtilsModuleNative.pickTargetFromShareTargetPickerForShareObject
+    name: pickTargetFromShareTargetPickerForShareObject(ShareObject)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |
+      Launches the Teams recipient picker on top of the current view.
+      > [!NOTE]
+      > Calling this method takes the user out of your app.
+    syntax:
+      content: >-
+        function pickTargetFromShareTargetPickerForShareObject(shareObject:
+        ShareObject)
+      parameters:
+        - id: shareObject
+          type:
+            - teams-mobile-sdk.ShareObject
+          description: the object that needs to be shared
+      return:
+        type:
+          - Promise<teams-mobile-sdk.ShareTarget>
+    package: teams-mobile-sdk
+references:
+  - uid: teams-mobile-sdk.IShareUtilsModule
+    name: IShareUtilsModule
+    spec.typeScript:
+      - name: IShareUtilsModule
+        fullName: IShareUtilsModule
+        uid: teams-mobile-sdk.IShareUtilsModule
+  - uid: teams-mobile-sdk.ShareObject
+    name: ShareObject
+    spec.typeScript:
+      - name: ShareObject
+        fullName: ShareObject
+        uid: teams-mobile-sdk.ShareObject
+  - uid: Promise<teams-mobile-sdk.ShareTarget>
+    name: ShareTarget>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: ShareTarget
+        fullName: ShareTarget
+        uid: teams-mobile-sdk.ShareTarget
+      - name: '>'
+        fullName: '>'

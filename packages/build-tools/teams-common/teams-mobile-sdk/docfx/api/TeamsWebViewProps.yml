@@ -1,0 +1,138 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.TeamsWebViewProps
+    name: TeamsWebViewProps
+    fullName: TeamsWebViewProps
+    children:
+      - teams-mobile-sdk.TeamsWebViewProps.injectedJavaScript
+      - teams-mobile-sdk.TeamsWebViewProps.onError
+      - teams-mobile-sdk.TeamsWebViewProps.onLoad
+      - teams-mobile-sdk.TeamsWebViewProps.onLoadEnd
+      - teams-mobile-sdk.TeamsWebViewProps.onLoadStart
+      - teams-mobile-sdk.TeamsWebViewProps.onMessage
+      - teams-mobile-sdk.TeamsWebViewProps.source
+    langs:
+      - typeScript
+    type: interface
+    summary: Props for `TeamsWebView`.
+    extends:
+      name: ViewProps
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsWebViewProps.injectedJavaScript
+    name: injectedJavaScript
+    fullName: injectedJavaScript
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'injectedJavaScript?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsWebViewProps.onError
+    name: onError
+    fullName: onError
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'onError?: undefined | (event: any) => void'
+      return:
+        type:
+          - 'undefined | (event: any) => void'
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsWebViewProps.onLoad
+    name: onLoad
+    fullName: onLoad
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'onLoad?: undefined | (event: any) => void'
+      return:
+        type:
+          - 'undefined | (event: any) => void'
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsWebViewProps.onLoadEnd
+    name: onLoadEnd
+    fullName: onLoadEnd
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'onLoadEnd?: undefined | (event: any) => void'
+      return:
+        type:
+          - 'undefined | (event: any) => void'
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsWebViewProps.onLoadStart
+    name: onLoadStart
+    fullName: onLoadStart
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'onLoadStart?: undefined | (event: any) => void'
+      return:
+        type:
+          - 'undefined | (event: any) => void'
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsWebViewProps.onMessage
+    name: onMessage
+    fullName: onMessage
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'onMessage?: undefined | (event: any) => void'
+      return:
+        type:
+          - 'undefined | (event: any) => void'
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsWebViewProps.source
+    name: source
+    fullName: source
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      Supports raw HTML content, URLs and asset files.
+      To use asset files:
+      ```ts
+      <TeamsWebView source={require('path/to/html/file/example.html')} />
+      ```
+    syntax:
+      content: 'source: WebViewSource | number'
+      return:
+        type:
+          - teams-mobile-sdk.WebViewSource | number
+    package: teams-mobile-sdk
+references:
+  - uid: teams-mobile-sdk.WebViewSource | number
+    name: WebViewSource | number
+    spec.typeScript:
+      - name: WebViewSource
+        fullName: WebViewSource
+        uid: teams-mobile-sdk.WebViewSource
+      - name: ' | number'
+        fullName: ' | number'

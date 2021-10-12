@@ -1,0 +1,446 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.TeamsShell
+    name: TeamsShell
+    fullName: TeamsShell
+    children:
+      - teams-mobile-sdk.TeamsShell.destroy
+      - teams-mobile-sdk.TeamsShell.dismissSnackbar
+      - teams-mobile-sdk.TeamsShell.hideFabLayoutAndroid
+      - teams-mobile-sdk.TeamsShell.invalidateOptionsMenu
+      - teams-mobile-sdk.TeamsShell.registerBackNavigationHandler
+      - teams-mobile-sdk.TeamsShell.removeBackNavigationHandler
+      - teams-mobile-sdk.TeamsShell.setBackgroundColor
+      - teams-mobile-sdk.TeamsShell.setHomeIndicatorBackgroundColorIOS
+      - teams-mobile-sdk.TeamsShell.setSubtitle
+      - teams-mobile-sdk.TeamsShell.setTitle
+      - teams-mobile-sdk.TeamsShell.setTitleDropdown
+      - teams-mobile-sdk.TeamsShell.setTitleWithCallBack
+      - teams-mobile-sdk.TeamsShell.setUpTabs
+      - teams-mobile-sdk.TeamsShell.setUpTabsWithDefaultSelectedTab
+      - teams-mobile-sdk.TeamsShell.showActionSheet
+      - teams-mobile-sdk.TeamsShell.showFabLayoutAndroid
+      - teams-mobile-sdk.TeamsShell.showSnackbar
+      - teams-mobile-sdk.TeamsShell.constructor
+    langs:
+      - typeScript
+    type: class
+    summary: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsShell.destroy
+    name: destroy()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: function destroy()
+      parameters: []
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsShell.dismissSnackbar
+    name: 'dismissSnackbar(number, undefined | (dismissed: boolean) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function dismissSnackbar(snackbarId: number, callback?: undefined |
+        (dismissed: boolean) => void)
+      parameters:
+        - id: snackbarId
+          type:
+            - number
+          description: ''
+        - id: callback
+          type:
+            - 'undefined | (dismissed: boolean) => void'
+          description: ''
+          optional: true
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsShell.hideFabLayoutAndroid
+    name: hideFabLayoutAndroid()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: function hideFabLayoutAndroid()
+      parameters: []
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsShell.invalidateOptionsMenu
+    name: invalidateOptionsMenu()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: function invalidateOptionsMenu()
+      parameters: []
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsShell.registerBackNavigationHandler
+    name: registerBackNavigationHandler(() => void)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >
+      Registers a handler that will be called when the user tries to navigate
+      back from
+
+      the current view. You may use this to warn the user of unsaved changes or
+      any other
+
+      consequences of navigating back from the current view. If the user wishes
+      to go back
+
+      anyway, you should call
+      <code>[closeView](xref:teams-mobile-sdk.TeamsView.closeView)</code>.
+
+      If you don't call `closeView` in your handler, back navigation won't be
+      executed. So,
+
+      your app gains full control of whether or not to allow back navigation.
+
+      Calling this method multiple times will simply overwrite the existing
+      handler.
+
+
+      **Platform specific notes:**
+
+
+      **iOS**
+
+
+      Your handler will be called when either of the following happens:
+
+      1. User taps on the back button of the navigation controller.
+
+      2. User performs a swipe gesture (interactive pop gesture).
+
+
+      **Android**
+
+
+      Your handler will be called either of the following happens:
+
+      1. User taps on the hardware back button of the device.
+
+      2. User taps on the up navigation button on the toolbar.
+    syntax:
+      content: 'function registerBackNavigationHandler(handler: () => void)'
+      parameters:
+        - id: handler
+          type:
+            - () => void
+          description: |
+            a callback that should be called when user attempts to navigate back
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsShell.removeBackNavigationHandler
+    name: removeBackNavigationHandler()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Removes any registered back navigation handlers. You app will no longer
+      have control
+
+      of back navigation. The default back navigation behaviour of the Teams app
+      will come
+
+      into effect.
+    syntax:
+      content: function removeBackNavigationHandler()
+      parameters: []
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsShell.setBackgroundColor
+    name: setBackgroundColor(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function setBackgroundColor(color: string)'
+      parameters:
+        - id: color
+          type:
+            - string
+          description: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsShell.setHomeIndicatorBackgroundColorIOS
+    name: setHomeIndicatorBackgroundColorIOS(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function setHomeIndicatorBackgroundColorIOS(colorInHexCode: string)'
+      parameters:
+        - id: colorInHexCode
+          type:
+            - string
+          description: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsShell.setSubtitle
+    name: setSubtitle(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function setSubtitle(subtitle: string)'
+      parameters:
+        - id: subtitle
+          type:
+            - string
+          description: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsShell.setTitle
+    name: setTitle(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function setTitle(title: string)'
+      parameters:
+        - id: title
+          type:
+            - string
+          description: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsShell.setTitleDropdown
+    name: 'setTitleDropdown(TitleDropdownItem[], (selectedItemId: string) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Sets up a title dropdown. The items are displayed in the order in which
+      they
+
+      are passed to this method. The first item will be selected by default.
+    syntax:
+      content: >-
+        function setTitleDropdown(items: TitleDropdownItem[], handler:
+        (selectedItemId: string) => void)
+      parameters:
+        - id: items
+          type:
+            - 'teams-mobile-sdk.TitleDropdownItem[]'
+          description: |
+            items to be displayed in the title dropdown
+        - id: handler
+          type:
+            - '(selectedItemId: string) => void'
+          description: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsShell.setTitleWithCallBack
+    name: 'setTitleWithCallBack(string, () => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function setTitleWithCallBack(title: string, callback: () => void)'
+      parameters:
+        - id: title
+          type:
+            - string
+          description: ''
+        - id: callback
+          type:
+            - () => void
+          description: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsShell.setUpTabs
+    name: 'setUpTabs(TeamsShellTab[])'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Sets up tabs in AppBar(Android)/NavigationBar(iOS)
+    syntax:
+      content: 'function setUpTabs(tabList: TeamsShellTab[])'
+      parameters:
+        - id: tabList
+          type:
+            - 'teams-mobile-sdk.TeamsShellTab[]'
+          description: |
+            list of tabs to be added to AppBar(Android)/NavigationBar(iOS)
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsShell.setUpTabsWithDefaultSelectedTab
+    name: 'setUpTabsWithDefaultSelectedTab(TeamsShellTab[], string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Sets up tabs in AppBar(Android)/NavigationBar(iOS) with default selected
+      tab
+
+      If defaultSelectedTabId is not present in tab list, first tab from tab
+      list gets selected.
+    syntax:
+      content: >-
+        function setUpTabsWithDefaultSelectedTab(tabList: TeamsShellTab[],
+        defaultSelectedTabId: string)
+      parameters:
+        - id: tabList
+          type:
+            - 'teams-mobile-sdk.TeamsShellTab[]'
+          description: list of tabs to be added to AppBar(Android)/NavigationBar(iOS)
+        - id: defaultSelectedTabId
+          type:
+            - string
+          description: |
+            tab that should be selected when the tabbed view is loaded
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsShell.showActionSheet
+    name: >-
+      showActionSheet(ActionSheet, (selectedOptionId: string) => void, undefined
+      | () => void)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |
+      Shows an action sheet. Available in both Android & iOS.
+      A maximum of 10 options will be shown in the action sheet. Any
+      extra options passed to this method will be ignored.
+
+      If no options are provided in the actionSheet object, the action
+      sheet will not be displayed. If any of the given options are
+      invalid (for example, icon is undefined, label is empty etc.), they
+      are ignored. If all the provided options are invalid, action sheet
+      will not be displayed.
+
+      The onOptionSelected handler is invoked with the option id of the selected
+      option.
+
+      The onCanceled handler is invoked when the user cancels the action sheet.
+      The user can do this by tapping on any area of the screen outside the
+      action sheet or by pressing the back button on Android.
+    syntax:
+      content: >-
+        function showActionSheet(actionSheet: ActionSheet, onOptionSelected:
+        (selectedOptionId: string) => void, onCanceled?: undefined | () => void)
+      parameters:
+        - id: actionSheet
+          type:
+            - teams-mobile-sdk.ActionSheet
+          description: action sheet to show
+        - id: onOptionSelected
+          type:
+            - '(selectedOptionId: string) => void'
+          description: handler to call when a user selects an option in the action sheet.
+        - id: onCanceled
+          type:
+            - undefined | () => void
+          description: |
+            Handler to call when user cancels the action sheet
+          optional: true
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsShell.showFabLayoutAndroid
+    name: showFabLayoutAndroid(FabLayoutParams)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function showFabLayoutAndroid(fabLayoutParams: FabLayoutParams)'
+      parameters:
+        - id: fabLayoutParams
+          type:
+            - teams-mobile-sdk.FabLayoutParams
+          description: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsShell.showSnackbar
+    name: 'showSnackbar(Snackbar, undefined | (snackbarId: number) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function showSnackbar(snackbar: Snackbar, callback?: undefined |
+        (snackbarId: number) => void)
+      parameters:
+        - id: snackbar
+          type:
+            - teams-mobile-sdk.Snackbar
+          description: ''
+        - id: callback
+          type:
+            - 'undefined | (snackbarId: number) => void'
+          description: ''
+          optional: true
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsShell.constructor
+    name: 'TeamsShell(HostContext, TeamsShellInteractionListener)'
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        new TeamsShell(host: HostContext, listener:
+        TeamsShellInteractionListener)
+      parameters:
+        - id: host
+          type:
+            - HostContext
+          description: ''
+        - id: listener
+          type:
+            - TeamsShellInteractionListener
+          description: ''
+    package: teams-mobile-sdk
+references:
+  - uid: 'teams-mobile-sdk.TitleDropdownItem[]'
+    name: 'TitleDropdownItem[]'
+    spec.typeScript:
+      - name: TitleDropdownItem
+        fullName: TitleDropdownItem
+        uid: teams-mobile-sdk.TitleDropdownItem
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'teams-mobile-sdk.TeamsShellTab[]'
+    name: 'TeamsShellTab[]'
+    spec.typeScript:
+      - name: TeamsShellTab
+        fullName: TeamsShellTab
+        uid: teams-mobile-sdk.TeamsShellTab
+      - name: '[]'
+        fullName: '[]'
+  - uid: teams-mobile-sdk.ActionSheet
+    name: ActionSheet
+    spec.typeScript:
+      - name: ActionSheet
+        fullName: ActionSheet
+        uid: teams-mobile-sdk.ActionSheet
+  - uid: teams-mobile-sdk.FabLayoutParams
+    name: FabLayoutParams
+    spec.typeScript:
+      - name: FabLayoutParams
+        fullName: FabLayoutParams
+        uid: teams-mobile-sdk.FabLayoutParams
+  - uid: teams-mobile-sdk.Snackbar
+    name: Snackbar
+    spec.typeScript:
+      - name: Snackbar
+        fullName: Snackbar
+        uid: teams-mobile-sdk.Snackbar

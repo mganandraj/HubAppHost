@@ -1,0 +1,104 @@
+- name: Introduction
+  href: intro.md
+- name: Getting started
+  href: 01_Getting_Started/01_Getting_Started.md
+  items:
+    - name: Creating a new app
+      href: 01_Getting_Started/02_Creating_a_new_app_auto.md
+    - name: Application context
+      href: 01_Getting_Started/03_Application_Context.md
+    - name: Resources
+      href: 01_Getting_Started/04_Resources.md
+    - name: Build & deploy
+      href: 01_Getting_Started/05_Build_and_deploy.md
+    - name: Additional resources
+      href: 01_Getting_Started/06_Additional_resources.md
+    - name: Libraries
+      href: 01_Getting_Started/07_Libraries.md
+    - name: Dev mode
+      href: 01_Getting_Started/08_Dev_mode.md
+    - name: Creating a new app (DEPRECATED)
+      href: 01_Getting_Started/02_Creating_a_new_app.md
+- name: Services
+  items:
+    - name: Authentication
+      href: 02_Services/01_Authentication.md
+    - name: Navigation
+      href: 02_Services/02_Navigation.md
+    - name: Telemetry
+      href: 02_Services/03_Telemetry.md
+- name: Providers
+  items:
+    - name: Device contacts
+      href: 03_Providers/01_Device_Contacts.md
+    - name: Teams and channels
+      href: 03_Providers/02_Teams_and_channels.md
+    - name: Endpoints
+      href: 03_Providers/03_Endpoints.md
+- name: Components
+  items:
+    - name: User avatar
+      href: 05_Components/01_UserAvatar.md
+    - name: State layout
+      href: 05_Components/02_StateLayout.md
+    - name: Teams picker
+      href: 05_Components/03_TeamsPicker.md
+    - name: Teams web view
+      href: 05_Components/04_TeamsWebView.md
+- name: Shell
+  items:
+    - name: Module controls
+      href: 07_Shell/01_Module_controls.md
+    - name: Toolbar
+      href: 07_Shell/02_Toolbar.md
+    - name: Snackbar
+      href: 07_Shell/03_Snackbar.md
+    - name: Action sheets
+      href: 07_Shell/04_Action_Sheet.md
+    - name: Fab layout
+      href: 07_Shell/05_FabLayout.md
+    - name: Title dropdown
+      href: 07_Shell/Title_Dropdown.md
+    - name: Back navigation handling
+      href: 07_Shell/Back_Navigation_Handling.md
+- name: Network
+  items:
+    - name: Network connectivity
+      href: 08_Network/01_Network_connectivity.md
+    - name: Making network calls
+      href: 08_Network/02_Executing_network_calls.md
+- name: Logging
+  items:
+    - name: Trace logs
+      href: 09_Logging/01_Trace_Logs.md
+    - name: Event logs
+      href: 09_Logging/02_Event_Logs.md
+    - name: Telemetry
+      href: 09_Logging/03_Telemetry.md
+    - name: Crash logs
+      href: 09_Logging/04_Crashes_Logs.md
+- name: Publishing
+  items:
+    - name: Setup CodePush
+      href: 10_Publishing/01_Setup_Codepush.md
+    - name: Integrate
+      href: 10_Publishing/02_Integrate.md
+    - name: Publish
+      href: 10_Publishing/03_Publish.md
+    - name: Ring-wise release
+      href: 10_Publishing/04_TeamsRingwiseRelease.md
+- name: Modules
+  items:
+    - name: Date & time picker (Android)
+      href: 11_Modules/01_Date_Time_Picker_Android.md
+    - name: Channel picker
+      href: 11_Modules/02_Channel_Picker.md
+    - name: Sharepoint file preview
+      href: 11_Modules/02_SharepointFilePreview.md
+    - name: Image and file picker
+      href: 11_Modules/04_ImageAndFilePicker.md
+    - name: Teams messaging
+      href: 11_Modules/05_Teams_Messaging.md
+- name: Architecture
+  href: 99_Architecture/01_Architecture.md
+    

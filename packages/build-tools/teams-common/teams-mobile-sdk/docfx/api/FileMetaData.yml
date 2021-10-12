@@ -1,0 +1,73 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.FileMetaData
+    name: FileMetaData
+    fullName: FileMetaData
+    children:
+      - teams-mobile-sdk.FileMetaData.fileExtension
+      - teams-mobile-sdk.FileMetaData.fileIdentifier
+      - teams-mobile-sdk.FileMetaData.fileName
+      - teams-mobile-sdk.FileMetaData.filePath
+    langs:
+      - typeScript
+    type: interface
+    summary: Copyright © Microsoft Corporation. All rights reserved.
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.FileMetaData.fileExtension
+    name: fileExtension
+    fullName: fileExtension
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: File extension for file/image selected from document/image picker
+    syntax:
+      content: 'fileExtension: String'
+      return:
+        type:
+          - String
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.FileMetaData.fileIdentifier
+    name: fileIdentifier
+    fullName: fileIdentifier
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Unique identifier for file/image selected from document/image picker
+    syntax:
+      content: 'fileIdentifier: String'
+      return:
+        type:
+          - String
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.FileMetaData.fileName
+    name: fileName
+    fullName: fileName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      File name without extension for file/image selected from document/image
+      picker
+    syntax:
+      content: 'fileName: String'
+      return:
+        type:
+          - String
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.FileMetaData.filePath
+    name: filePath
+    fullName: filePath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: File extension for file/image selected from document/image picker
+    syntax:
+      content: 'filePath: String'
+      return:
+        type:
+          - String
+    package: teams-mobile-sdk

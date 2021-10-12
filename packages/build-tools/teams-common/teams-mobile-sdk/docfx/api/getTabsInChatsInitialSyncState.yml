@@ -1,0 +1,27 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.getTabsInChatsInitialSyncState
+    name: getTabsInChatsInitialSyncState()
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Get the initial sync status of chats
+    syntax:
+      content: function getTabsInChatsInitialSyncState()
+      parameters: []
+      return:
+        type:
+          - Promise<teams-mobile-sdk.SyncState>
+    package: teams-mobile-sdk
+references:
+  - uid: Promise<teams-mobile-sdk.SyncState>
+    name: SyncState>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: SyncState
+        fullName: SyncState
+        uid: teams-mobile-sdk.SyncState
+      - name: '>'
+        fullName: '>'

@@ -1,0 +1,13 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.IdType
+    name: IdType
+    fullName: IdType
+    children: []
+    langs:
+      - typeScript
+    type: type alias
+    summary: A user identifier type.
+    syntax:
+      content: type IdType = "aadUpn" | "aadObjectId" | "mri"
+    package: teams-mobile-sdk

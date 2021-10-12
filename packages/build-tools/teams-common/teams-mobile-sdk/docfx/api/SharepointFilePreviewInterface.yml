@@ -1,0 +1,83 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.SharepointFilePreviewInterface
+    name: SharepointFilePreviewInterface
+    fullName: SharepointFilePreviewInterface
+    children:
+      - teams-mobile-sdk.SharepointFilePreviewInterface.showPreview
+      - teams-mobile-sdk.SharepointFilePreviewInterface.showPreviewWithScenario
+    langs:
+      - typeScript
+    type: interface
+    summary: Shows Sharepoint File Preview
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.SharepointFilePreviewInterface.showPreview
+    name: 'showPreview(string, string, string, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function showPreview(fileTitle: string, fileUrl: string, fileType:
+        string, fileDownloadUrl: string)
+      parameters:
+        - id: fileTitle
+          type:
+            - string
+          description: ': Name of the File'
+        - id: fileUrl
+          type:
+            - string
+          description: ': Object URL of the File'
+        - id: fileType
+          type:
+            - string
+          description: ': Type of the File'
+        - id: fileDownloadUrl
+          type:
+            - string
+          description: |
+            : Download URL of the File
+      return:
+        type:
+          - any
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.SharepointFilePreviewInterface.showPreviewWithScenario
+    name: 'showPreviewWithScenario(string, string, string, string, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function showPreviewWithScenario(fileTitle: string, fileUrl: string,
+        fileType: string, fileDownloadUrl: string, platformScenarioName: string)
+      parameters:
+        - id: fileTitle
+          type:
+            - string
+          description: ': Name of the File'
+        - id: fileUrl
+          type:
+            - string
+          description: ': Object URL of the File'
+        - id: fileType
+          type:
+            - string
+          description: ': Type of the File'
+        - id: fileDownloadUrl
+          type:
+            - string
+          description: ': Download URL of the File'
+        - id: platformScenarioName
+          type:
+            - string
+          description: |
+            : platform identifier - e.g. <RNAppid_file>
+      return:
+        type:
+          - any
+    package: teams-mobile-sdk

@@ -1,0 +1,50 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.TeamsMessagingCard
+    name: TeamsMessagingCard
+    fullName: TeamsMessagingCard
+    children:
+      - teams-mobile-sdk.TeamsMessagingCard.cardJson
+      - teams-mobile-sdk.TeamsMessagingCard.cardType
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsMessagingCard.cardJson
+    name: cardJson
+    fullName: cardJson
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Cards json  which has to be attached
+    syntax:
+      content: 'cardJson: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsMessagingCard.cardType
+    name: cardType
+    fullName: cardType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Required if `messageType` equals `Card`
+      Indicates type of card
+    syntax:
+      content: 'cardType: TeamsMessageCardType'
+      return:
+        type:
+          - teams-mobile-sdk.TeamsMessageCardType
+    package: teams-mobile-sdk
+references:
+  - uid: teams-mobile-sdk.TeamsMessageCardType
+    name: TeamsMessageCardType
+    spec.typeScript:
+      - name: TeamsMessageCardType
+        fullName: TeamsMessageCardType
+        uid: teams-mobile-sdk.TeamsMessageCardType

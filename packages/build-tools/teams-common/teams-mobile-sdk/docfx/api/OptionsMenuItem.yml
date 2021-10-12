@@ -1,0 +1,73 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.OptionsMenuItem
+    name: OptionsMenuItem
+    fullName: OptionsMenuItem
+    children:
+      - teams-mobile-sdk.OptionsMenuItem.contentDescription
+      - teams-mobile-sdk.OptionsMenuItem.icon
+      - teams-mobile-sdk.OptionsMenuItem.id
+      - teams-mobile-sdk.OptionsMenuItem.title
+    langs:
+      - typeScript
+    type: interface
+    summary: Copyright © Microsoft Corporation. All rights reserved.
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.OptionsMenuItem.contentDescription
+    name: contentDescription
+    fullName: contentDescription
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Description of the content which will be used to support Accessibility
+    optional: true
+    syntax:
+      content: 'contentDescription?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.OptionsMenuItem.icon
+    name: icon
+    fullName: icon
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'icon?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.OptionsMenuItem.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'id: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.OptionsMenuItem.title
+    name: title
+    fullName: title
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'title: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk

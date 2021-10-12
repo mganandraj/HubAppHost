@@ -1,0 +1,41 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.EndpointProviderInterface
+    name: EndpointProviderInterface
+    fullName: EndpointProviderInterface
+    children:
+      - teams-mobile-sdk.EndpointProviderInterface.getMTEndpoint
+      - teams-mobile-sdk.EndpointProviderInterface.getSCSEndpoint
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.EndpointProviderInterface.getMTEndpoint
+    name: getMTEndpoint()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: This method gets the endpoint for middle tier.
+    syntax:
+      content: function getMTEndpoint()
+      parameters: []
+      return:
+        type:
+          - Promise<string>
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.EndpointProviderInterface.getSCSEndpoint
+    name: getSCSEndpoint()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: This method gets the endpoint for Skype Chat Service.
+    syntax:
+      content: function getSCSEndpoint()
+      parameters: []
+      return:
+        type:
+          - Promise<string>
+    package: teams-mobile-sdk

@@ -1,0 +1,125 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.ContactCardHeroItem
+    name: ContactCardHeroItem
+    fullName: ContactCardHeroItem
+    children:
+      - teams-mobile-sdk.ContactCardHeroItem.actions
+      - teams-mobile-sdk.ContactCardHeroItem.avatarUrl
+      - teams-mobile-sdk.ContactCardHeroItem.getProperties
+      - teams-mobile-sdk.ContactCardHeroItem.getTemplate
+      - teams-mobile-sdk.ContactCardHeroItem.subTitle
+      - teams-mobile-sdk.ContactCardHeroItem.title
+    langs:
+      - typeScript
+    type: class
+    summary: ''
+    extends:
+      name: teams-mobile-sdk.ContactCardItem
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ContactCardHeroItem.actions
+    name: actions
+    fullName: actions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'public actions: ContactCardAction[]'
+      return:
+        type:
+          - 'teams-mobile-sdk.ContactCardAction[]'
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ContactCardHeroItem.avatarUrl
+    name: avatarUrl
+    fullName: avatarUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'public avatarUrl?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ContactCardHeroItem.getProperties
+    name: getProperties()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: function getProperties()
+      parameters: []
+      return:
+        type:
+          - any
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ContactCardHeroItem.getTemplate
+    name: getTemplate()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: function getTemplate()
+      parameters: []
+      return:
+        type:
+          - teams-mobile-sdk.ContactCardItemTemplate
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ContactCardHeroItem.subTitle
+    name: subTitle
+    fullName: subTitle
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'public subTitle: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ContactCardHeroItem.title
+    name: title
+    fullName: title
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'public title: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+references:
+  - uid: teams-mobile-sdk.ContactCardItem
+    name: ContactCardItem
+    spec.typeScript:
+      - name: ContactCardItem
+        fullName: ContactCardItem
+        uid: teams-mobile-sdk.ContactCardItem
+  - uid: 'teams-mobile-sdk.ContactCardAction[]'
+    name: 'ContactCardAction[]'
+    spec.typeScript:
+      - name: ContactCardAction
+        fullName: ContactCardAction
+        uid: teams-mobile-sdk.ContactCardAction
+      - name: '[]'
+        fullName: '[]'
+  - uid: teams-mobile-sdk.ContactCardItemTemplate
+    name: ContactCardItemTemplate
+    spec.typeScript:
+      - name: ContactCardItemTemplate
+        fullName: ContactCardItemTemplate
+        uid: teams-mobile-sdk.ContactCardItemTemplate

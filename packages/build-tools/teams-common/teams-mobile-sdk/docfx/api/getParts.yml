@@ -1,0 +1,24 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.getParts
+    name: 'getParts(string, [key: string]: function)'
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getParts<T>(path: string, paramData: [key: string]: function)'
+      parameters:
+        - id: path
+          type:
+            - string
+          description: ''
+        - id: paramData
+          type:
+            - '[key: string]: function'
+          description: ''
+      return:
+        type:
+          - Array<T | string>
+    package: teams-mobile-sdk

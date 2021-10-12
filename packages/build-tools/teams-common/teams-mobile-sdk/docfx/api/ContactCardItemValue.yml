@@ -1,0 +1,64 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.ContactCardItemValue
+    name: ContactCardItemValue
+    fullName: ContactCardItemValue
+    children:
+      - teams-mobile-sdk.ContactCardItemValue.contentDescription
+      - teams-mobile-sdk.ContactCardItemValue.displayText
+      - teams-mobile-sdk.ContactCardItemValue.valueType
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ContactCardItemValue.contentDescription
+    name: contentDescription
+    fullName: contentDescription
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'contentDescription?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ContactCardItemValue.displayText
+    name: displayText
+    fullName: displayText
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'displayText: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ContactCardItemValue.valueType
+    name: valueType
+    fullName: valueType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'valueType: ContactCardItemValueType'
+      return:
+        type:
+          - teams-mobile-sdk.ContactCardItemValueType
+    package: teams-mobile-sdk
+references:
+  - uid: teams-mobile-sdk.ContactCardItemValueType
+    name: ContactCardItemValueType
+    spec.typeScript:
+      - name: ContactCardItemValueType
+        fullName: ContactCardItemValueType
+        uid: teams-mobile-sdk.ContactCardItemValueType

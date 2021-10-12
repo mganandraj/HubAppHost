@@ -1,0 +1,63 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.shareImagesToShareTarget
+    name: 'shareImagesToShareTarget(ShareTarget, string[])'
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >
+      > [!NOTE]
+
+      > This method is deprecated and a new API 'shareToShareTarget' which
+      supports
+
+      > sharing images, text/link or both images and text/links is exposed. It
+      is
+
+      > highly advisible to use 'shareToShareTarget' API instead of
+      'shareImagesToShareTarget'.
+
+      Share images to a target. Calling this method opens the respective chat or
+
+      channel view on top of the current view. The images specified in
+
+      `imageHandles` are added to the compose box. If multiple images are
+
+      specified, each of them appears on a new line i.e. the images are
+
+      vertically stacked.
+
+
+      > [!NOTE]
+
+      > Calling this method takes the user out of your app.
+
+
+      > [!NOTE]
+
+      > Image handles can be obtained via `ImageAndFilePicker` APIs.
+    syntax:
+      content: >-
+        function shareImagesToShareTarget(shareTarget: ShareTarget,
+        imageHandles: string[])
+      parameters:
+        - id: shareTarget
+          type:
+            - teams-mobile-sdk.ShareTarget
+          description: the target recipient to share to
+        - id: imageHandles
+          type:
+            - 'string[]'
+          description: handles of the images that are to be shared
+      return:
+        type:
+          - Promise<void>
+    package: teams-mobile-sdk
+references:
+  - uid: teams-mobile-sdk.ShareTarget
+    name: ShareTarget
+    spec.typeScript:
+      - name: ShareTarget
+        fullName: ShareTarget
+        uid: teams-mobile-sdk.ShareTarget

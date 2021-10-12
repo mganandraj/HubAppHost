@@ -1,0 +1,160 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.TeamsMessagingRequest
+    name: TeamsMessagingRequest
+    fullName: TeamsMessagingRequest
+    children:
+      - teams-mobile-sdk.TeamsMessagingRequest.cards
+      - teams-mobile-sdk.TeamsMessagingRequest.files
+      - teams-mobile-sdk.TeamsMessagingRequest.mentionDictionary
+      - teams-mobile-sdk.TeamsMessagingRequest.messageType
+      - teams-mobile-sdk.TeamsMessagingRequest.rootMessageID
+      - teams-mobile-sdk.TeamsMessagingRequest.text
+      - teams-mobile-sdk.TeamsMessagingRequest.threadID
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsMessagingRequest.cards
+    name: cards
+    fullName: cards
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Card info  which has to be attached
+
+      Cards & files cannot exist together. Files would be ignored when cards is
+      available
+    optional: true
+    syntax:
+      content: 'cards?: TeamsMessagingCard[]'
+      return:
+        type:
+          - 'teams-mobile-sdk.TeamsMessagingCard[]'
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsMessagingRequest.files
+    name: files
+    fullName: files
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: File info which has to be attached
+    optional: true
+    syntax:
+      content: 'files?: TeamsMessagingFile[]'
+      return:
+        type:
+          - 'teams-mobile-sdk.TeamsMessagingFile[]'
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsMessagingRequest.mentionDictionary
+    name: mentionDictionary
+    fullName: mentionDictionary
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Information about mentions
+    optional: true
+    syntax:
+      content: 'mentionDictionary?: Dictionary<TeamsMessagingMention>'
+      return:
+        type:
+          - Dictionary<teams-mobile-sdk.TeamsMessagingMention>
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsMessagingRequest.messageType
+    name: messageType
+    fullName: messageType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Message type - Text or Html or Card
+    syntax:
+      content: 'messageType: TeamsMessageType'
+      return:
+        type:
+          - teams-mobile-sdk.TeamsMessageType
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsMessagingRequest.rootMessageID
+    name: rootMessageID
+    fullName: rootMessageID
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Message ID to which it should be posted as reply.
+      If message should not be posted in reply thread, ignore.
+    optional: true
+    syntax:
+      content: 'rootMessageID?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsMessagingRequest.text
+    name: text
+    fullName: text
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Message to be posted
+    optional: true
+    syntax:
+      content: 'text?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsMessagingRequest.threadID
+    name: threadID
+    fullName: threadID
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Thread ID of the conversation
+    syntax:
+      content: 'threadID: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+references:
+  - uid: 'teams-mobile-sdk.TeamsMessagingCard[]'
+    name: 'TeamsMessagingCard[]'
+    spec.typeScript:
+      - name: TeamsMessagingCard
+        fullName: TeamsMessagingCard
+        uid: teams-mobile-sdk.TeamsMessagingCard
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'teams-mobile-sdk.TeamsMessagingFile[]'
+    name: 'TeamsMessagingFile[]'
+    spec.typeScript:
+      - name: TeamsMessagingFile
+        fullName: TeamsMessagingFile
+        uid: teams-mobile-sdk.TeamsMessagingFile
+      - name: '[]'
+        fullName: '[]'
+  - uid: Dictionary<teams-mobile-sdk.TeamsMessagingMention>
+    name: TeamsMessagingMention>
+    spec.typeScript:
+      - name: Dictionary<
+        fullName: Dictionary<
+      - name: TeamsMessagingMention
+        fullName: TeamsMessagingMention
+        uid: teams-mobile-sdk.TeamsMessagingMention
+      - name: '>'
+        fullName: '>'
+  - uid: teams-mobile-sdk.TeamsMessageType
+    name: TeamsMessageType
+    spec.typeScript:
+      - name: TeamsMessageType
+        fullName: TeamsMessageType
+        uid: teams-mobile-sdk.TeamsMessageType

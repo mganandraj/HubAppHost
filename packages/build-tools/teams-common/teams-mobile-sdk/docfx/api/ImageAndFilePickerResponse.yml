@@ -1,0 +1,108 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.ImageAndFilePickerResponse
+    name: ImageAndFilePickerResponse
+    fullName: ImageAndFilePickerResponse
+    children:
+      - teams-mobile-sdk.ImageAndFilePickerResponse.fileIdentifiers
+      - teams-mobile-sdk.ImageAndFilePickerResponse.fileMetadatas
+      - teams-mobile-sdk.ImageAndFilePickerResponse.statusCode
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ImageAndFilePickerResponse.fileIdentifiers
+    name: fileIdentifiers
+    fullName: fileIdentifiers
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'fileIdentifiers: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: teams-mobile-sdk
+    deprecated:
+      content: >-
+        Array of unique file Identifiers for file/image selected from
+        document/image picker
+  - uid: teams-mobile-sdk.ImageAndFilePickerResponse.fileMetadatas
+    name: fileMetadatas
+    fullName: fileMetadatas
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Array of file metadata for file/image selected from document/image picker
+    syntax:
+      content: 'fileMetadatas: FileMetaData[]'
+      return:
+        type:
+          - 'teams-mobile-sdk.FileMetaData[]'
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ImageAndFilePickerResponse.statusCode
+    name: statusCode
+    fullName: statusCode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      status code for ImageAndFilePicker request <br>
+
+      <br>
+
+      SDKImageAndFilePickerStatusSuccess = 200,                       
+      //Success<br>
+
+      SDKImageAndFilePickerStatusAccessDenied = 403,                   //Camera
+      access denied<br>
+
+      SDKImageAndFilePickerStatusCameraNotSupported = 415,             //Camera
+      not supported in device/simulator<br>
+
+      SDKImageAndFilePickerStatusOfficeLensNotInitialised = 416,       //Office
+      lens failed to initialise<br>
+
+      SDKImageAndFilePickerStatusDocumentMenuNotInitialised = 417,    
+      //Document menu failed to initialise<br>
+
+      SDKImageAndFilePickerStatusFailedToWrite = 418,                  //Image
+      failed to write<br>
+
+      SDKImageAndFilePickerStatusImagePickerFailedFetch = 419,         //Image
+      picker failed to fetch image<br>
+
+      SDKImageAndFilePickerStatusImagePickerCancelled = 420,           //Image
+      picker operation cancelled<br>
+
+      SDKImageAndFilePickerStatusOfficeLensCancelled = 421,            //Office
+      lens operation cancelled<br>
+
+      SDKImageAndFilePickerStatusDocumentProviderCancelled = 422,     
+      //Document Provider cancelled<br>
+
+      SDKImageAndFilePickerStatusEmptyFilePathOrFileIdentifier = 423,  //Empty
+      image path or identifier<br>
+
+      SDKImageAndFilePickerStatusUnknown = 500                         //Some
+      unknown error occured<br>
+    syntax:
+      content: 'statusCode: number'
+      return:
+        type:
+          - number
+    package: teams-mobile-sdk
+references:
+  - uid: 'teams-mobile-sdk.FileMetaData[]'
+    name: 'FileMetaData[]'
+    spec.typeScript:
+      - name: FileMetaData
+        fullName: FileMetaData
+        uid: teams-mobile-sdk.FileMetaData
+      - name: '[]'
+        fullName: '[]'

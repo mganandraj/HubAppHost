@@ -1,0 +1,578 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.TeamsView
+    name: TeamsView
+    fullName: TeamsView<P>
+    children:
+      - teams-mobile-sdk.TeamsView.closeModule
+      - teams-mobile-sdk.TeamsView.closeView
+      - teams-mobile-sdk.TeamsView.closeViewWithResult
+      - teams-mobile-sdk.TeamsView.componentWillUnmount
+      - teams-mobile-sdk.TeamsView.getApplicationContext
+      - teams-mobile-sdk.TeamsView.getEventLogger
+      - teams-mobile-sdk.TeamsView.getOptionsMenuItems
+      - teams-mobile-sdk.TeamsView.getTeamsShell
+      - teams-mobile-sdk.TeamsView.getViewParams
+      - teams-mobile-sdk.TeamsView.onOptionsMenuItemSelected
+      - teams-mobile-sdk.TeamsView.onPrimaryFabClick
+      - teams-mobile-sdk.TeamsView.onSecondaryFabClick
+      - teams-mobile-sdk.TeamsView.onTabSelected
+      - teams-mobile-sdk.TeamsView.onViewAppear
+      - teams-mobile-sdk.TeamsView.openModule
+      - teams-mobile-sdk.TeamsView.openView
+      - teams-mobile-sdk.TeamsView.openViewForResult
+      - teams-mobile-sdk.TeamsView.constructor
+    langs:
+      - typeScript
+    type: class
+    summary: >
+      Base class for a component that represents a view in the Teams app.
+
+      <h4>What is a view?</h4>
+
+
+      Each screen of your module is a view! All components
+
+      that represent a view in the Teams app must extend this class.
+
+
+      This class derives from
+      [React.Component](https://reactjs.org/docs/react-component.html)
+
+      and thus can be used exactly the same way. The generic type parameters
+      needed
+
+      here are the ones that you would normally supply to `React.Component`.
+
+
+      This class performs initialization this is required for some of the other
+      Teams SDK
+
+      functionality to work. So, make sure to always invoke the super class
+      methods in the
+
+      constructor and any of the React component lifecycle methods.
+
+
+      > [!CAUTION]
+
+      > Only the top level components that represent a view should extend
+      `TeamsView`. Extending it in
+
+      > nested components will cause undefined behaviour. Even if it works
+      today, it might not
+
+      > work in future releases of the SDK and should not be relied upon.
+
+
+      <h4>Navigation</h4>
+
+
+      `TeamsView` provides access to all the navigation operations like opening
+      a
+
+      new view, closing current view etc. See the following methods for more
+      info:
+
+      - [openView](xref:teams-mobile-sdk.TeamsView.closeModule)
+
+      - [openViewForResult](xref:teams-mobile-sdk.TeamsView.openViewForResult)
+
+      - [closeView](xref:teams-mobile-sdk.TeamsView.closeView)
+
+      -
+      [closeViewWithResult](xref:teams-mobile-sdk.TeamsView.closeViewWithResult)
+
+      - [openModule](xref:teams-mobile-sdk.TeamsView.openModule)
+
+      - [closeModule](xref:teams-mobile-sdk.TeamsView.closeModule)
+
+
+      <h4>Interacting with the Teams shell</h4>
+
+
+      `TeamsView` also provides the ability to modify the "Teams shell" in which
+      the
+
+      current view exists. This includes ability to set buttons in the
+      navigation bar,
+
+      ability to show/hide a floating action button layout, ability to show
+      action
+
+      sheets and more. You can get an instance of the Teams shell using
+      [[getTeamsShell]].
+
+
+      See [TeamsShell](xref:teams-mobile-sdk.TeamsShell) to know more.
+
+
+      <h4>Example usage</h4>
+
+
+      ```ts
+
+      class MyCustomView extends TeamsView<MyCustomViewProps, MyCustomViewState>
+      {
+        constructor (props: MyCustomViewProps, state?: MyCustomViewState) {
+          super (props, state); // always call super!
+          // your initialization goes here
+        }
+        ...
+        public goToNextView () {
+          this.openView('nextViewIdentifier', {
+              id: '1',
+              name: 'John Doe'
+          });
+          // and similarly you can use closeView and openModule/closeModule
+        }
+        ...
+        private showFab () {
+          // First, get an instance of the teams shell.
+          const teamsShell: TeamsShell = this.getTeamsShell();
+
+          // Now, let's show the fab layout
+          teamsShell.showFabLayoutAndroid({ ... });
+        }
+      }
+
+      ```
+    extends:
+      name: 'Component<P, S, SS>'
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsView.closeModule
+    name: closeModule(undefined | false | true)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Closes the current module.
+    syntax:
+      content: 'function closeModule(success?: undefined | false | true)'
+      parameters:
+        - id: success
+          type:
+            - undefined | false | true
+          description: |
+            whether the current module successfully completed its operation
+          optional: true
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsView.closeView
+    name: closeView(undefined | false | true)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Closes the current view with or without animation.
+    syntax:
+      content: 'function closeView(animated?: undefined | false | true)'
+      parameters:
+        - id: animated
+          type:
+            - undefined | false | true
+          description: |
+            To close the view with animation or not. `true` by default.
+          optional: true
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsView.closeViewWithResult
+    name: 'closeViewWithResult(R, undefined | false | true)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >
+      Closes the current view and returns a result to the previous view.
+
+      The result is passed on to the callback that was specified when calling
+
+      `openViewForResult(...)`.
+
+      These result object is sent across the bridge to the native. So, be
+      mindful of the
+
+      data type limitations of the bridge while choosing the type of data you
+      want
+
+      to send as result.
+    syntax:
+      content: >-
+        function closeViewWithResult<R>(result: R, animated?: undefined | false
+        | true)
+      parameters:
+        - id: result
+          type:
+            - R
+          description: Result to return to the previous view.
+        - id: animated
+          type:
+            - undefined | false | true
+          description: |
+            To close the view with animation or not. `true` by default.
+          optional: true
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsView.componentWillUnmount
+    name: componentWillUnmount()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: function componentWillUnmount()
+      parameters: []
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsView.getApplicationContext
+    name: getApplicationContext()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Gets the current application context. The application context is available
+
+      at the time of view creation so it is safe to call this method any time
+      after
+
+      the super class constructor has been invoked.
+    syntax:
+      content: function getApplicationContext()
+      parameters: []
+      return:
+        type:
+          - teams-mobile-sdk.ApplicationContext
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsView.getEventLogger
+    name: getEventLogger()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Returns an `EventLogger` that can be used to send events to iOS/Android
+      native.
+
+      It is safe to call this method anytime after the super class constructor
+      has
+
+      finished executing. It is safe to store the object returned and use it
+      later.
+    syntax:
+      content: function getEventLogger()
+      parameters: []
+      return:
+        type:
+          - teams-mobile-sdk.EventLogger
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsView.getOptionsMenuItems
+    name: getOptionsMenuItems()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |
+      This method will be called by Teams shell to get the options menu items.
+      Override this if your view needs to display these items. If you want
+      the Teams shell to redraw these items invoke `invalidateOptionsMenu()`.
+      The base class implementation of this method returns an empty array.
+    syntax:
+      content: function getOptionsMenuItems()
+      parameters: []
+      return:
+        type:
+          - 'teams-mobile-sdk.OptionsMenuItem[]'
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsView.getTeamsShell
+    name: getTeamsShell()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Gets the `TeamsShell` instance that can be used in the current view's
+      context
+
+      It is safe to call this method anytime after the super class constructor
+      has
+
+      been invoked.
+    syntax:
+      content: function getTeamsShell()
+      parameters: []
+      return:
+        type:
+          - teams-mobile-sdk.TeamsShell
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsView.getViewParams
+    name: getViewParams()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >
+      Gets the parameters that were passed to this view (if any) casted to the
+
+      specified type. The returned value will be `undefined` if no parameters
+
+      were passed to this view. Check the value before using.
+
+      These parameters can come from various sources:
+
+      1. openView calls: When a view opens another view within the same module
+      by
+         calling `openView` or `openViewForResult`, these parameters represent the
+         params passed to those functions.
+      2. openModule calls: When a module opens another module using openModule
+         params will be passed to the default view of the target module.
+      3. Deep links: When a module opens another module via a deep link the
+      params
+         are passed to the default view of the target module.
+
+      The parameters are available at the time of view creation so it is safe
+
+      to call this method any time after the super class constructor is invoked.
+    syntax:
+      content: function getViewParams<T>()
+      parameters: []
+      return:
+        type:
+          - T | undefined
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsView.onOptionsMenuItemSelected
+    name: onOptionsMenuItemSelected(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |
+      This method will be called whenever the user selects an options menu item.
+      Override this if you need to handle it.
+      The base class implementation is empty.
+    syntax:
+      content: 'function onOptionsMenuItemSelected(selectedMenuItemId: string)'
+      parameters:
+        - id: selectedMenuItemId
+          type:
+            - string
+          description: |
+            ID of the options menu item that was selected
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsView.onPrimaryFabClick
+    name: onPrimaryFabClick()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >
+      [ANDROID ONLY]
+
+      This method will be called when the user clicks on the primary Fab.
+      Override
+
+      this if you have a FAB in your view.
+
+      The base class implementation is empty.
+    syntax:
+      content: function onPrimaryFabClick()
+      parameters: []
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsView.onSecondaryFabClick
+    name: onSecondaryFabClick(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >
+      [ANDROID ONLY]
+
+      This method will be called when the user clicks on the primary FAB.
+      Override
+
+      this if you have a secondary FAB in your view.
+
+      The base class implementation is empty.
+    syntax:
+      content: 'function onSecondaryFabClick(buttonId: string)'
+      parameters:
+        - id: buttonId
+          type:
+            - string
+          description: |
+            ID of the secondary fab that was clicked
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsView.onTabSelected
+    name: onTabSelected(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >
+      This method will be called whenever user selects a tab in the app
+      bar/navigation bar.
+
+      Override this to handle tab selection.
+
+      The base class implementation throws error for not implementing it, this
+      will ensure tab selection is handled properly.
+    syntax:
+      content: 'function onTabSelected(tabId: string)'
+      parameters:
+        - id: tabId
+          type:
+            - string
+          description: |
+            ID of the tab that was selected
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsView.onViewAppear
+    name: onViewAppear()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |
+      This method will be called when the view comes into focus. Override
+      this if you want to perform some action when view appears.
+      The base class implementation is empty.
+    syntax:
+      content: function onViewAppear()
+      parameters: []
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsView.openModule
+    name: 'openModule(string, T)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Opens a module with the given ID. The `params` provided are passed to the
+      newly
+
+      opened module. `params` will be converted to JSON before sending over the
+      bridge
+
+      using `JSON.stringify()`.
+    syntax:
+      content: 'function openModule<T>(moduleId: string, params: T)'
+      parameters:
+        - id: moduleId
+          type:
+            - string
+          description: ID of the module to be opened
+        - id: params
+          type:
+            - T
+          description: |
+            parameters to be passed to the newly opened module.
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsView.openView
+    name: 'openView(string, T)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Pushes a new view with the view name as viewId on the navigation stack.
+
+      If view is not found, first view in the view list defined in manifest is
+      pushed.
+    syntax:
+      content: 'function openView<T>(viewId: string, params: T)'
+      parameters:
+        - id: viewId
+          type:
+            - string
+          description: Name of the view.
+        - id: params
+          type:
+            - T
+          description: |
+            Params to pass to new view.
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsView.openViewForResult
+    name: 'openViewForResult(string, T, (closeHostResult: R) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >
+      Pushes a new view with the given viewId on the navigation stack (i.e. on
+      top of the
+
+      current view). If view is not found, first view in the view list defined
+      in manifest
+
+      is pushed. Callback called with the returned result when the view is
+      closed.
+
+      The contents of `params` are sent across the bridge to the native. So, be
+      mindful of the
+
+      data type limitations of the bridge while choosing the type of data you
+      want
+
+      to send as parameters to the new view.
+    syntax:
+      content: >-
+        function openViewForResult<T>(viewId: string, params: T, callback:
+        (closeHostResult: R) => void)
+      parameters:
+        - id: viewId
+          type:
+            - string
+          description: Name of the view (as defined in the manifest).
+        - id: params
+          type:
+            - T
+          description: Parameters to pass to new view.
+        - id: callback
+          type:
+            - '(closeHostResult: R) => void'
+          description: |
+            function to be called when the view that is being opened is closed.
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsView.constructor
+    name: 'TeamsView(P, S)'
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'new TeamsView(props: P, state?: S)'
+      parameters:
+        - id: props
+          type:
+            - P
+          description: ''
+        - id: state
+          type:
+            - S
+          description: ''
+          optional: true
+    package: teams-mobile-sdk
+references:
+  - uid: teams-mobile-sdk.ApplicationContext
+    name: ApplicationContext
+    spec.typeScript:
+      - name: ApplicationContext
+        fullName: ApplicationContext
+        uid: teams-mobile-sdk.ApplicationContext
+  - uid: teams-mobile-sdk.EventLogger
+    name: EventLogger
+    spec.typeScript:
+      - name: EventLogger
+        fullName: EventLogger
+        uid: teams-mobile-sdk.EventLogger
+  - uid: 'teams-mobile-sdk.OptionsMenuItem[]'
+    name: 'OptionsMenuItem[]'
+    spec.typeScript:
+      - name: OptionsMenuItem
+        fullName: OptionsMenuItem
+        uid: teams-mobile-sdk.OptionsMenuItem
+      - name: '[]'
+        fullName: '[]'
+  - uid: teams-mobile-sdk.TeamsShell
+    name: TeamsShell
+    spec.typeScript:
+      - name: TeamsShell
+        fullName: TeamsShell
+        uid: teams-mobile-sdk.TeamsShell

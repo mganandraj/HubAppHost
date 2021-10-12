@@ -1,0 +1,93 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.TeamsMessagingFile
+    name: TeamsMessagingFile
+    fullName: TeamsMessagingFile
+    children:
+      - teams-mobile-sdk.TeamsMessagingFile.botFileProperties
+      - teams-mobile-sdk.TeamsMessagingFile.fileInfo
+      - teams-mobile-sdk.TeamsMessagingFile.fileName
+      - teams-mobile-sdk.TeamsMessagingFile.fileType
+      - teams-mobile-sdk.TeamsMessagingFile.itemid
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsMessagingFile.botFileProperties
+    name: botFileProperties
+    fullName: botFileProperties
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Bot file properties info
+    syntax:
+      content: 'botFileProperties: Dictionary<any>'
+      return:
+        type:
+          - Dictionary<any>
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsMessagingFile.fileInfo
+    name: fileInfo
+    fullName: fileInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: File info
+    syntax:
+      content: 'fileInfo: TeamsMessagingFileInfo'
+      return:
+        type:
+          - teams-mobile-sdk.TeamsMessagingFileInfo
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsMessagingFile.fileName
+    name: fileName
+    fullName: fileName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: File name
+    syntax:
+      content: 'fileName: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsMessagingFile.fileType
+    name: fileType
+    fullName: fileType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: File type - deeplink or file extension
+    syntax:
+      content: 'fileType: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsMessagingFile.itemid
+    name: itemid
+    fullName: itemid
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Item id for the file
+    syntax:
+      content: 'itemid: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+references:
+  - uid: teams-mobile-sdk.TeamsMessagingFileInfo
+    name: TeamsMessagingFileInfo
+    spec.typeScript:
+      - name: TeamsMessagingFileInfo
+        fullName: TeamsMessagingFileInfo
+        uid: teams-mobile-sdk.TeamsMessagingFileInfo

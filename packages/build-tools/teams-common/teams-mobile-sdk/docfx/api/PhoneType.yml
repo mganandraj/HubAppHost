@@ -1,0 +1,51 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.PhoneType
+    name: PhoneType
+    fullName: PhoneType
+    children:
+      - teams-mobile-sdk.PhoneType.BUSINESS
+      - teams-mobile-sdk.PhoneType.HOME
+      - teams-mobile-sdk.PhoneType.MOBILE
+      - teams-mobile-sdk.PhoneType.NONE
+    langs:
+      - typeScript
+    type: enum
+    summary: The phone number type of a given Phone object.
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.PhoneType.BUSINESS
+    name: BUSINESS
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: null
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.PhoneType.HOME
+    name: HOME
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: null
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.PhoneType.MOBILE
+    name: MOBILE
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: null
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.PhoneType.NONE
+    name: NONE
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: null
+    package: teams-mobile-sdk

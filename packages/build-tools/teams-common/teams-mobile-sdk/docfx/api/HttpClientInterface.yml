@@ -1,0 +1,66 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.HttpClientInterface
+    name: HttpClientInterface
+    fullName: HttpClientInterface
+    children:
+      - teams-mobile-sdk.HttpClientInterface.cancel
+      - teams-mobile-sdk.HttpClientInterface.execute
+    langs:
+      - typeScript
+    type: interface
+    summary: Executes network calls.
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.HttpClientInterface.cancel
+    name: cancel(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function cancel(requestId: string)'
+      parameters:
+        - id: requestId
+          type:
+            - string
+          description: ''
+      return:
+        type:
+          - any
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.HttpClientInterface.execute
+    name: execute(HttpRequest)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function execute(request: HttpRequest)'
+      parameters:
+        - id: request
+          type:
+            - teams-mobile-sdk.HttpRequest
+          description: ''
+      return:
+        type:
+          - Promise<teams-mobile-sdk.HttpResponse>
+    package: teams-mobile-sdk
+references:
+  - uid: teams-mobile-sdk.HttpRequest
+    name: HttpRequest
+    spec.typeScript:
+      - name: HttpRequest
+        fullName: HttpRequest
+        uid: teams-mobile-sdk.HttpRequest
+  - uid: Promise<teams-mobile-sdk.HttpResponse>
+    name: HttpResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: HttpResponse
+        fullName: HttpResponse
+        uid: teams-mobile-sdk.HttpResponse
+      - name: '>'
+        fullName: '>'

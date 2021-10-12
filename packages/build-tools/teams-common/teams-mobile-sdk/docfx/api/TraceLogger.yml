@@ -1,0 +1,111 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.TraceLogger
+    name: TraceLogger
+    fullName: TraceLogger
+    children:
+      - teams-mobile-sdk.TraceLogger.logDebug
+      - teams-mobile-sdk.TraceLogger.logError
+      - teams-mobile-sdk.TraceLogger.logInformation
+      - teams-mobile-sdk.TraceLogger.logVerbose
+      - teams-mobile-sdk.TraceLogger.logWarning
+    langs:
+      - typeScript
+    type: class
+    summary: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TraceLogger.logDebug
+    name: 'logDebug(string, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'static function logDebug(tag: string, message: string)'
+      parameters:
+        - id: tag
+          type:
+            - string
+          description: ''
+        - id: message
+          type:
+            - string
+          description: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TraceLogger.logError
+    name: 'logError(string, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'static function logError(tag: string, message: string)'
+      parameters:
+        - id: tag
+          type:
+            - string
+          description: ''
+        - id: message
+          type:
+            - string
+          description: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TraceLogger.logInformation
+    name: 'logInformation(string, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'static function logInformation(tag: string, message: string)'
+      parameters:
+        - id: tag
+          type:
+            - string
+          description: ''
+        - id: message
+          type:
+            - string
+          description: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TraceLogger.logVerbose
+    name: 'logVerbose(string, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'static function logVerbose(tag: string, message: string)'
+      parameters:
+        - id: tag
+          type:
+            - string
+          description: ''
+        - id: message
+          type:
+            - string
+          description: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TraceLogger.logWarning
+    name: 'logWarning(string, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'static function logWarning(tag: string, message: string)'
+      parameters:
+        - id: tag
+          type:
+            - string
+          description: ''
+        - id: message
+          type:
+            - string
+          description: ''
+    package: teams-mobile-sdk

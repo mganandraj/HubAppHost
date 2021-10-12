@@ -1,0 +1,71 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.TeamsMessagingFileInfo
+    name: TeamsMessagingFileInfo
+    fullName: TeamsMessagingFileInfo
+    children:
+      - teams-mobile-sdk.TeamsMessagingFileInfo.fileUrl
+      - teams-mobile-sdk.TeamsMessagingFileInfo.serverRelativeUrl
+      - teams-mobile-sdk.TeamsMessagingFileInfo.siteUrl
+    langs:
+      - typeScript
+    type: interface
+    summary: Copyright © Microsoft Corporation. All rights reserved.
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsMessagingFileInfo.fileUrl
+    name: fileUrl
+    fullName: fileUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      File url - Complete url to the file
+
+      Eg:
+      https://microsoft.sharepoint.com/teams/veryveryveryveryveryverylongteamname/Shared%20Documents/General/IMG_0037.JPG
+    optional: true
+    syntax:
+      content: 'fileUrl?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsMessagingFileInfo.serverRelativeUrl
+    name: serverRelativeUrl
+    fullName: serverRelativeUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Relative url from site url - Path component of file url or deeplink params
+
+      Eg: /teams/veryveryveryveryveryverylongteamname/Shared
+      Documents/General/IMG_0037.JPG
+    optional: true
+    syntax:
+      content: 'serverRelativeUrl?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsMessagingFileInfo.siteUrl
+    name: siteUrl
+    fullName: siteUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Base url / site url
+
+      Eg:
+      https://microsoft.sharepoint.com/teams/veryveryveryveryveryverylongteamname
+    optional: true
+    syntax:
+      content: 'siteUrl?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: teams-mobile-sdk

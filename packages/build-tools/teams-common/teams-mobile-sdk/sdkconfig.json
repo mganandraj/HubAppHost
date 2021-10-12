@@ -1,0 +1,11 @@
+{
+    "devAppDownloadConfig": {
+        "ownerName": "thomas-olsen-er92",
+        "android":{
+            "appName": "Microsoft-Teams-ARM-Canary"
+        },
+        "ios":{
+            "appName": "Microsoft-Teams-Canary-iOS"
+        }
+    }
+}

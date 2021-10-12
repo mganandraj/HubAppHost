@@ -1,0 +1,41 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.SnackbarDuration
+    name: SnackbarDuration
+    fullName: SnackbarDuration
+    children:
+      - teams-mobile-sdk.SnackbarDuration.SHORT
+      - teams-mobile-sdk.SnackbarDuration.LONG
+      - teams-mobile-sdk.SnackbarDuration.INDEFINITE
+    langs:
+      - typeScript
+    type: enum
+    summary: Copyright © Microsoft Corporation. All rights reserved.
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.SnackbarDuration.SHORT
+    name: SHORT
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: 0
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.SnackbarDuration.LONG
+    name: LONG
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: 1
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.SnackbarDuration.INDEFINITE
+    name: INDEFINITE
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: 2
+    package: teams-mobile-sdk

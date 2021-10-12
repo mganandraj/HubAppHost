@@ -1,0 +1,44 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.TeamsMessagingInterface
+    name: TeamsMessagingInterface
+    fullName: TeamsMessagingInterface
+    children:
+      - teams-mobile-sdk.TeamsMessagingInterface.postMessageWithParams
+    langs:
+      - typeScript
+    type: interface
+    summary: Teams Messaging
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsMessagingInterface.postMessageWithParams
+    name: postMessageWithParams(Dictionary<any>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |
+      API to post message to Teams channel / chat.
+      If message sending is not successful, promise
+      will be returned with failure status code.
+    syntax:
+      content: 'function postMessageWithParams(params: Dictionary<any>)'
+      parameters:
+        - id: params
+          type:
+            - Dictionary<any>
+          description: param dictionary to post message
+      return:
+        type:
+          - Promise<teams-mobile-sdk.TeamsMessagingResponse>
+    package: teams-mobile-sdk
+references:
+  - uid: Promise<teams-mobile-sdk.TeamsMessagingResponse>
+    name: TeamsMessagingResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: TeamsMessagingResponse
+        fullName: TeamsMessagingResponse
+        uid: teams-mobile-sdk.TeamsMessagingResponse
+      - name: '>'
+        fullName: '>'

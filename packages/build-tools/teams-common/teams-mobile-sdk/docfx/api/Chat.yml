@@ -1,0 +1,135 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.Chat
+    name: Chat
+    fullName: Chat
+    children:
+      - teams-mobile-sdk.Chat.consumerGroupId
+      - teams-mobile-sdk.Chat.conversationId
+      - teams-mobile-sdk.Chat.displayName
+      - teams-mobile-sdk.Chat.isChatCreatedByConsumerAccount
+      - teams-mobile-sdk.Chat.isFederatedChat
+      - teams-mobile-sdk.Chat.isGroupChat
+      - teams-mobile-sdk.Chat.isSMSChat
+      - teams-mobile-sdk.Chat.type
+    langs:
+      - typeScript
+    type: class
+    summary: Represent details about a chat
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.Chat.consumerGroupId
+    name: consumerGroupId
+    fullName: consumerGroupId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'public consumerGroupId: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.Chat.conversationId
+    name: conversationId
+    fullName: conversationId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'public conversationId: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.Chat.displayName
+    name: displayName
+    fullName: displayName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'public displayName: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.Chat.isChatCreatedByConsumerAccount
+    name: isChatCreatedByConsumerAccount()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Check if a chat is created by Consumer account or not
+
+      Consumer account - Consumer users are Skype users available from SfC
+      interop in enterprise scenarios, or TfL users.
+    syntax:
+      content: function isChatCreatedByConsumerAccount()
+      parameters: []
+      return:
+        type:
+          - boolean
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.Chat.isFederatedChat
+    name: isFederatedChat()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Check if the chat is federated or not
+    syntax:
+      content: function isFederatedChat()
+      parameters: []
+      return:
+        type:
+          - boolean
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.Chat.isGroupChat
+    name: isGroupChat()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Check if a chat is a group chat or not
+    syntax:
+      content: function isGroupChat()
+      parameters: []
+      return:
+        type:
+          - boolean
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.Chat.isSMSChat
+    name: isSMSChat()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Check if a chat is a oneOnoneSmsChat or not
+    syntax:
+      content: function isSMSChat()
+      parameters: []
+      return:
+        type:
+          - boolean
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.Chat.type
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'public type: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk

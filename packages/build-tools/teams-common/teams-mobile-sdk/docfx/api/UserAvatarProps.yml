@@ -1,0 +1,90 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.UserAvatarProps
+    name: UserAvatarProps
+    fullName: UserAvatarProps
+    children:
+      - teams-mobile-sdk.UserAvatarProps.displayName
+      - teams-mobile-sdk.UserAvatarProps.showPresenceIndicator
+      - teams-mobile-sdk.UserAvatarProps.userAvatarUrl
+      - teams-mobile-sdk.UserAvatarProps.userId
+      - teams-mobile-sdk.UserAvatarProps.userIdType
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.UserAvatarProps.displayName
+    name: displayName
+    fullName: displayName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'displayName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.UserAvatarProps.showPresenceIndicator
+    name: showPresenceIndicator
+    fullName: showPresenceIndicator
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'showPresenceIndicator?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.UserAvatarProps.userAvatarUrl
+    name: userAvatarUrl
+    fullName: userAvatarUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'userAvatarUrl?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.UserAvatarProps.userId
+    name: userId
+    fullName: userId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'userId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.UserAvatarProps.userIdType
+    name: userIdType
+    fullName: userIdType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'userIdType: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk

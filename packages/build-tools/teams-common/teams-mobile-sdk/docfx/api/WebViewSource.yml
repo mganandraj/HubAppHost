@@ -1,0 +1,66 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.WebViewSource
+    name: WebViewSource
+    fullName: WebViewSource
+    children:
+      - teams-mobile-sdk.WebViewSource.headers
+      - teams-mobile-sdk.WebViewSource.html
+      - teams-mobile-sdk.WebViewSource.uri
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.WebViewSource.headers
+    name: headers
+    fullName: headers
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'headers?: AuthorizationHeaders'
+      return:
+        type:
+          - teams-mobile-sdk.AuthorizationHeaders
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.WebViewSource.html
+    name: html
+    fullName: html
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'html?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.WebViewSource.uri
+    name: uri
+    fullName: uri
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'uri?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: teams-mobile-sdk
+references:
+  - uid: teams-mobile-sdk.AuthorizationHeaders
+    name: AuthorizationHeaders
+    spec.typeScript:
+      - name: AuthorizationHeaders
+        fullName: AuthorizationHeaders
+        uid: teams-mobile-sdk.AuthorizationHeaders

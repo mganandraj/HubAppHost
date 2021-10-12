@@ -1,0 +1,38 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.ContactCardAction
+    name: ContactCardAction
+    fullName: ContactCardAction
+    children:
+      - teams-mobile-sdk.ContactCardAction.OpenChat
+      - teams-mobile-sdk.ContactCardAction.StartAudioCall
+      - teams-mobile-sdk.ContactCardAction.StartVideoCall
+    langs:
+      - typeScript
+    type: enum
+    summary: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ContactCardAction.OpenChat
+    name: OpenChat
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ContactCardAction.StartAudioCall
+    name: StartAudioCall
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ContactCardAction.StartVideoCall
+    name: StartVideoCall
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    package: teams-mobile-sdk

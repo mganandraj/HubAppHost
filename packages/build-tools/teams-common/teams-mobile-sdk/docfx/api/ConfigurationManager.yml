@@ -1,0 +1,49 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.ConfigurationManager
+    name: ConfigurationManager
+    fullName: ConfigurationManager
+    children:
+      - teams-mobile-sdk.ConfigurationManager.getInstance
+      - teams-mobile-sdk.ConfigurationManager.setAriaTenant
+    langs:
+      - typeScript
+    type: class
+    summary: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ConfigurationManager.getInstance
+    name: getInstance()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: static function getInstance()
+      parameters: []
+      return:
+        type:
+          - teams-mobile-sdk.ConfigurationManager
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ConfigurationManager.setAriaTenant
+    name: setAriaTenant(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function setAriaTenant(tenantToken: string)'
+      parameters:
+        - id: tenantToken
+          type:
+            - string
+          description: ''
+    package: teams-mobile-sdk
+references:
+  - uid: teams-mobile-sdk.ConfigurationManager
+    name: ConfigurationManager
+    spec.typeScript:
+      - name: ConfigurationManager
+        fullName: ConfigurationManager
+        uid: teams-mobile-sdk.ConfigurationManager

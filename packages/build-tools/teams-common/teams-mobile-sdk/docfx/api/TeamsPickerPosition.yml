@@ -1,0 +1,29 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.TeamsPickerPosition
+    name: TeamsPickerPosition
+    fullName: TeamsPickerPosition
+    children:
+      - teams-mobile-sdk.TeamsPickerPosition.BOTTOM
+      - teams-mobile-sdk.TeamsPickerPosition.TOP
+    langs:
+      - typeScript
+    type: enum
+    summary: Defines where picker suggestions should appear.
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsPickerPosition.BOTTOM
+    name: BOTTOM
+    children: []
+    langs:
+      - typeScript
+    summary: Picker suggestions will appear below the search box.
+    type: field
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsPickerPosition.TOP
+    name: TOP
+    children: []
+    langs:
+      - typeScript
+    summary: Picker suggestions will appear above the search box.
+    type: field
+    package: teams-mobile-sdk

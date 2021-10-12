@@ -1,0 +1,93 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.ContactList
+    name: ContactList
+    fullName: ContactList
+    children:
+      - teams-mobile-sdk.ContactList.contactListType
+      - teams-mobile-sdk.ContactList.createdDate
+      - teams-mobile-sdk.ContactList.displayName
+      - teams-mobile-sdk.ContactList.eTag
+      - teams-mobile-sdk.ContactList.id
+    langs:
+      - typeScript
+    type: interface
+    summary: Represents the contact list
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ContactList.contactListType
+    name: contactListType
+    fullName: contactListType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'contactListType: ContactListType'
+      return:
+        type:
+          - teams-mobile-sdk.ContactListType
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ContactList.createdDate
+    name: createdDate
+    fullName: createdDate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'createdDate: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ContactList.displayName
+    name: displayName
+    fullName: displayName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'displayName: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ContactList.eTag
+    name: eTag
+    fullName: eTag
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'eTag: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ContactList.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'id: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+references:
+  - uid: teams-mobile-sdk.ContactListType
+    name: ContactListType
+    spec.typeScript:
+      - name: ContactListType
+        fullName: ContactListType
+        uid: teams-mobile-sdk.ContactListType

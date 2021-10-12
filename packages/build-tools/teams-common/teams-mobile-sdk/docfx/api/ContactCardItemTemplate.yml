@@ -1,0 +1,56 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.ContactCardItemTemplate
+    name: ContactCardItemTemplate
+    fullName: ContactCardItemTemplate
+    children:
+      - teams-mobile-sdk.ContactCardItemTemplate.EditButton
+      - teams-mobile-sdk.ContactCardItemTemplate.Hero
+      - teams-mobile-sdk.ContactCardItemTemplate.MultiValue
+      - teams-mobile-sdk.ContactCardItemTemplate.SectionHeader
+      - teams-mobile-sdk.ContactCardItemTemplate.SingleValue
+    langs:
+      - typeScript
+    type: enum
+    summary: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ContactCardItemTemplate.EditButton
+    name: EditButton
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ContactCardItemTemplate.Hero
+    name: Hero
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ContactCardItemTemplate.MultiValue
+    name: MultiValue
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ContactCardItemTemplate.SectionHeader
+    name: SectionHeader
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ContactCardItemTemplate.SingleValue
+    name: SingleValue
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    package: teams-mobile-sdk

@@ -1,0 +1,16 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.getLocale
+    name: getLocale()
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: function getLocale()
+      parameters: []
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk

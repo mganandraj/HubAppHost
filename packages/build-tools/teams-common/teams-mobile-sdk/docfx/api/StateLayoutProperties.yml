@@ -1,0 +1,68 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.StateLayoutProperties
+    name: StateLayoutProperties
+    fullName: StateLayoutProperties
+    children:
+      - teams-mobile-sdk.StateLayoutProperties.onChange
+      - teams-mobile-sdk.StateLayoutProperties.syncing
+      - teams-mobile-sdk.StateLayoutProperties.viewState
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    extends:
+      name: ViewProps
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.StateLayoutProperties.onChange
+    name: onChange
+    fullName: onChange
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'onChange?: any'
+      return:
+        type:
+          - any
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.StateLayoutProperties.syncing
+    name: syncing
+    fullName: syncing
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'syncing?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.StateLayoutProperties.viewState
+    name: viewState
+    fullName: viewState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'viewState?: ViewState'
+      return:
+        type:
+          - teams-mobile-sdk.ViewState
+    package: teams-mobile-sdk
+references:
+  - uid: teams-mobile-sdk.ViewState
+    name: ViewState
+    spec.typeScript:
+      - name: ViewState
+        fullName: ViewState
+        uid: teams-mobile-sdk.ViewState

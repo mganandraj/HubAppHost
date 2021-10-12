@@ -1,0 +1,9 @@
+{
+  "accessToken": "<GENERATE TOKEN AT https://appcenter.ms/settings/apitokens>",
+  "appName": "Teams-Mobile-Platform/SDK-Example",
+  "deployment": "Dev-Testing",
+  "description": "Published via build script.",
+  "additionalArgs": [
+    "--debug"
+  ]
+}

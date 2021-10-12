@@ -1,0 +1,30 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.IModuleLifecycleHandler
+    name: IModuleLifecycleHandler
+    fullName: IModuleLifecycleHandler
+    children:
+      - teams-mobile-sdk.IModuleLifecycleHandler.onUserSignedOut
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.IModuleLifecycleHandler.onUserSignedOut
+    name: onUserSignedOut(any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function onUserSignedOut(event: any)'
+      parameters:
+        - id: event
+          type:
+            - any
+          description: ''
+      return:
+        type:
+          - any
+    package: teams-mobile-sdk

@@ -1,0 +1,44 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.shareToShareTarget
+    name: 'shareToShareTarget(ShareTarget, ShareObject)'
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: |
+      Share information, such as, images, text to a target. Calling this method
+      opens the respective chat or channel view on top of the current view.
+      The information passed is added to compose box.
+      > [!NOTE]
+      > Calling this method takes the user out of your app.
+    syntax:
+      content: >-
+        function shareToShareTarget(shareTarget: ShareTarget, shareObject:
+        ShareObject)
+      parameters:
+        - id: shareTarget
+          type:
+            - teams-mobile-sdk.ShareTarget
+          description: the target recipient to share to
+        - id: shareObject
+          type:
+            - teams-mobile-sdk.ShareObject
+          description: images and/or text which may contain link to be shared.
+      return:
+        type:
+          - Promise<void>
+    package: teams-mobile-sdk
+references:
+  - uid: teams-mobile-sdk.ShareTarget
+    name: ShareTarget
+    spec.typeScript:
+      - name: ShareTarget
+        fullName: ShareTarget
+        uid: teams-mobile-sdk.ShareTarget
+  - uid: teams-mobile-sdk.ShareObject
+    name: ShareObject
+    spec.typeScript:
+      - name: ShareObject
+        fullName: ShareObject
+        uid: teams-mobile-sdk.ShareObject

@@ -1,0 +1,56 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.DeepLinkUtils
+    name: DeepLinkUtils
+    fullName: DeepLinkUtils
+    children:
+      - teams-mobile-sdk.DeepLinkUtils.executeDeepLink
+      - teams-mobile-sdk.DeepLinkUtils.getDeepLinkForModule
+    langs:
+      - typeScript
+    type: class
+    summary: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.DeepLinkUtils.executeDeepLink
+    name: executeDeepLink(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Navigates user to a given deep link URL within Teams.
+
+      If the given deep link is not supported by Teams, user will be navigated
+      to the URL in browser.
+    syntax:
+      content: 'static function executeDeepLink(deepLink: string)'
+      parameters:
+        - id: deepLink
+          type:
+            - string
+          description: |
+            to any module in Teams.
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.DeepLinkUtils.getDeepLinkForModule
+    name: 'getDeepLinkForModule(string, any)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Gets the deep link for a module. Deeplinks can be opened using `Linking`.
+    syntax:
+      content: 'static function getDeepLinkForModule(moduleId: string, params: any)'
+      parameters:
+        - id: moduleId
+          type:
+            - string
+          description: target module ID
+        - id: params
+          type:
+            - any
+          description: |
+            params to be included in the deep link
+      return:
+        type:
+          - Promise<string>
+    package: teams-mobile-sdk

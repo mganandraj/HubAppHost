@@ -1,0 +1,38 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.UserInfoProviderInterface
+    name: UserInfoProviderInterface
+    fullName: UserInfoProviderInterface
+    children:
+      - teams-mobile-sdk.UserInfoProviderInterface.getUserLicense
+    langs:
+      - typeScript
+    type: interface
+    summary: |
+      User information provider
+      Method in this interface has equivalents in native code.
+
+      See SdkUsersProviderModule.java for Android.
+
+      See SDKUsersProviderModule.m for iOS.
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.UserInfoProviderInterface.getUserLicense
+    name: getUserLicense()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      This method fetches the user license. It checks if the user
+      is having EDU license i.e. either
+      1. Teacher (TeamsForFacultyEducation) or
+      2. Student (TeamsForStudentEducation),
+      if the user license is not EDU then it checks
+      if the user is having TeamsForLife (TFL) or TeamsForWork (TFW) license.
+    syntax:
+      content: function getUserLicense()
+      parameters: []
+      return:
+        type:
+          - Promise<string>
+    package: teams-mobile-sdk

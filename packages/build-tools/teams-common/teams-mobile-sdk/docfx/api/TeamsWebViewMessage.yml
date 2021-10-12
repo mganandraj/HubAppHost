@@ -1,0 +1,28 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.TeamsWebViewMessage
+    name: TeamsWebViewMessage
+    fullName: TeamsWebViewMessage
+    children:
+      - teams-mobile-sdk.TeamsWebViewMessage.data
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      Structure of the native event passed to `onMessage` prop of
+      the web view.
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsWebViewMessage.data
+    name: data
+    fullName: data
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'data: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk

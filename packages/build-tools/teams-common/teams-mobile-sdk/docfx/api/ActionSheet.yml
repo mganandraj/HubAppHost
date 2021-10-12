@@ -1,0 +1,83 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.ActionSheet
+    name: ActionSheet
+    fullName: ActionSheet
+    children:
+      - teams-mobile-sdk.ActionSheet.message
+      - teams-mobile-sdk.ActionSheet.options
+      - teams-mobile-sdk.ActionSheet.title
+    langs:
+      - typeScript
+    type: interface
+    summary: >-
+      Represents an action sheet.
+
+      https://developer.apple.com/design/human-interface-guidelines/ios/views/action-sheets/
+
+      https://material.io/develop/android/components/bottom-sheet-behavior/
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ActionSheet.message
+    name: message
+    fullName: message
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      A brief message for the action sheet. Think of this as
+      a subtitle. Message is displayed just below the title
+      in a smaller font.
+    optional: true
+    syntax:
+      content: 'message?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ActionSheet.options
+    name: options
+    fullName: options
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      List of options to be shown in the action sheet (max 10).
+
+      No action sheet will be displayed if this array is empty.
+
+      Any invalid objects in the array (e.g. if icon is not SVG) will be
+      ignored.
+    syntax:
+      content: 'options: ActionSheetOption[]'
+      return:
+        type:
+          - 'teams-mobile-sdk.ActionSheetOption[]'
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ActionSheet.title
+    name: title
+    fullName: title
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Title for the action sheet.
+      This is displayed on top of the sheet.
+    optional: true
+    syntax:
+      content: 'title?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: teams-mobile-sdk
+references:
+  - uid: 'teams-mobile-sdk.ActionSheetOption[]'
+    name: 'ActionSheetOption[]'
+    spec.typeScript:
+      - name: ActionSheetOption
+        fullName: ActionSheetOption
+        uid: teams-mobile-sdk.ActionSheetOption
+      - name: '[]'
+        fullName: '[]'

@@ -1,0 +1,51 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.ImageQuality
+    name: ImageQuality
+    fullName: ImageQuality
+    children:
+      - teams-mobile-sdk.ImageQuality.EXCELLENT
+      - teams-mobile-sdk.ImageQuality.GOOD
+      - teams-mobile-sdk.ImageQuality.MODERATE
+      - teams-mobile-sdk.ImageQuality.LOW
+    langs:
+      - typeScript
+    type: enum
+    summary: Enums to describe image quality
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ImageQuality.EXCELLENT
+    name: EXCELLENT
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: 0
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ImageQuality.GOOD
+    name: GOOD
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: 1
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ImageQuality.MODERATE
+    name: MODERATE
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: 2
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ImageQuality.LOW
+    name: LOW
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: 3
+    package: teams-mobile-sdk

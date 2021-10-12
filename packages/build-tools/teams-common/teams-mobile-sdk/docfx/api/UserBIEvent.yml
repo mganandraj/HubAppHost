@@ -1,0 +1,337 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.UserBIEvent
+    name: UserBIEvent
+    fullName: UserBIEvent
+    children:
+      - teams-mobile-sdk.UserBIEvent.databagProp
+      - teams-mobile-sdk.UserBIEvent.destinationUri
+      - teams-mobile-sdk.UserBIEvent.eventName
+      - teams-mobile-sdk.UserBIEvent.gesture
+      - teams-mobile-sdk.UserBIEvent.launchMethod
+      - teams-mobile-sdk.UserBIEvent.moduleName
+      - teams-mobile-sdk.UserBIEvent.moduleState
+      - teams-mobile-sdk.UserBIEvent.moduleSummary
+      - teams-mobile-sdk.UserBIEvent.moduleType
+      - teams-mobile-sdk.UserBIEvent.outcome
+      - teams-mobile-sdk.UserBIEvent.panelType
+      - teams-mobile-sdk.UserBIEvent.panelUri
+      - teams-mobile-sdk.UserBIEvent.region
+      - teams-mobile-sdk.UserBIEvent.scenario
+      - teams-mobile-sdk.UserBIEvent.scenarioType
+      - teams-mobile-sdk.UserBIEvent.teamId
+      - teams-mobile-sdk.UserBIEvent.threadId
+      - teams-mobile-sdk.UserBIEvent.threadMembers
+      - teams-mobile-sdk.UserBIEvent.threadType
+      - teams-mobile-sdk.UserBIEvent.userBIDatabag
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.UserBIEvent.databagProp
+    name: databagProp
+    fullName: databagProp
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'databagProp?: undefined | [key: string]: string'
+      return:
+        type:
+          - 'undefined | [key: string]: string'
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.UserBIEvent.destinationUri
+    name: destinationUri
+    fullName: destinationUri
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'destinationUri?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.UserBIEvent.eventName
+    name: eventName
+    fullName: eventName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'eventName: UserBIEventName'
+      return:
+        type:
+          - teams-mobile-sdk.UserBIEventName
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.UserBIEvent.gesture
+    name: gesture
+    fullName: gesture
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'gesture?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.UserBIEvent.launchMethod
+    name: launchMethod
+    fullName: launchMethod
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'launchMethod?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.UserBIEvent.moduleName
+    name: moduleName
+    fullName: moduleName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'moduleName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.UserBIEvent.moduleState
+    name: moduleState
+    fullName: moduleState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'moduleState?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.UserBIEvent.moduleSummary
+    name: moduleSummary
+    fullName: moduleSummary
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'moduleSummary?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.UserBIEvent.moduleType
+    name: moduleType
+    fullName: moduleType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'moduleType?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.UserBIEvent.outcome
+    name: outcome
+    fullName: outcome
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'outcome?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.UserBIEvent.panelType
+    name: panelType
+    fullName: panelType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'panelType?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.UserBIEvent.panelUri
+    name: panelUri
+    fullName: panelUri
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'panelUri?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.UserBIEvent.region
+    name: region
+    fullName: region
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'region?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.UserBIEvent.scenario
+    name: scenario
+    fullName: scenario
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'scenario?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.UserBIEvent.scenarioType
+    name: scenarioType
+    fullName: scenarioType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'scenarioType?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.UserBIEvent.teamId
+    name: teamId
+    fullName: teamId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'teamId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.UserBIEvent.threadId
+    name: threadId
+    fullName: threadId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'threadId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.UserBIEvent.threadMembers
+    name: threadMembers
+    fullName: threadMembers
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'threadMembers?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.UserBIEvent.threadType
+    name: threadType
+    fullName: threadType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'threadType?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.UserBIEvent.userBIDatabag
+    name: userBIDatabag
+    fullName: userBIDatabag
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'userBIDatabag?: undefined | [key: string]: function'
+      return:
+        type:
+          - 'undefined | [key: string]: function'
+    package: teams-mobile-sdk
+references:
+  - uid: teams-mobile-sdk.UserBIEventName
+    name: UserBIEventName
+    spec.typeScript:
+      - name: UserBIEventName
+        fullName: UserBIEventName
+        uid: teams-mobile-sdk.UserBIEventName

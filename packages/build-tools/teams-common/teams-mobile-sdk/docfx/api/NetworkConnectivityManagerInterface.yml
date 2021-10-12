@@ -1,0 +1,26 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.NetworkConnectivityManagerInterface
+    name: NetworkConnectivityManagerInterface
+    fullName: NetworkConnectivityManagerInterface
+    children:
+      - teams-mobile-sdk.NetworkConnectivityManagerInterface.isNetworkAvailable
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Receives signals from Native to React Native, i.e. Java/Obj-C to JS'
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.NetworkConnectivityManagerInterface.isNetworkAvailable
+    name: isNetworkAvailable()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: function isNetworkAvailable()
+      parameters: []
+      return:
+        type:
+          - Promise<boolean>
+    package: teams-mobile-sdk

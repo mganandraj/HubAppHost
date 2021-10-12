@@ -1,0 +1,169 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.User
+    name: User
+    fullName: User
+    children:
+      - teams-mobile-sdk.User.aadId
+      - teams-mobile-sdk.User.contactId
+      - teams-mobile-sdk.User.displayName
+      - teams-mobile-sdk.User.imageURI
+      - teams-mobile-sdk.User.jobTitle
+      - teams-mobile-sdk.User.personalSharePointSiteUrl
+      - teams-mobile-sdk.User.principalName
+      - teams-mobile-sdk.User.skypeMri
+      - teams-mobile-sdk.User.tenantId
+      - teams-mobile-sdk.User.tenantSiteUrl
+    langs:
+      - typeScript
+    type: interface
+    summary: Copyright © Microsoft Corporation. All rights reserved.
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.User.aadId
+    name: aadId
+    fullName: aadId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'aadId: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.User.contactId
+    name: contactId
+    fullName: contactId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Represents the contact id of the user if its a contact
+    optional: true
+    syntax:
+      content: 'contactId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.User.displayName
+    name: displayName
+    fullName: displayName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'displayName: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.User.imageURI
+    name: imageURI
+    fullName: imageURI
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'imageURI?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.User.jobTitle
+    name: jobTitle
+    fullName: jobTitle
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'jobTitle: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.User.personalSharePointSiteUrl
+    name: personalSharePointSiteUrl
+    fullName: personalSharePointSiteUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Represent personal sharepoint url of user.
+      Note : This value will be present only for current logged-in user.
+    optional: true
+    syntax:
+      content: 'personalSharePointSiteUrl?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.User.principalName
+    name: principalName
+    fullName: principalName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'principalName: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.User.skypeMri
+    name: skypeMri
+    fullName: skypeMri
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'skypeMri: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.User.tenantId
+    name: tenantId
+    fullName: tenantId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'tenantId: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.User.tenantSiteUrl
+    name: tenantSiteUrl
+    fullName: tenantSiteUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Represent sharepoint url of user.
+      Note : This value will be present only for current logged-in user.
+    optional: true
+    syntax:
+      content: 'tenantSiteUrl?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: teams-mobile-sdk

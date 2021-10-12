@@ -1,0 +1,68 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.ActionSheetOption
+    name: ActionSheetOption
+    fullName: ActionSheetOption
+    children:
+      - teams-mobile-sdk.ActionSheetOption.icon
+      - teams-mobile-sdk.ActionSheetOption.id
+      - teams-mobile-sdk.ActionSheetOption.label
+    langs:
+      - typeScript
+    type: interface
+    summary: Represents a single option in the action sheet.
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ActionSheetOption.icon
+    name: icon
+    fullName: icon
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      The image resource to use as icon for an action sheet options.
+      This is mandatory. If this is not provided or is invalid, the
+      corresponding option will not be displayed in the action sheet.
+      The value of this field is actually a URI for an image packaged
+      with the app. Use Resource.image('...') to get the value for this field.
+    syntax:
+      content: 'icon: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ActionSheetOption.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      A unique identifier for the option. This value is passed to the handler
+      when the user selects an option in the action sheet. If this is
+      null or undefined, the corresponding option will not be displayed in
+      the action sheet.
+    syntax:
+      content: 'id: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ActionSheetOption.label
+    name: label
+    fullName: label
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Label for the action sheet option. This is the main text content
+      of an option. If this is null or undefined, the corresponding option
+      will not be displayed in the action sheet.
+    syntax:
+      content: 'label: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk

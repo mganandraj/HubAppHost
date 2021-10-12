@@ -1,0 +1,71 @@
+{
+  "name": "teams-mobile-sdk-example",
+  "version": "0.2.1",
+  "description": "A sample application built using teams-mobile-sdk",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf ./build",
+    "clean-sdk-cache": "rimraf ./.sdk_cache",
+    "package-app": "package-app --hermes disabled",
+    "build": "yarn rnx-dep-check && yarn clean && build-resources && tsc && cp -r ./src/static ./build/src/static && if [ -d 'node_modules/teams-mobile-sdk/node_modules/react' ]; then rm -R node_modules/teams-mobile-sdk/node_modules/react; fi",
+    "build-dev": "yarn lintautofix && yarn build",
+    "lint": "tslint --project tsconfig.json",
+    "lintautofix": "tslint --project tsconfig.json --fix",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sdk-config": "sdk-config",
+    "install-teams": "install-teams",
+    "start-rn": "node ./node_modules/react-native/local-cli/cli.js start",
+    "build-sdk": "cd ../teams-mobile-sdk && yarn build && cd ../teams-mobile-sdk-example && yarn upgrade teams-mobile-sdk",
+    "start-android": "adb reverse tcp:3333 tcp:3333 && adb reverse tcp:8081 tcp:8081 && adb shell am start -n \"com.microsoft.skype.teams.dev/com.microsoft.skype.teams.Launcher\" -a android.intent.action.MAIN -c android.intent.category.LAUNCHER --esn \"sdkRunner\"",
+    "start-ios-sim": "xcrun simctl launch booted com.microsoft.dmx.teamspace SDK_RUNNER $(ifconfig en0 | awk '/inet.[0-9]/{print $2}') 3333",
+    "start-ios-device": "idevicedebug run com.microsoft.dmx.teamspace SDK_RUNNER \"$(ifconfig en0 | awk '/inet.[0-9]/{print $2}')\" 3333",
+    "android": "concurrently \"yarn watch\" \"yarn run-dev\" \"yarn start-rn\" \"yarn start-android\"",
+    "ios-sim": "concurrently \"yarn watch\" \"yarn run-dev\" \"yarn start-rn\" \"yarn start-ios-sim\"",
+    "ios-device": "concurrently \"yarn watch\" \"yarn run-dev\" \"yarn start-rn\" \"yarn start-ios-device\"",
+    "publish-app": "publish-app --config codepush.json --hermes disabled",
+    "watch": "tsc --watch"
+  },
+  "author": "Microsoft Corporation",
+  "license": "ISC",
+  "engines": {
+    "yarn": ">=1.19.1"
+  },
+  "dependencies": {
+    "@react-native-async-storage/async-storage": "^1.15.5",
+    "@react-native-community/datetimepicker": "^3.4.6",
+    "@react-native-community/netinfo": "^6.0.0",
+    "react": "17.0.1",
+    "react-native": "^0.64.2",
+    "react-native-svg": "^12.1.1",
+    "react-native-webview": "^11.4.2",
+    "teams-mobile-sdk": "../teams-mobile-sdk"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@rnx-kit/dep-check": "^1.5.18",
+    "@types/react": "16.9.56",
+    "@types/react-native": "0.62.18",
+    "concurrently": "^3.6.0",
+    "rimraf": "^2.6.2",
+    "tslint": "5.20.1",
+    "tslint-config-prettier": "^1.17.0",
+    "tslint-react": "^5.0.0",
+    "typescript": "^4.4.2"
+  },
+  "resolutions": {
+    "lodash": "4.17.21",
+    "underscore": "1.13.1",
+    "glob-parent": "5.1.2"
+  },
+  "rnx-kit": {
+    "reactNativeVersion": "^0.64",
+    "reactNativeDevVersion": "0.64.2",
+    "kitType": "app",
+    "capabilities": [
+      "core-android",
+      "core-ios",
+      "react",
+      "storage"
+    ]
+  }
+}

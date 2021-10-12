@@ -1,0 +1,41 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.AddressType
+    name: AddressType
+    fullName: AddressType
+    children:
+      - teams-mobile-sdk.AddressType.BUSINESS
+      - teams-mobile-sdk.AddressType.HOME
+      - teams-mobile-sdk.AddressType.OTHER
+    langs:
+      - typeScript
+    type: enum
+    summary: The address type of a given Address object.
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.AddressType.BUSINESS
+    name: BUSINESS
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: null
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.AddressType.HOME
+    name: HOME
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: null
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.AddressType.OTHER
+    name: OTHER
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: null
+    package: teams-mobile-sdk

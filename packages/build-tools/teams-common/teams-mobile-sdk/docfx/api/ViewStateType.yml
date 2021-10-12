@@ -1,0 +1,47 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.ViewStateType
+    name: ViewStateType
+    fullName: ViewStateType
+    children:
+      - teams-mobile-sdk.ViewStateType.AVAILABLE
+      - teams-mobile-sdk.ViewStateType.EMPTY
+      - teams-mobile-sdk.ViewStateType.ERROR
+      - teams-mobile-sdk.ViewStateType.LOADING
+    langs:
+      - typeScript
+    type: enum
+    summary: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ViewStateType.AVAILABLE
+    name: AVAILABLE
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ViewStateType.EMPTY
+    name: EMPTY
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ViewStateType.ERROR
+    name: ERROR
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ViewStateType.LOADING
+    name: LOADING
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    package: teams-mobile-sdk

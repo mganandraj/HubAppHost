@@ -1,0 +1,121 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.TeamsPickerType
+    name: TeamsPickerType
+    fullName: TeamsPickerType
+    children:
+      - teams-mobile-sdk.TeamsPickerType.BOTS
+      - teams-mobile-sdk.TeamsPickerType.CHANNELS
+      - teams-mobile-sdk.TeamsPickerType.FEDERATED_CHATS
+      - teams-mobile-sdk.TeamsPickerType.FEDERATED_USERS
+      - teams-mobile-sdk.TeamsPickerType.GROUP_CHATS
+      - teams-mobile-sdk.TeamsPickerType.NO_SMS_CHATS
+      - teams-mobile-sdk.TeamsPickerType.NO_SMS_USERS
+      - teams-mobile-sdk.TeamsPickerType.ONETOONE_CHATS
+      - teams-mobile-sdk.TeamsPickerType.PEOPLE
+      - teams-mobile-sdk.TeamsPickerType.SAVED_CONTACTS
+      - teams-mobile-sdk.TeamsPickerType.SELF
+      - teams-mobile-sdk.TeamsPickerType.TEAMS
+    langs:
+      - typeScript
+    type: enum
+    summary: |
+      Defines types of content to be displayed in picker.
+      Default: PEOPLE
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsPickerType.BOTS
+    name: BOTS
+    children: []
+    langs:
+      - typeScript
+    summary: Bots
+    type: field
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsPickerType.CHANNELS
+    name: CHANNELS
+    children: []
+    langs:
+      - typeScript
+    summary: Channels
+    type: field
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsPickerType.FEDERATED_CHATS
+    name: FEDERATED_CHATS
+    children: []
+    langs:
+      - typeScript
+    summary: Federated Chats
+    type: field
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsPickerType.FEDERATED_USERS
+    name: FEDERATED_USERS
+    children: []
+    langs:
+      - typeScript
+    summary: Federated users
+    type: field
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsPickerType.GROUP_CHATS
+    name: GROUP_CHATS
+    children: []
+    langs:
+      - typeScript
+    summary: Group chats
+    type: field
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsPickerType.NO_SMS_CHATS
+    name: NO_SMS_CHATS
+    children: []
+    langs:
+      - typeScript
+    summary: Filter out SMS chats
+    type: field
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsPickerType.NO_SMS_USERS
+    name: NO_SMS_USERS
+    children: []
+    langs:
+      - typeScript
+    summary: Filter out SMS users
+    type: field
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsPickerType.ONETOONE_CHATS
+    name: ONETOONE_CHATS
+    children: []
+    langs:
+      - typeScript
+    summary: One to one chats
+    type: field
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsPickerType.PEOPLE
+    name: PEOPLE
+    children: []
+    langs:
+      - typeScript
+    summary: All users not covered by other types below.
+    type: field
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsPickerType.SAVED_CONTACTS
+    name: SAVED_CONTACTS
+    children: []
+    langs:
+      - typeScript
+    summary: Contacts
+    type: field
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsPickerType.SELF
+    name: SELF
+    children: []
+    langs:
+      - typeScript
+    summary: Current user
+    type: field
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsPickerType.TEAMS
+    name: TEAMS
+    children: []
+    langs:
+      - typeScript
+    summary: Teams
+    type: field
+    package: teams-mobile-sdk

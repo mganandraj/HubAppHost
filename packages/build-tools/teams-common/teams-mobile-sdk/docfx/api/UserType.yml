@@ -1,0 +1,16 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.UserType
+    name: UserType
+    fullName: UserType
+    children: []
+    langs:
+      - typeScript
+    type: type alias
+    summary: The user type of a Person object.
+    syntax:
+      content: >-
+        type UserType = "Admin" | "User" | "Guest" | "NonGuest" | "ADUser" |
+        "FTLUser" | "Federated" | "TFLConsumer" | "Education" | "SkypeConsumer"
+        | "Shadow"
+    package: teams-mobile-sdk

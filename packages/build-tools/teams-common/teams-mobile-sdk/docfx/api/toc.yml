@@ -1,0 +1,402 @@
+- uid: teams-mobile-sdk
+  name: teams-mobile-sdk
+  items:
+    - uid: teams-mobile-sdk.ActionSheet
+      name: ActionSheet
+      items: []
+    - uid: teams-mobile-sdk.ActionSheetOption
+      name: ActionSheetOption
+      items: []
+    - uid: teams-mobile-sdk.Address
+      name: Address
+      items: []
+    - uid: teams-mobile-sdk.AddressType
+      name: AddressType
+      items: []
+    - uid: teams-mobile-sdk.ApplicationContext
+      name: ApplicationContext
+      items: []
+    - uid: teams-mobile-sdk.AppTheme
+      name: AppTheme
+      items: []
+    - uid: teams-mobile-sdk.AuthenticationService
+      name: AuthenticationService
+      items: []
+    - uid: teams-mobile-sdk.AuthorizationHeaders
+      name: AuthorizationHeaders
+      items: []
+    - uid: teams-mobile-sdk.AuthorizationType
+      name: AuthorizationType
+      items: []
+    - uid: teams-mobile-sdk.BaseProviderParams
+      name: BaseProviderParams
+      items: []
+    - uid: teams-mobile-sdk.BaseProviderResult
+      name: BaseProviderResult
+      items: []
+    - uid: teams-mobile-sdk.Channel
+      name: Channel
+      items: []
+    - uid: teams-mobile-sdk.ChannelPickerInterface
+      name: ChannelPickerInterface
+      items: []
+    - uid: teams-mobile-sdk.ChannelPickerOptions
+      name: ChannelPickerOptions
+      items: []
+    - uid: teams-mobile-sdk.ChannelPickerResult
+      name: ChannelPickerResult
+      items: []
+    - uid: teams-mobile-sdk.Chat
+      name: Chat
+      items: []
+    - uid: teams-mobile-sdk.ChatsProviderModule
+      name: ChatsProviderModule
+      items: []
+    - uid: teams-mobile-sdk.ConfigurationInterface
+      name: ConfigurationInterface
+      items: []
+    - uid: teams-mobile-sdk.ConfigurationManager
+      name: ConfigurationManager
+      items: []
+    - uid: teams-mobile-sdk.Contact
+      name: Contact
+      items: []
+    - uid: teams-mobile-sdk.ContactCardAction
+      name: ContactCardAction
+      items: []
+    - uid: teams-mobile-sdk.ContactCardEditButtonItem
+      name: ContactCardEditButtonItem
+      items: []
+    - uid: teams-mobile-sdk.ContactCardHeroItem
+      name: ContactCardHeroItem
+      items: []
+    - uid: teams-mobile-sdk.ContactCardItem
+      name: ContactCardItem
+      items: []
+    - uid: teams-mobile-sdk.ContactCardItemTemplate
+      name: ContactCardItemTemplate
+      items: []
+    - uid: teams-mobile-sdk.ContactCardItemValue
+      name: ContactCardItemValue
+      items: []
+    - uid: teams-mobile-sdk.ContactCardItemValueType
+      name: ContactCardItemValueType
+      items: []
+    - uid: teams-mobile-sdk.ContactCardLinkItemValue
+      name: ContactCardLinkItemValue
+      items: []
+    - uid: teams-mobile-sdk.ContactCardMultiValueItem
+      name: ContactCardMultiValueItem
+      items: []
+    - uid: teams-mobile-sdk.ContactCardSectionHeaderItem
+      name: ContactCardSectionHeaderItem
+      items: []
+    - uid: teams-mobile-sdk.ContactCardSingleValueItem
+      name: ContactCardSingleValueItem
+      items: []
+    - uid: teams-mobile-sdk.ContactList
+      name: ContactList
+      items: []
+    - uid: teams-mobile-sdk.ContactListType
+      name: ContactListType
+      items: []
+    - uid: teams-mobile-sdk.ContactsProviderInterface
+      name: ContactsProviderInterface
+      items: []
+    - uid: teams-mobile-sdk.ContactsProviderResponse
+      name: ContactsProviderResponse
+      items: []
+    - uid: teams-mobile-sdk.ContactsProviderResponseStatus
+      name: ContactsProviderResponseStatus
+      items: []
+    - uid: teams-mobile-sdk.ContactSyncState
+      name: ContactSyncState
+      items: []
+    - uid: teams-mobile-sdk.ContactType
+      name: ContactType
+      items: []
+    - uid: teams-mobile-sdk.DateTimeParams
+      name: DateTimeParams
+      items: []
+    - uid: teams-mobile-sdk.DateTimePickerInterface
+      name: DateTimePickerInterface
+      items: []
+    - uid: teams-mobile-sdk.DeepLinkUtils
+      name: DeepLinkUtils
+      items: []
+    - uid: teams-mobile-sdk.DeviceContact
+      name: DeviceContact
+      items: []
+    - uid: teams-mobile-sdk.DeviceContactsProviderInterface
+      name: DeviceContactsProviderInterface
+      items: []
+    - uid: teams-mobile-sdk.EndpointProviderInterface
+      name: EndpointProviderInterface
+      items: []
+    - uid: teams-mobile-sdk.EventLogger
+      name: EventLogger
+      items: []
+    - uid: teams-mobile-sdk.FabLayoutParams
+      name: FabLayoutParams
+      items: []
+    - uid: teams-mobile-sdk.FileMetaData
+      name: FileMetaData
+      items: []
+    - uid: teams-mobile-sdk.FluentIconView
+      name: FluentIconView
+      items: []
+    - uid: teams-mobile-sdk.FluentIconViewProps
+      name: FluentIconViewProps
+      items: []
+    - uid: teams-mobile-sdk.HttpClientInterface
+      name: HttpClientInterface
+      items: []
+    - uid: teams-mobile-sdk.HttpRequest
+      name: HttpRequest
+      items: []
+    - uid: teams-mobile-sdk.HttpResponse
+      name: HttpResponse
+      items: []
+    - uid: teams-mobile-sdk.IconStyle
+      name: IconStyle
+      items: []
+    - uid: teams-mobile-sdk.IdType
+      name: IdType
+      items: []
+    - uid: teams-mobile-sdk.ImageAndFilePickerInterface
+      name: ImageAndFilePickerInterface
+      items: []
+    - uid: teams-mobile-sdk.ImageAndFilePickerResponse
+      name: ImageAndFilePickerResponse
+      items: []
+    - uid: teams-mobile-sdk.ImageQuality
+      name: ImageQuality
+      items: []
+    - uid: teams-mobile-sdk.IModuleLifecycleHandler
+      name: IModuleLifecycleHandler
+      items: []
+    - uid: teams-mobile-sdk.IShareUtilsModule
+      name: IShareUtilsModule
+      items: []
+    - uid: teams-mobile-sdk.LocalizedStringsProvider
+      name: LocalizedStringsProvider
+      items: []
+    - uid: teams-mobile-sdk.ModuleLifecycle
+      name: ModuleLifecycle
+      items: []
+    - uid: teams-mobile-sdk.NetworkConnectivityManagerInterface
+      name: NetworkConnectivityManagerInterface
+      items: []
+    - uid: teams-mobile-sdk.OptionsMenuItem
+      name: OptionsMenuItem
+      items: []
+    - uid: teams-mobile-sdk.PeopleContact
+      name: PeopleContact
+      items: []
+    - uid: teams-mobile-sdk.PeopleProviderInterface
+      name: PeopleProviderInterface
+      items: []
+    - uid: teams-mobile-sdk.Person
+      name: Person
+      items: []
+    - uid: teams-mobile-sdk.PersonContactMetadata
+      name: PersonContactMetadata
+      items: []
+    - uid: teams-mobile-sdk.PersonIds
+      name: PersonIds
+      items: []
+    - uid: teams-mobile-sdk.PersonPresenceStatus
+      name: PersonPresenceStatus
+      items: []
+    - uid: teams-mobile-sdk.PersonProfilePicture
+      name: PersonProfilePicture
+      items: []
+    - uid: teams-mobile-sdk.Phone
+      name: Phone
+      items: []
+    - uid: teams-mobile-sdk.Phones
+      name: Phones
+      items: []
+    - uid: teams-mobile-sdk.PhoneType
+      name: PhoneType
+      items: []
+    - uid: teams-mobile-sdk.PickerType
+      name: PickerType
+      items: []
+    - uid: teams-mobile-sdk.PresenceStatus
+      name: PresenceStatus
+      items: []
+    - uid: teams-mobile-sdk.Resource
+      name: Resource
+      items: []
+    - uid: teams-mobile-sdk.SecondaryFloatingActionButton
+      name: SecondaryFloatingActionButton
+      items: []
+    - uid: teams-mobile-sdk.SecureStorageInterface
+      name: SecureStorageInterface
+      items: []
+    - uid: teams-mobile-sdk.ShareObject
+      name: ShareObject
+      items: []
+    - uid: teams-mobile-sdk.SharepointFilePreviewInterface
+      name: SharepointFilePreviewInterface
+      items: []
+    - uid: teams-mobile-sdk.ShareTarget
+      name: ShareTarget
+      items: []
+    - uid: teams-mobile-sdk.ShareTargetType
+      name: ShareTargetType
+      items: []
+    - uid: teams-mobile-sdk.Snackbar
+      name: Snackbar
+      items: []
+    - uid: teams-mobile-sdk.SnackbarAction
+      name: SnackbarAction
+      items: []
+    - uid: teams-mobile-sdk.SnackbarDuration
+      name: SnackbarDuration
+      items: []
+    - uid: teams-mobile-sdk.SortOrder
+      name: SortOrder
+      items: []
+    - uid: teams-mobile-sdk.SortType
+      name: SortType
+      items: []
+    - uid: teams-mobile-sdk.StateLayoutProperties
+      name: StateLayoutProperties
+      items: []
+    - uid: teams-mobile-sdk.SyncEventListener
+      name: SyncEventListener
+      items: []
+    - uid: teams-mobile-sdk.SyncState
+      name: SyncState
+      items: []
+    - uid: teams-mobile-sdk.Tab
+      name: Tab
+      items: []
+    - uid: teams-mobile-sdk.TargetPickerParams
+      name: TargetPickerParams
+      items: []
+    - uid: teams-mobile-sdk.Team
+      name: Team
+      items: []
+    - uid: teams-mobile-sdk.TeamsAndChannelsProviderInterface
+      name: TeamsAndChannelsProviderInterface
+      items: []
+    - uid: teams-mobile-sdk.TeamsMessageCardType
+      name: TeamsMessageCardType
+      items: []
+    - uid: teams-mobile-sdk.TeamsMessageType
+      name: TeamsMessageType
+      items: []
+    - uid: teams-mobile-sdk.TeamsMessagingCard
+      name: TeamsMessagingCard
+      items: []
+    - uid: teams-mobile-sdk.TeamsMessagingFile
+      name: TeamsMessagingFile
+      items: []
+    - uid: teams-mobile-sdk.TeamsMessagingFileInfo
+      name: TeamsMessagingFileInfo
+      items: []
+    - uid: teams-mobile-sdk.TeamsMessagingMention
+      name: TeamsMessagingMention
+      items: []
+    - uid: teams-mobile-sdk.TeamsMessagingMentionType
+      name: TeamsMessagingMentionType
+      items: []
+    - uid: teams-mobile-sdk.TeamsMessagingRequest
+      name: TeamsMessagingRequest
+      items: []
+    - uid: teams-mobile-sdk.TeamsMessagingResponse
+      name: TeamsMessagingResponse
+      items: []
+    - uid: teams-mobile-sdk.TeamsModules
+      name: TeamsModules
+      items: []
+    - uid: teams-mobile-sdk.TeamsPickerBehavior
+      name: TeamsPickerBehavior
+      items: []
+    - uid: teams-mobile-sdk.TeamsPickerPosition
+      name: TeamsPickerPosition
+      items: []
+    - uid: teams-mobile-sdk.TeamsPickerProps
+      name: TeamsPickerProps
+      items: []
+    - uid: teams-mobile-sdk.TeamsPickerScope
+      name: TeamsPickerScope
+      items: []
+    - uid: teams-mobile-sdk.TeamsPickerType
+      name: TeamsPickerType
+      items: []
+    - uid: teams-mobile-sdk.TeamsShell
+      name: TeamsShell
+      items: []
+    - uid: teams-mobile-sdk.TeamsShellTab
+      name: TeamsShellTab
+      items: []
+    - uid: teams-mobile-sdk.TeamsView
+      name: TeamsView
+      items: []
+    - uid: teams-mobile-sdk.TeamsWebView
+      name: TeamsWebView
+      items: []
+    - uid: teams-mobile-sdk.TeamsWebViewMessage
+      name: TeamsWebViewMessage
+      items: []
+    - uid: teams-mobile-sdk.TeamsWebViewProps
+      name: TeamsWebViewProps
+      items: []
+    - uid: teams-mobile-sdk.TelemetryClient
+      name: TelemetryClient
+      items: []
+    - uid: teams-mobile-sdk.TelemetryClientInterface
+      name: TelemetryClientInterface
+      items: []
+    - uid: teams-mobile-sdk.TelemetryInfo
+      name: TelemetryInfo
+      items: []
+    - uid: teams-mobile-sdk.TitleDropdownItem
+      name: TitleDropdownItem
+      items: []
+    - uid: teams-mobile-sdk.TraceLogger
+      name: TraceLogger
+      items: []
+    - uid: teams-mobile-sdk.User
+      name: User
+      items: []
+    - uid: teams-mobile-sdk.UserAvatarComponentPropTypes
+      name: UserAvatarComponentPropTypes
+      items: []
+    - uid: teams-mobile-sdk.UserAvatarProps
+      name: UserAvatarProps
+      items: []
+    - uid: teams-mobile-sdk.UserBIEvent
+      name: UserBIEvent
+      items: []
+    - uid: teams-mobile-sdk.UserBIEventName
+      name: UserBIEventName
+      items: []
+    - uid: teams-mobile-sdk.UserId
+      name: UserId
+      items: []
+    - uid: teams-mobile-sdk.UserInfoProviderInterface
+      name: UserInfoProviderInterface
+      items: []
+    - uid: teams-mobile-sdk.UserPDCLevel
+      name: UserPDCLevel
+      items: []
+    - uid: teams-mobile-sdk.UserType
+      name: UserType
+      items: []
+    - uid: teams-mobile-sdk.ViewError
+      name: ViewError
+      items: []
+    - uid: teams-mobile-sdk.ViewState
+      name: ViewState
+      items: []
+    - uid: teams-mobile-sdk.ViewStateType
+      name: ViewStateType
+      items: []
+    - uid: teams-mobile-sdk.WebViewSource
+      name: WebViewSource
+      items: []

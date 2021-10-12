@@ -1,0 +1,51 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.EventLogger
+    name: EventLogger
+    fullName: EventLogger
+    children:
+      - teams-mobile-sdk.EventLogger.constructor
+      - teams-mobile-sdk.EventLogger.logContentReady
+      - teams-mobile-sdk.EventLogger.logViewReady
+    langs:
+      - typeScript
+    type: class
+    summary: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.EventLogger.constructor
+    name: EventLogger(string)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'new EventLogger(hostInstanceId: string)'
+      parameters:
+        - id: hostInstanceId
+          type:
+            - string
+          description: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.EventLogger.logContentReady
+    name: logContentReady()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: function logContentReady()
+      parameters: []
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.EventLogger.logViewReady
+    name: logViewReady()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: function logViewReady()
+      parameters: []
+    package: teams-mobile-sdk

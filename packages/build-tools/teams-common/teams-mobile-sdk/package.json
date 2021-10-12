@@ -1,0 +1,144 @@
+{
+  "name": "teams-mobile-sdk",
+  "version": "0.9.1",
+  "description": "Build your apps for Teams Mobile application on Android & iOS.",
+  "main": "dist/exports.js",
+  "typings": "dist/exports.d.ts",
+  "scripts": {
+    "clean": "rimraf ./dist",
+    "build": "yarn rnx-dep-check && yarn clean && tsc && tsc --declaration true --emitDeclarationOnly true --allowJs false",
+    "build-win": "yarn clean && tsc && tsc --declaration true --emitDeclarationOnly true --allowJs false",
+    "build-dev": "yarn lintautofix && yarn build",
+    "lint": "tslint --project tsconfig.json",
+    "lintautofix": "tslint --project tsconfig.json --fix",
+    "test": "jest",
+    "clean:docs": "rm -rf ./docfx/api rm -rf ./docfx/_site",
+    "docfx": "./node_modules/.bin/typedoc --json api.json --excludeExternals --ignoreCompilerErrors --mode file --target ES6 --excludePrivate --excludeProtected --excludeNotExported ./src/lib && ./node_modules/.bin/type2docfx api.json ./docfx/api && rm -f api.json",
+    "watch": "tsc --watch"
+  },
+  "bin": {
+    "run-dev": "./bin/run-dev",
+    "install-teams": "./bin/install-teams",
+    "build-resources": "./bin/build-resources",
+    "sdk-config": "./bin/sdk-config",
+    "package-app": "./bin/package-app",
+    "publish-app": "./bin/publish-app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://domoreexp.visualstudio.com/DefaultCollection/Teamspace/_git/TeamsMobile-Common"
+  },
+  "author": "Microsoft Corporation",
+  "license": "ISC",
+  "dependencies": {
+    "ansi-colors": "4.1.1",
+    "appcenter-cli": "2.7.1",
+    "archiver": "5.0.2",
+    "express": "4.17.1",
+    "follow-redirects": "1.13.0",
+    "fs-extra": "9.0.1",
+    "gulp": "4.0.2",
+    "hermes-engine": "0.7.2",
+    "gulp-json-transform": "0.4.7",
+    "lodash": "4.17.21",
+    "messageformat": "2.3.0",
+    "minimist": "1.2.5",
+    "uuid": "8.3.1"
+  },
+  "peerDependencies": {
+    "@react-native-async-storage/async-storage": "^1.15.8",
+    "@react-native-community/datetimepicker": "^3.4.6",
+    "@react-native-community/netinfo": "^6.0.2",
+    "@react-native-picker/picker": "1.9.11",
+    "react": "17.0.1",
+    "react-native": "^0.64.2",
+    "react-native-svg": "^12.1.1",
+    "react-native-webview": "^11.4.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@babel/runtime": "^7.12.5",
+    "@react-native-async-storage/async-storage": "^1.15.8",
+    "@react-native-community/datetimepicker": "^3.4.6",
+    "@react-native-community/netinfo": "^6.0.2",
+    "@rnx-kit/dep-check": "^1.5.18",
+    "@types/archiver": "2.0.1",
+    "@types/express": "4.0.39",
+    "@types/fs-extra": "4.0.5",
+    "@types/gulp": "4.0.5",
+    "@types/jest": "23.3.9",
+    "@types/lodash": "4.14.62",
+    "@types/node": "12.7.12",
+    "@types/react": "16.9.56",
+    "@types/react-native": "0.62.18",
+    "@types/uuid": "3.4.4",
+    "babel-jest": "^26.6.3",
+    "jest": "^26.6.3",
+    "metro-react-native-babel-preset": "^0.64.0",
+    "react": "17.0.1",
+    "react-native": "^0.64.2",
+    "react-native-svg": "^12.1.1",
+    "react-native-webview": "^11.4.2",
+    "react-test-renderer": "17.0.1",
+    "rimraf": "2.6.2",
+    "ts-jest": "24.3.0",
+    "tslint": "5.20.1",
+    "tslint-config-prettier": "^1.17.0",
+    "tslint-react": "^5.0.0",
+    "type2docfx": "0.9.114",
+    "typedoc": "0.13.0",
+    "typescript": "^4.4.2"
+  },
+  "resolutions": {
+    "lodash": "4.17.21",
+    "@types/react": "16.9.56",
+    "@types/node": "12.7.12",
+    "url-parse": "1.5.0",
+    "copy-props": "2.0.5",
+    "underscore": "1.13.1",
+    "glob-parent": "5.1.2"
+  },
+  "sdkConfig": {
+    "runnerAppVersion": ""
+  },
+  "jest": {
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/src/tools"
+    ],
+    "preset": "react-native",
+    "globals": {
+      "ts-jest": {
+        "tsConfig": "tsconfig.json"
+      }
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
+    "transform": {
+      "^.+\\.jsx?$": "<rootDir>/node_modules/react-native/jest/preprocessor.js",
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "verbose": true
+  },
+  "rnx-kit": {
+    "reactNativeVersion": "^0.64",
+    "reactNativeDevVersion": "0.64.2",
+    "kitType": "library",
+    "capabilities": [
+      "core-android",
+      "core-ios",
+      "datetime-picker",
+      "netinfo",
+      "react",
+      "storage",
+      "svg",
+      "webview"
+    ]
+  }
+}

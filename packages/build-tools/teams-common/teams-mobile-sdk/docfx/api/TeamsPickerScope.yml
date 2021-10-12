@@ -1,0 +1,33 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.TeamsPickerScope
+    name: TeamsPickerScope
+    fullName: TeamsPickerScope
+    children:
+      - teams-mobile-sdk.TeamsPickerScope.ORG
+      - teams-mobile-sdk.TeamsPickerScope.TEAM
+    langs:
+      - typeScript
+    type: enum
+    summary: Defines scope of search results.
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsPickerScope.ORG
+    name: ORG
+    children: []
+    langs:
+      - typeScript
+    summary: Search org-wide.
+    type: field
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsPickerScope.TEAM
+    name: TEAM
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Search limited to team/thread specified in `pickerProps.scopeTeamId` and
+      `pickerProps.scopeThreadId`.
+
+      Defaults to TeamPickerScope.ORG if proper IDs are not provided.
+    type: field
+    package: teams-mobile-sdk

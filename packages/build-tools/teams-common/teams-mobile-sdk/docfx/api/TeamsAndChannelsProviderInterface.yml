@@ -1,0 +1,159 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.TeamsAndChannelsProviderInterface
+    name: TeamsAndChannelsProviderInterface
+    fullName: TeamsAndChannelsProviderInterface
+    children:
+      - >-
+        teams-mobile-sdk.TeamsAndChannelsProviderInterface.androidForceSyncTabsForChannels
+      - teams-mobile-sdk.TeamsAndChannelsProviderInterface.getAllTeams
+      - >-
+        teams-mobile-sdk.TeamsAndChannelsProviderInterface.getTabsForChannelsWithIDs
+      - >-
+        teams-mobile-sdk.TeamsAndChannelsProviderInterface.getTeamsAndChannelsInitialSyncStateIOS
+      - teams-mobile-sdk.TeamsAndChannelsProviderInterface.getTeamsWithIDs
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: teams-mobile-sdk
+  - uid: >-
+      teams-mobile-sdk.TeamsAndChannelsProviderInterface.androidForceSyncTabsForChannels
+    name: 'androidForceSyncTabsForChannels(string[])'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Gets all tabs for the given list of channels
+
+      Prefered to send channelIds in small chunk and handle pagination on RN
+      side
+    syntax:
+      content: 'function androidForceSyncTabsForChannels(channelIDs: string[])'
+      parameters:
+        - id: channelIDs
+          type:
+            - 'string[]'
+          description: channel ids for which tabs will be returned
+      return:
+        type:
+          - 'Promise<Map<string, teams-mobile-sdk.Tab[]>>'
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsAndChannelsProviderInterface.getAllTeams
+    name: getAllTeams(boolean)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |
+      Gets all teams the current user is a part of.
+      This API will not return archived teams.
+      If includeChannels is false, the channels property of Team will be
+      an empty array
+    syntax:
+      content: 'function getAllTeams(includeChannels: boolean)'
+      parameters:
+        - id: includeChannels
+          type:
+            - boolean
+          description: whether details of channels are to be returned for each team
+      return:
+        type:
+          - 'Promise<teams-mobile-sdk.Team[]>'
+    package: teams-mobile-sdk
+  - uid: >-
+      teams-mobile-sdk.TeamsAndChannelsProviderInterface.getTabsForChannelsWithIDs
+    name: 'getTabsForChannelsWithIDs(string[])'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Gets all tabs for the given list of channels
+    syntax:
+      content: 'function getTabsForChannelsWithIDs(channelIDs: string[])'
+      parameters:
+        - id: channelIDs
+          type:
+            - 'string[]'
+          description: channel ids for which tabs will be returned
+      return:
+        type:
+          - 'Promise<Map<string, teams-mobile-sdk.Tab[]>>'
+    package: teams-mobile-sdk
+  - uid: >-
+      teams-mobile-sdk.TeamsAndChannelsProviderInterface.getTeamsAndChannelsInitialSyncStateIOS
+    name: getTeamsAndChannelsInitialSyncStateIOS()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Get the initial sync status of teams and channels.
+    syntax:
+      content: function getTeamsAndChannelsInitialSyncStateIOS()
+      parameters: []
+      return:
+        type:
+          - Promise<teams-mobile-sdk.SyncState>
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsAndChannelsProviderInterface.getTeamsWithIDs
+    name: 'getTeamsWithIDs(string[], boolean)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >
+      Gets the teams with the given IDs. Any invalid team IDs are ignored. If
+      any of the
+
+      given team ID refers to an archived team, it will be ignored.
+
+      If includeChannels is false, the channels property of Team will be
+
+      an empty array
+    syntax:
+      content: 'function getTeamsWithIDs(teamIDs: string[], includeChannels: boolean)'
+      parameters:
+        - id: teamIDs
+          type:
+            - 'string[]'
+          description: list of team IDs
+        - id: includeChannels
+          type:
+            - boolean
+          description: whether details of channels are to be returned for each team
+      return:
+        type:
+          - 'Promise<teams-mobile-sdk.Team[]>'
+    package: teams-mobile-sdk
+references:
+  - uid: 'Promise<Map<string, teams-mobile-sdk.Tab[]>>'
+    name: 'Tab[]>>'
+    spec.typeScript:
+      - name: 'Promise<Map<string, '
+        fullName: 'Promise<Map<string, '
+      - name: Tab
+        fullName: Tab
+        uid: teams-mobile-sdk.Tab
+      - name: '[]>>'
+        fullName: '[]>>'
+  - uid: 'Promise<teams-mobile-sdk.Team[]>'
+    name: 'Team[]>'
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: Team
+        fullName: Team
+        uid: teams-mobile-sdk.Team
+      - name: '[]>'
+        fullName: '[]>'
+  - uid: Promise<teams-mobile-sdk.SyncState>
+    name: SyncState>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: SyncState
+        fullName: SyncState
+        uid: teams-mobile-sdk.SyncState
+      - name: '>'
+        fullName: '>'

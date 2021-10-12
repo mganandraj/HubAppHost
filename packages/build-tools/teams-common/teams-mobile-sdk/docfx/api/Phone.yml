@@ -1,0 +1,48 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.Phone
+    name: Phone
+    fullName: Phone
+    children:
+      - teams-mobile-sdk.Phone.number
+      - teams-mobile-sdk.Phone.type
+    langs:
+      - typeScript
+    type: interface
+    summary: An object representing a phone number.
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.Phone.number
+    name: number
+    fullName: number
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The phone number
+    syntax:
+      content: 'number: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.Phone.type
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The phone number type
+    syntax:
+      content: 'type: PhoneType'
+      return:
+        type:
+          - teams-mobile-sdk.PhoneType
+    package: teams-mobile-sdk
+references:
+  - uid: teams-mobile-sdk.PhoneType
+    name: PhoneType
+    spec.typeScript:
+      - name: PhoneType
+        fullName: PhoneType
+        uid: teams-mobile-sdk.PhoneType

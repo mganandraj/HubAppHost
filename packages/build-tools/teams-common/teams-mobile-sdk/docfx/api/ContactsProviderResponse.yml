@@ -1,0 +1,48 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.ContactsProviderResponse
+    name: ContactsProviderResponse
+    fullName: ContactsProviderResponse<T>
+    children:
+      - teams-mobile-sdk.ContactsProviderResponse.result
+      - teams-mobile-sdk.ContactsProviderResponse.statusCode
+    langs:
+      - typeScript
+    type: interface
+    summary: Represents the response returned by the contact provider APIs
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ContactsProviderResponse.result
+    name: result
+    fullName: result
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'result: T'
+      return:
+        type:
+          - T
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ContactsProviderResponse.statusCode
+    name: statusCode
+    fullName: statusCode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: status code for ContactsProvider request
+    syntax:
+      content: 'statusCode: ContactsProviderResponseStatus'
+      return:
+        type:
+          - teams-mobile-sdk.ContactsProviderResponseStatus
+    package: teams-mobile-sdk
+references:
+  - uid: teams-mobile-sdk.ContactsProviderResponseStatus
+    name: ContactsProviderResponseStatus
+    spec.typeScript:
+      - name: ContactsProviderResponseStatus
+        fullName: ContactsProviderResponseStatus
+        uid: teams-mobile-sdk.ContactsProviderResponseStatus

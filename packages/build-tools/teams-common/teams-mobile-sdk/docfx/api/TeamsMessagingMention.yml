@@ -1,0 +1,78 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.TeamsMessagingMention
+    name: TeamsMessagingMention
+    fullName: TeamsMessagingMention
+    children:
+      - teams-mobile-sdk.TeamsMessagingMention.displayName
+      - teams-mobile-sdk.TeamsMessagingMention.itemid
+      - teams-mobile-sdk.TeamsMessagingMention.mentionType
+      - teams-mobile-sdk.TeamsMessagingMention.mri
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsMessagingMention.displayName
+    name: displayName
+    fullName: displayName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Display name for mention
+    syntax:
+      content: 'displayName: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsMessagingMention.itemid
+    name: itemid
+    fullName: itemid
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Unique item id for mention. Same as span item id
+    syntax:
+      content: 'itemid: number'
+      return:
+        type:
+          - number
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsMessagingMention.mentionType
+    name: mentionType
+    fullName: mentionType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Type of mention - Person / Channel / Bot
+    syntax:
+      content: 'mentionType: TeamsMessagingMentionType'
+      return:
+        type:
+          - teams-mobile-sdk.TeamsMessagingMentionType
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsMessagingMention.mri
+    name: mri
+    fullName: mri
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: MRI for person mention & thread ID for channel mention
+    syntax:
+      content: 'mri: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+references:
+  - uid: teams-mobile-sdk.TeamsMessagingMentionType
+    name: TeamsMessagingMentionType
+    spec.typeScript:
+      - name: TeamsMessagingMentionType
+        fullName: TeamsMessagingMentionType
+        uid: teams-mobile-sdk.TeamsMessagingMentionType

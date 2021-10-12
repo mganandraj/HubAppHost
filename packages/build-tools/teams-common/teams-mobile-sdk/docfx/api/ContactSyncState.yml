@@ -1,0 +1,41 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.ContactSyncState
+    name: ContactSyncState
+    fullName: ContactSyncState
+    children:
+      - teams-mobile-sdk.ContactSyncState.COMPLETED
+      - teams-mobile-sdk.ContactSyncState.INITIAL
+      - teams-mobile-sdk.ContactSyncState.IN_PROGRESS
+    langs:
+      - typeScript
+    type: enum
+    summary: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ContactSyncState.COMPLETED
+    name: COMPLETED
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: null
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ContactSyncState.INITIAL
+    name: INITIAL
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: null
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ContactSyncState.IN_PROGRESS
+    name: IN_PROGRESS
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: null
+    package: teams-mobile-sdk

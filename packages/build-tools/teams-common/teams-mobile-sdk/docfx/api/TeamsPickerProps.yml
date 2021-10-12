@@ -1,0 +1,321 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.TeamsPickerProps
+    name: TeamsPickerProps
+    fullName: TeamsPickerProps
+    children:
+      - teams-mobile-sdk.TeamsPickerProps.accessibilityLabel
+      - teams-mobile-sdk.TeamsPickerProps.autoFocus
+      - teams-mobile-sdk.TeamsPickerProps.behavior
+      - teams-mobile-sdk.TeamsPickerProps.excludeContactsInLists
+      - teams-mobile-sdk.TeamsPickerProps.fullscreen
+      - teams-mobile-sdk.TeamsPickerProps.hint
+      - teams-mobile-sdk.TeamsPickerProps.limit
+      - teams-mobile-sdk.TeamsPickerProps.position
+      - teams-mobile-sdk.TeamsPickerProps.scope
+      - teams-mobile-sdk.TeamsPickerProps.scopeTeamId
+      - teams-mobile-sdk.TeamsPickerProps.scopeThreadId
+      - teams-mobile-sdk.TeamsPickerProps.showBottomAnchor
+      - teams-mobile-sdk.TeamsPickerProps.showSuggestionsWhenEmpty
+      - teams-mobile-sdk.TeamsPickerProps.showTopAnchor
+      - teams-mobile-sdk.TeamsPickerProps.types
+    langs:
+      - typeScript
+    type: interface
+    summary: Properties of TeamsPicker.
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsPickerProps.accessibilityLabel
+    name: accessibilityLabel
+    fullName: accessibilityLabel
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      Text to announce when voiceover is focused on search box.
+      Default: "To search field is editing"
+    optional: true
+    syntax:
+      content: 'accessibilityLabel?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsPickerProps.autoFocus
+    name: autoFocus
+    fullName: autoFocus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      Indicates whether FirstResponder is SearchBar or not.
+      Default: false
+    optional: true
+    syntax:
+      content: 'autoFocus?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsPickerProps.behavior
+    name: behavior
+    fullName: behavior
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      Behavior of picker.
+      Default: TeamsPickerBehavior.MULTIPLE
+    syntax:
+      content: 'behavior: TeamsPickerBehavior'
+      return:
+        type:
+          - teams-mobile-sdk.TeamsPickerBehavior
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsPickerProps.excludeContactsInLists
+    name: excludeContactsInLists
+    fullName: excludeContactsInLists
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Indicates list of contact list ids. The contacts in these list ids will be
+      excluded in the people picker
+    optional: true
+    syntax:
+      content: 'excludeContactsInLists?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsPickerProps.fullscreen
+    name: fullscreen
+    fullName: fullscreen
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      Indicates if suggestions should occupy entire screen.
+      Default: false
+    optional: true
+    syntax:
+      content: 'fullscreen?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsPickerProps.hint
+    name: hint
+    fullName: hint
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      Text to display in search box when empty and not focused.
+      Default: "Search"
+    optional: true
+    syntax:
+      content: 'hint?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsPickerProps.limit
+    name: limit
+    fullName: limit
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >
+      Maximum number of items which may be selected when `behavior` is
+      TeamsPickerBehavior.MULTIPLE.
+
+      Setting this prop with items already picked will result in the selected
+      items being reduced to
+
+      the new limit.
+
+      Special cases:
+          - 0 : no items (clears list)
+          - negative number : unlimited
+
+      Default: -1 (unlimited)
+    optional: true
+    syntax:
+      content: 'limit?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsPickerProps.position
+    name: position
+    fullName: position
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      Position of picker suggestions.
+      Default: TeamsPickerPosition.BOTTOM
+    syntax:
+      content: 'position: TeamsPickerPosition'
+      return:
+        type:
+          - teams-mobile-sdk.TeamsPickerPosition
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsPickerProps.scope
+    name: scope
+    fullName: scope
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      Scope of picker search.
+      Default: TeamsPickerScope.ORG
+    syntax:
+      content: 'scope: TeamsPickerScope'
+      return:
+        type:
+          - teams-mobile-sdk.TeamsPickerScope
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsPickerProps.scopeTeamId
+    name: scopeTeamId
+    fullName: scopeTeamId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      Team ID related to `scope`.
+      This field is required if `scope` is TeamsPickerScope.TEAM.
+
+      Default: null
+    optional: true
+    syntax:
+      content: 'scopeTeamId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsPickerProps.scopeThreadId
+    name: scopeThreadId
+    fullName: scopeThreadId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      Thread ID related to `scope`.
+      This field is optional if `scope` is TeamsPickerScope.TEAM.
+
+      Defaults: - `scopeTeamId` if defined and `scope` is TeamsPickerScope.TEAM
+                - null in all other cases
+    optional: true
+    syntax:
+      content: 'scopeThreadId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsPickerProps.showBottomAnchor
+    name: showBottomAnchor
+    fullName: showBottomAnchor
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      Indicates if top anchor (line) is visible.
+      Default: false
+    optional: true
+    syntax:
+      content: 'showBottomAnchor?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsPickerProps.showSuggestionsWhenEmpty
+    name: showSuggestionsWhenEmpty
+    fullName: showSuggestionsWhenEmpty
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      Indicates if suggestions should be shown when search box is empty.
+      If enabled, focus is requested for the search box.
+      Default: false
+    optional: true
+    syntax:
+      content: 'showSuggestionsWhenEmpty?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsPickerProps.showTopAnchor
+    name: showTopAnchor
+    fullName: showTopAnchor
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      Indicates if top anchor (line) is visible.
+      Default: false
+    optional: true
+    syntax:
+      content: 'showTopAnchor?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsPickerProps.types
+    name: types
+    fullName: types
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      List of types of items to display.
+      Default: [TeamsPickerType.PEOPLE]
+    syntax:
+      content: 'types: TeamsPickerType[]'
+      return:
+        type:
+          - 'teams-mobile-sdk.TeamsPickerType[]'
+    package: teams-mobile-sdk
+references:
+  - uid: teams-mobile-sdk.TeamsPickerBehavior
+    name: TeamsPickerBehavior
+    spec.typeScript:
+      - name: TeamsPickerBehavior
+        fullName: TeamsPickerBehavior
+        uid: teams-mobile-sdk.TeamsPickerBehavior
+  - uid: teams-mobile-sdk.TeamsPickerPosition
+    name: TeamsPickerPosition
+    spec.typeScript:
+      - name: TeamsPickerPosition
+        fullName: TeamsPickerPosition
+        uid: teams-mobile-sdk.TeamsPickerPosition
+  - uid: teams-mobile-sdk.TeamsPickerScope
+    name: TeamsPickerScope
+    spec.typeScript:
+      - name: TeamsPickerScope
+        fullName: TeamsPickerScope
+        uid: teams-mobile-sdk.TeamsPickerScope
+  - uid: 'teams-mobile-sdk.TeamsPickerType[]'
+    name: 'TeamsPickerType[]'
+    spec.typeScript:
+      - name: TeamsPickerType
+        fullName: TeamsPickerType
+        uid: teams-mobile-sdk.TeamsPickerType
+      - name: '[]'
+        fullName: '[]'

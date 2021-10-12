@@ -1,0 +1,17 @@
+{
+  "id": "790c2502-8663-4399-9460-fcc90a153bb6",
+  "name": "Sample2",
+  "title": "res://strings/app_name",
+  "icons": {
+    "default": "res://images/default/icn_default.svg",
+    "selected": "res://images/default/icn_selected.svg"
+  },
+  "views": [
+    {
+      "name": "home",
+      "title": "res://strings/hello_world_view_title",
+      "componentName": "HomeComponent"
+    }
+  ],
+  "minReactNativeSdkVersion": "0.8.0"
+}

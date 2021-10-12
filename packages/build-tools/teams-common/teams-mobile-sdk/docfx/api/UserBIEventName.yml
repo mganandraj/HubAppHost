@@ -1,0 +1,31 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.UserBIEventName
+    name: UserBIEventName
+    fullName: UserBIEventName
+    children:
+      - teams-mobile-sdk.UserBIEventName.PANEL_ACTION
+      - teams-mobile-sdk.UserBIEventName.PANEL_VIEW
+    langs:
+      - typeScript
+    type: enum
+    summary: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.UserBIEventName.PANEL_ACTION
+    name: PANEL_ACTION
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: null
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.UserBIEventName.PANEL_VIEW
+    name: PANEL_VIEW
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: null
+    package: teams-mobile-sdk

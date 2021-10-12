@@ -1,0 +1,82 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.SecureStorageInterface
+    name: SecureStorageInterface
+    fullName: SecureStorageInterface
+    children:
+      - teams-mobile-sdk.SecureStorageInterface.addEntry
+      - teams-mobile-sdk.SecureStorageInterface.getEntry
+      - teams-mobile-sdk.SecureStorageInterface.removeEntry
+    langs:
+      - typeScript
+    type: interface
+    summary: >-
+      Provides methods to add, get and remove entries from secure storage
+
+      This has storage limit of 50 MB per app for Android whereas no specific
+      limit on iOS. The Promise will be rejected in case the storage limit
+      exceeds.
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.SecureStorageInterface.addEntry
+    name: 'addEntry(string, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Stores the key and the encrypted value in Secure Storage. Also updates the
+      old value with new value if key is already present.
+    syntax:
+      content: 'function addEntry(key: string, value: string)'
+      parameters:
+        - id: key
+          type:
+            - string
+          description: ': a non empty string representing key'
+        - id: value
+          type:
+            - string
+          description: |
+            : a non empty string representing value
+      return:
+        type:
+          - Promise<void>
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.SecureStorageInterface.getEntry
+    name: getEntry(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Gets the decrypted value from Secure Storage.
+    syntax:
+      content: 'function getEntry(key: string)'
+      parameters:
+        - id: key
+          type:
+            - string
+          description: |
+            : a non empty string representing key
+      return:
+        type:
+          - Promise<string>
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.SecureStorageInterface.removeEntry
+    name: removeEntry(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Removes the entry for key from Secure Storage.
+    syntax:
+      content: 'function removeEntry(key: string)'
+      parameters:
+        - id: key
+          type:
+            - string
+          description: |
+            : a non empty string representing key
+      return:
+        type:
+          - Promise<void>
+    package: teams-mobile-sdk

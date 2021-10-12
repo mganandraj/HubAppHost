@@ -1,0 +1,51 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.ContactType
+    name: ContactType
+    fullName: ContactType
+    children:
+      - teams-mobile-sdk.ContactType.EXTERNAL
+      - teams-mobile-sdk.ContactType.FEDERATED_ONLINE
+      - teams-mobile-sdk.ContactType.FEDERATED_ONPREM
+      - teams-mobile-sdk.ContactType.INTENANT
+    langs:
+      - typeScript
+    type: enum
+    summary: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ContactType.EXTERNAL
+    name: EXTERNAL
+    children: []
+    langs:
+      - typeScript
+    summary: EXTERNAL - SfbPhone and ExternalEmail and contacts with just names
+    type: field
+    numericValue: null
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ContactType.FEDERATED_ONLINE
+    name: FEDERATED_ONLINE
+    children: []
+    langs:
+      - typeScript
+    summary: FEDERATEDONLINE - SfbFederatedOnline
+    type: field
+    numericValue: null
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ContactType.FEDERATED_ONPREM
+    name: FEDERATED_ONPREM
+    children: []
+    langs:
+      - typeScript
+    summary: FEDERATEDONPREM - SfbFederatedOnPrem
+    type: field
+    numericValue: null
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ContactType.INTENANT
+    name: INTENANT
+    children: []
+    langs:
+      - typeScript
+    summary: INTENANT - Teams and SfbEmail
+    type: field
+    numericValue: null
+    package: teams-mobile-sdk

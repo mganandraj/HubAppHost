@@ -1,0 +1,84 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.ViewState
+    name: ViewState
+    fullName: ViewState
+    children:
+      - teams-mobile-sdk.ViewState.error
+      - teams-mobile-sdk.ViewState.errorMessage
+      - teams-mobile-sdk.ViewState.lastUpdatedTime
+      - teams-mobile-sdk.ViewState.type
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ViewState.error
+    name: error
+    fullName: error
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'error: ViewError'
+      return:
+        type:
+          - teams-mobile-sdk.ViewError
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ViewState.errorMessage
+    name: errorMessage
+    fullName: errorMessage
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'errorMessage: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ViewState.lastUpdatedTime
+    name: lastUpdatedTime
+    fullName: lastUpdatedTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'lastUpdatedTime: number'
+      return:
+        type:
+          - number
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ViewState.type
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'type: ViewStateType'
+      return:
+        type:
+          - teams-mobile-sdk.ViewStateType
+    package: teams-mobile-sdk
+references:
+  - uid: teams-mobile-sdk.ViewError
+    name: ViewError
+    spec.typeScript:
+      - name: ViewError
+        fullName: ViewError
+        uid: teams-mobile-sdk.ViewError
+  - uid: teams-mobile-sdk.ViewStateType
+    name: ViewStateType
+    spec.typeScript:
+      - name: ViewStateType
+        fullName: ViewStateType
+        uid: teams-mobile-sdk.ViewStateType

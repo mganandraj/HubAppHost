@@ -1,0 +1,48 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.UserId
+    name: UserId
+    fullName: UserId
+    children:
+      - teams-mobile-sdk.UserId.userId
+      - teams-mobile-sdk.UserId.userIdType
+    langs:
+      - typeScript
+    type: interface
+    summary: A tuple containing a single user ID and its type.
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.UserId.userId
+    name: userId
+    fullName: userId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'userId: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.UserId.userIdType
+    name: userIdType
+    fullName: userIdType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'userIdType: IdType'
+      return:
+        type:
+          - teams-mobile-sdk.IdType
+    package: teams-mobile-sdk
+references:
+  - uid: teams-mobile-sdk.IdType
+    name: IdType
+    spec.typeScript:
+      - name: IdType
+        fullName: IdType
+        uid: teams-mobile-sdk.IdType

@@ -1,0 +1,106 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.PersonPresenceStatus
+    name: PersonPresenceStatus
+    fullName: PersonPresenceStatus
+    children:
+      - teams-mobile-sdk.PersonPresenceStatus.customStatusMessage
+      - teams-mobile-sdk.PersonPresenceStatus.customStatusMessageTime
+      - teams-mobile-sdk.PersonPresenceStatus.oofStatusMessage
+      - teams-mobile-sdk.PersonPresenceStatus.oofStatusMessageTime
+      - teams-mobile-sdk.PersonPresenceStatus.presenceStatus
+    langs:
+      - typeScript
+    type: interface
+    summary: An object containing a Person's real time presence status.
+    extends:
+      name: teams-mobile-sdk.PersonIds
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.PersonPresenceStatus.customStatusMessage
+    name: customStatusMessage
+    fullName: customStatusMessage
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The Person's custom status message.
+    optional: true
+    syntax:
+      content: 'customStatusMessage?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.PersonPresenceStatus.customStatusMessageTime
+    name: customStatusMessageTime
+    fullName: customStatusMessageTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The time the custom status message was set in ISO 8601
+    optional: true
+    syntax:
+      content: 'customStatusMessageTime?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.PersonPresenceStatus.oofStatusMessage
+    name: oofStatusMessage
+    fullName: oofStatusMessage
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The Person's Out of Office message.
+    optional: true
+    syntax:
+      content: 'oofStatusMessage?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.PersonPresenceStatus.oofStatusMessageTime
+    name: oofStatusMessageTime
+    fullName: oofStatusMessageTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The time the Out of Office message was set in ISO 8601
+    optional: true
+    syntax:
+      content: 'oofStatusMessageTime?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.PersonPresenceStatus.presenceStatus
+    name: presenceStatus
+    fullName: presenceStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'The Person''s realtime presence status: available, away, etc.'
+    optional: true
+    syntax:
+      content: 'presenceStatus?: PresenceStatus'
+      return:
+        type:
+          - teams-mobile-sdk.PresenceStatus
+    package: teams-mobile-sdk
+references:
+  - uid: teams-mobile-sdk.PersonIds
+    name: PersonIds
+    spec.typeScript:
+      - name: PersonIds
+        fullName: PersonIds
+        uid: teams-mobile-sdk.PersonIds
+  - uid: teams-mobile-sdk.PresenceStatus
+    name: PresenceStatus
+    spec.typeScript:
+      - name: PresenceStatus
+        fullName: PresenceStatus
+        uid: teams-mobile-sdk.PresenceStatus

@@ -1,0 +1,6 @@
+Add appmanifest
+Remove the end of build script
+
+Remove version check in manifest parsing
+rnx-kit dep-check --write
+rnx-kit metro config

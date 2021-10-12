@@ -1,0 +1,201 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.PeopleProviderInterface
+    name: PeopleProviderInterface
+    fullName: PeopleProviderInterface
+    children:
+      - teams-mobile-sdk.PeopleProviderInterface.getContactMetadata
+      - teams-mobile-sdk.PeopleProviderInterface.getPeopleDetails
+      - teams-mobile-sdk.PeopleProviderInterface.getPresenceStatuses
+      - teams-mobile-sdk.PeopleProviderInterface.getProfilePictures
+      - teams-mobile-sdk.PeopleProviderInterface.openContactMetadataLink
+      - teams-mobile-sdk.PeopleProviderInterface.viewProfilePictureForPerson
+    langs:
+      - typeScript
+    type: interface
+    summary: |
+      People information provider
+      Method in this interface has equivalents in native code.
+
+      See SdkPeopleProviderModule.java for Android.
+
+      See SDKPeopleProviderModule.m for iOS.
+
+      > [!IMPORTANT]
+      > PeopleProviderInterface is under active development. Please, expect
+      frequent breaking changes and use this module at your discretion.
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.PeopleProviderInterface.getContactMetadata
+    name: 'getContactMetadata(UserId[])'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: This method fetches people metadata such as Shifts metadata.
+    syntax:
+      content: 'function getContactMetadata(UserIds: UserId[])'
+      parameters:
+        - id: UserIds
+          type:
+            - 'teams-mobile-sdk.UserId[]'
+          description: ''
+      return:
+        type:
+          - 'Promise<teams-mobile-sdk.PersonContactMetadata[]>'
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.PeopleProviderInterface.getPeopleDetails
+    name: 'getPeopleDetails(UserId[])'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: This method fetches the people information.
+    syntax:
+      content: 'function getPeopleDetails(UserIds: UserId[])'
+      parameters:
+        - id: UserIds
+          type:
+            - 'teams-mobile-sdk.UserId[]'
+          description: ''
+      return:
+        type:
+          - 'Promise<teams-mobile-sdk.Person[]>'
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.PeopleProviderInterface.getPresenceStatuses
+    name: 'getPresenceStatuses(UserId[])'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: This method fetches people presence information.
+    syntax:
+      content: 'function getPresenceStatuses(UserIds: UserId[])'
+      parameters:
+        - id: UserIds
+          type:
+            - 'teams-mobile-sdk.UserId[]'
+          description: ''
+      return:
+        type:
+          - 'Promise<teams-mobile-sdk.PersonPresenceStatus[]>'
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.PeopleProviderInterface.getProfilePictures
+    name: 'getProfilePictures(UserId[])'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: This method fetches profile picture urls.
+    syntax:
+      content: 'function getProfilePictures(UserIds: UserId[])'
+      parameters:
+        - id: UserIds
+          type:
+            - 'teams-mobile-sdk.UserId[]'
+          description: ''
+      return:
+        type:
+          - 'Promise<teams-mobile-sdk.PersonProfilePicture[]>'
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.PeopleProviderInterface.openContactMetadataLink
+    name: 'openContactMetadataLink(UserId, string, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: API to open contact metadata link such as Shifts "Set Availablility"
+    syntax:
+      content: >-
+        function openContactMetadataLink(UserId: UserId, contactMetadataType:
+        string, contentDescription: string)
+      parameters:
+        - id: UserId
+          type:
+            - teams-mobile-sdk.UserId
+          description: ''
+        - id: contactMetadataType
+          type:
+            - string
+          description: The contact metadata provider such as "shifts"
+        - id: contentDescription
+          type:
+            - string
+          description: |
+            The link descriptor such as "staffhubAvailabilityKey"
+      return:
+        type:
+          - any
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.PeopleProviderInterface.viewProfilePictureForPerson
+    name: viewProfilePictureForPerson(UserId)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: API to view profile picture.
+    syntax:
+      content: 'function viewProfilePictureForPerson(UserId: UserId)'
+      parameters:
+        - id: UserId
+          type:
+            - teams-mobile-sdk.UserId
+          description: ''
+      return:
+        type:
+          - Promise<void>
+    package: teams-mobile-sdk
+references:
+  - uid: 'teams-mobile-sdk.UserId[]'
+    name: 'UserId[]'
+    spec.typeScript:
+      - name: UserId
+        fullName: UserId
+        uid: teams-mobile-sdk.UserId
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'Promise<teams-mobile-sdk.PersonContactMetadata[]>'
+    name: 'PersonContactMetadata[]>'
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: PersonContactMetadata
+        fullName: PersonContactMetadata
+        uid: teams-mobile-sdk.PersonContactMetadata
+      - name: '[]>'
+        fullName: '[]>'
+  - uid: 'Promise<teams-mobile-sdk.Person[]>'
+    name: 'Person[]>'
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: Person
+        fullName: Person
+        uid: teams-mobile-sdk.Person
+      - name: '[]>'
+        fullName: '[]>'
+  - uid: 'Promise<teams-mobile-sdk.PersonPresenceStatus[]>'
+    name: 'PersonPresenceStatus[]>'
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: PersonPresenceStatus
+        fullName: PersonPresenceStatus
+        uid: teams-mobile-sdk.PersonPresenceStatus
+      - name: '[]>'
+        fullName: '[]>'
+  - uid: 'Promise<teams-mobile-sdk.PersonProfilePicture[]>'
+    name: 'PersonProfilePicture[]>'
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: PersonProfilePicture
+        fullName: PersonProfilePicture
+        uid: teams-mobile-sdk.PersonProfilePicture
+      - name: '[]>'
+        fullName: '[]>'
+  - uid: teams-mobile-sdk.UserId
+    name: UserId
+    spec.typeScript:
+      - name: UserId
+        fullName: UserId
+        uid: teams-mobile-sdk.UserId

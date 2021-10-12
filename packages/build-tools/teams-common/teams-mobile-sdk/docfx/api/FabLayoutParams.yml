@@ -1,0 +1,83 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.FabLayoutParams
+    name: FabLayoutParams
+    fullName: FabLayoutParams
+    children:
+      - teams-mobile-sdk.FabLayoutParams.description
+      - teams-mobile-sdk.FabLayoutParams.iconUri
+      - teams-mobile-sdk.FabLayoutParams.secondaryFabs
+      - teams-mobile-sdk.FabLayoutParams.title
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.FabLayoutParams.description
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'description?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.FabLayoutParams.iconUri
+    name: iconUri
+    fullName: iconUri
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'iconUri: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.FabLayoutParams.secondaryFabs
+    name: secondaryFabs
+    fullName: secondaryFabs
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'secondaryFabs?: SecondaryFloatingActionButton[]'
+      return:
+        type:
+          - 'teams-mobile-sdk.SecondaryFloatingActionButton[]'
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.FabLayoutParams.title
+    name: title
+    fullName: title
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'title?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: teams-mobile-sdk
+references:
+  - uid: 'teams-mobile-sdk.SecondaryFloatingActionButton[]'
+    name: 'SecondaryFloatingActionButton[]'
+    spec.typeScript:
+      - name: SecondaryFloatingActionButton
+        fullName: SecondaryFloatingActionButton
+        uid: teams-mobile-sdk.SecondaryFloatingActionButton
+      - name: '[]'
+        fullName: '[]'

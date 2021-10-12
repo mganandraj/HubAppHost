@@ -1,0 +1,50 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.ChannelPickerInterface
+    name: ChannelPickerInterface
+    fullName: ChannelPickerInterface
+    children:
+      - teams-mobile-sdk.ChannelPickerInterface.launch
+    langs:
+      - typeScript
+    type: interface
+    summary: Native interface for channel picker.
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ChannelPickerInterface.launch
+    name: launch(ChannelPickerOptions)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Shows channel picker. Various configuration options
+      are available through the options parameter. See
+      ChannelPickerOptions class for documentation on options.
+    syntax:
+      content: 'function launch(options: ChannelPickerOptions)'
+      parameters:
+        - id: options
+          type:
+            - teams-mobile-sdk.ChannelPickerOptions
+          description: options to configure the channel picker
+      return:
+        type:
+          - Promise<teams-mobile-sdk.ChannelPickerResult>
+    package: teams-mobile-sdk
+references:
+  - uid: teams-mobile-sdk.ChannelPickerOptions
+    name: ChannelPickerOptions
+    spec.typeScript:
+      - name: ChannelPickerOptions
+        fullName: ChannelPickerOptions
+        uid: teams-mobile-sdk.ChannelPickerOptions
+  - uid: Promise<teams-mobile-sdk.ChannelPickerResult>
+    name: ChannelPickerResult>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: ChannelPickerResult
+        fullName: ChannelPickerResult
+        uid: teams-mobile-sdk.ChannelPickerResult
+      - name: '>'
+        fullName: '>'

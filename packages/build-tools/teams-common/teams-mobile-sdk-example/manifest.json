@@ -1,0 +1,90 @@
+{
+  "id": "9a1f0cd2-ff89-443f-9618-01993b1c5ff0",
+  "name": "sample",
+  "title": "res://strings/app_name",
+  "icons": {
+    "default": "fluent://home/regular",
+    "selected": "fluent://home/regular"
+  },
+  "views": [
+    {
+      "name": "home",
+      "title": "res://strings/hello_world_view_title",
+      "componentName": "GreetingComponent"
+    },
+    {
+      "name": "asyncStorage",
+      "title": "res://strings/asyncStorage_view_title",
+      "componentName": "AsyncStorageComponent"
+    },
+    {
+      "name": "imageAndFilePicker",
+      "title": "res://strings/imageAndFilePicker_view_title",
+      "componentName": "ImageAndFilePickerComponent"
+    },
+    {
+      "name": "navigation",
+      "title": "res://strings/navigation_view_title",
+      "componentName": "NavigationComponent"
+    },
+    {
+      "name": "userAvatar",
+      "title": "res://strings/user_avatar_view_title",
+      "componentName": "UserAvatarComponent"
+    },
+    {
+      "name": "networkConnectivity",
+      "title": "res://strings/network_connectivity_view_title",
+      "componentName": "NetworkConnectivityComponent"
+    },
+    {
+      "name": "stateLayout",
+      "title": "res://strings/state_layout_view_title",
+      "componentName": "StateLayoutComponent"
+    },
+    {
+      "name": "teamsAndChannelsApi",
+      "title": "res://strings/teams_channels_api",
+      "componentName": "TeamsAndChannelsApiComponent"
+    },
+    {
+      "name": "tabsInChatsApi",
+      "title": "res://strings/tabs_in_chats_api",
+      "componentName": "TabsInChatsApiComponent"
+    },
+    {
+      "name": "teamsWebView",
+      "title": "res://strings/teams_web_view",
+      "componentName": "TeamsWebViewComponent"
+    },
+    {
+      "name": "sharepointFilePreview",
+      "title": "res://strings/filePreview_view_title",
+      "componentName": "SharepointFilePreviewComponent"
+    },
+    {
+      "name": "telemetryClient",
+      "title": "res://strings/telemetryClient_title",
+      "componentName": "TelemetryClientComponent"
+    },
+    {
+      "name": "tabbedComponent",
+      "title": "res://strings/tabbed_component_title",
+      "componentName": "TabbedComponent"
+    },
+    {
+      "name": "fluentIconsDemo",
+      "title": "res://strings/fluent_icons_demo_title",
+      "componentName": "FluentIconsDemoComponent"
+    },
+    {
+      "name": "secureStorage",
+      "title": "res://strings/secureStorage_view_title",
+      "componentName": "SecureStorageComponent"
+    }
+  ],
+  "authDomains": [
+    "https://graph.microsoft.com"
+  ],
+  "minReactNativeSdkVersion": "0.9.1"
+}

@@ -1,0 +1,29 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.ShareContentType
+    name: ShareContentType
+    fullName: ShareContentType
+    children:
+      - teams-mobile-sdk.ShareContentType.IMAGE
+      - teams-mobile-sdk.ShareContentType.TEXT
+    langs:
+      - typeScript
+    type: enum
+    summary: Represents the content type of a share object.
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ShareContentType.IMAGE
+    name: IMAGE
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ShareContentType.TEXT
+    name: TEXT
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    package: teams-mobile-sdk

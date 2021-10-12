@@ -1,0 +1,452 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.PeopleContact
+    name: PeopleContact
+    fullName: PeopleContact
+    children:
+      - teams-mobile-sdk.PeopleContact.assistant
+      - teams-mobile-sdk.PeopleContact.businessAddress
+      - teams-mobile-sdk.PeopleContact.companyName
+      - teams-mobile-sdk.PeopleContact.contactListIds
+      - teams-mobile-sdk.PeopleContact.contactType
+      - teams-mobile-sdk.PeopleContact.creationDate
+      - teams-mobile-sdk.PeopleContact.department
+      - teams-mobile-sdk.PeopleContact.displayName
+      - teams-mobile-sdk.PeopleContact.emails
+      - teams-mobile-sdk.PeopleContact.eTag
+      - teams-mobile-sdk.PeopleContact.firstName
+      - teams-mobile-sdk.PeopleContact.homeAddress
+      - teams-mobile-sdk.PeopleContact.id
+      - teams-mobile-sdk.PeopleContact.isTeamsFavorite
+      - teams-mobile-sdk.PeopleContact.jobTitle
+      - teams-mobile-sdk.PeopleContact.lastName
+      - teams-mobile-sdk.PeopleContact.location
+      - teams-mobile-sdk.PeopleContact.manager
+      - teams-mobile-sdk.PeopleContact.middleName
+      - teams-mobile-sdk.PeopleContact.modifiedDate
+      - teams-mobile-sdk.PeopleContact.mri
+      - teams-mobile-sdk.PeopleContact.nickName
+      - teams-mobile-sdk.PeopleContact.notes
+      - teams-mobile-sdk.PeopleContact.otherAddress
+      - teams-mobile-sdk.PeopleContact.phones
+      - teams-mobile-sdk.PeopleContact.sipAddress
+      - teams-mobile-sdk.PeopleContact.title
+      - teams-mobile-sdk.PeopleContact.upn
+    langs:
+      - typeScript
+    type: interface
+    summary: Represents the people contact
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.PeopleContact.assistant
+    name: assistant
+    fullName: assistant
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'assistant: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.PeopleContact.businessAddress
+    name: businessAddress
+    fullName: businessAddress
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'businessAddress: Address'
+      return:
+        type:
+          - teams-mobile-sdk.Address
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.PeopleContact.companyName
+    name: companyName
+    fullName: companyName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'companyName: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.PeopleContact.contactListIds
+    name: contactListIds
+    fullName: contactListIds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'contactListIds: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.PeopleContact.contactType
+    name: contactType
+    fullName: contactType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'contactType: ContactType'
+      return:
+        type:
+          - teams-mobile-sdk.ContactType
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.PeopleContact.creationDate
+    name: creationDate
+    fullName: creationDate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'creationDate: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.PeopleContact.department
+    name: department
+    fullName: department
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'department: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.PeopleContact.displayName
+    name: displayName
+    fullName: displayName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'displayName: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.PeopleContact.emails
+    name: emails
+    fullName: emails
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'emails: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.PeopleContact.eTag
+    name: eTag
+    fullName: eTag
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'eTag: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.PeopleContact.firstName
+    name: firstName
+    fullName: firstName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'firstName: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.PeopleContact.homeAddress
+    name: homeAddress
+    fullName: homeAddress
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'homeAddress: Address'
+      return:
+        type:
+          - teams-mobile-sdk.Address
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.PeopleContact.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'id: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.PeopleContact.isTeamsFavorite
+    name: isTeamsFavorite
+    fullName: isTeamsFavorite
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'isTeamsFavorite: boolean'
+      return:
+        type:
+          - boolean
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.PeopleContact.jobTitle
+    name: jobTitle
+    fullName: jobTitle
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'jobTitle: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.PeopleContact.lastName
+    name: lastName
+    fullName: lastName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'lastName: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.PeopleContact.location
+    name: location
+    fullName: location
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'location: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.PeopleContact.manager
+    name: manager
+    fullName: manager
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'manager: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.PeopleContact.middleName
+    name: middleName
+    fullName: middleName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'middleName: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.PeopleContact.modifiedDate
+    name: modifiedDate
+    fullName: modifiedDate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'modifiedDate: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.PeopleContact.mri
+    name: mri
+    fullName: mri
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'mri: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.PeopleContact.nickName
+    name: nickName
+    fullName: nickName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'nickName: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.PeopleContact.notes
+    name: notes
+    fullName: notes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'notes: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.PeopleContact.otherAddress
+    name: otherAddress
+    fullName: otherAddress
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'otherAddress: Address'
+      return:
+        type:
+          - teams-mobile-sdk.Address
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.PeopleContact.phones
+    name: phones
+    fullName: phones
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'phones: Phones[]'
+      return:
+        type:
+          - 'teams-mobile-sdk.Phones[]'
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.PeopleContact.sipAddress
+    name: sipAddress
+    fullName: sipAddress
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'sipAddress: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.PeopleContact.title
+    name: title
+    fullName: title
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'title: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.PeopleContact.upn
+    name: upn
+    fullName: upn
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'upn: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+references:
+  - uid: teams-mobile-sdk.Address
+    name: Address
+    spec.typeScript:
+      - name: Address
+        fullName: Address
+        uid: teams-mobile-sdk.Address
+  - uid: teams-mobile-sdk.ContactType
+    name: ContactType
+    spec.typeScript:
+      - name: ContactType
+        fullName: ContactType
+        uid: teams-mobile-sdk.ContactType
+  - uid: 'teams-mobile-sdk.Phones[]'
+    name: 'Phones[]'
+    spec.typeScript:
+      - name: Phones
+        fullName: Phones
+        uid: teams-mobile-sdk.Phones
+      - name: '[]'
+        fullName: '[]'

@@ -1,0 +1,56 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.SnackbarAction
+    name: SnackbarAction
+    fullName: SnackbarAction
+    children:
+      - teams-mobile-sdk.SnackbarAction.id
+      - teams-mobile-sdk.SnackbarAction.onSelected
+      - teams-mobile-sdk.SnackbarAction.title
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.SnackbarAction.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'id: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.SnackbarAction.onSelected
+    name: onSelected
+    fullName: onSelected
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'onSelected: () => void'
+      return:
+        type:
+          - () => void
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.SnackbarAction.title
+    name: title
+    fullName: title
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'title: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk

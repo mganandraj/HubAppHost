@@ -1,0 +1,44 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.TitleDropdownItem
+    name: TitleDropdownItem
+    fullName: TitleDropdownItem
+    children:
+      - teams-mobile-sdk.TitleDropdownItem.id
+      - teams-mobile-sdk.TitleDropdownItem.title
+    langs:
+      - typeScript
+    type: interface
+    summary: Represents a title dropdown item.
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TitleDropdownItem.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      A unique identifier for the item. This identifier will be sent
+      to the handler when the user selects an item fom the title
+      dropdown.
+    syntax:
+      content: 'id: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TitleDropdownItem.title
+    name: title
+    fullName: title
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Title of the item.
+    syntax:
+      content: 'title: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk

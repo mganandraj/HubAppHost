@@ -1,0 +1,76 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.FluentIconViewProps
+    name: FluentIconViewProps
+    fullName: FluentIconViewProps
+    children:
+      - teams-mobile-sdk.FluentIconViewProps.iconColor
+      - teams-mobile-sdk.FluentIconViewProps.iconStyle
+      - teams-mobile-sdk.FluentIconViewProps.iconSymbol
+    langs:
+      - typeScript
+    type: interface
+    summary: Props supported by the fluent icon view
+    extends:
+      name: ViewProps
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.FluentIconViewProps.iconColor
+    name: iconColor
+    fullName: iconColor
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      The tint/outline color of the icon in hex format (e.g. #6264a7). If the
+      icon is filled, this will be used as the fill color. If not specified, the
+      defaults defined by Stardust will be used.
+    optional: true
+    syntax:
+      content: 'iconColor?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.FluentIconViewProps.iconStyle
+    name: iconStyle
+    fullName: iconStyle
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      The style of the icon: regular or filled. If not specified, the defaults
+      set by Stardust will be used.
+    optional: true
+    syntax:
+      content: 'iconStyle?: IconStyle'
+      return:
+        type:
+          - teams-mobile-sdk.IconStyle
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.FluentIconViewProps.iconSymbol
+    name: iconSymbol
+    fullName: iconSymbol
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      A string identifer for the icon. All possible icon symbol names can be
+
+      found here:
+      https://github.com/microsoft/fluentui-system-icons/blob/master/icons.md
+    syntax:
+      content: 'iconSymbol: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+references:
+  - uid: teams-mobile-sdk.IconStyle
+    name: IconStyle
+    spec.typeScript:
+      - name: IconStyle
+        fullName: IconStyle
+        uid: teams-mobile-sdk.IconStyle

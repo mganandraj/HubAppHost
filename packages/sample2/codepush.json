@@ -1,0 +1,9 @@
+{
+  "accessToken": "",
+  "appName": "",
+  "deployment": "",
+  "description": "",
+  "additionalArgs": [
+    "--debug"
+  ]
+}

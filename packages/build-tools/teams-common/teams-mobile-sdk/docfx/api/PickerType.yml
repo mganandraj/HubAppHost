@@ -1,0 +1,38 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.PickerType
+    name: PickerType
+    fullName: PickerType
+    children:
+      - teams-mobile-sdk.PickerType.ALL
+      - teams-mobile-sdk.PickerType.CHANNEL
+      - teams-mobile-sdk.PickerType.CHAT
+    langs:
+      - typeScript
+    type: enum
+    summary: Represents the accepted values of picker type
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.PickerType.ALL
+    name: ALL
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.PickerType.CHANNEL
+    name: CHANNEL
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.PickerType.CHAT
+    name: CHAT
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    package: teams-mobile-sdk

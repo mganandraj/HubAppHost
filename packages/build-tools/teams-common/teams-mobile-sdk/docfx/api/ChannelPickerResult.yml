@@ -1,0 +1,54 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.ChannelPickerResult
+    name: ChannelPickerResult
+    fullName: ChannelPickerResult
+    children:
+      - teams-mobile-sdk.ChannelPickerResult.parentTeam
+      - teams-mobile-sdk.ChannelPickerResult.selectedChannel
+    langs:
+      - typeScript
+    type: interface
+    summary: Represents the result returned by the channel picker.
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ChannelPickerResult.parentTeam
+    name: parentTeam
+    fullName: parentTeam
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The parent team of the channel selected by the user.
+    syntax:
+      content: 'parentTeam: Team'
+      return:
+        type:
+          - teams-mobile-sdk.Team
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ChannelPickerResult.selectedChannel
+    name: selectedChannel
+    fullName: selectedChannel
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The channel selected by the user.
+    syntax:
+      content: 'selectedChannel: Channel'
+      return:
+        type:
+          - teams-mobile-sdk.Channel
+    package: teams-mobile-sdk
+references:
+  - uid: teams-mobile-sdk.Team
+    name: Team
+    spec.typeScript:
+      - name: Team
+        fullName: Team
+        uid: teams-mobile-sdk.Team
+  - uid: teams-mobile-sdk.Channel
+    name: Channel
+    spec.typeScript:
+      - name: Channel
+        fullName: Channel
+        uid: teams-mobile-sdk.Channel

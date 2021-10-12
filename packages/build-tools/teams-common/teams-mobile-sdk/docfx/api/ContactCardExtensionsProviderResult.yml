@@ -1,0 +1,79 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.ContactCardExtensionsProviderResult
+    name: ContactCardExtensionsProviderResult
+    fullName: ContactCardExtensionsProviderResult
+    children:
+      - teams-mobile-sdk.ContactCardExtensionsProviderResult.contact
+      - teams-mobile-sdk.ContactCardExtensionsProviderResult.incomplete
+      - teams-mobile-sdk.ContactCardExtensionsProviderResult.items
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    extends:
+      name: teams-mobile-sdk.BaseProviderResult
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ContactCardExtensionsProviderResult.contact
+    name: contact
+    fullName: contact
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'contact: Contact'
+      return:
+        type:
+          - teams-mobile-sdk.Contact
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ContactCardExtensionsProviderResult.incomplete
+    name: incomplete
+    fullName: incomplete
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'incomplete: boolean'
+      return:
+        type:
+          - boolean
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ContactCardExtensionsProviderResult.items
+    name: items
+    fullName: items
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'items: ContactCardItem[]'
+      return:
+        type:
+          - 'teams-mobile-sdk.ContactCardItem[]'
+    package: teams-mobile-sdk
+references:
+  - uid: teams-mobile-sdk.BaseProviderResult
+    name: BaseProviderResult
+    spec.typeScript:
+      - name: BaseProviderResult
+        fullName: BaseProviderResult
+        uid: teams-mobile-sdk.BaseProviderResult
+  - uid: teams-mobile-sdk.Contact
+    name: Contact
+    spec.typeScript:
+      - name: Contact
+        fullName: Contact
+        uid: teams-mobile-sdk.Contact
+  - uid: 'teams-mobile-sdk.ContactCardItem[]'
+    name: 'ContactCardItem[]'
+    spec.typeScript:
+      - name: ContactCardItem
+        fullName: ContactCardItem
+        uid: teams-mobile-sdk.ContactCardItem
+      - name: '[]'
+        fullName: '[]'

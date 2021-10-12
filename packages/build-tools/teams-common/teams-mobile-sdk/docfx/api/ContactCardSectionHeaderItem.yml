@@ -1,0 +1,71 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.ContactCardSectionHeaderItem
+    name: ContactCardSectionHeaderItem
+    fullName: ContactCardSectionHeaderItem
+    children:
+      - teams-mobile-sdk.ContactCardSectionHeaderItem.getProperties
+      - teams-mobile-sdk.ContactCardSectionHeaderItem.getTemplate
+      - teams-mobile-sdk.ContactCardSectionHeaderItem.header
+    langs:
+      - typeScript
+    type: class
+    summary: ''
+    extends:
+      name: teams-mobile-sdk.ContactCardItem
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ContactCardSectionHeaderItem.getProperties
+    name: getProperties()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: function getProperties()
+      parameters: []
+      return:
+        type:
+          - any
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ContactCardSectionHeaderItem.getTemplate
+    name: getTemplate()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: function getTemplate()
+      parameters: []
+      return:
+        type:
+          - teams-mobile-sdk.ContactCardItemTemplate
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ContactCardSectionHeaderItem.header
+    name: header
+    fullName: header
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'public header: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+references:
+  - uid: teams-mobile-sdk.ContactCardItem
+    name: ContactCardItem
+    spec.typeScript:
+      - name: ContactCardItem
+        fullName: ContactCardItem
+        uid: teams-mobile-sdk.ContactCardItem
+  - uid: teams-mobile-sdk.ContactCardItemTemplate
+    name: ContactCardItemTemplate
+    spec.typeScript:
+      - name: ContactCardItemTemplate
+        fullName: ContactCardItemTemplate
+        uid: teams-mobile-sdk.ContactCardItemTemplate

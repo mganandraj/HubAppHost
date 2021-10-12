@@ -1,0 +1,123 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.Address
+    name: Address
+    fullName: Address
+    children:
+      - teams-mobile-sdk.Address.city
+      - teams-mobile-sdk.Address.countryOrRegion
+      - teams-mobile-sdk.Address.postalCode
+      - teams-mobile-sdk.Address.postOfficeBox
+      - teams-mobile-sdk.Address.state
+      - teams-mobile-sdk.Address.street
+      - teams-mobile-sdk.Address.type
+    langs:
+      - typeScript
+    type: interface
+    summary: An object representing a postal address.
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.Address.city
+    name: city
+    fullName: city
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The city name.
+    syntax:
+      content: 'city: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.Address.countryOrRegion
+    name: countryOrRegion
+    fullName: countryOrRegion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The country or region name.
+    syntax:
+      content: 'countryOrRegion: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.Address.postalCode
+    name: postalCode
+    fullName: postalCode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The postal code.
+    syntax:
+      content: 'postalCode: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.Address.postOfficeBox
+    name: postOfficeBox
+    fullName: postOfficeBox
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The post office box.
+    syntax:
+      content: 'postOfficeBox: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.Address.state
+    name: state
+    fullName: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The state name.
+    syntax:
+      content: 'state: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.Address.street
+    name: street
+    fullName: street
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The street address.
+    syntax:
+      content: 'street: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.Address.type
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The address type.
+    syntax:
+      content: 'type: AddressType'
+      return:
+        type:
+          - teams-mobile-sdk.AddressType
+    package: teams-mobile-sdk
+references:
+  - uid: teams-mobile-sdk.AddressType
+    name: AddressType
+    spec.typeScript:
+      - name: AddressType
+        fullName: AddressType
+        uid: teams-mobile-sdk.AddressType

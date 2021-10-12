@@ -1,0 +1,56 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.HttpResponse
+    name: HttpResponse
+    fullName: HttpResponse
+    children:
+      - teams-mobile-sdk.HttpResponse.data
+      - teams-mobile-sdk.HttpResponse.headers
+      - teams-mobile-sdk.HttpResponse.status
+    langs:
+      - typeScript
+    type: interface
+    summary: Copyright © Microsoft Corporation. All rights reserved.
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.HttpResponse.data
+    name: data
+    fullName: data
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'data: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.HttpResponse.headers
+    name: headers
+    fullName: headers
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'headers: any'
+      return:
+        type:
+          - any
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.HttpResponse.status
+    name: status
+    fullName: status
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'status: number'
+      return:
+        type:
+          - number
+    package: teams-mobile-sdk

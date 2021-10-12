@@ -1,0 +1,59 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.TeamsShellTab
+    name: TeamsShellTab
+    fullName: TeamsShellTab
+    children:
+      - teams-mobile-sdk.TeamsShellTab.contentDescription
+      - teams-mobile-sdk.TeamsShellTab.id
+      - teams-mobile-sdk.TeamsShellTab.title
+    langs:
+      - typeScript
+    type: interface
+    summary: A model to define a tab in AppBar(Android)/NavigationBar(iOS)
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsShellTab.contentDescription
+    name: contentDescription
+    fullName: contentDescription
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Discription of the tab, which will be used to support Accessibility'
+    optional: true
+    syntax:
+      content: 'contentDescription?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsShellTab.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Unique id of the tab
+    syntax:
+      content: 'id: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsShellTab.title
+    name: title
+    fullName: title
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      title of the tab, which will be displayed for this tab in
+      AppBar(Android)/NavigationBar(iOS)
+    syntax:
+      content: 'title: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk

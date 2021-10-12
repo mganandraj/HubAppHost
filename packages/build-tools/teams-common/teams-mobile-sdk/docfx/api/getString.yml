@@ -1,0 +1,24 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.getString
+    name: 'getString(string, [key: string]: function)'
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getString(path: string, paramData: [key: string]: function)'
+      parameters:
+        - id: path
+          type:
+            - string
+          description: ''
+        - id: paramData
+          type:
+            - '[key: string]: function'
+          description: ''
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk

@@ -1,0 +1,107 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.ShareTarget
+    name: ShareTarget
+    fullName: ShareTarget
+    children:
+      - teams-mobile-sdk.ShareTarget.displayName
+      - teams-mobile-sdk.ShareTarget.icon
+      - teams-mobile-sdk.ShareTarget.id
+      - teams-mobile-sdk.ShareTarget.team
+      - teams-mobile-sdk.ShareTarget.type
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      Represents a share target in Teams. A share target can
+      be a user, group chat, meeting chat or channel.
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ShareTarget.displayName
+    name: displayName
+    fullName: displayName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'The name of the selected chat, group chat or channel'
+    syntax:
+      content: 'displayName: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ShareTarget.icon
+    name: icon
+    fullName: icon
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The url of the icon to be displayed for chat or channel.
+    optional: true
+    syntax:
+      content: 'icon?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ShareTarget.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Unique identifier for the share target. This can
+      either be a user MRI or a thread ID.
+    syntax:
+      content: 'id: string'
+      return:
+        type:
+          - string
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ShareTarget.team
+    name: team
+    fullName: team
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The team of the selected channel. Would be null in case of chat/group
+      chat.
+    optional: true
+    syntax:
+      content: 'team?: Team'
+      return:
+        type:
+          - teams-mobile-sdk.Team
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.ShareTarget.type
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The type of the target.
+    syntax:
+      content: 'type: ShareTargetType'
+      return:
+        type:
+          - teams-mobile-sdk.ShareTargetType
+    package: teams-mobile-sdk
+references:
+  - uid: teams-mobile-sdk.Team
+    name: Team
+    spec.typeScript:
+      - name: Team
+        fullName: Team
+        uid: teams-mobile-sdk.Team
+  - uid: teams-mobile-sdk.ShareTargetType
+    name: ShareTargetType
+    spec.typeScript:
+      - name: ShareTargetType
+        fullName: ShareTargetType
+        uid: teams-mobile-sdk.ShareTargetType

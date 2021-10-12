@@ -1,0 +1,199 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.IShareUtilsModule
+    name: IShareUtilsModule
+    fullName: IShareUtilsModule
+    children:
+      - teams-mobile-sdk.IShareUtilsModule.pickShareTargetAndShareObject
+      - teams-mobile-sdk.IShareUtilsModule.pickTargetFromShareTargetPicker
+      - teams-mobile-sdk.IShareUtilsModule.pickTargetFromTargetPicker
+      - teams-mobile-sdk.IShareUtilsModule.shareImagesToShareTarget
+      - teams-mobile-sdk.IShareUtilsModule.shareToShareTarget
+    langs:
+      - typeScript
+    type: interface
+    summary: Interface for the `ShareUtilsModule` native module.
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.IShareUtilsModule.pickShareTargetAndShareObject
+    name: pickShareTargetAndShareObject(ShareObject)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |
+      Share information, such as, images, text to a target. Calling this method
+      opens the respective chat or channel view on top of the current view.
+      The information passed is added to compose box.
+      > [!NOTE]
+      > Calling this method takes the user out of your app.
+    syntax:
+      content: 'function pickShareTargetAndShareObject(shareObject: ShareObject)'
+      parameters:
+        - id: shareObject
+          type:
+            - teams-mobile-sdk.ShareObject
+          description: images and/or text which may contain link to be shared.
+      return:
+        type:
+          - Promise<void>
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.IShareUtilsModule.pickTargetFromShareTargetPicker
+    name: pickTargetFromShareTargetPicker()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Launches the Teams recipient picker on top of the current view.
+      > [!NOTE]
+      > Calling this method takes the user out of your app.
+       For Android this method requests storage permission from the user due to a known bug.
+       Please use the pickShareTargetAndShareObject API to share content to target.
+    syntax:
+      content: function pickTargetFromShareTargetPicker()
+      parameters: []
+      return:
+        type:
+          - Promise<teams-mobile-sdk.ShareTarget>
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.IShareUtilsModule.pickTargetFromTargetPicker
+    name: pickTargetFromTargetPicker(TargetPickerParams)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >-
+      Launches the chat/channel recipient picker on top of the current view.
+
+      > [!WARNING]
+
+      > iOS doesn't support `params` currently and will always show a combined
+      picker.
+
+
+      > [!NOTE]
+
+      > Calling this method takes the user out of your app.
+    syntax:
+      content: 'function pickTargetFromTargetPicker(params: TargetPickerParams)'
+      parameters:
+        - id: params
+          type:
+            - teams-mobile-sdk.TargetPickerParams
+          description: Configuration of the picker to be displayed.
+      return:
+        type:
+          - Promise<teams-mobile-sdk.ShareTarget>
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.IShareUtilsModule.shareImagesToShareTarget
+    name: 'shareImagesToShareTarget(ShareTarget, string[])'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: >
+      > [!NOTE]
+
+      > This method is deprecated and a new API 'shareToShareTarget' which
+      supports
+
+      > sharing images, text/link or both images and text/links is exposed. It
+      is
+
+      > highly advisible to use 'shareToShareTarget' API instead of
+      'shareImagesToShareTarget'.
+
+      Share images to a target. Calling this method opens the respective chat or
+
+      channel view on top of the current view. The images specified in
+
+      `imageHandles` are added to the compose box. If multiple images are
+
+      specified, each of them appears on a new line i.e. the images are
+
+      vertically stacked.
+
+
+      > [!NOTE]
+
+      > Calling this method takes the user out of your app.
+
+
+      > [!NOTE]
+
+      > Image handles can be obtained via `ImageAndFilePicker` APIs.
+    syntax:
+      content: >-
+        function shareImagesToShareTarget(shareTarget: ShareTarget,
+        imageHandles: string[])
+      parameters:
+        - id: shareTarget
+          type:
+            - teams-mobile-sdk.ShareTarget
+          description: the target recipient to share to
+        - id: imageHandles
+          type:
+            - 'string[]'
+          description: handles of the images that are to be shared
+      return:
+        type:
+          - Promise<void>
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.IShareUtilsModule.shareToShareTarget
+    name: 'shareToShareTarget(ShareTarget, ShareObject)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |
+      Share information, such as, images, text to a target. Calling this method
+      opens the respective chat or channel view on top of the current view.
+      The information passed is added to compose box.
+      > [!NOTE]
+      > Calling this method takes the user out of your app.
+    syntax:
+      content: >-
+        function shareToShareTarget(shareTarget: ShareTarget, shareObject:
+        ShareObject)
+      parameters:
+        - id: shareTarget
+          type:
+            - teams-mobile-sdk.ShareTarget
+          description: the target recipient to share to
+        - id: shareObject
+          type:
+            - teams-mobile-sdk.ShareObject
+          description: images and/or text which may contain link to be shared.
+      return:
+        type:
+          - Promise<void>
+    package: teams-mobile-sdk
+references:
+  - uid: teams-mobile-sdk.ShareObject
+    name: ShareObject
+    spec.typeScript:
+      - name: ShareObject
+        fullName: ShareObject
+        uid: teams-mobile-sdk.ShareObject
+  - uid: Promise<teams-mobile-sdk.ShareTarget>
+    name: ShareTarget>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: ShareTarget
+        fullName: ShareTarget
+        uid: teams-mobile-sdk.ShareTarget
+      - name: '>'
+        fullName: '>'
+  - uid: teams-mobile-sdk.TargetPickerParams
+    name: TargetPickerParams
+    spec.typeScript:
+      - name: TargetPickerParams
+        fullName: TargetPickerParams
+        uid: teams-mobile-sdk.TargetPickerParams
+  - uid: teams-mobile-sdk.ShareTarget
+    name: ShareTarget
+    spec.typeScript:
+      - name: ShareTarget
+        fullName: ShareTarget
+        uid: teams-mobile-sdk.ShareTarget

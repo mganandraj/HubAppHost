@@ -1,0 +1,49 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.TeamsFetchBlob
+    name: TeamsFetchBlob
+    fullName: TeamsFetchBlob
+    children:
+      - teams-mobile-sdk.TeamsFetchBlob.readStream
+    langs:
+      - typeScript
+    type: class
+    summary: ''
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.TeamsFetchBlob.readStream
+    name: 'readStream(string, string, number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Create file stream from file at `path`.
+    syntax:
+      content: 'function readStream(path: string, encoding: string, bufferSize: number)'
+      parameters:
+        - id: path
+          type:
+            - string
+          description: The file path.
+        - id: encoding
+          type:
+            - string
+          description: 'Data encoding, should be one of `base64`, `utf8`, `ascii`'
+        - id: bufferSize
+          type:
+            - number
+          description: Size of stream buffer.
+      return:
+        type:
+          - Promise<teams-mobile-sdk.TeamsFetchBlobReadStream>
+    package: teams-mobile-sdk
+references:
+  - uid: Promise<teams-mobile-sdk.TeamsFetchBlobReadStream>
+    name: TeamsFetchBlobReadStream>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: TeamsFetchBlobReadStream
+        fullName: TeamsFetchBlobReadStream
+        uid: teams-mobile-sdk.TeamsFetchBlobReadStream
+      - name: '>'
+        fullName: '>'

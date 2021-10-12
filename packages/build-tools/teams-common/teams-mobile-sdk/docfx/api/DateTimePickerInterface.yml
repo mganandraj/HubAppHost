@@ -1,0 +1,37 @@
+### YamlMime:UniversalReference
+items:
+  - uid: teams-mobile-sdk.DateTimePickerInterface
+    name: DateTimePickerInterface
+    fullName: DateTimePickerInterface
+    children:
+      - teams-mobile-sdk.DateTimePickerInterface.showDateTimePickerDialog
+    langs:
+      - typeScript
+    type: interface
+    summary: Shows Date and Time picker dialog (Android only)
+    package: teams-mobile-sdk
+  - uid: teams-mobile-sdk.DateTimePickerInterface.showDateTimePickerDialog
+    name: showDateTimePickerDialog(DateTimeParams)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Shows DateTime picker dialog.
+    syntax:
+      content: 'function showDateTimePickerDialog(params: DateTimeParams)'
+      parameters:
+        - id: params
+          type:
+            - teams-mobile-sdk.DateTimeParams
+          description: ''
+      return:
+        type:
+          - Promise<number>
+    package: teams-mobile-sdk
+references:
+  - uid: teams-mobile-sdk.DateTimeParams
+    name: DateTimeParams
+    spec.typeScript:
+      - name: DateTimeParams
+        fullName: DateTimeParams
+        uid: teams-mobile-sdk.DateTimeParams
